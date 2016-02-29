@@ -3,15 +3,13 @@
 #include<locale.h>
 #include<math.h>
 
-int DATA;
-
 int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    int output_value;
-
     printf("Я теперь понимаю русский язык!))\n\n");
+
+    printf("Сий конвертер сможет конвертировать для Вас любые (или почти любые) величины в считанные мгновения!);");
 
     system("pause");
     exit(EXIT_SUCCESS);
