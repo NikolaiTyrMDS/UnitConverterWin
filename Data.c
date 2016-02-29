@@ -82,3 +82,13 @@ double bytesTobits(double DATA)
     DATA = DATA*8;
     return DATA;
 }
+double bitsTokilobytes(double DATA)
+{
+    DATA = DATA/(1024*8);
+    return DATA;
+}
+double kilobytesTobits(double DATA)
+{
+    DATA = DATA*(1024*8);
+    return DATA;
+}
