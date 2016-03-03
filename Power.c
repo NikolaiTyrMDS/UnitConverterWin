@@ -2,73 +2,73 @@
 
 /* ФУНКЦИИ КОНВЕРТИРОВАНИЯ РАЗЛИЧНЫХ ЕДИНИЦ МОЩНОСТИ */
 
-// Из <Ват> ---> <Киловат> //
+// <Ваты> ---> <Киловаты> //
 double Vat2kVat(double POWER) {
 	POWER = POWER / 1000;
 	return POWER;
 }
 
-// <Киловат> ---> <Ват> //
+// <Киловаты> ---> <Ваты> //
 double kVat2Vat(double POWER) {
 	POWER = POWER * 1000;
 	return POWER;
 }
 
-// <Ват> ---> <Мегават> //
+// <Ваты> ---> <Мегаваты> //
 double Vat2mVat(double POWER) {
 	POWER = POWER / 1000000;
 	return POWER;
 }
 
-// <Мегават> ---> <Ват> //
+// <Мегаваты> ---> <Ваты> //
 double mVat2Vat(double POWER) {
 	POWER = POWER * 1000000;
 	return POWER;
 }
 
-// <Киловат> ---> <Мегават> //
+// <Киловаты> ---> <Мегаваты> //
 double kVat2mVat(double POWER) {
 	POWER = POWER / 1000;
 	return POWER;
 }
 
-// <Мегават> ---> <Киловат> //
+// <Мегаваты> ---> <Киловаты> //
 double mVat2kVat(double POWER) {
 	POWER = POWER * 1000;
 	return POWER;
 }
 
-// Из <Килограмм-сила-метр в секунду> ---> <Ват> //
+// <Килограмм-сила-метр в секунду> ---> <Ваты> //
 double kgSilaMvS2Vat(double POWER) {
 	POWER = POWER * 9.81;
 	return POWER;
 }
 
-// <Ват> ---> <Килограмм-сила-метр в секунду> //
+// <Ваты> ---> <Килограмм-сила-метр в секунду> //
 double Vat2kgSilaMvS(double POWER) {
 	POWER = POWER / 9.81;
 	return POWER;
 }
 
-// Из <Килограмм-сила-метр в секунду> ---> <Киловат> //
+// <Килограмм-сила-метр в секунду> ---> <Киловаты> //
 double kgSilaMvS2kVat(double POWER) {
 	POWER = (POWER * 9.81) / 1000;
 	return POWER;
 }
 
-// <Киловат> ---> <Килограмм-сила-метр в секунду> //
+// <Киловаты> ---> <Килограмм-сила-метр в секунду> //
 double kVat2kgSilaMvS(double POWER) {
 	POWER = (POWER * 1000) / 9.81;
 	return POWER;
 }
 	
-// <Килограмм-сила-метр в секунду> ---> <Мегават> //
+// <Килограмм-сила-метр в секунду> ---> <Мегаваты> //
 double kgSilaMvS2mVat(double POWER) {
 	POWER = (POWER * 9.81) / 1000000;
 	return POWER;
 }
 
-// <Мегават> ---> <Килограмм-сила-метр в секунду> //
+// <Мегаваты> ---> <Килограмм-сила-метр в секунду> //
 double mVat2kgSilaMvS(double POWER) {
 	POWER = (POWER * 1000000) / 9.81;
 	return POWER;
