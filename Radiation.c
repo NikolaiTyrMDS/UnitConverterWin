@@ -13,3 +13,11 @@ double adjacentValuesToDecrease(double RESISTANCE)
     return RESISTANCE;
 }
 // ----------------------------------------------------- //
+// Конвертирование соседних в сторону уменьшения;
+double adjacentValuesToDecrease(double RESISTANCE)
+{
+    RESISTANCE = RESISTANCE*1000;
+    return RESISTANCE;
+}
+// ----------------------------------------------------- //
+// bgfdbgsdjofsghrsknf
