@@ -3,85 +3,85 @@
                 // Метрические единицы измерения  мм, см, метр, км //
 
 /////////////////////////////Миллиметры/////////////////////////////////////////////
-double millimetresTOcentimetres(double LENGHT) // Перевод из миллиметров в сантиметры
+double millimetresTOcentimetres(double LENGTH) // Перевод из миллиметров в сантиметры
 {
-   LENGHT = LENGHT / 10 ;
-    return LENGHT ;
+   LENGTH = LENGTH / 10;
+    return LENGTH;
 }
 
-double millimetresTOmetres(double LENGHT) // Перевод из миллиметров в метры
+double millimetresTOmetres(double LENGTH) // Перевод из миллиметров в метры
 {
-    LENGHT = LENGHT / 1000 ;
-     return LENGHT ;
+    LENGTH = LENGTH / 1000;
+     return LENGTH;
 }
 
-double millimetresTOkilometres(double LENGHT) // Перевод из миллиметров в километры
+double millimetresTOkilometres(double LENGTH) // Перевод из миллиметров в километры
 {
-    LENGHT = LENGHT / 1000000 ;
-     return LENGHT ;
+    LENGTH = LENGTH / 1000000;
+     return LENGTH;
 }
 //////////////////////////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////Сантиметры//////////////////////////////////////////
-double centimetresTOmillimetres(double LENGHT) // Перевод из сантиметров в миллиметры
+double centimetresTOmillimetres(double LENGTH) // Перевод из сантиметров в миллиметры
 {
-    LENGHT = LENGHT * 10  ;
-     return LENGHT ;
+    LENGTH = LENGTH * 10;
+     return LENGTH;
 }
 
-double centimetresTOmetres(double LENGHT) // Перевод из сантиметров в метры
+double centimetresTOmetres(double LENGTH) // Перевод из сантиметров в метры
 {
-    LENGHT = LENGHT / 100 ;
-     return LENGHT ;
+    LENGTH = LENGTH / 100;
+     return LENGTH;
 }
 
-double centimetresTOkilometres(double LENGHT) // Перевод из сантиметров в километры
+double centimetresTOkilometres(double LENGTH) // Перевод из сантиметров в километры
 {
-    LENGHT = LENGHT / 100000 ;
-     return LENGHT ;
+    LENGTH = LENGTH / 100000;
+     return LENGTH;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 
 
 ///////////////////////////////////Метры////////////////////////////////////////////
-double metresTOmillimetres(double LENGHT) // Перевод из метров в миллиметры
+double metresTOmillimetres(double LENGTH) // Перевод из метров в миллиметры
 {
-    LENGHT = LENGHT * 1000 ;
-     return LENGHT ;
+    LENGTH = LENGTH * 1000;
+     return LENGTH;
 }
 
-double metresTOcentimetres(double LENGHT) // Перевод из метров в сантиметры
+double metresTOcentimetres(double LENGTH) // Перевод из метров в сантиметры
 {
-    LENGHT = LENGHT * 100 ;
-     return LENGHT ;
+    LENGTH = LENGTH * 100;
+     return LENGTH;
 }
 
-double metresTOkilometres(double LENGHT) // Перевод из метров в километры
+double metresTOkilometres(double LENGTH) // Перевод из метров в километры
 {
-    LENGHT = LENGHT / 1000 ;
-     return LENGHT ;
+    LENGTH = LENGTH / 1000;
+     return LENGTH;
 }
 ////////////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////Километры//////////////////////////////////////////
-double kilometresTOmillimetres(double LENGHT) // Перевод из километров в миллиметры
+double kilometresTOmillimetres(double LENGTH) // Перевод из километров в миллиметры
 {
-    LENGHT = LENGHT * 1000 ;
-     return LENGHT ;
+    LENGTH = LENGTH * 1000;
+     return LENGTH;
 }
 
-double kilometresTOcentimetres(double LENGHT) // Перевод из километров в сантиметры
+double kilometresTOcentimetres(double LENGTH) // Перевод из километров в сантиметры
 {
-    LENGHT = LENGHT * 100000 ;
-     return LENGHT ;
+    LENGTH = LENGTH * 100000;
+     return LENGTH;
 }
 
-double kilometresTOmetres(double LENGHT) // Перевод из километров в метры
+double kilometresTOmetres(double LENGTH) // Перевод из километров в метры
 {
-    LENGHT = LENGHT * 1000 ;
-     return LENGHT ;
+    LENGTH = LENGTH * 1000;
+     return LENGTH;
 }
 ///////////////////////////////////////////////////////////////////////////////////
 
