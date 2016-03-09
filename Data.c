@@ -1,4 +1,5 @@
 #include <stdio.h>
+// DONE;
 // Конвертирование соседних величин из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
 double adjacentValuesUpward(double DATA)
 {
