@@ -1,4 +1,5 @@
 #include <stdio.h>
+// DONE;
 // Конвертирование соседних величин в сторону увеличения;
 double adjacentValuesUpward(double RESISTANCE)
 {
@@ -41,3 +42,9 @@ double valuesBetweenTwoToDecrease(double RESISTANCE)
     return RESISTANCE;
 }
 // ----------------------------------------------------- //
+// Конвертирование из беккерелей в кюри; //
+double ciTobq(double RESISTANCE)
+{
+    RESISTANCE = RESISTANCE*37000000000;
+    return RESISTANCE;
+}
