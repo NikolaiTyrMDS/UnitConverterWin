@@ -22,7 +22,6 @@ double CelsiusTOKelvins(double TEMPERATURE) {
 double CelsiusTOReaumurs(double TEMPERATURE) {
 	TEMPERATURE = TEMPERATURE * 0.8; // Температура по Реомюру = Температура по Цельсия * 4 / 5
 	return TEMPERATURE;
-
 }
 
 // <Цельсий> ---> <Ранкин> //
@@ -98,6 +97,7 @@ double FahrenheitsTODelisles(double TEMPERATURE) {
 	TEMPERATURE = (212 - TEMPERATURE) * 5/6; // Для перевода температуры из шкалы Фаренгейта в шкалу Делисле нужно воспользоваться формулой [°De]=(212-[°F])*5/6
 	return TEMPERATURE;
 }
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------------Единица измерения Кельвин и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -204,32 +204,38 @@ double RankinesTOReaumurs(double TEMPERATURE) {
 // <Ранкина> ---> <Кельвин> //
 double RankinesTOKelvins(double TEMPERATURE) {
 	TEMPERATURE = TEMPERATURE * 5/9; //Для перевода температуры из шкалы Ранкина в шкалу Кельвина  нужно воспользоваться формулой  	[°K]=[°R]*5/9
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ранкина> ---> <Фаренгейт> //
 double RankinesTOFahrenheits(double TEMPERATURE) {
 	TEMPERATURE = TEMPERATURE - 459.67; //Для перевода температуры из шкалы Ранкина в шкалу Фаренгейта  нужно воспользоваться формулой 	[°F]=[°R]-459.67
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ранкина> ---> <Цельсий> //
 double RankinesTOCelsius(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 491.67) * 5/9 ; //Для перевода температуры из шкалы Ранкина в шкалу Цельсия  нужно воспользоваться формулой [°C]=([°R]-491.67)*5/9  !!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ранкина> ---> <Ньютона> //
 double RankinesTONewtons(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 491.67) * 11/60 ; //Для перевода температуры из шкалы Ранкина в шкалу Ньютона  нужно воспользоваться формулой 	[°N]=([°R]-491.67)*11/60 !!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}     
 
 // <Ранкина> ---> <Рёмера> //
 double RankinesTORomers(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 491.67) * 7/24 + 7.5 ; //Для перевода температуры из шкалы Ранкина в шкалу Ремера  нужно воспользоваться формулой 	[°Ro]=([°R]-491.67)*7/24+7.5 !!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ранкина> ---> <Делисле> //
 double RankinesTODelisles(double TEMPERATURE) {
 	TEMPERATURE = (671.67 - TEMPERATURE ) * 5/6; //Для перевода температуры из шкалы Ранкина в шкалу Делисле  нужно воспользоваться формулой 	[°De]=(671.67-[°R])*5/6!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -238,37 +244,44 @@ double RankinesTODelisles(double TEMPERATURE) {
 // <Ньютона> ---> <Ранкина> //
 double NewtonsTORankines(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE * 60/11) + 491.67; //Для перевода температуры из шкалы Ньютона в шкалу Ранкина  нужно воспользоваться формулой  [°R]=[°N]*60/11+491.67
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ньютона> ---> <Реомюра> //
 double NewtonsTOReaumurs(double TEMPERATURE) {
 	TEMPERATURE = TEMPERATURE * 80/33; //Для перевода температуры из шкалы Ньютона в шкалу Реомюра  нужно воспользоваться формулой  [°Re]=[°N]*80/33
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ньютона> ---> <Кельвина> //
 double NewtonsTOKelvins(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE * 100/33) + 273.15; //Для перевода температуры из шкалы Ньютона в шкалу Кельвина  нужно воспользоваться формулой  [°K]=[°N]*100/33+273.15
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ньютона> ---> <Фаренгейт> //
 double NewtonsTOFahrenheits(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE * 60/11) + 32; //Для перевода температуры из шкалы Ньютона в шкалу Фаренгейта  нужно воспользоваться формулой [°F]=[°N]*60/11+32
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ньютона> ---> <Цельсий> //
 double NewtonsTOCelsius(double TEMPERATURE) {
 	TEMPERATURE = TEMPERATURE * 100/33; //Для перевода температуры из шкалы Ньютона в шкалу Фаренгейта  нужно воспользоваться формулой [°C]=[°N]*100/33
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ньютона> ---> <Рёмера> //
 double NewtonsTORomers(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE * 35/22) + 7.5; //Для перевода температуры из шкалы Ньютона в шкалу Рёмера  нужно воспользоваться формулой 	[°Ro]=[°N]*35/22+7.5 !!!! Уточнить !!!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Ньютона> ---> <Делисле> //
 double NewtonsTODelisles(double TEMPERATURE) {
 	TEMPERATURE = (33 - TEMPERATURE ) * 50/11; //Для перевода температуры из шкалы Ньютона в шкалу Делисле   нужно воспользоваться формулой  [°De]=(33-[°N])*50/11 !!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -277,38 +290,45 @@ double NewtonsTODelisles(double TEMPERATURE) {
 // <Рёмера> ---> <Ньютона> //
 double RomersTONewtons(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 7.5) * 22/35; //Для перевода температуры из шкалы Рёмера в шкалу Ньютона   нужно воспользоваться формулой  [°N]=([°Ro]-7.5)*22/35 !!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Рёмера> ---> <Ранкина> //
 double RomersTORankines(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 7.5 * 24/7) + 491.67; //Для перевода температуры из шкалы Рёмера в шкалу Ранкина   нужно воспользоваться формулой [°R]=([°Ro]-7.5)*24/7+491.67!!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Рёмера> ---> <Реомюра> //
 double RomersTOReaumurs(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 7.5) * 32/21; //Для перевода температуры из шкалы Рёмера в шкалу Реомюра   нужно воспользоваться формулой 	[°Re]=([°Ro]-7.5)*32/21 Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 
 // <Рёмера> ---> <Кельвина> //
 double RomersTOKelvins(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 7.5 * 40/21) + 273.15; //Для перевода температуры из шкалы Рёмера в шкалу Кельвина   нужно воспользоваться формулой [°K]=([°Ro]-7.5)*40/21+273.15 Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Рёмера> ---> <Фаренгейт> //
 double RomersTOFahrenheits(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 7.5 * 24/7) + 32; //Для перевода температуры из шкалы Рёмера в шкалу Фаренгейта   нужно воспользоваться формулой [°F]=([°Ro]-7.5)*24/7+32 !!!! Нужно уточнить !!!!
-}   return TEMPERATURE;!
+        return TEMPERATURE;
+}
 
 // <Рёмера> ---> <Цельсий> //
 double RomersTOCelsius(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 7.5 * 40/21); //Для перевода температуры из шкалы Рёмера в шкалу Цельсий   нужно воспользоваться формулой [°C]=([°Ro]-7.5)*40/21	!!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+         return TEMPERATURE;
+}
 
 // <Рёмера> ---> <Делисле> //
 double RomersTODelisles(double TEMPERATURE) {
 	TEMPERATURE = (60 - TEMPERATURE) * 20/7; //Для перевода температуры из шкалы Рёмера в шкалу Делисле    нужно воспользоваться формулой [°De]=(60-[°Ro])*20/7	!!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -317,36 +337,43 @@ double RomersTODelisles(double TEMPERATURE) {
 // <Делисле> ---> <Рёмера> //
 double DelislesTORomers(double TEMPERATURE) {
 	TEMPERATURE = (60 - TEMPERATURE) * 7/20; //Для перевода температуры из шкалы Делисле в шкалу Рёмера    нужно воспользоваться формулой [°Ro]=60-[°De]*7/20	!!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Делисле> ---> <Ньютона> //
 double DelislesTONewtons(double TEMPERATURE) {
 	TEMPERATURE = (33 - TEMPERATURE) * 11/50; //Для перевода температуры из шкалы Делисле в шкалу Ньютона    нужно воспользоваться формулой [°N]=33-[°De]*11/50	!!!! Нужно уточнить !!!!
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Делисле> ---> <Ранкина> //
 double DelislesTORankines(double TEMPERATURE) {
 	TEMPERATURE = (671.67 - TEMPERATURE) * 6/5; //Для перевода температуры из шкалы Делисле в шкалу Ранкина    нужно воспользоваться формулой 	[°R]=671.67-[°De]*6/5
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Делисле> ---> <Реомюра> //
 double DelislesTOReaumurs(double TEMPERATURE) {
 	TEMPERATURE = (80 - TEMPERATURE) * 8/15; //Для перевода температуры из шкалы Делисле в шкалу Реомюра    нужно воспользоваться формулой  [°Re]=80-[°De]*8/15
-}   return TEMPERATURE;
+       return TEMPERATURE;
+}
 
 // <Делисле> ---> <Кельвин> //
 double DelislesTOKelvins(double TEMPERATURE) {
 	TEMPERATURE = (373.15 - TEMPERATURE) * 2/3; //Для перевода температуры из шкалы Делисле в шкалу Кельвина   нужно воспользоваться формулой  [°K]=373.15-[°De]*2/3
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Делисле> ---> <Фаренгейт> //
 double DelislesTOFahrenheits(double TEMPERATURE) {
 	TEMPERATURE = (212 - TEMPERATURE) * 6/5; //Для перевода температуры из шкалы Делисле в шкалу Фаренгейта   нужно воспользоваться формулой  [°F]=212-[°De]*6/5
-}   return TEMPERATURE;
+        return TEMPERATURE;
+}
 
 // <Делисле> ---> <Цельсий> //
 double DelislesTOCelsius(double TEMPERATURE) {
 	TEMPERATURE = (100 - TEMPERATURE) * 2/3; //Для перевода температуры из шкалы Делисле в шкалу Фаренгейта   нужно воспользоваться формулой  [°C]=100-[°De]*2/3
-}   return TEMPERATURE;
+       return TEMPERATURE;
+}
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
