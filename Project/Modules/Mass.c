@@ -290,3 +290,294 @@ double Carats_TO_Grains(double MASS) {
 }
 
 /*--------------------------------------------------------------------------*/
+
+/*------------------------Единица измерения Стоун и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// <Стоун> ---> <Карат> //
+double Stones_TO_Carats(double MASS) {
+	MASS = MASS * 31751.5;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Тонна> //
+double Stones_TO_Tonnes(double MASS) {
+	MASS = MASS * 0.00635029;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Центнер> //
+double Stones_TO_Quintals(double MASS) {
+	MASS = MASS * 0,0635029;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Килограмм> //
+double Stones_TO_Kilograms(double MASS) {
+	MASS = MASS * 6,35029;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Грамм> //
+double Stones_TO_Grams(double MASS) {
+	MASS = MASS * 6350.29;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Фунт> //
+double Stones_TO_Funts(double MASS) {
+	MASS = MASS * 14;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Унция> //
+double Stones_TO_Ounces(double MASS) {
+	MASS = MASS * 224;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Драхма> //
+double Stones_TO_Drachmas(double MASS) {
+	MASS = MASS * 3583.99;   // Формула для перевода
+	return MASS;
+}
+
+// <Стоун> ---> <Гран> //
+double Stones_TO_Grains(double MASS) {
+	MASS = MASS * 97999.9;   // Формула для перевода
+	return MASS;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*------------------------Единица измерения Фунт и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// <Фунт> ---> <Стоун> //
+double Funts_TO_Stones(double MASS) {
+	MASS = MASS * 0.0714286;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Карат> //
+double Funts_TO_Carats(double MASS) {
+	MASS = MASS * 2267.96;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Тонна> //
+double Funts_TO_Tonnes(double MASS) {
+	MASS = MASS * 0.000453592;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Центнер> //
+double Funts_TO_Quintals(double MASS) {
+	MASS = MASS * 0.00453592;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Килограмм> //
+double Funts_TO_Kilograms(double MASS) {
+	MASS = MASS * 0.00453592;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Грамм> //
+double Funts_TO_Grams(double MASS) {
+	MASS = MASS * 453.592;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Унция> //
+double Funts_TO_Ounces(double MASS) {
+	MASS = MASS * 16;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Драхма> //
+double Funts_TO_Drachmas(double MASS) {
+	MASS = MASS * 255.999;   // Формула для перевода
+	return MASS;
+}
+
+// <Фунт> ---> <Гран> //
+double Funts_TO_Grains(double MASS) {
+	MASS = MASS * 6999.99;   // Формула для перевода
+	return MASS;
+}
+/*--------------------------------------------------------------------------*/
+
+/*------------------------Единица измерения Унция и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// <Унция> ---> <Фунт> //
+double Ounces_TO_Funts(double MASS) {
+	MASS = MASS * 0.0625;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Стоун> //
+double Ounces_TO_Stones(double MASS) {
+	MASS = MASS * 0.00446429;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Карат> //
+double Ounces_TO_Carats(double MASS) {
+	MASS = MASS * 141.748;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Тонна> //
+double Ounces_TO_Tonnes(double MASS) {
+	MASS = MASS * 2.83495;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Центнер> //
+double Ounces_TO_Quintals(double MASS) {
+	MASS = MASS * 0.000283495;   // Формула для перевода
+	return MASS;
+}
+++
+// <Унция> ---> <Килограмм> //
+double Ounces_TO_Kilograms(double MASS) {
+	MASS = MASS * 0.0283495;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Грамм> //
+double Ounces_TO_Grams(double MASS) {
+	MASS = MASS * 28.3495;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Драхма> //
+double Ounces_TO_Drachmas(double MASS) {
+	MASS = MASS * 16;   // Формула для перевода
+	return MASS;
+}
+
+// <Унция> ---> <Гран> //
+double Ounces_TO_Grains(double MASS) {
+	MASS = MASS * 437.499;   // Формула для перевода
+	return MASS;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+
+/*------------------------Единица измерения Драхма и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// <Драхма> ---> <Унция> //
+double Drachmas_TO_Ounces(double MASS) {
+	MASS = MASS * 0.0625002;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Фунт> //
+double Drachmas_TO_Funts(double MASS) {
+	MASS = MASS * 0.00390626;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Стоун> //
+double Drachmas_TO_Stones(double MASS) {
+	MASS = MASS * 0.000279019;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Карат> //
+double Drachmas_TO_Carats(double MASS) {
+	MASS = MASS * 8.85925;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Тонна> //
+double Drachmas_TO_Tonnes(double MASS) {
+	MASS = MASS * 1.77185;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Центнер> //
+double Drachmas_TO_Quintals(double MASS) {
+	MASS = MASS * 1.77185;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Килограмм> //
+double Drachmas_TO_Kilograms(double MASS) {
+	MASS = MASS * 0.00177185;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Грамм> //
+double Drachmas_TO_Grams(double MASS) {
+	MASS = MASS * 1.77185;   // Формула для перевода
+	return MASS;
+}
+
+// <Драхма> ---> <Гран> //
+double Drachmas_TO_Grains(double MASS) {
+	MASS = MASS * 27.3438;   // Формула для перевода
+	return MASS;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*------------------------Единица измерения Гран и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// <Гран> ---> <Драхма> //
+double Grains_TO_Drachmas(double MASS) {
+	MASS = MASS * 0.0365714;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Унция> //
+double Grains_TO_Ounces(double MASS) {
+	MASS = MASS * 0.00228572;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Фунт> //
+double Grains_TO_Funts(double MASS) {
+	MASS = MASS * 0.000142857;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Стоун> //
+double Grains_TO_Stones(double MASS) {
+	MASS = MASS * 1.0204;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Карат> //
+double Grains_TO_Carats(double MASS) {
+	MASS = MASS * 0.323995;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Тонна> //
+double Grains_TO_Tonnes(double MASS) {
+	MASS = MASS / 15430000;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Центнер> //
+double Grains_TO_Quintals(double MASS) {
+	MASS = MASS / 1543235.83529;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Килограмм> //
+double Grains_TO_Kilograms(double MASS) {
+	MASS = MASS / 15432.3;   // Формула для перевода
+	return MASS;
+}
+
+// <Гран> ---> <Грамм> //
+double Grains_TO_Grams(double MASS) {
+	MASS = MASS * 0.064799 ;   // Формула для перевода
+	return MASS;
+}
+
+/*--------------------------------------------------------------------------*/
