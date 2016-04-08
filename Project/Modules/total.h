@@ -1,3 +1,13 @@
+typedef struct entered_and_gated_parameters {
+    double MEASUREMENT, result;
+    int measurement_id;
+} MainParameters;
+
+typedef struct working_values {
+    double gate;
+    int input_choice, id, output_choice;
+} FunctionsParameters;
+
 double selectionswitchData(double MEASUREMENT);
 double adjacentValuesUpward(double DATA);
 double adjacentValuesToDecrease(double DATA);
@@ -29,13 +39,3 @@ double bitsToexabytes(double DATA);
 double exabytesTobits(double DATA);
 double bitsTozetabytes(double DATA);
 double zetabytesTobits(double DATA);
-
-typedef struct entered_and_gated_parameters {
-    double MEASUREMENT, result;
-    int measurement_id;
-} MainParameters;
-
-typedef struct working_values {
-    double gate;
-    int input_choice, id, output_choice;
-} FunctionsParameters;
