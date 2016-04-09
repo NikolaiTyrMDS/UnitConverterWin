@@ -11,7 +11,7 @@ int main()
 
     MainParameters head;
     int like_to_continue = 1;
-    float version = 1.13;
+    float version = 1.15;
 
     printf("Unit Converter. Версия %.2f \n\n", version);
 
