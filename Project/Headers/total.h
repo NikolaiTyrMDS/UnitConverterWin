@@ -1,6 +1,7 @@
 typedef struct entered_and_gated_parameters {
     double MEASUREMENT, result;
     int measurement_id;
+    float version;
 } MainParameters;
 
 typedef struct working_values {
