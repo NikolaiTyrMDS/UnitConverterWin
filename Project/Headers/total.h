@@ -4,14 +4,18 @@ typedef struct entered_and_gated_parameters {
     int measurement_id;
     float version;
 } MainParameters;
+// ИЗМЕНЕНИЕ ПАРАМЕТРОВ ОПАСНО ДЛЯ ЖИЗНИ!;
 
 typedef struct working_values {
     double gate;
     int input_choice, id, output_choice;
 } FunctionsParameters;
+// ИЗМЕНЕНИЕ ПАРАМЕТРОВ ОПАСНО ДЛЯ ЖИЗНИ!;
 
+// Служебные функции;
 double transfer(char *MEASUREMENT);
 
+// Прототипы рабочих функций;
 double adjacentValuesUpward(double DATA);
 double adjacentValuesToDecrease(double DATA);
 double valuesBetweenOneUpward(double DATA);
@@ -43,4 +47,5 @@ double exabytesTobits(double DATA);
 double bitsTozetabytes(double DATA);
 double zetabytesTobits(double DATA);
 
+// Прототипы конструкций switch;
 double selectionswitchData(double MEASUREMENT);
