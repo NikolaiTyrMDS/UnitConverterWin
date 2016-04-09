@@ -1,15 +1,21 @@
 typedef struct entered_and_gated_parameters {
-    double MEASUREMENT, result;
+    char MEASUREMENT[261];
+    double result, VOLUME;
     int measurement_id;
     float version;
 } MainParameters;
+// ИЗМЕНЕНИЕ ПАРАМЕТРОВ ОПАСНО ДЛЯ ЖИЗНИ!;
 
 typedef struct working_values {
     double gate;
     int input_choice, id, output_choice;
 } FunctionsParameters;
+// ИЗМЕНЕНИЕ ПАРАМЕТРОВ ОПАСНО ДЛЯ ЖИЗНИ!;
 
-double selectionswitchData(double MEASUREMENT);
+// Служебные функции;
+double transfer(char *MEASUREMENT);
+
+// Прототипы рабочих функций;
 double adjacentValuesUpward(double DATA);
 double adjacentValuesToDecrease(double DATA);
 double valuesBetweenOneUpward(double DATA);
@@ -40,3 +46,28 @@ double bitsToexabytes(double DATA);
 double exabytesTobits(double DATA);
 double bitsTozetabytes(double DATA);
 double zetabytesTobits(double DATA);
+double CelsiusTOFahrenheits(double TEMPERATURE);
+double CelsiusTOKelvins(double TEMPERATURE);
+double CelsiusTOReaumurs(double TEMPERATURE);
+double CelsiusTORankines(double TEMPERATURE);
+double CelsiusTONewtons(double TEMPERATURE);
+double CelsiusTORomers(double TEMPERATURE);
+double CelsiusTODelisles(double TEMPERATURE);
+double FahrenheitsTOCelsiuss(double TEMPERATURE);
+double FahrenheitsTOKelvins(double TEMPERATURE);
+double FahrenheitsTOReaumurs(double TEMPERATURE);
+double FahrenheitsTORankines(double TEMPERATURE);
+double FahrenheitsTONewtons(double TEMPERATURE);
+double FahrenheitsTORomers(double TEMPERATURE);
+double FahrenheitsTODelisles(double TEMPERATURE);
+double KelvinsTOFahrenheits(double TEMPERATURE);
+double KelvinsTOCelsius(double TEMPERATURE);
+double KelvinsTOReaumurs(double TEMPERATURE);
+double KelvinsTORankines(double TEMPERATURE);
+double KelvinsTONewtons(double TEMPERATURE);
+double KelvinsTORomers(double TEMPERATURE);
+double KelvinsTODelisles(double TEMPERATURE);
+
+// Прототипы конструкций switch;
+double selectionswitchData(double MEASUREMENT);
+double selectionswitchTemperature(double MEASUREMENT);

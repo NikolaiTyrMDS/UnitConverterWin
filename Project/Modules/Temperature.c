@@ -223,7 +223,7 @@ double RankinesTOCelsius(double TEMPERATURE) {
 double RankinesTONewtons(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 491.67) * 11/60 ; //Для перевода температуры из шкалы Ранкина в шкалу Ньютона  нужно воспользоваться формулой 	[°N]=([°R]-491.67)*11/60 !!!! Нужно уточнить !!!!
         return TEMPERATURE;
-}     
+}
 
 // <Ранкина> ---> <Рёмера> //
 double RankinesTORomers(double TEMPERATURE) {
