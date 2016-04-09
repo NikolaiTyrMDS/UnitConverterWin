@@ -11,12 +11,12 @@ int main()
 
     MainParameters head;
     int like_to_continue = 1;
-    float version = 1.15;
+    float version = 1.27;
 
     printf("Unit Converter. Версия %.2f \n\n", version);
 
     printf("ВНИМАНИЕ!\n"
-           "В настоящее время этот конвертер работает исключительно с объёмами данных\n\n");
+           "В настоящее время этот конвертер работает с пунктами 3, 17. \n\n");
 
     while(like_to_continue == 1) {
         printf("Выберите, с величиной какого рода Вы хотели бы работать: \n"
@@ -105,9 +105,11 @@ int main()
                 system("pause");
                 exit(EXIT_FAILURE);
             case 17:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = transfer(head.MEASUREMENT);
+                head.result = selectionswitchTemperature(head.VOLUME);
+                break;
             case 18:
                 fprintf(stderr, "Модуль не существует\n");
                 system("pause");

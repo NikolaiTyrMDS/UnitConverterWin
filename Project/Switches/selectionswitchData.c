@@ -18,7 +18,7 @@ double selectionswitchData(double MEASUREMENT)
            "8 - Эксабайт;\n"
            "9 - Зэтабайт;\n \t");
     scanf("%d", &key.input_choice);
-    while(key.input_choice != 1 && key.input_choice != 2 && key.input_choice != 3 && key.input_choice != 4 && key.input_choice != 5 && key.input_choice != 6 && key.input_choice != 7 && key.input_choice != 8 && key.input_choice != 9) {
+    while(key.input_choice >= 10 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
     }
@@ -35,19 +35,13 @@ double selectionswitchData(double MEASUREMENT)
            "8 - Эксабайт;\n"
            "9 - Зэтабайт;\n\t");
     scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || (key.output_choice != 1 && key.output_choice != 2 && key.output_choice != 3 && key.output_choice != 4 && key.output_choice != 5 && key.output_choice != 6 && key.output_choice != 7 && key.output_choice != 8 && key.output_choice != 9) )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.output_choice);
     }
 
-    key.id = key.input_choice;
-    if(key.output_choice >= 10) {
-        key.id = key.id * 100 + key.output_choice;
-    }
-    else if(key.output_choice < 10) {
-        key.id = key.id * 10 + key.output_choice;
-    }
+    key.id = key.input_choice * 10 + key.output_choice;
 
     switch(key.id) {
         case 12:
