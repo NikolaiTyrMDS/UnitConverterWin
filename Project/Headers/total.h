@@ -13,7 +13,7 @@ typedef struct working_values {
 // ÈÇÌÅÍÅÍÈÅ ÏÀÐÀÌÅÒÐÎÂ ÎÏÀÑÍÎ ÄËß ÆÈÇÍÈ!;
 
 // Ñëóæåáíûå ôóíêöèè;
-double transfer(char *MEASUREMENT);
+double parsing(char *MEASUREMENT);
 
 // Ïðîòîòèïû ðàáî÷èõ ôóíêöèé;
 double adjacentValuesUpward(double DATA);

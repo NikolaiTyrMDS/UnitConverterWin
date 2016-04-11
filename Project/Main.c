@@ -10,7 +10,7 @@ int main()
     setlocale(LC_ALL, "Russian");
 
     MainParameters head;
-    head.version = 1.27;
+    head.version = 1.54;
     head.like_to_continue = 1;
 
     printf("Unit Converter. Версия %.2f \n\n", head.version);
@@ -49,7 +49,7 @@ int main()
             case 3:
                 printf("Введите число, которое Вы хотели были перевести. \n"
                        "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
-                head.VOLUME = transfer(head.MEASUREMENT);
+                head.VOLUME = parsing(head.MEASUREMENT);
                 head.result = selectionswitchData(head.VOLUME);
                 break;
             case 4:
@@ -107,7 +107,7 @@ int main()
             case 17:
                 printf("Введите число, которое Вы хотели были перевести. \n"
                        "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
-                head.VOLUME = transfer(head.MEASUREMENT);
+                head.VOLUME = parsing(head.MEASUREMENT);
                 head.result = selectionswitchTemperature(head.VOLUME);
                 break;
             case 18:
