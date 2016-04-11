@@ -35,25 +35,25 @@ double selectionswitchTemperature(double MEASUREMENT)
 
     switch(key.id) {
         case 12:
-            key.gate = bitsTobytes(MEASUREMENT);
+            key.gate = DelislesTOKelvins(MEASUREMENT);
             break;
         case 13:
-            key.gate = bitsTokilobytes(MEASUREMENT);
+            key.gate = DelislesTONewtons(MEASUREMENT);
             break;
         case 14:
-            key.gate = bitsTomegabytes(MEASUREMENT);
+            key.gate = DelislesTORankines(MEASUREMENT);
             break;
         case 15:
-            key.gate = bitsTogigabytes(MEASUREMENT);
+            key.gate = DelislesTOReaumurs(MEASUREMENT);
             break;
         case 16:
-            key.gate = bitsToterabytes(MEASUREMENT);
+            key.gate = DelislesTORomers(MEASUREMENT);
             break;
         case 17:
-            key.gate = bitsTopetabytes(MEASUREMENT);
+            key.gate = DelislesTOCelsius(MEASUREMENT);
             break;
         case 18:
-            key.gate = bitsToexabytes(MEASUREMENT);
+            key.gate = DelislesTOFahrenheits(MEASUREMENT);
             break;
         case 21:
             key.gate = KelvinsTODelisles(MEASUREMENT);
@@ -77,88 +77,88 @@ double selectionswitchTemperature(double MEASUREMENT)
             key.gate = KelvinsTOFahrenheits(MEASUREMENT);
             break;
         case 31:
-            key.gate = kilobytesTobits(MEASUREMENT);
+            key.gate = NewtonsTODelisles(MEASUREMENT);
             break;
         case 32:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = NewtonsTOKelvins(MEASUREMENT);
             break;
         case 34:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = NewtonsTORankines(MEASUREMENT);
             break;
         case 35:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = NewtonsTOReaumurs(MEASUREMENT);
             break;
         case 36:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = NewtonsTORomers(MEASUREMENT);
             break;
         case 37:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            key.gate = NewtonsTOCelsius(MEASUREMENT);
             break;
         case 38:
-            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+            key.gate = NewtonsTOFahrenheits(MEASUREMENT);
             break;
         case 41:
-            key.gate = megabytesTobits(MEASUREMENT);
+            key.gate = RankinesTODelisles(MEASUREMENT);
             break;
         case 42:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = RankinesTOKelvins(MEASUREMENT);
             break;
         case 43:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = RankinesTONewtons(MEASUREMENT);
             break;
         case 45:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = RankinesTOReaumurs(MEASUREMENT);
             break;
         case 46:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = RankinesTORomers(MEASUREMENT);
             break;
         case 47:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = RankinesTOCelsius(MEASUREMENT);
             break;
         case 48:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            key.gate = RankinesTOFahrenheits(MEASUREMENT);
             break;
         case 51:
-            key.gate = gigabytesTobits(MEASUREMENT);
+            key.gate = ReaumursTODelisles(MEASUREMENT);
             break;
         case 52:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = ReaumursTOKelvins(MEASUREMENT);
             break;
         case 53:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = ReaumursTONewtons(MEASUREMENT);
             break;
         case 54:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = ReaumursTORankines(MEASUREMENT);
             break;
         case 56:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = ReaumursTORomers(MEASUREMENT);
             break;
         case 57:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = ReaumursTOCelsius(MEASUREMENT);
             break;
         case 58:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = ReaumursTOFahrenheits(MEASUREMENT);
             break;
         case 61:
-            key.gate = terabytesTobits(MEASUREMENT);
+            key.gate = RomersTODelisles(MEASUREMENT);
             break;
         case 62:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            key.gate = RomersTOKelvins(MEASUREMENT);
             break;
         case 63:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = RomersTONewtons(MEASUREMENT);
             break;
         case 64:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = RomersTORankines(MEASUREMENT);
             break;
         case 65:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = RomersTOReaumurs(MEASUREMENT);
             break;
         case 67:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = RomersTOCelsius(MEASUREMENT);
             break;
         case 68:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = RomersTOFahrenheits(MEASUREMENT);
             break;
         case 71:
             key.gate = CelsiusTODelisles(MEASUREMENT);

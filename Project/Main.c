@@ -10,15 +10,15 @@ int main()
     setlocale(LC_ALL, "Russian");
 
     MainParameters head;
-    int like_to_continue = 1;
-    float version = 1.27;
+    head.version = 1.27;
+    head.like_to_continue = 1;
 
-    printf("Unit Converter. Версия %.2f \n\n", version);
+    printf("Unit Converter. Версия %.2f \n\n", head.version);
 
     printf("ВНИМАНИЕ!\n"
            "В настоящее время этот конвертер работает с пунктами 3, 17. \n\n");
 
-    while(like_to_continue == 1) {
+    while(head.like_to_continue == 1) {
         printf("Выберите, с величиной какого рода Вы хотели бы работать: \n"
                "1 - Время;\t\t\t11 - Плотность; \n"
                "2 - Давление;\t\t\t12 - Радиоактивность; \n"
@@ -123,13 +123,14 @@ int main()
                 system("pause");
                 exit(EXIT_FAILURE);
             default:
+                fprintf(stderr, "Вы пытаетесь выбрать род величины, которого не существует. Программа будет завершена;");
                 break;
         }
 
         printf("Результат конвертирования: %.6lf\n", head.result);
 
         printf("Хотите продолжить?\n");
-        scanf("%d", &like_to_continue);
+        scanf("%d", &head.like_to_continue);
         printf("\n");
     }
 
