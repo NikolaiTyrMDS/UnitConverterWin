@@ -7,7 +7,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "");
 
     MainParameters head;
     head.version = 1.54;
@@ -129,6 +129,7 @@ int main()
 
         printf("Результат конвертирования: %.6lf\n", head.result);
 
+        printf("Вам нравится?\n");
         printf("Хотите продолжить?\n");
         scanf("%d", &head.like_to_continue);
         printf("\n");
