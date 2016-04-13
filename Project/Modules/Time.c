@@ -16,6 +16,36 @@ double nsec_to_msec (double TIME) {
 	return TIME;
 }
 
+double nsec_to_min (double TIME) {
+	TIME = (TIME / pow(10,-9)) * 60;
+	return TIME;
+}
+
+double nsec_to_chac (double TIME) {
+	TIME = (TIME / pow(10,-9)) * 3600;
+	return TIME;
+}
+
+double nsec_to_sut (double TIME) {
+	TIME = (TIME / pow(10,-9)) * 3600 * 24;
+	return TIME;
+}
+
+double nsec_to_week (double TIME) {
+	TIME = (TIME / pow(10,-9)) * 3600 * 24 * 7;
+	return TIME;
+}
+
+double nsec_to_year (double TIME) {
+	TIME = (TIME / pow(10,-9)) * 3600 * 24 * 7 * 52;
+	return TIME;
+}
+
+double nsec_to_vek (double TIME) {
+	TIME = (TIME / pow(10,-9)) * 3600 * 24 * 7 * 52 * 100;
+	return TIME;
+}
+
 double mksec_to_sec (double TIME) {
 	TIME = TIME / pow(10, 6);
 	return TIME;
@@ -26,6 +56,36 @@ double mksec_to_msec (double TIME) {
 	return TIME;
 }
 
+double mksec_to_min (double TIME) {
+	TIME = (TIME / pow(10,6)) * 60;
+	return TIME;
+}
+
+double mksec_to_chas (double TIME) {
+	TIME = (TIME / pow(10,6)) * 3600;
+	return TIME;
+}
+
+double mksec_to_sut (double TIME) {
+	TIME = (TIME / pow(10,6)) * 3600 * 24;
+	return TIME;
+}
+
+double mksec_to_weak (double TIME) {
+	TIME = (TIME / pow(10,6)) * 3600 * 24 * 7;
+	return TIME;
+}
+
+double mksec_to_year (double TIME) {
+	TIME = (TIME / pow(10,6)) * 3600 * 24 * 7 * 52;
+	return TIME;
+}
+
+double mksec_to_vek (double TIME) {
+	TIME = (TIME / pow(10,6)) * 3600 * 24 * 7 * 52 * 100;
+	return TIME;
+}
+///////////////DODELAT
 double mksec_to_nsec (double TIME) {
 	TIME = TIME * pow(10,3);
 	return TIME;
