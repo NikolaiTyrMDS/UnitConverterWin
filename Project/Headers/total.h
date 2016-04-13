@@ -272,3 +272,95 @@ double MkMole2MgMole(double QOS);
 double MgMole2MkMole(double QOS);
 double PoundMole2MgMole(double QOS);
 double MgMole2PoundMole(double QOS);
+
+//прототип функций конвентирования различных величин массы
+//Единица измерения Грамм и её перевод
+double Grams_TO_Kilograms(double MASS);
+double Grams_TO_Quintals(double MASS);
+double Grams_TO_Tonnes(double MASS);
+double Grams_TO_Carats(double MASS);
+double Grams_TO_Stones(double MASS);
+double Grams_TO_Funts(double MASS);
+double Grams_TO_Ounces(double MASS);
+double Grams_TO_Drachmas(double MASS);
+double Grams_TO_Grains(double MASS);
+//Единица измерения Центнер и её перевод
+double Quintals_TO_Kilograms(double MASS);
+double Quintals_TO_Grams(double MASS);
+double Quintals_TO_Tonnes(double MASS);
+double Quintals_TO_Carats(double MASS);
+double Quintals_TO_Stones(double MASS);
+double Quintals_TO_Funts(double MASS);
+double Quintals_TO_Ounces(double MASS);
+double Quintals_TO_Drachmas(double MASS);
+double Quintals_TO_Grains(double MASS);
+//Единица измерения Тонна и её перевод
+double Tonnes_TO_Quintals(double MASS);
+double Tonnes_TO_Kilograms(double MASS);
+double Tonnes_TO_Grams(double MASS);
+double Tonnes_TO_Carats(double MASS);
+double Tonnes_TO_Stones(double MASS);
+double Tonnes_TO_Funts(double MASS);
+double Tonnes_TO_Ounces(double MASS);
+double Tonnes_TO_Drachmas(double MASS);
+double Tonnes_TO_Grains(double MASS);
+//Единица измерения Карат и её перевод
+double Carats_TO_Tonnes(double MASS);
+double Carats_TO_Quintals(double MASS);
+double Carats_TO_Kilograms(double MASS);
+double Carats_TO_Grams(double MASS);
+double Carats_TO_Stones(double MASS);
+double Carats_TO_Funts(double MASS);
+double Carats_TO_Ounces(double MASS);
+double Carats_TO_Drachmas(double MASS);
+double Carats_TO_Grains(double MASS);
+//Единица измерения Стоун и её перевод
+double Stones_TO_Carats(double MASS);
+double Stones_TO_Tonnes(double MASS);
+double Stones_TO_Quintals(double MASS);
+double Stones_TO_Kilograms(double MASS);
+double Stones_TO_Grams(double MASS);
+double Stones_TO_Funts(double MASS);
+double Stones_TO_Ounces(double MASS);
+double Stones_TO_Drachmas(double MASS);
+double Stones_TO_Grains(double MASS);
+//Единица измерения Фунт и её перевод
+double Funts_TO_Stones(double MASS);
+double Funts_TO_Carats(double MASS);
+double Funts_TO_Tonnes(double MASS);
+double Funts_TO_Quintals(double MASS);
+double Funts_TO_Kilograms(double MASS);
+double Funts_TO_Grams(double MASS);
+double Funts_TO_Ounces(double MASS);
+double Funts_TO_Drachmas(double MASS);
+double Funts_TO_Grains(double MASS);
+//Единица измерения Унция и её перевод
+double Ounces_TO_Funts(double MASS);
+double Ounces_TO_Stones(double MASS);
+double Ounces_TO_Carats(double MASS);
+double Ounces_TO_Tonnes(double MASS);
+double Ounces_TO_Quintals(double MASS);
+double Ounces_TO_Kilograms(double MASS);
+double Ounces_TO_Grams(double MASS);
+double Ounces_TO_Drachmas(double MASS);
+double Ounces_TO_Grains(double MASS);
+//Единица измерения Драхма и её перевод
+double Drachmas_TO_Ounces(double MASS);
+double Drachmas_TO_Funts(double MASS);
+double Drachmas_TO_Stones(double MASS);
+double Drachmas_TO_Carats(double MASS);
+double Drachmas_TO_Tonnes(double MASS);
+double Drachmas_TO_Quintals(double MASS);
+double Drachmas_TO_Kilograms(double MASS);
+double Drachmas_TO_Grams(double MASS);
+double Drachmas_TO_Grains(double MASS);
+//Единица измерения Гран и её перевод
+double Grains_TO_Drachmas(double MASS);
+double Grains_TO_Ounces(double MASS);
+double Grains_TO_Funts(double MASS);
+double Grains_TO_Stones(double MASS);
+double Grains_TO_Carats(double MASS);
+double Grains_TO_Tonnes(double MASS);
+double Grains_TO_Quintals(double MASS);
+double Grains_TO_Kilograms(double MASS);
+double Grains_TO_Grams(double MASS);
