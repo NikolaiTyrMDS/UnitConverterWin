@@ -1,0 +1,276 @@
+#include <stdio.h>
+#include <math.h>
+#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+
+double selectionswitchTime(double MEASUREMENT)
+{
+    FunctionsParameters key;
+
+    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
+           " 1 - Наносекунды;\n"
+           " 2 - Микросекунды;\n"
+           " 3 - Миллисекунды;\n"
+           " 4 - Секунды;\n"
+           " 5 - Минуты;\n"
+           " 6 - Часы;\n"
+           " 7 - Сутки;\n"
+           " 8 - Недели;\n"
+           " 9 - Года;\n"
+           "10 - Века;\n \t");
+    scanf("%d", &key.input_choice);
+    while(key.input_choice >= 10 || key.input_choice == 0) {
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
+        scanf("%d", &key.input_choice);
+    }
+
+    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
+           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
+           " 1 - Наносекунды;\n"
+           " 2 - Микросекунды;\n"
+           " 3 - Миллисекунды;\n"
+           " 4 - Секунды;\n"
+           " 5 - Минуты;\n"
+           " 6 - Часы;\n"
+           " 7 - Сутки;\n"
+           " 8 - Недели;\n"
+           " 9 - Года;\n"
+           "10 - Века;\n \t");
+    scanf("%d", &key.output_choice);
+    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
+                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
+        scanf("%d", &key.output_choice);
+    }
+
+    key.id = key.input_choice * 100 + key.output_choice;
+
+    switch(key.id) {
+        case 102:
+            key.gate = nsec_to_mksec(MEASUREMENT);
+            break;
+        case 103:
+            key.gate = nsec_to_msec(MEASUREMENT);
+            break;
+        case 104:
+            key.gate = nsec_to_sec(MEASUREMENT);
+            break;
+        case 105:
+            key.gate = nsec_to_min(MEASUREMENT);
+            break;
+        case 106:
+            key.gate = nsec_to_chac(MEASUREMENT);
+            break;
+        case 107:
+            key.gate = nsec_to_sut(MEASUREMENT);
+            break;
+        case 108:
+            key.gate = nsec_to_week(MEASUREMENT);
+            break;
+        case 109:
+            key.gate = nsec_to_year(MEASUREMENT);
+            break;
+        case 110:
+            key.gate = nsec_to_vek(MEASUREMENT);
+            break;            
+        case 201:
+            key.gate = mksec_to_nsec(MEASUREMENT);
+            break;
+        case 203:
+            key.gate = mksec_to_msec(MEASUREMENT);
+            break;
+        case 204:
+            key.gate = mksec_to_sec(MEASUREMENT);
+            break;
+        case 205:
+            key.gate = mksec_to_min(MEASUREMENT);
+            break;
+        case 206:
+            key.gate = mksec_to_chas(MEASUREMENT);
+            break;
+        case 207:
+            key.gate = mksec_to_sut(MEASUREMENT);
+            break;
+        case 208:
+            key.gate = mksec_to_weak(MEASUREMENT);
+            break;
+        case 209:
+            key.gate = mksec_to_year(MEASUREMENT);
+            break;
+        case 210:
+            key.gate = mksec_to_vek(MEASUREMENT);
+            break;
+            ///////////////DODELAT
+        case 32:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        case 34:
+            key.gate = adjacentValuesUpward(MEASUREMENT);
+            break;
+        case 35:
+            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            break;
+        case 36:
+            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            break;
+        case 37:
+            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            break;
+        case 38:
+            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+            break;
+        case 39:
+            key.gate = valuesBetweenFiveUpward(MEASUREMENT);
+            break;
+        case 41:
+            key.gate = megabytesTobits(MEASUREMENT);
+            break;
+        case 42:
+            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            break;
+        case 43:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        case 45:
+            key.gate = adjacentValuesUpward(MEASUREMENT);
+            break;
+        case 46:
+            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            break;
+        case 47:
+            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            break;
+        case 48:
+            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            break;
+        case 49:
+            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+            break;
+        case 51:
+            key.gate = gigabytesTobits(MEASUREMENT);
+            break;
+        case 52:
+            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            break;
+        case 53:
+            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            break;
+        case 54:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        case 56:
+            key.gate = adjacentValuesUpward(MEASUREMENT);
+            break;
+        case 57:
+            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            break;
+        case 58:
+            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            break;
+        case 59:
+            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            break;
+        case 61:
+            key.gate = terabytesTobits(MEASUREMENT);
+            break;
+        case 62:
+            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            break;
+        case 63:
+            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            break;
+        case 64:
+            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            break;
+        case 65:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        case 67:
+            key.gate = adjacentValuesUpward(MEASUREMENT);
+            break;
+        case 68:
+            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            break;
+        case 69:
+            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            break;
+        case 71:
+            key.gate = petabytesTobits(MEASUREMENT);
+            break;
+        case 72:
+            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+            break;
+        case 73:
+            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            break;
+        case 74:
+            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            break;
+        case 75:
+            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            break;
+        case 76:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        case 78:
+            key.gate = adjacentValuesUpward(MEASUREMENT);
+            break;
+        case 79:
+            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            break;
+        case 81:
+            key.gate = exabytesTobits(MEASUREMENT);
+            break;
+        case 82:
+            key.gate = valuesBetweenFiveToDecrease(MEASUREMENT);
+            break;
+        case 83:
+            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+            break;
+        case 84:
+            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            break;
+        case 85:
+            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            break;
+        case 86:
+            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            break;
+        case 87:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        case 89:
+            key.gate = adjacentValuesUpward(MEASUREMENT);
+            break;
+        case 91:
+            key.gate = zetabytesTobits(MEASUREMENT);
+            break;
+        case 92:
+            key.gate = valuesBetweenSixToDecrease(MEASUREMENT);
+            break;
+        case 93:
+            key.gate = valuesBetweenFiveToDecrease(MEASUREMENT);
+            break;
+        case 94:
+            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+            break;
+        case 95:
+            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            break;
+        case 96:
+            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            break;
+        case 97:
+            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            break;
+        case 98:
+            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            break;
+        default:
+            printf("Не введено значение конвертируемой величины, "
+                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
+            break;
+    }
+
+    return key.gate;
+}
