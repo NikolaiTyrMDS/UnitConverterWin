@@ -100,171 +100,221 @@ double selectionswitchTime(double MEASUREMENT)
         case 210:
             key.gate = mksec_to_vek(MEASUREMENT);
             break;
-            ///////////////DODELAT
-        case 32:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 301:
+            key.gate = msec_to_nsec(MEASUREMENT);
             break;
-        case 34:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+        case 302:
+            key.gate = msec_to_mksec(MEASUREMENT);
             break;
-        case 35:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+        case 304:
+            key.gate = msec_to_sec(MEASUREMENT);
             break;
-        case 36:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+        case 305:
+            key.gate = msec_to_min(MEASUREMENT);
             break;
-        case 37:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+        case 306:
+            key.gate = msec_to_chas(MEASUREMENT);
             break;
-        case 38:
-            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+        case 307:
+            key.gate = msec_to_sut(MEASUREMENT);
             break;
-        case 39:
-            key.gate = valuesBetweenFiveUpward(MEASUREMENT);
+        case 308:
+            key.gate = msec_to_weak(MEASUREMENT);
             break;
-        case 41:
-            key.gate = megabytesTobits(MEASUREMENT);
+        case 309:
+            key.gate = msec_to_year(MEASUREMENT);
             break;
-        case 42:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+        case 310:
+            key.gate = msec_to_vek(MEASUREMENT);
+            break;   
+        case 401:
+            key.gate = sec_to_nsec(MEASUREMENT);
             break;
-        case 43:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 402:
+            key.gate = sec_to_mksec(MEASUREMENT);
             break;
-        case 45:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+        case 403:
+            key.gate = sec_to_msec(MEASUREMENT);
             break;
-        case 46:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+        case 405:
+            key.gate = sec_to_min(MEASUREMENT);
             break;
-        case 47:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+        case 406:
+            key.gate = sec_to_chas(MEASUREMENT);
             break;
-        case 48:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+        case 407:
+            key.gate = sec_to_sut(MEASUREMENT);
             break;
-        case 49:
-            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+        case 408:
+            key.gate = sec_to_weak(MEASUREMENT);
             break;
-        case 51:
-            key.gate = gigabytesTobits(MEASUREMENT);
+        case 409:
+            key.gate = sec_to_year(MEASUREMENT);
             break;
-        case 52:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+        case 410:
+            key.gate = sec_to_vek(MEASUREMENT);
             break;
-        case 53:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+        case 501:
+            key.gate = min_to_nsek(MEASUREMENT);
             break;
-        case 54:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 502:
+            key.gate = min_to_mksek(MEASUREMENT);
             break;
-        case 56:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+        case 503:
+            key.gate = min_to_msek(MEASUREMENT);
             break;
-        case 57:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+        case 504:
+            key.gate = min_to_sec(MEASUREMENT);
             break;
-        case 58:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+        case 506:
+            key.gate = min_to_chas(MEASUREMENT);
             break;
-        case 59:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+        case 507:
+            key.gate = min_to_sut(MEASUREMENT);
             break;
-        case 61:
-            key.gate = terabytesTobits(MEASUREMENT);
+        case 508:
+            key.gate = min_to_week(MEASUREMENT);
             break;
-        case 62:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+        case 509:
+            key.gate = min_to_year(MEASUREMENT);
             break;
-        case 63:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+        case 510:
+            key.gate = min_to_vek(MEASUREMENT);
             break;
-        case 64:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+        case 601:
+            key.gate = chas_to_nsec(MEASUREMENT);
             break;
-        case 65:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 602:
+            key.gate = chas_to_mksec(MEASUREMENT);
             break;
-        case 67:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+        case 603:
+            key.gate = chas_to_msek(MEASUREMENT);
             break;
-        case 68:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+        case 604:
+            key.gate = chas_to_sec(MEASUREMENT);
             break;
-        case 69:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+        case 605:
+            key.gate = chas_to_min(MEASUREMENT);
             break;
-        case 71:
-            key.gate = petabytesTobits(MEASUREMENT);
+        case 607:
+            key.gate = chas_to_sut(MEASUREMENT);
             break;
-        case 72:
-            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+        case 608:
+            key.gate = chas_to_week(MEASUREMENT);
             break;
-        case 73:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+        case 609:
+            key.gate = chas_to_year(MEASUREMENT);
             break;
-        case 74:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+        case 610:
+            key.gate = chas_to_vek(MEASUREMENT);
             break;
-        case 75:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+        case 701:
+            key.gate = sut_to_nsek(MEASUREMENT);
             break;
-        case 76:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 702:
+            key.gate = sut_to_mksek(MEASUREMENT);
             break;
-        case 78:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+        case 703:
+            key.gate = sut_to_msek(MEASUREMENT);
             break;
-        case 79:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+        case 704:
+            key.gate = sut_to_sek(MEASUREMENT);
             break;
-        case 81:
-            key.gate = exabytesTobits(MEASUREMENT);
+        case 705:
+            key.gate = sut_to_min(MEASUREMENT);
             break;
-        case 82:
-            key.gate = valuesBetweenFiveToDecrease(MEASUREMENT);
+        case 706:
+            key.gate = sut_to_chas(MEASUREMENT);
             break;
-        case 83:
-            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+        case 708:
+            key.gate = sut_to_week(MEASUREMENT);
             break;
-        case 84:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+        case 709:
+            key.gate = sut_to_year(MEASUREMENT);
             break;
-        case 85:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+        case 710:
+            key.gate = sut_to_vek(MEASUREMENT);
             break;
-        case 86:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+        case 801:
+            key.gate = week_to_nsek(MEASUREMENT);
             break;
-        case 87:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 802:
+            key.gate = week_to_mksek(MEASUREMENT);
             break;
-        case 89:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+        case 803:
+            key.gate = week_to_msek(MEASUREMENT);
             break;
-        case 91:
-            key.gate = zetabytesTobits(MEASUREMENT);
+        case 804:
+            key.gate = week_to_sek(MEASUREMENT);
             break;
-        case 92:
-            key.gate = valuesBetweenSixToDecrease(MEASUREMENT);
+        case 805:
+            key.gate = week_to_min(MEASUREMENT);
             break;
-        case 93:
-            key.gate = valuesBetweenFiveToDecrease(MEASUREMENT);
+        case 806:
+            key.gate = week_to_chas(MEASUREMENT);
             break;
-        case 94:
-            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+        case 807:
+            key.gate = week_to_sut(MEASUREMENT);
             break;
-        case 95:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+        case 809:
+            key.gate = week_to_year(MEASUREMENT);
             break;
-        case 96:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+        case 810:
+            key.gate = week_to_vek(MEASUREMENT);
+            break;    
+        case 901:
+            key.gate = year_to_nsek(MEASUREMENT);
             break;
-        case 97:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+        case 902:
+            key.gate = year_to_mksek(MEASUREMENT);
             break;
-        case 98:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+        case 903:
+            key.gate = year_to_msek(MEASUREMENT);
+            break;
+        case 904:
+            key.gate = year_to_sek(MEASUREMENT);
+            break;
+        case 905:
+            key.gate = year_to_min(MEASUREMENT);
+            break;
+        case 906:
+            key.gate = year_to_chas(MEASUREMENT);
+            break;
+        case 907:
+            key.gate = year_to_sut(MEASUREMENT);
+            break;
+        case 908:
+            key.gate = year_to_week(MEASUREMENT);
+            break;
+        case 910:
+            key.gate = year_to_vek(MEASUREMENT);
+            break;
+        case 1001:
+            key.gate = vek_to_nsek(MEASUREMENT);
+            break;
+        case 1002:
+            key.gate = vek_to_mksek(MEASUREMENT);
+            break;
+        case 1003:
+            key.gate = vek_to_msek(MEASUREMENT);
+            break;
+        case 1004:
+            key.gate = vek_to_sek(MEASUREMENT);
+            break;
+        case 1005:
+            key.gate = vek_to_min(MEASUREMENT);
+            break;
+        case 1006:
+            key.gate = vek_to_chas(MEASUREMENT);
+            break;
+        case 1007:
+            key.gate = vek_to_sut(MEASUREMENT);
+            break;
+        case 1008:
+            key.gate = vek_to_weak(MEASUREMENT);
+            break;
+        case 1009:
+            key.gate = vek_to_year(MEASUREMENT);
             break;
         default:
             printf("Не введено значение конвертируемой величины, "
