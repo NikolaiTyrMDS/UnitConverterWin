@@ -14,6 +14,7 @@ typedef struct working_values {
 
 // Ñëóæåáíûå ôóíêöèè;
 double parsing(char *MEASUREMENT);
+void convert(double RESULT);
 
 // Ïðîòîòèïû ðàáî÷èõ ôóíêöèé;
 double adjacentValuesUpward(double DATA);

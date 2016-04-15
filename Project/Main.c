@@ -127,7 +127,8 @@ int main()
                 break;
         }
 
-        printf("Результат конвертирования: %.6lf\n", head.result);
+        // printf("Результат конвертирования: %.6lf\n", head.result);
+        convert(head.result);
 
         printf("Вам нравится?\n");
         printf("Хотите продолжить?\n");
