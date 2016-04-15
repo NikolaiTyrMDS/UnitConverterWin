@@ -365,7 +365,7 @@ double squaredmillimeters_TO_pints(double AMOUNT) {
 	return AMOUNT;
 }
 
-/*----------------------------------------------------------------squareddecimeters-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
 
 /*------------------------Единица измерения литр  и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -452,7 +452,7 @@ double mililiters_TO_squaredmillimeters(double AMOUNT) {
 }
 
 // <миллилитр> ---> <кубический сантиметр> //
-double mililiters_TO_squaredcentimeters(double AMOUNT) {squareddecimeters
+double mililiters_TO_squaredcentimeters(double AMOUNT) {
 	AMOUNT = AMOUNT * 1;  // Формула для перевода
 	return AMOUNT;
 }
