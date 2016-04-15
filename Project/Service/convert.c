@@ -11,18 +11,15 @@ void convert(double RESULT) {
 		f = 1;
 	}
 
-	printf("1 tmp = %lf\n", tmp);
-
 	for (i = 0; tmp >= 1; i++) {
 			tmp = tmp - 1;
 	}
 
-	printf("2 tmp = %lf\n", tmp);
 	if (tmp != 0)
-		printf("Результат конвертирования: %lf\n", RESULT);
+		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %lf\n", RESULT);
 	if (tmp == 0 && f == 1)
-		printf("Результат конвертирования: %0.0lf\n", RESULT + tmp);
+		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %0.0lf\n", RESULT + tmp);
 	if (tmp == 0 && f == 0)
-		printf("Результат конвертирования: %0.0lf\n", RESULT - tmp);
+		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %0.0lf\n", RESULT - tmp);
 
 }
