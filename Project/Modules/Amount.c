@@ -832,7 +832,7 @@ double flozs_TO_squaredmillimeters(double AMOUNT) {
 }
 
 // <жидкая унция> ---> <кубический сантиметр> //
-double flozs_TO_squaredmillimeters(double AMOUNT) {
+double flozs_TO_squaredcentimeters(double AMOUNT) {
 	AMOUNT = AMOUNT * 29.5735295625;  // Формула для перевода
 	return AMOUNT;
 }
