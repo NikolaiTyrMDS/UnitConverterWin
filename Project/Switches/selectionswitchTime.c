@@ -45,6 +45,8 @@ double selectionswitchTime(double MEASUREMENT)
 
     key.id = key.input_choice * 100 + key.output_choice;
 
+    printf("ID равно %d", key.id);
+
     switch(key.id) {
         case 102:
             key.gate = nsec_to_mksec(MEASUREMENT);
@@ -59,7 +61,7 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = nsec_to_min(MEASUREMENT);
             break;
         case 106:
-            key.gate = nsec_to_chac(MEASUREMENT);
+            key.gate = nsec_to_chas(MEASUREMENT);
             break;
         case 107:
             key.gate = nsec_to_sut(MEASUREMENT);
@@ -72,7 +74,7 @@ double selectionswitchTime(double MEASUREMENT)
             break;
         case 110:
             key.gate = nsec_to_vek(MEASUREMENT);
-            break;            
+            break;
         case 201:
             key.gate = mksec_to_nsec(MEASUREMENT);
             break;
@@ -92,7 +94,7 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = mksec_to_sut(MEASUREMENT);
             break;
         case 208:
-            key.gate = mksec_to_weak(MEASUREMENT);
+            key.gate = mksec_to_week(MEASUREMENT);
             break;
         case 209:
             key.gate = mksec_to_year(MEASUREMENT);
@@ -119,14 +121,14 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = msec_to_sut(MEASUREMENT);
             break;
         case 308:
-            key.gate = msec_to_weak(MEASUREMENT);
+            key.gate = msec_to_week(MEASUREMENT);
             break;
         case 309:
             key.gate = msec_to_year(MEASUREMENT);
             break;
         case 310:
             key.gate = msec_to_vek(MEASUREMENT);
-            break;   
+            break;
         case 401:
             key.gate = sec_to_nsec(MEASUREMENT);
             break;
@@ -146,7 +148,7 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = sec_to_sut(MEASUREMENT);
             break;
         case 408:
-            key.gate = sec_to_weak(MEASUREMENT);
+            key.gate = sec_to_week(MEASUREMENT);
             break;
         case 409:
             key.gate = sec_to_year(MEASUREMENT);
@@ -155,13 +157,13 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = sec_to_vek(MEASUREMENT);
             break;
         case 501:
-            key.gate = min_to_nsek(MEASUREMENT);
+            key.gate = min_to_nsec(MEASUREMENT);
             break;
         case 502:
-            key.gate = min_to_mksek(MEASUREMENT);
+            key.gate = min_to_mksec(MEASUREMENT);
             break;
         case 503:
-            key.gate = min_to_msek(MEASUREMENT);
+            key.gate = min_to_msec(MEASUREMENT);
             break;
         case 504:
             key.gate = min_to_sec(MEASUREMENT);
@@ -188,7 +190,7 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = chas_to_mksec(MEASUREMENT);
             break;
         case 603:
-            key.gate = chas_to_msek(MEASUREMENT);
+            key.gate = chas_to_msec(MEASUREMENT);
             break;
         case 604:
             key.gate = chas_to_sec(MEASUREMENT);
@@ -209,16 +211,16 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = chas_to_vek(MEASUREMENT);
             break;
         case 701:
-            key.gate = sut_to_nsek(MEASUREMENT);
+            key.gate = sut_to_nsec(MEASUREMENT);
             break;
         case 702:
-            key.gate = sut_to_mksek(MEASUREMENT);
+            key.gate = sut_to_mksec(MEASUREMENT);
             break;
         case 703:
-            key.gate = sut_to_msek(MEASUREMENT);
+            key.gate = sut_to_msec(MEASUREMENT);
             break;
         case 704:
-            key.gate = sut_to_sek(MEASUREMENT);
+            key.gate = sut_to_sec(MEASUREMENT);
             break;
         case 705:
             key.gate = sut_to_min(MEASUREMENT);
@@ -236,16 +238,16 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = sut_to_vek(MEASUREMENT);
             break;
         case 801:
-            key.gate = week_to_nsek(MEASUREMENT);
+            key.gate = week_to_nsec(MEASUREMENT);
             break;
         case 802:
-            key.gate = week_to_mksek(MEASUREMENT);
+            key.gate = week_to_mksec(MEASUREMENT);
             break;
         case 803:
-            key.gate = week_to_msek(MEASUREMENT);
+            key.gate = week_to_msec(MEASUREMENT);
             break;
         case 804:
-            key.gate = week_to_sek(MEASUREMENT);
+            key.gate = week_to_sec(MEASUREMENT);
             break;
         case 805:
             key.gate = week_to_min(MEASUREMENT);
@@ -261,18 +263,18 @@ double selectionswitchTime(double MEASUREMENT)
             break;
         case 810:
             key.gate = week_to_vek(MEASUREMENT);
-            break;    
+            break;
         case 901:
-            key.gate = year_to_nsek(MEASUREMENT);
+            key.gate = year_to_nsec(MEASUREMENT);
             break;
         case 902:
-            key.gate = year_to_mksek(MEASUREMENT);
+            key.gate = year_to_mksec(MEASUREMENT);
             break;
         case 903:
-            key.gate = year_to_msek(MEASUREMENT);
+            key.gate = year_to_msec(MEASUREMENT);
             break;
         case 904:
-            key.gate = year_to_sek(MEASUREMENT);
+            key.gate = year_to_sec(MEASUREMENT);
             break;
         case 905:
             key.gate = year_to_min(MEASUREMENT);
@@ -290,16 +292,16 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = year_to_vek(MEASUREMENT);
             break;
         case 1001:
-            key.gate = vek_to_nsek(MEASUREMENT);
+            key.gate = vek_to_nsec(MEASUREMENT);
             break;
         case 1002:
-            key.gate = vek_to_mksek(MEASUREMENT);
+            key.gate = vek_to_mksec(MEASUREMENT);
             break;
         case 1003:
-            key.gate = vek_to_msek(MEASUREMENT);
+            key.gate = vek_to_msec(MEASUREMENT);
             break;
         case 1004:
-            key.gate = vek_to_sek(MEASUREMENT);
+            key.gate = vek_to_sec(MEASUREMENT);
             break;
         case 1005:
             key.gate = vek_to_min(MEASUREMENT);
@@ -311,7 +313,7 @@ double selectionswitchTime(double MEASUREMENT)
             key.gate = vek_to_sut(MEASUREMENT);
             break;
         case 1008:
-            key.gate = vek_to_weak(MEASUREMENT);
+            key.gate = vek_to_week(MEASUREMENT);
             break;
         case 1009:
             key.gate = vek_to_year(MEASUREMENT);

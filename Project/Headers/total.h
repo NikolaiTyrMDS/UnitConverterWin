@@ -1,4 +1,4 @@
-typedef struct entered_and_gated_parameters {
+﻿typedef struct entered_and_gated_parameters {
     double result, VOLUME;
     float version;
     int like_to_continue, measurement_id;
@@ -109,6 +109,7 @@ double DelislesTOCelsius(double TEMPERATURE);
 // Ïðîòîòèïû êîíñòðóêöèé switch;
 double selectionswitchData(double MEASUREMENT);
 double selectionswitchTemperature(double MEASUREMENT);
+double selectionswitchTime(double MEASUREMENT);
 
 // прототипы функций конвентирования различных величин УГЛА
 double Degree2Radian(double ANGLE);
@@ -365,3 +366,106 @@ double Grains_TO_Tonnes(double MASS);
 double Grains_TO_Quintals(double MASS);
 double Grains_TO_Kilograms(double MASS);
 double Grains_TO_Grams(double MASS);
+
+//TIME
+long double nsec_to_sec (long double TIME);
+long double nsec_to_msec (long double TIME);
+long double nsec_to_mksec (long double TIME);
+long double nsec_to_sec (long double TIME);
+long double nsec_to_min (long double TIME);
+long double nsec_to_chas (long double TIME);
+long double nsec_to_sut (long double TIME);
+long double nsec_to_week (long double TIME);
+long double nsec_to_year (long double TIME);
+long double nsec_to_vek (long double TIME);
+
+
+long double mksec_to_sec (long double TIME);
+long double mksec_to_nsec (long double TIME);
+long double mksec_to_msec (long double TIME);
+long double mksec_to_min (long double TIME);
+long double mksec_to_chas (long double TIME);
+long double mksec_to_sut (long double TIME);
+long double mksec_to_week (long double TIME);
+long double mksec_to_year (long double TIME);
+long double mksec_to_vek (long double TIME);
+
+long double msec_to_sec (long double TIME);
+long double msec_to_nsec (long double TIME);
+long double msec_to_mksec (long double TIME);
+long double msec_to_min (long double TIME);
+long double msec_to_chas (long double TIME);
+long double msec_to_sut (long double TIME);
+long double msec_to_week (long double TIME);
+long double msec_to_year (long double TIME);
+long double msec_to_vek (long double TIME);
+
+long double sec_to_nsec (long double TIME);
+long double sec_to_mksec (long double TIME);
+long double sec_to_msec (long double TIME);
+long double sec_to_min (long double TIME);
+long double sec_to_chas (long double TIME);
+long double sec_to_sut (long double TIME);
+long double sec_to_week (long double TIME);
+long double sec_to_year (long double TIME);
+long double sec_to_vek (long double TIME);
+
+long double min_to_nsec (long double TIME);
+long double min_to_mksec (long double TIME);
+long double min_to_msec (long double TIME);
+long double min_to_sec (long double TIME);
+long double min_to_chas (long double TIME);
+long double min_to_sut (long double TIME);
+long double min_to_week (long double TIME);
+long double min_to_year (long double TIME);
+long double min_to_vek (long double TIME);
+
+long double chas_to_nsec (long double TIME);
+long double chas_to_mksec (long double TIME);
+long double chas_to_msec (long double TIME);
+long double chas_to_sec (long double TIME);
+long double chas_to_min (long double TIME);
+long double chas_to_sut (long double TIME);
+long double chas_to_week (long double TIME);
+long double chas_to_year (long double TIME);
+long double chas_to_vek (long double TIME);
+
+long double sut_to_nsec (long double TIME);
+long double sut_to_mksec (long double TIME);
+long double sut_to_msec (long double TIME);
+long double sut_to_sec (long double TIME);
+long double sut_to_min (long double TIME);
+long double sut_to_chas (long double TIME);
+long double sut_to_week (long double TIME);
+long double sut_to_year (long double TIME);
+long double sut_to_vek (long double TIME);
+
+long double week_to_nsec (long double TIME);
+long double week_to_mksec (long double TIME);
+long double week_to_msec (long double TIME);
+long double week_to_sec (long double TIME);
+long double week_to_min (long double TIME);
+long double week_to_sut (long double TIME);
+long double week_to_chas (long double TIME);
+long double week_to_year (long double TIME);
+long double week_to_vek (long double TIME);
+
+long double year_to_nsec (long double TIME);
+long double year_to_mksec (long double TIME);
+long double year_to_msec (long double TIME);
+long double year_to_sec (long double TIME);
+long double year_to_min (long double TIME);
+long double year_to_sut (long double TIME);
+long double year_to_chas (long double TIME);
+long double year_to_week (long double TIME);
+long double year_to_vek (long double TIME);
+
+long double vek_to_nsec (long double TIME);
+long double vek_to_mksec (long double TIME);
+long double vek_to_msec (long double TIME);
+long double vek_to_sec (long double TIME);
+long double vek_to_min (long double TIME);
+long double vek_to_sut (long double TIME);
+long double vek_to_chas (long double TIME);
+long double vek_to_week (long double TIME);
+long double vek_to_year (long double TIME);

@@ -7,7 +7,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Russian");
 
     MainParameters head;
     head.version = 1.54;
@@ -39,9 +39,11 @@ int main()
 
         switch(head.measurement_id) {
             case 1:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchTime(head.VOLUME);
+                break;
             case 2:
                 fprintf(stderr, "Модуль не существует\n");
                 system("pause");
@@ -127,7 +129,6 @@ int main()
                 break;
         }
 
-        // printf("Результат конвертирования: %.6lf\n", head.result);
         convert(head.result);
 
         printf("Вам нравится?\n");
