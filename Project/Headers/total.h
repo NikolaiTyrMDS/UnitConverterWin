@@ -110,6 +110,10 @@ double DelislesTOCelsius(double TEMPERATURE);
 double selectionswitchData(double MEASUREMENT);
 double selectionswitchTemperature(double MEASUREMENT);
 double selectionswitchTime(double MEASUREMENT);
+double selectionswitchAngle(double MEASUREMENT);
+double selectionswitchFrequency(double MEASUREMENT);
+double selectionswitchQuantityOfSubstance(double MEASUREMENT);
+double selectionswitchPower(double MEASUREMENT);
 
 // прототипы функций конвентирования различных величин УГЛА
 double Degree2Radian(double ANGLE);
@@ -242,6 +246,36 @@ double ErgS2HorsePowEng(double POWER);
 double HorsePowEng2ErgS(double POWER);
 double HorsePowMetr2HorsePowEng(double POWER);
 double HorsePowEng2HorsePowMetr(double POWER);
+double Vat2MlVat(double POWER);
+double MlVat2Vat(double POWER);
+double kVat2MlVat(double POWER);
+double MlVat2kVat(double POWER);
+double mVat2MlVat(double POWER);
+double MlVat2mVat(double POWER);
+double MlVat2kgSilaMvS(double POWER);
+double kgSilaMvS2MlVat(double POWER);
+double MlVat2ErgS(double POWER);
+double ErgS2MlVat(double POWER);
+double MlVat2HorsePowMetr(double POWER);
+double HorsePowMetr2MlVat(double POWER);
+double MlVat2HorsePowEng(double POWER);
+double HorsePowEng2MlVat(double POWER);
+double MlVat2MkVat(double POWER);
+double MkVat2MlVat(double POWER);
+double Vat2MkVat(double POWER);
+double MkVat2Vat(double POWER);
+double kVat2MkVat(double POWER);
+double MkVat2kVat(double POWER);
+double mVat2MkVat(double POWER);
+double MkVat2mVat(double POWER);
+double MkVat2kgSilaMvS(double POWER);
+double kgSilaMvS2MkVat(double POWER);
+double MkVat2ErgS(double POWER);
+double ErgS2MkVat(double POWER);
+double MkVat2HorsePowMetr(double POWER);
+double HorsePowMetr2MkVat(double POWER);
+double MkVat2HorsePowEng(double POWER);
+double HorsePowEng2MkVat(double POWER);
 
 // прототипы функций конвентирования различных величин КОЛИЧЕСТВА ВЕЩЕСТВА
 double Mole2mMole(double QOS);
