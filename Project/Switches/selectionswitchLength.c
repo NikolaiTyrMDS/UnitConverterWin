@@ -52,12 +52,15 @@ double selectionswitchLength(double MEASUREMENT)
         scanf("%d", &key.output_choice);
     }
 
-    if(input_choice < 10 && output_choice < 10)
+    if(key.input_choice < 10 && output_choice < 10)
 		key.id = key.input_choice * 10 + key.output_choice;
-	if(input_choice == 10 && output_choice <= 10)
+	if(key.input_choice == 10 && output_choice <= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-	if(input_choice < 10 && output_choice == 10)
+	if(key.input_choice < 10 && output_choice >= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
+    if(key.input_choice >=10 && output_choice >= 10)
+        key.id = key.input_choice * 1000 + o
+
 
     switch(key.id) {
         case 12:
