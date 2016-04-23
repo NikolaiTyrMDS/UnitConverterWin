@@ -401,7 +401,8 @@ double Grains_TO_Quintals(double MASS);
 double Grains_TO_Kilograms(double MASS);
 double Grains_TO_Grams(double MASS);
 
-//TIME
+//Прототипы конвертирования ВРЕМЕНИ
+//наносекунды
 long double nsec_to_sec (long double TIME);
 long double nsec_to_msec (long double TIME);
 long double nsec_to_mksec (long double TIME);
@@ -412,8 +413,7 @@ long double nsec_to_sut (long double TIME);
 long double nsec_to_week (long double TIME);
 long double nsec_to_year (long double TIME);
 long double nsec_to_vek (long double TIME);
-
-
+//микросекунды
 long double mksec_to_sec (long double TIME);
 long double mksec_to_nsec (long double TIME);
 long double mksec_to_msec (long double TIME);
@@ -423,7 +423,7 @@ long double mksec_to_sut (long double TIME);
 long double mksec_to_week (long double TIME);
 long double mksec_to_year (long double TIME);
 long double mksec_to_vek (long double TIME);
-
+//миллисекунды
 long double msec_to_sec (long double TIME);
 long double msec_to_nsec (long double TIME);
 long double msec_to_mksec (long double TIME);
@@ -433,7 +433,7 @@ long double msec_to_sut (long double TIME);
 long double msec_to_week (long double TIME);
 long double msec_to_year (long double TIME);
 long double msec_to_vek (long double TIME);
-
+//секунды
 long double sec_to_nsec (long double TIME);
 long double sec_to_mksec (long double TIME);
 long double sec_to_msec (long double TIME);
@@ -443,7 +443,7 @@ long double sec_to_sut (long double TIME);
 long double sec_to_week (long double TIME);
 long double sec_to_year (long double TIME);
 long double sec_to_vek (long double TIME);
-
+//минуты
 long double min_to_nsec (long double TIME);
 long double min_to_mksec (long double TIME);
 long double min_to_msec (long double TIME);
@@ -453,7 +453,7 @@ long double min_to_sut (long double TIME);
 long double min_to_week (long double TIME);
 long double min_to_year (long double TIME);
 long double min_to_vek (long double TIME);
-
+//часы
 long double chas_to_nsec (long double TIME);
 long double chas_to_mksec (long double TIME);
 long double chas_to_msec (long double TIME);
@@ -463,7 +463,7 @@ long double chas_to_sut (long double TIME);
 long double chas_to_week (long double TIME);
 long double chas_to_year (long double TIME);
 long double chas_to_vek (long double TIME);
-
+//сутки
 long double sut_to_nsec (long double TIME);
 long double sut_to_mksec (long double TIME);
 long double sut_to_msec (long double TIME);
@@ -473,7 +473,7 @@ long double sut_to_chas (long double TIME);
 long double sut_to_week (long double TIME);
 long double sut_to_year (long double TIME);
 long double sut_to_vek (long double TIME);
-
+//недели
 long double week_to_nsec (long double TIME);
 long double week_to_mksec (long double TIME);
 long double week_to_msec (long double TIME);
@@ -483,7 +483,7 @@ long double week_to_sut (long double TIME);
 long double week_to_chas (long double TIME);
 long double week_to_year (long double TIME);
 long double week_to_vek (long double TIME);
-
+//года
 long double year_to_nsec (long double TIME);
 long double year_to_mksec (long double TIME);
 long double year_to_msec (long double TIME);
@@ -493,7 +493,7 @@ long double year_to_sut (long double TIME);
 long double year_to_chas (long double TIME);
 long double year_to_week (long double TIME);
 long double year_to_vek (long double TIME);
-
+//века
 long double vek_to_nsec (long double TIME);
 long double vek_to_mksec (long double TIME);
 long double vek_to_msec (long double TIME);
@@ -847,3 +847,29 @@ double nauticalmiles_TO_decimeters(double LENGTH);
 double nauticalmiles_TO_centimeters(double LENGTH);
 double nauticalmiles_TO_meters(double LENGTH);
 double nauticalmiles_TO_millimeters(double LENGTH);
+//Прототипы конвертирования ЭНЕРГИИ
+//джоули
+double joule_to_kvatch (double ENERGY);
+double joule_to_electronvolt (double ENERGY);
+double joule_to_kall (double ENERGY);
+double joule_to_tnt (double ENERGY);
+//Киловатт-час
+double kvatch_to_joule (double ENERGY);
+double kvatch_to_electronvolt (double ENERGY);
+double kvatch_to_kall (double ENERGY);
+double kvatch_to_tnt (double ENERGY);
+//Электронвольт
+double electronvolt_to_joule (double ENERGY);
+double electronvolt_to_kvatch (double ENERGY);
+double electronvolt_to_kall (double ENERGY);
+double electronvolt_to_tnt (double ENERGY);
+//Калории
+double kall_to_joule (double ENERGY);
+double kall_to_kvatch (double ENERGY);
+double kall_to_electronvolt (double ENERGY);
+double kall_to_tnt (double ENERGY);
+//Тратиловый эквивалент
+double tnt_to_joule (double ENERGY);
+double tnt_to_kvatch (double ENERGY);
+double tnt_to_electronvolt (double ENERGY);
+double tnt_to_kall (double ENERGY);
