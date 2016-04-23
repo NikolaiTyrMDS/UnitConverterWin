@@ -249,7 +249,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = liters_TO_gallons(MEASUREMENT);
             break;
         case 69:
-            key.gate = liters_TO_barrelsMEASUREMENT);
+            key.gate = liters_TO_barrels(MEASUREMENT);
             break;
         case 610:
             key.gate = liters_TO_quarts(MEASUREMENT);
@@ -323,7 +323,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = gallons_TO_quarts(MEASUREMENT);
             break;
         case 811:
-            key.gate = gallons_TO_pints flozs(MEASUREMENT);
+            key.gate = gallons_TO_pints(MEASUREMENT);
             break;
         case 812:
             key.gate = gallons_TO_flozs(MEASUREMENT);
