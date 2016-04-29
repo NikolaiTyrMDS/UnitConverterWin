@@ -700,7 +700,7 @@ double decimeters_TO_millimeters(double LENGTH);
 double decimeters_TO_kilometers(double LENGTH);
 double decimeters_TO_fathoms(double LENGTH);
 double decimeters_TO_arshins(double LENGTH);
-double decimeters_TO_miles(double LENGTH;
+double decimeters_TO_miles(double LENGTH);
 double decimeters_TO_yards(double LENGTH);
 double decimeters_TO_foots(double LENGTH);
 double decimeters_TO_micrometers(double LENGTH);
