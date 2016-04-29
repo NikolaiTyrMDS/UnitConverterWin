@@ -1,54 +1,54 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* РЎРёРјРІРѕР» '../' - escape-СЃРёРјРІРѕР» - РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРµСЂРµС…РѕРґР° РЅР° РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ;
-                                Р­С‚РѕС‚ СЃРёРјРІРѕР» РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃС‚РѕР»СЊРєРѕ СЂР°Р·, РЅР° СЃРєРѕР»СЊРєРѕ СѓСЂРѕРІРЅРµР№ РЅСѓР¶РЅРѕ РїРѕРґРЅСЏС‚СЊСЃСЏ; */
+#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
 
 double selectionswitchLength(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РёР· РєРѕС‚РѕСЂРѕР№ Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРёР·РІРµСЃС‚Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ:\n"
-           "1 - РњРёР»Р»РёРјРµС‚СЂ;\n"
-           "2 - РњРµС‚СЂ;\n"
-           "3 - РЎР°РЅС‚РёРјРµС‚СЂ;\n"
-           "4 - Р”РµС†РёРјРµС‚СЂ;\n"
-           "5 - РљРёР»РѕРјРµС‚СЂ;\n"
-           "6 - РЎР°Р¶РµРЅСЊ;\n"
-           "7 - РђСЂС€РёРЅ;\n"
-           "8 - РњРёР»СЏ;\n"
-           "9 - РЇСЂРґ;\n"
-           "10 - Р¤СѓС‚;\n \t"
-           "11 - РњРёРєСЂРѕРјРµС‚СЂ;\n \t"
-           "12 - РќР°РЅРѕРјРµС‚СЂ; \n \t"
-           "13 - РђРЅРіСЃС‚СЂРµРј;\n \t"
-           "14 - РњРѕСЂСЃРєР°СЏ РјРёР»СЏ; \n \t");
+    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
+           "1 - Миллиметр;\n"
+           "2 - Метр;\n"
+           "3 - Сантиметр;\n"
+           "4 - Дециметр;\n"
+           "5 - Километр;\n"
+           "6 - Сажень;\n"
+           "7 - Аршин;\n"
+           "8 - Миля;\n"
+           "9 - Ярд;\n"
+           "10 - Фут;\n \t"
+           "11 - Микрометр;\n \t"
+           "12 - Нанометр; \n \t"
+           "13 - Ангстрем;\n \t"
+           "14 - Морская миля; \n \t");
     scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РІ РєРѕС‚РѕСЂСѓСЋ Р’С‹ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ Р’Р°С€Сѓ РІРµР»РёС‡РёРЅСѓ.\n"
-           "РќРµ РЅСѓР¶РЅРѕ РІС‹Р±РёСЂР°С‚СЊ С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ, С‡С‚Рѕ Р’С‹ РІС‹Р±СЂР°Р»Рё РІ РєР°С‡РµСЃС‚РІРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№:\n"
-           "1 - РњРёР»Р»РёРјРµС‚СЂ;\n"
-           "2 - РњРµС‚СЂ;\n"
-           "3 - РЎР°РЅС‚РёРјРµС‚СЂ;\n"
-           "4 - Р”РµС†РёРјРµС‚СЂ;\n"
-           "5 - РљРёР»РѕРјРµС‚СЂ;\n"
-           "6 - РЎР°Р¶РµРЅСЊ;\n"
-           "7 - РђСЂС€РёРЅ;\n"
-           "8 - РњРёР»СЏ;\n"
-           "9 - РЇСЂРґ;\n"
-           "10 - Р¤СѓС‚;\n \t"
-           "11 - РњРёРєСЂРѕРјРµС‚СЂ;\n \t"
-           "12 - РќР°РЅРѕРјРµС‚СЂ; \n \t"
-           "13 - РђРЅРіСЃС‚СЂРµРј;\n \t"
-           "14 - РњРѕСЂСЃРєР°СЏ РјРёР»СЏ; \n \t");
+    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
+           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
+           "1 - Миллиметр;\n"
+           "2 - Метр;\n"
+           "3 - Сантиметр;\n"
+           "4 - Дециметр;\n"
+           "5 - Километр;\n"
+           "6 - Сажень;\n"
+           "7 - Аршин;\n"
+           "8 - Миля;\n"
+           "9 - Ярд;\n"
+           "10 - Фут;\n \t"
+           "11 - Микрометр;\n \t"
+           "12 - Нанометр; \n \t"
+           "13 - Ангстрем;\n \t"
+           "14 - Морская миля; \n \t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ, \nРёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ "
-                "РѕРґРЅСѓ Рё С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
+                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -60,7 +60,7 @@ double selectionswitchLength(double MEASUREMENT)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
-        //РњРёР»Р»РёРјРµС‚СЂ
+        //Миллиметр
         case 12:
             key.gate = millimeters_TO_meters((MEASUREMENT);
             break;
@@ -100,7 +100,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 114:
             key.gate = millimeters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РњРµС‚СЂ
+        //Метр
         case 21:
             key.gate = meters_TO_millimeters(MEASUREMENT);
             break;
@@ -140,7 +140,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 214:
             key.gate = meters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РЎР°РЅС‚РёРјРµС‚СЂ
+        //Сантиметр
         case 32:
             key.gate = centimeters_TO_meters(MEASUREMENT);
             break;
@@ -180,7 +180,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 314:
             key.gate = centimeters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Р”РµС†РёРјРµС‚СЂ
+        //Дециметр
         case 43:
             key.gate = decimeters_TO_centimeters(MEASUREMENT);
             break;
@@ -220,7 +220,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 414:
             key.gate = decimeters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РљРёР»РѕРјРµС‚СЂ
+        //Километр
         case 54:
             key.gate = kilometers_TO_decimeters(MEASUREMENT);
             break;
@@ -260,7 +260,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 514:
             key.gate = kilometers_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РЎР°Р¶РµРЅСЊ
+        //Сажень
         case 65:
             key.gate = fathoms_TO_kilometers(MEASUREMENT);
             break;
@@ -300,7 +300,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 614:
             key.gate = fathoms_TO_nauticalmiles(MEASUREMENT);
             break;
-         //РђСЂС€РёРЅ
+         //Аршин
         case 76:
             key.gate = arshins_TO_fathoms(MEASUREMENT);
             break;
@@ -340,7 +340,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 714:
             key.gate = arshins_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РњРёР»СЏ
+        //Миля
         case 87:
             key.gate = miles_TO_arshins(MEASUREMENT);
             break;
@@ -380,7 +380,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 814:
             key.gate = miles_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РЇСЂРґ
+        //Ярд
         case 98:
             key.gate = yards_TO_miles(MEASUREMENT);
             break;
@@ -420,7 +420,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 914:
             key.gate = yards_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Р¤СѓС‚
+        //Фут
         case 1009:
             key.gate = foots_TO_yards(MEASUREMENT);
             break;
@@ -460,7 +460,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1014:
             key.gate = foots_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РњРёРєСЂРѕРјРµС‚СЂ
+        //Микрометр
         case 1110:
             key.gate = micrometers_TO_foots(MEASUREMENT);
             break;
@@ -500,7 +500,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1114:
             key.gate = micrometers_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РќР°РЅРѕРјРµС‚СЂ
+        //Нанометр
         case 1211:
             key.gate = nanometers_TO_micrometers(MEASUREMENT);
             break;
@@ -540,7 +540,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1214:
             key.gate = nanometers_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РђРЅРіСЃС‚СЂРµРј
+        //Ангстрем
         case 1312:
             key.gate = angstroms_TO_nanometers(MEASUREMENT);
             break;
@@ -580,7 +580,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1314:
             key.gate = angstroms_TO_nauticalmiles(MEASUREMENT);
             break;
-        //РњРѕСЂСЃРєР°СЏ РјРёР»СЏ
+        //Морская миля
         case 1413:
             key.gate = nauticalmiles_TO_angstroms(MEASUREMENT);
             break;
@@ -621,8 +621,8 @@ double selectionswitchLength(double MEASUREMENT)
             key.gate = nauticalmiles_TO_millimeters(MEASUREMENT);
             break;
         default:
-            printf("РќРµ РІРІРµРґРµРЅРѕ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№ РІРµР»РёС‡РёРЅС‹, "
-                   "РёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ РІ РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂСѓСЋ СѓР¶Рµ РїСЂРµРѕР±СЂР°Р·СѓРµС‚Рµ\n");
+            printf("Не введено значение конвертируемой величины, "
+                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
             break;
     }
 

@@ -1,254 +1,254 @@
 #include <stdio.h>
 // DONE;
-/* –§–£–ù–ö–¶–ò–ò –ö–û–ù–í–ï–†–¢–ò–†–û–í–ê–ù–ò–Ø –†–ê–ó–õ–ò–ß–ù–´–• –ï–î–ò–ù–ò–¶ –ò–ó–ú–ï–†–ï–ù–ò–Ø –°–ò–õ–´ */
+/* ‘”Õ ÷»»  ŒÕ¬≈–“»–Œ¬¿Õ»ﬂ –¿«À»◊Õ€’ ≈ƒ»Õ»÷ »«Ã≈–≈Õ»ﬂ —»À€ */
 
-// <–ù—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <Õ¸˛ÚÓÌ˚> ---> < ËÎÓÌ¸˛ÚÓÌ˚> //
 double Newton2kNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ù—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓÌ¸˛ÚÓÌ˚> ---> <Õ¸˛ÚÓÌ˚> //
 double kNewton2Newton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000;
 	return STRENGTH;
 }
 
-// <–ù—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> //
+// <Õ¸˛ÚÓÌ˚> ---> <ÃËÎÎËÌ¸˛ÚÓÌ˚> //
 double Newton2mNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000;
 	return STRENGTH;
 }
 
-// <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> ---> <–ù—å—é—Ç–æ–Ω—ã> //
+// <ÃËÎÎËÌ¸˛ÚÓÌ˚> ---> <Õ¸˛ÚÓÌ˚> //
 double mNewton2Newton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000;
 	return STRENGTH;
 }
 
-// <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃËÎÎËÌ¸˛ÚÓÌ˚> ---> < ËÎÓÌ¸˛ÚÓÌ˚> //
 double mNewton2kNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓÌ¸˛ÚÓÌ˚> ---> <ÃËÎÎËÌ¸˛ÚÓÌ˚> //
 double kNewton2mNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000;
 	return STRENGTH;
 }
 
-// <–ù—å—é—Ç–æ–Ω—ã> ---> <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> //
+// <Õ¸˛ÚÓÌ˚> ---> <ÃÂ„‡Ì¸˛ÚÓÌ˚> //
 double Newton2MgNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000;
 	return STRENGTH;
 }
 
-// <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> ---> <–ù—å—é—Ç–æ–Ω—ã> //
+// <ÃÂ„‡Ì¸˛ÚÓÌ˚> ---> <Õ¸˛ÚÓÌ˚> //
 double MgNewton2Newton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000;
 	return STRENGTH;
 }
 
-// <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃËÎÎËÌ¸˛ÚÓÌ˚> ---> <ÃÂ„‡Ì¸˛ÚÓÌ˚> //
 double mNewton2MgNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000000;
 	return STRENGTH;
 }
 
-// <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃÂ„‡Ì¸˛ÚÓÌ˚> ---> <ÃËÎÎËÌ¸˛ÚÓÌ˚> //
 double MgNewton2mNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000000;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓÌ¸˛ÚÓÌ˚> ---> <ÃÂ„‡Ì¸˛ÚÓÌ˚> //
 double kNewton2MgNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000;
 	return STRENGTH;
 }
 
-// <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃÂ„‡Ì¸˛ÚÓÌ˚> ---> < ËÎÓÌ¸˛ÚÓÌ˚> //
 double MgNewton2kNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000;
 	return STRENGTH;
 }
 
-// <–ù—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <Õ¸˛ÚÓÌ˚> ---> <ÃËÍÓÌ¸˛ÚÓÌ˚> //
 double Newton2MkNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000;
 	return STRENGTH;
 }
 
-// <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ù—å—é—Ç–æ–Ω—ã> //
+// <ÃËÍÓÌ¸˛ÚÓÌ˚> ---> <Õ¸˛ÚÓÌ˚> //
 double MkNewton2Newton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000;
 	return STRENGTH;
 }
 
-// <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃËÎÎËÌ¸˛ÚÓÌ˚> ---> <ÃËÍÓÌ¸˛ÚÓÌ˚> //
 double mNewton2MkNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000;
 	return STRENGTH;
 }
 
-// <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃËÍÓÌ¸˛ÚÓÌ˚> ---> <ÃËÎÎËÌ¸˛ÚÓÌ˚> //
 double MkNewton2mNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓÌ¸˛ÚÓÌ˚> ---> <ÃËÍÓÌ¸˛ÚÓÌ˚> //
 double kNewton2MkNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000000;
 	return STRENGTH;
 }
 
-// <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃËÍÓÌ¸˛ÚÓÌ˚> ---> < ËÎÓÌ¸˛ÚÓÌ˚> //
 double MkNewton2kNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000000;
 	return STRENGTH;
 }
 
-// <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃÂ„‡Ì¸˛ÚÓÌ˚> ---> <ÃËÍÓÌ¸˛ÚÓÌ˚> //
 double MgNewton2MkNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000000000;
 	return STRENGTH;
 }
 
-// <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> //
+// <ÃËÍÓÌ¸˛ÚÓÌ˚> ---> <ÃÂ„‡Ì¸˛ÚÓÌ˚> //
 double MkNewton2MgNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000000000;
 	return STRENGTH;
 }
 
-// <–ù—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> //
+// <Õ¸˛ÚÓÌ˚> ---> < ËÎÓ„‡ÏÏ-ÒËÎ˚> //
 double Newton2kgsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 0.101972;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> ---> <–ù—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓ„‡ÏÏ-ÒËÎ˚> ---> <Õ¸˛ÚÓÌ˚> //
 double kgsNewton2Newton(double STRENGTH) {
 	STRENGTH = STRENGTH / 0.101972;
 	return STRENGTH;
 }
 
-// <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> //
+// <ÃËÎÎËÌ¸˛ÚÓÌ˚> ---> < ËÎÓ„‡ÏÏ-ÒËÎ˚> //
 double mNewton2kgsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000 * 0.101972;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> ---> <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓ„‡ÏÏ-ÒËÎ˚> ---> <ÃËÎÎËÌ¸˛ÚÓÌ˚> //
 double kgsNewton2mNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.101972) * 1000;
 	return STRENGTH;
 }
 
-// <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> //
+// <ÃËÍÓÌ¸˛ÚÓÌ˚> ---> < ËÎÓ„‡ÏÏ-ÒËÎ˚> //
 double MkNewton2kgsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000 * 0.101972;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> ---> <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓ„‡ÏÏ-ÒËÎ˚> ---> <ÃËÍÓÌ¸˛ÚÓÌ˚> //
 double kgsNewton2MkNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.101972) * 1000000;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> //
+// < ËÎÓÌ¸˛ÚÓÌ˚> ---> < ËÎÓ„‡ÏÏ-ÒËÎ˚> //
 double kNewton2kgsNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 1000) * 0.101972;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> ---> <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓ„‡ÏÏ-ÒËÎ˚> ---> < ËÎÓÌ¸˛ÚÓÌ˚> //
 double kgsNewton2kNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.101972) * 1000;
 	return STRENGTH;
 }
 
-// <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> ---> <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> //
+// <ÃÂ„‡Ì¸˛ÚÓÌ˚> ---> < ËÎÓ„‡ÏÏ-ÒËÎ˚> //
 double MgNewton2kgsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 1000000 * 0.101972;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> ---> <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> //
+// < ËÎÓ„‡ÏÏ-ÒËÎ˚> ---> <ÃÂ„‡Ì¸˛ÚÓÌ˚> //
 double kgsNewton2MgNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.101972) * 1000000;
 	return STRENGTH;
 }
 
-// <–ù—å—é—Ç–æ–Ω—ã> ---> <–§—É–Ω—Ç-—Å–∏–ª—ã> //
+// <Õ¸˛ÚÓÌ˚> ---> <‘ÛÌÚ-ÒËÎ˚> //
 double Newton2fsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 0.225;
 	return STRENGTH;
 }
 
-// <–§—É–Ω—Ç-—Å–∏–ª—ã> ---> <–ù—å—é—Ç–æ–Ω—ã> //
+// <‘ÛÌÚ-ÒËÎ˚> ---> <Õ¸˛ÚÓÌ˚> //
 double fsNewton2Newton(double STRENGTH) {
 	STRENGTH = STRENGTH / 0.225;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–§—É–Ω—Ç-—Å–∏–ª—ã> //
+// < ËÎÓÌ¸˛ÚÓÌ˚> ---> <‘ÛÌÚ-ÒËÎ˚> //
 double kNewton2fsNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 1000) * 0.225;
 	return STRENGTH;
 }
 
-// <–§—É–Ω—Ç-—Å–∏–ª—ã> ---> <–ö–∏–ª–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <‘ÛÌÚ-ÒËÎ˚> ---> < ËÎÓÌ¸˛ÚÓÌ˚> //
 double fsNewton2kNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.225) * 1000;
 	return STRENGTH;
 }
 
-// <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> ---> <–§—É–Ω—Ç-—Å–∏–ª—ã> //
+// <ÃÂ„‡Ì¸˛ÚÓÌ˚> ---> <‘ÛÌÚ-ÒËÎ˚> //
 double MgNewton2fsNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 1000000) * 0.225;
 	return STRENGTH;
 }
 
-// <–§—É–Ω—Ç-—Å–∏–ª—ã> ---> <–ú–µ–≥–∞–Ω—å—é—Ç–æ–Ω—ã> //
+// <‘ÛÌÚ-ÒËÎ˚> ---> <ÃÂ„‡Ì¸˛ÚÓÌ˚> //
 double fsNewton2MgNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.225) * 1000000;
 	return STRENGTH;
 }
 
-// <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> ---> <–§—É–Ω—Ç-—Å–∏–ª—ã> //
+// <ÃËÎÎËÌ¸˛ÚÓÌ˚> ---> <‘ÛÌÚ-ÒËÎ˚> //
 double mNewton2fsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000 * 0.225;
 	return STRENGTH;
 }
 
-// <–§—É–Ω—Ç-—Å–∏–ª—ã> ---> <–ú–∏–ª–ª–∏–Ω—å—é—Ç–æ–Ω—ã> //
+// <‘ÛÌÚ-ÒËÎ˚> ---> <ÃËÎÎËÌ¸˛ÚÓÌ˚> //
 double fsNewton2mNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.225) * 1000;
 	return STRENGTH;
 }
 
-// <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> ---> <–§—É–Ω—Ç-—Å–∏–ª—ã> //
+// <ÃËÍÓÌ¸˛ÚÓÌ˚> ---> <‘ÛÌÚ-ÒËÎ˚> //
 double MkNewton2fsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 1000000 * 0.225;
 	return STRENGTH;
 }
 
-// <–§—É–Ω—Ç-—Å–∏–ª—ã> ---> <–ú–∏–∫—Ä–æ–Ω—å—é—Ç–æ–Ω—ã> //
+// <‘ÛÌÚ-ÒËÎ˚> ---> <ÃËÍÓÌ¸˛ÚÓÌ˚> //
 double fsNewton2MkNewton(double STRENGTH) {
 	STRENGTH = (STRENGTH / 0.225) * 1000000;
 	return STRENGTH;
 }
 
-// <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> ---> <–§—É–Ω—Ç-—Å–∏–ª—ã> //
+// < ËÎÓ„‡ÏÏ-ÒËÎ˚> ---> <‘ÛÌÚ-ÒËÎ˚> //
 double kgsNewton2fsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH * 2.205;
 	return STRENGTH;
 }
 
-// <–§—É–Ω—Ç-—Å–∏–ª—ã> ---> <–ö–∏–ª–æ–≥—Ä–∞–º–º-—Å–∏–ª—ã> //
+// <‘ÛÌÚ-ÒËÎ˚> ---> < ËÎÓ„‡ÏÏ-ÒËÎ˚> //
 double fsNewton2kgsNewton(double STRENGTH) {
 	STRENGTH = STRENGTH / 2.205;
 	return STRENGTH;

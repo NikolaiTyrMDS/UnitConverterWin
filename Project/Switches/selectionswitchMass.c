@@ -1,46 +1,46 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* РЎРёРјРІРѕР» '../' - escape-СЃРёРјРІРѕР» - РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРµСЂРµС…РѕРґР° РЅР° РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ;
-                                Р­С‚РѕС‚ СЃРёРјРІРѕР» РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃС‚РѕР»СЊРєРѕ СЂР°Р·, РЅР° СЃРєРѕР»СЊРєРѕ СѓСЂРѕРІРЅРµР№ РЅСѓР¶РЅРѕ РїРѕРґРЅСЏС‚СЊСЃСЏ; */
-                                
+#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+
 
 double selectionswitchMass(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РёР· РєРѕС‚РѕСЂРѕР№ Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРёР·РІРµСЃС‚Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ:\n"
-           "1 - Р“СЂР°РјРј;\n"
-           "2 - РљРёР»РѕРіСЂР°РјРј;\n"
-           "3 - Р¦РµРЅС‚РЅРµСЂ;\n"
-           "4 - РўРѕРЅРЅР°;\n"
-           "5 - РљР°СЂР°С‚;\n"
-           "6 - РЎС‚РѕСѓРЅ;\n"
-           "7 - Р¤СѓРЅС‚;\n"
-           "8 - РЈРЅС†РёСЏ;\n"
-           "9 - Р”СЂР°С…РјР°;\n"
-           "10 - Р“СЂР°РЅ;\n \t");
+    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
+           "1 - Грамм;\n"
+           "2 - Килограмм;\n"
+           "3 - Центнер;\n"
+           "4 - Тонна;\n"
+           "5 - Карат;\n"
+           "6 - Стоун;\n"
+           "7 - Фунт;\n"
+           "8 - Унция;\n"
+           "9 - Драхма;\n"
+           "10 - Гран;\n \t");
     scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
     }
-    
-    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РІ РєРѕС‚РѕСЂСѓСЋ Р’С‹ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ Р’Р°С€Сѓ РІРµР»РёС‡РёРЅСѓ.\n"
-           "РќРµ РЅСѓР¶РЅРѕ РІС‹Р±РёСЂР°С‚СЊ С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ, С‡С‚Рѕ Р’С‹ РІС‹Р±СЂР°Р»Рё РІ РєР°С‡РµСЃС‚РІРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№:\n"
-           "1 - Р“СЂР°РјРј;\n"
-           "2 - РљРёР»РѕРіСЂР°РјРј;\n"
-           "3 - Р¦РµРЅС‚РЅРµСЂ;\n"
-           "4 - РўРѕРЅРЅР°;\n"
-           "5 - РљР°СЂР°С‚;\n"
-           "6 - РЎС‚РѕСѓРЅ;\n"
-           "7 - Р¤СѓРЅС‚;\n"
-           "8 - РЈРЅС†РёСЏ;\n"
-           "9 - Р”СЂР°С…РјР°;\n\t"
-           "10 - Р“СЂР°РЅ;\n \t");
+
+    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
+           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
+           "1 - Грамм;\n"
+           "2 - Килограмм;\n"
+           "3 - Центнер;\n"
+           "4 - Тонна;\n"
+           "5 - Карат;\n"
+           "6 - Стоун;\n"
+           "7 - Фунт;\n"
+           "8 - Унция;\n"
+           "9 - Драхма;\n\t"
+           "10 - Гран;\n \t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ, \nРёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ "
-                "РѕРґРЅСѓ Рё С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
+                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -50,18 +50,18 @@ double selectionswitchMass(double MEASUREMENT)
 		key.id = key.input_choice * 100 + key.output_choice;
 	  if(input_choice < 10 && output_choice >= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-		
+
     switch(key.id) {
-		//Р“СЂР°РјРј
+		//Грамм
         case 12:
             key.gate = Grams_TO_Kilograms(MEASUREMENT);
             break;
         case 13:
             key.gate = Grams_TO_Quintals(MEASUREMENT);
-            break;    
+            break;
         case 14:
             key.gate = Grams_TO_Tonnes(MEASUREMENT);
-            break; 
+            break;
         case 15:
             key.gate = Grams_TO_Carats(MEASUREMENT);
             break;
@@ -76,11 +76,11 @@ double selectionswitchMass(double MEASUREMENT)
             break;
         case 19:
             key.gate = Grams_TO_Drachmas(MEASUREMENT);
-            break;  
+            break;
         case 110:
             key.gate = Grams_TO_Grains(MEASUREMENT);
             break;
-        //РљРёР»РѕРіСЂР°РјРј
+        //Килограмм
         case 21:
             key.gate = Kilograms_TO_Grams(MEASUREMENT);
             break;
@@ -89,7 +89,7 @@ double selectionswitchMass(double MEASUREMENT)
             break;
         case 24:
             key.gate = Kilograms_TO_Tonnes(MEASUREMENT);
-            break; 
+            break;
         case 25:
             key.gate = Kilograms_TO_Carats(MEASUREMENT);
             break;
@@ -108,7 +108,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 210:
             key.gate = Kilograms_TO_Grains(MEASUREMENT);
             break;
-        //Р¦РµРЅС‚РЅРµСЂ   
+        //Центнер
         case 32:
             key.gate = Quintals_TO_Kilograms(MEASUREMENT);
             break;
@@ -136,7 +136,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 310:
             key.gate = Quintals_TO_Grains(MEASUREMENT);
             break;
-        //РўРѕРЅРЅР°  
+        //Тонна
         case 43:
             key.gate = Tonnes_TO_Quintals(MEASUREMENT);
             break;
@@ -164,7 +164,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 410:
             key.gate = Tonnes_TO_Grains(MEASUREMENT);
             break;
-        //РљР°СЂР°С‚ 
+        //Карат
         case 54:
             key.gate = Carats_TO_Tonnes(MEASUREMENT);
             break;
@@ -192,7 +192,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 510:
             key.gate = Carats_TO_Grains(MEASUREMENT);
             break;
-        //РЎС‚РѕСѓРЅ  
+        //Стоун
         case 65:
             key.gate = Stones_TO_Carats(MEASUREMENT);
             break;
@@ -220,7 +220,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 610:
             key.gate = Stones_TO_Grains(MEASUREMENT);
             break;
-        //Р¤СѓРЅС‚   
+        //Фунт
         case 76:
             key.gate = Funts_TO_Stones(MEASUREMENT);
             break;
@@ -248,7 +248,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 710:
             key.gate = Funts_TO_Grains(MEASUREMENT);
             break;
-        //РЈРЅС†РёСЏ    
+        //Унция
         case 87:
             key.gate = Ounces_TO_Funts(MEASUREMENT);
             break;
@@ -276,7 +276,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 810:
             key.gate = Ounces_TO_Grains(MEASUREMENT);
             break;
-        //Р”СЂР°С…РјР°    
+        //Драхма
         case 98:
             key.gate = Drachmas_TO_Ounces(MEASUREMENT);
             break;
@@ -304,7 +304,7 @@ double selectionswitchMass(double MEASUREMENT)
         case 910:
             key.gate = Drachmas_TO_Grains(MEASUREMENT);
             break;
-        //Р“СЂР°РЅ   
+        //Гран
         case 1009:
             key.gate = Grains_TO_Drachma(MEASUREMENT);
             break;
@@ -333,11 +333,11 @@ double selectionswitchMass(double MEASUREMENT)
             key.gate = Grains_TO_Grams(MEASUREMENT);
             break;
         default:
-            printf("РќРµ РІРІРµРґРµРЅРѕ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№ РІРµР»РёС‡РёРЅС‹, "
-                   "РёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ РІ РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂСѓСЋ СѓР¶Рµ РїСЂРµРѕР±СЂР°Р·СѓРµС‚Рµ\n");
+            printf("Не введено значение конвертируемой величины, "
+                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
             break;
     }
 
     return key.gate;
-}                                                                                                                                                                                                                                                                                                                                                                                                                                              
-                       
+}
+

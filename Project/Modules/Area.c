@@ -1,327 +1,255 @@
 #include <stdio.h>
-// DONE;
-/* –§–£–ù–ö–¶–ò–ò –ö–û–ù–í–ï–†–¢–ò–†–û–í–ê–ù–ò–Ø –†–ê–ó–õ–ò–ß–ù–´–• –ï–î–ò–ù–ò–¶ –ò–ó–ú–ï–†–ï–ù–ò–Ø –ü–õ–û–¢–ù–û–°–¢–ò */
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> ---> <–ì–µ–∫—Ç–∞—Ä—ã> //
-double SquareMeter2Hectare(double AREA) {
-	AREA = AREA / 10000;
-	return AREA;
+/* ‘”Õ ÷»»  ŒÕ¬≈–“»–Œ¬¿Õ»ﬂ –¿«À»◊Õ€’ ≈ƒ»Õ»÷ ◊¿—“Œ“€ */
+
+// <√Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+double Herz2kHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000;
+	return FREQUENCY;
 }
 
-// <–ì–µ–∫—Ç–∞—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> //
-double Hectare2SquareMeter(double AREA) {
-	AREA = AREA * 10000;
-	return AREA;
+// < ËÎÓ„Âˆ˚> ---> <√Âˆ˚> //
+double kHerz2Herz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> ---> <–ê—Ä—ã> //
-double SquareMeter2Ar(double AREA) {
-	AREA = AREA / 100;
-	return AREA;
+// <√Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+double Herz2MlHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000;
+	return FREQUENCY;
 }
 
-// <–ê—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> //
-double Ar2SquareMeter(double AREA) {
-	AREA = AREA * 100;
-	return AREA;
+// <ÃËÎÎË„Âˆ˚> ---> <√Âˆ˚> //
+double MlHerz2Herz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000;
+	return FREQUENCY;
 }
 
-// <–ì–µ–∫—Ç–∞—Ä—ã> ---> <–ê—Ä—ã> //
-double Hectare2Ar(double AREA) {
-	AREA = AREA / 100;
-	return AREA;
+// < ËÎÓ„Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+double kHerz2MlHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000;
+	return FREQUENCY;
 }
 
-// <–ê—Ä—ã> ---> <–ì–µ–∫—Ç–∞—Ä—ã> //
-double Ar2Hectare(double AREA) {
-	AREA = AREA * 100;
-	return AREA;
+// <ÃËÎÎË„Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+double MlHerz2kHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> //
-double SquarekMeter2SquareMeter(double AREA) {
-	AREA = AREA * 1000000;
-	return AREA;
+// <√Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+double Herz2MkHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> //
-double SquareMeter2SquarekMeter(double AREA) {
-	AREA = AREA / 1000000;
-	return AREA;
+// <ÃËÍÓ„Âˆ˚> ---> <√Âˆ˚> //
+double MkHerz2Herz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> ---> <–ì–µ–∫—Ç–∞—Ä—ã> //
-double SquarekMeter2Hectare(double AREA) {
-	AREA = AREA * 100;
-	return AREA;
+// < ËÎÓ„Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+double kHerz2MkHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000;
+	return FREQUENCY;
 }
 
-// <–ì–µ–∫—Ç–∞—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> //
-double Hectare2SquarekMeter(double AREA) {
-	AREA = AREA / 100;
-	return AREA;
+// <ÃËÍÓ„Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+double MkHerz2kHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> ---> <–ê—Ä—ã> //
-double SquarekMeter2Ar(double AREA) {
-	AREA = AREA * 10000;
-	return AREA;
+// <ÃËÍÓ„Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+double MkHerz2MlHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000;
+	return FREQUENCY;
 }
 
-// <–ê—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> //
-double Ar2SquarekMeter(double AREA) {
-	AREA = AREA / 10000;
-	return AREA;
+// <ÃËÎÎË„Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+double MlHerz2MkHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> ---> <–ê–∫—Ä—ã> //
-double SquareMeter2Acr(double AREA) {
-	AREA = AREA / 4046.854;
-	return AREA;
+// <√Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+double Herz2MgHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000;
+	return FREQUENCY;
 }
 
-// <–ê–∫—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –º–µ—Ç—Ä—ã> //
-double Acr2SquareMeter(double AREA) {
-	AREA = AREA * 4046.854;
-	return AREA;
+// <ÃÂ„‡„Âˆ˚> ---> <√Âˆ˚> //
+double MgHerz2Herz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> ---> <–ê–∫—Ä—ã> //
-double SquarekMeter2Acr(double AREA) {
-	AREA = AREA / 0.004;
-	return AREA;
+// <ÃËÎÎË„Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+double MlHerz2MgHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000;
+	return FREQUENCY;
 }
 
-// <–ê–∫—Ä—ã> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–µ –∫–∏–ª–æ–º–µ—Ç—Ä—ã> //
-double Acr2SquarekMeter(double AREA) {
-	AREA = AREA * 0.004;
-	return AREA;
+// <ÃÂ„‡„Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+double MgHerz2MlHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000;
+	return FREQUENCY;
 }
 
-// <–ì–µ–∫—Ç–∞—Ä—ã> ---> <–ê–∫—Ä—ã> //
-double Hectare2Acr(double AREA) {
-	AREA = AREA / 0.405;
-	return AREA;
+// < ËÎÓ„Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+double kHerz2MgHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000;
+	return FREQUENCY;
 }
 
-// <–ê–∫—Ä—ã> ---> <–ì–µ–∫—Ç–∞—Ä—ã> //
-double Acr2Hectare(double AREA) {
-	AREA = AREA * 0.405;
-	return AREA;
+// <ÃÂ„‡„Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+double MgHerz2kHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000;
+	return FREQUENCY;
 }
 
-// <–ê—Ä—ã> ---> <–ê–∫—Ä—ã> //
-double Ar2Acr(double AREA) {
-	AREA = AREA / 40.469;
-	return AREA;
+// <ÃËÍÓ„Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+double MkHerz2MgHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000000;
+	return FREQUENCY;
 }
 
-// <–ê–∫—Ä—ã> ---> <–ê—Ä—ã> //
-double Acr2Ar(double AREA) {
-	AREA = AREA * 40.469;
-	return AREA;
+// <ÃÂ„‡„Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+double MgHerz2MkHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> //
-double SquaresMeter2SquareMeter(double AREA) {
-	AREA = AREA / 10000;
-	return AREA;
+// <√Âˆ˚> ---> <‘ÂÌÂÎË> //
+double Herz2Frenel(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double SquareMeter2SquaresMeter(double AREA) {
-	AREA = AREA * 10000;
-	return AREA;
+// <‘ÂÌÂÎË> ---> <√Âˆ˚> //
+double Frenel2Herz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> //
-double SquaresMeter2SquaremMeter(double AREA) {
-	AREA = AREA / 100;
-	return AREA;
+// <ÃËÎÎË„Âˆ˚> ---> <‘ÂÌÂÎË> //
+double MlHerz2Frenel(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double SquaremMeter2SquaressMeter(double AREA) {
-	AREA = AREA * 100;
-	return AREA;
+// <‘ÂÌÂÎË> ---> <ÃËÎÎË„Âˆ˚> //
+double Frenel2MlHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> //
-double SquaressMeter2SquareInch(double AREA) {
-	AREA = AREA / 0.155;
-	return AREA;
+// <ÃËÍÓ„Âˆ˚> ---> <‘ÂÌÂÎË> //
+double MkHerz2Frenel(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double SquaremInch2SquaressMeter(double AREA) {
-	AREA = AREA * 0.155;
-	return AREA;
+// <‘ÂÌÂÎË> ---> <ÃËÍÓ„Âˆ˚> //
+double Frenel2MkHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> //
-double SquaressMeter2SquareMeter(double AREA) {
-	AREA = AREA / 10000;
-	return AREA;
+// < ËÎÓ„Âˆ˚> ---> <‘ÂÌÂÎË> //
+double kHerz2Frenel(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double SquareMeter2SquaressMeter(double AREA) {
-	AREA = AREA * 10000;
-	return AREA;
+// <‘ÂÌÂÎË> ---> < ËÎÓ„Âˆ˚> //
+double Frenel2kHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ê—Ä> //
-double SquaressMeter2Ar(double AREA) {
-	AREA = AREA / 1000000;
-	return AREA;
+// <ÃÂ„‡„Âˆ˚> ---> <‘ÂÌÂÎË> //
+double MgHerz2Frenel(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000000000000000;
+	return FREQUENCY;
 }
 
-// <–ê—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double Ar2SquaressMeter(double AREA) {
-	AREA = AREA * 1000000;
-	return AREA;
+// <‘ÂÌÂÎË> ---> <ÃÂ„‡„Âˆ˚> //
+double Frenel2MgHerz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 1000000000000000000;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ì–µ–∫—Ç–∞—Ä> //
-double SquaressMeter2Hectare(double AREA) {
-	AREA = AREA / 100000000;
-	return AREA;
+// <√Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+double Herz2RadSec(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 6.28319;
+	return FREQUENCY;
 }
 
-// <–ì–µ–∫—Ç–∞—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double Hectare2SquaressMeter(double AREA) {
-	AREA = AREA * 100000000;
-	return AREA;
+// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <√Âˆ˚> //
+double RadSec2Herz(double FREQUENCY) {
+	FREQUENCY = FREQUENCY / 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –∫–∏–ª–æ–º–µ—Ç—Ä> //
-double SquaressMeter2SquarekMeter(double AREA) {
-	AREA = AREA / 10000000000;
-	return AREA;
+// <ÃËÎÎË„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+double MlHerz2RadSec(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY / 1000) * 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –∫–∏–ª–æ–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double SquarekMeter2SquaressMeter(double AREA) {
-	AREA = AREA * 10000000000;
-	return AREA;
+// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <ÃËÎÎË„Âˆ˚> //
+double RadSec2MlHerz(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY * 1000) / 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> ---> <–ê–∫—Ä> //
-double SquaressMeter2Acr(double AREA) {
-	AREA = AREA / 40468544,812;
-	return AREA;
+// <ÃËÍÓ„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+double MkHerz2RadSec(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY / 1000000) * 6.28319;
+	return FREQUENCY;
 }
 
-// <–ê–∫—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π —Å–∞–Ω—Ç–∏–º–µ—Ç—Ä> //
-double Acr2SquaressMeter(double AREA) {
-	AREA = AREA * 40468544,812;
-	return AREA;
+// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <ÃËÍÓ„Âˆ˚> //
+double RadSec2MkHerz(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY * 1000000) / 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> //
-double SquareInch2SquareMeter(double AREA) {
-	AREA = AREA / 1550,003;
-	return AREA;
+// < ËÎÓ„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+double kHerz2RadSec(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000 * 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> //
-double SquareMeter2SquareInch(double AREA) {
-	AREA = AREA * 1550,003;
-	return AREA;
+// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> < ËÎÓ„Âˆ˚> //
+double RadSec2kHerz(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY / 1000) / 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> ---> <–ê—Ä> //
-double SquareInch2Ar(double AREA) {
-	AREA = AREA / 155000,3;
-	return AREA;
+// <ÃÂ„‡„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+double MgHerz2RadSec(double FREQUENCY) {
+	FREQUENCY = FREQUENCY * 1000000 * 6.28319;
+	return FREQUENCY;
 }
 
-// <–ê—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> //
-double Ar2SquareInch(double AREA) {
-	AREA = AREA * 155000,3;
-	return AREA;
+// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <ÃÂ„‡„Âˆ˚> //
+double RadSec2MgHerz(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY / 1000000) / 6.28319;
+	return FREQUENCY;
 }
 
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> ---> <–ì–µ–∫—Ç–∞—Ä> //
-double SquareInch2Hectare(double AREA) {
-	AREA = AREA / 15500030;
-	return AREA;
+// <‘ÂÌÂÎË> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+double Frenel2RadSec(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY / 1000000000000) * 6.28319;
+	return FREQUENCY;
 }
 
-// <–ì–µ–∫—Ç–∞—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> //
-double Hectare2SquareInch(double AREA) {
-	AREA = AREA * 15500030;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –∫–∏–ª–æ–º–µ—Ç—Ä> //
-double SquareInch2SquarekMeter(double AREA) {
-	AREA = AREA / 15500030000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –∫–∏–ª–æ–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> //
-double SquarekMeter2SquareInch(double AREA) {
-	AREA = AREA * 15500030000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> //
-double SquaremMeter2SquareMeter(double AREA) {
-	AREA = AREA / 1000000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> //
-double SquareMeter2SquaremMeter(double AREA) {
-	AREA = AREA * 1000000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> ---> <–ê—Ä> //
-double SquaremMeter2Ar(double AREA) {
-	AREA = AREA / 100000000;
-	return AREA;
-}
-
-// <–ê—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> //
-double Ar2SquaremMeter(double AREA) {
-	AREA = AREA * 100000000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> ---> <–ì–µ–∫—Ç–∞—Ä> //
-double SquaremMeter2Hectare(double AREA) {
-	AREA = AREA / 10000000000;
-	return AREA;
-}
-
-// <–ì–µ–∫—Ç–∞—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> //
-double Hectare2SquaremMeter(double AREA) {
-	AREA = AREA * 10000000000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –∫–∏–ª–æ–º–µ—Ç—Ä> //
-double SquaremMeter2SquarekMeter(double AREA) {
-	AREA = AREA / 1000000000000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –∫–∏–ª–æ–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> //
-double SquarekMeter2SquaremMeter(double AREA) {
-	AREA = AREA * 1000000000000;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> //
-double SquaremMeter2SquareInch(double AREA) {
-	AREA = AREA / 6,452;
-	return AREA;
-}
-
-// <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –¥—é–π–º> ---> <–ö–≤–∞–¥—Ä–∞—Ç–Ω—ã–π –º–∏–ª–ª–∏–º–µ—Ç—Ä> //
-double SquareInch2SquaremMeter(double AREA) {
-	AREA = AREA * 6,452;
-	return AREA;
+// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <‘ÂÌÂÎË> //
+double RadSec2Frenel(double FREQUENCY) {
+	FREQUENCY = (FREQUENCY * 1000000000000) / 6.28319;
+	return FREQUENCY;
 }
