@@ -1,22 +1,22 @@
-п»їtypedef struct entered_and_gated_parameters {
+typedef struct entered_and_gated_parameters {
     double result, VOLUME;
     float version;
     int like_to_continue, measurement_id;
     char MEASUREMENT[261];
 } MainParameters;
-// Г€Г‡ГЊГ…ГЌГ…ГЌГ€Г… ГЏГЂГђГЂГЊГ…Г’ГђГЋГ‚ ГЋГЏГЂГ‘ГЌГЋ Г„Г‹Гџ Г†Г€Г‡ГЌГ€!;
+// ECIAIAIEA IA?AIAO?IA IIANII AE? ?ECIE!;
 
 typedef struct working_values {
     double gate;
     int input_choice, id, output_choice;
 } FunctionsParameters;
-// Г€Г‡ГЊГ…ГЌГ…ГЌГ€Г… ГЏГЂГђГЂГЊГ…Г’ГђГЋГ‚ ГЋГЏГЂГ‘ГЌГЋ Г„Г‹Гџ Г†Г€Г‡ГЌГ€!;
+// ECIAIAIEA IA?AIAO?IA IIANII AE? ?ECIE!;
 
-// Г‘Г«ГіГ¦ГҐГЎГ­Г»ГҐ ГґГіГ­ГЄГ¶ГЁГЁ;
+// Neo?aaiua ooieoee;
 double parsing(char *MEASUREMENT);
 void convert(double RESULT);
 
-// ГЏГ°Г®ГІГ®ГІГЁГЇГ» Г°Г ГЎГ®Г·ГЁГµ ГґГіГ­ГЄГ¶ГЁГ©;
+// I?ioioeiu ?aai?eo ooieoee;
 double adjacentValuesUpward(double DATA);
 double adjacentValuesToDecrease(double DATA);
 double valuesBetweenOneUpward(double DATA);
@@ -48,7 +48,7 @@ double exabytesTobits(double DATA);
 double bitsTozetabytes(double DATA);
 double zetabytesTobits(double DATA);
 
-// РџСЂРѕС‚РѕС‚РёРїС‹ РґР»СЏ С‚РµРјРїРµСЂР°С‚СѓСЂС‹;
+// Прототипы для температуры;
 double CelsiusTOFahrenheits(double TEMPERATURE);
 double CelsiusTOKelvins(double TEMPERATURE);
 double CelsiusTOReaumurs(double TEMPERATURE);
@@ -104,9 +104,9 @@ double DelislesTORankines(double TEMPERATURE);
 double DelislesTOReaumurs(double TEMPERATURE);
 double DelislesTOKelvins(double TEMPERATURE);
 double DelislesTOFahrenheits(double TEMPERATURE);
-double DelislesTOCelsius(double TEMPERATURE);
+double DelislesTOCelsius(double TEMPERATURE); */
 
-// ГЏГ°Г®ГІГ®ГІГЁГЇГ» ГЄГ®Г­Г±ГІГ°ГіГЄГ¶ГЁГ© switch;
+// I?ioioeiu eiino?oeoee switch;
 double selectionswitchData(double MEASUREMENT);
 double selectionswitchTemperature(double MEASUREMENT);
 double selectionswitchTime(double MEASUREMENT);
@@ -115,7 +115,7 @@ double selectionswitchFrequency(double MEASUREMENT);
 double selectionswitchQuantityOfSubstance(double MEASUREMENT);
 double selectionswitchPower(double MEASUREMENT);
 
-// РїСЂРѕС‚РѕС‚РёРїС‹ С„СѓРЅРєС†РёР№ РєРѕРЅРІРµРЅС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РІРµР»РёС‡РёРЅ РЈР“Р›Рђ
+// прототипы функций конвентирования различных величин УГЛА
 double Degree2Radian(double ANGLE);
 double Radian2Degree(double ANGLE);
 double Degree2Min(double ANGLE);
@@ -159,7 +159,7 @@ double Grad2Rumb(double ANGLE);
 double Rumb2Sextant(double ANGLE);
 double Sextant2Rumb(double ANGLE);
 
-// РїСЂРѕС‚РѕС‚РёРїС‹ С„СѓРЅРєС†РёР№ РєРѕРЅРІРµРЅС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РІРµР»РёС‡РёРЅ Р§РђРЎРўРћРўР«
+// прототипы функций конвентирования различных величин ЧАСТОТЫ
 double Herz2kHerz(double FREQUENCY);
 double kHerz2Herz(double FREQUENCY);
 double Herz2MlHerz(double FREQUENCY);
@@ -203,7 +203,7 @@ double RadSec2MgHerz(double FREQUENCY);
 double Frenel2RadSec(double FREQUENCY);
 double RadSec2Frenel(double FREQUENCY);
 
-// РїСЂРѕС‚РѕС‚РёРїС‹ С„СѓРЅРєС†РёР№ РєРѕРЅРІРµРЅС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РІРµР»РёС‡РёРЅ РњРћР©РќРћРЎРўР
+// прототипы функций конвентирования различных величин МОЩНОСТИ
 double Vat2kVat(double POWER);
 double kVat2Vat(double POWER);
 double Vat2mVat(double POWER);
@@ -277,7 +277,7 @@ double HorsePowMetr2MkVat(double POWER);
 double MkVat2HorsePowEng(double POWER);
 double HorsePowEng2MkVat(double POWER);
 
-// РїСЂРѕС‚РѕС‚РёРїС‹ С„СѓРЅРєС†РёР№ РєРѕРЅРІРµРЅС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РІРµР»РёС‡РёРЅ РљРћР›РР§Р•РЎРўР’Рђ Р’Р•Р©Р•РЎРўР’Рђ
+// прототипы функций конвентирования различных величин КОЛИЧЕСТВА ВЕЩЕСТВА
 double Mole2mMole(double QOS);
 double mMole2Mole(double QOS);
 double Mole2kMole(double QOS);
@@ -309,8 +309,8 @@ double MgMole2MkMole(double QOS);
 double PoundMole2MgMole(double QOS);
 double MgMole2PoundMole(double QOS);
 
-//РїСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёР№ РєРѕРЅРІРµРЅС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РІРµР»РёС‡РёРЅ РјР°СЃСЃС‹
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р“СЂР°РјРј Рё РµС‘ РїРµСЂРµРІРѕРґ
+//прототип функций конвентирования различных величин массы
+//Единица измерения Грамм и её перевод
 double Grams_TO_Kilograms(double MASS);
 double Grams_TO_Quintals(double MASS);
 double Grams_TO_Tonnes(double MASS);
@@ -320,7 +320,7 @@ double Grams_TO_Funts(double MASS);
 double Grams_TO_Ounces(double MASS);
 double Grams_TO_Drachmas(double MASS);
 double Grams_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р¦РµРЅС‚РЅРµСЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Центнер и её перевод
 double Quintals_TO_Kilograms(double MASS);
 double Quintals_TO_Grams(double MASS);
 double Quintals_TO_Tonnes(double MASS);
@@ -330,7 +330,7 @@ double Quintals_TO_Funts(double MASS);
 double Quintals_TO_Ounces(double MASS);
 double Quintals_TO_Drachmas(double MASS);
 double Quintals_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РўРѕРЅРЅР° Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Тонна и её перевод
 double Tonnes_TO_Quintals(double MASS);
 double Tonnes_TO_Kilograms(double MASS);
 double Tonnes_TO_Grams(double MASS);
@@ -340,7 +340,7 @@ double Tonnes_TO_Funts(double MASS);
 double Tonnes_TO_Ounces(double MASS);
 double Tonnes_TO_Drachmas(double MASS);
 double Tonnes_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РљР°СЂР°С‚ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Карат и её перевод
 double Carats_TO_Tonnes(double MASS);
 double Carats_TO_Quintals(double MASS);
 double Carats_TO_Kilograms(double MASS);
@@ -350,7 +350,7 @@ double Carats_TO_Funts(double MASS);
 double Carats_TO_Ounces(double MASS);
 double Carats_TO_Drachmas(double MASS);
 double Carats_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РЎС‚РѕСѓРЅ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Стоун и её перевод
 double Stones_TO_Carats(double MASS);
 double Stones_TO_Tonnes(double MASS);
 double Stones_TO_Quintals(double MASS);
@@ -360,7 +360,7 @@ double Stones_TO_Funts(double MASS);
 double Stones_TO_Ounces(double MASS);
 double Stones_TO_Drachmas(double MASS);
 double Stones_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р¤СѓРЅС‚ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Фунт и её перевод
 double Funts_TO_Stones(double MASS);
 double Funts_TO_Carats(double MASS);
 double Funts_TO_Tonnes(double MASS);
@@ -370,7 +370,7 @@ double Funts_TO_Grams(double MASS);
 double Funts_TO_Ounces(double MASS);
 double Funts_TO_Drachmas(double MASS);
 double Funts_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РЈРЅС†РёСЏ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Унция и её перевод
 double Ounces_TO_Funts(double MASS);
 double Ounces_TO_Stones(double MASS);
 double Ounces_TO_Carats(double MASS);
@@ -380,7 +380,7 @@ double Ounces_TO_Kilograms(double MASS);
 double Ounces_TO_Grams(double MASS);
 double Ounces_TO_Drachmas(double MASS);
 double Ounces_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р”СЂР°С…РјР° Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Драхма и её перевод
 double Drachmas_TO_Ounces(double MASS);
 double Drachmas_TO_Funts(double MASS);
 double Drachmas_TO_Stones(double MASS);
@@ -390,7 +390,7 @@ double Drachmas_TO_Quintals(double MASS);
 double Drachmas_TO_Kilograms(double MASS);
 double Drachmas_TO_Grams(double MASS);
 double Drachmas_TO_Grains(double MASS);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р“СЂР°РЅ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Гран и её перевод
 double Grains_TO_Drachmas(double MASS);
 double Grains_TO_Ounces(double MASS);
 double Grains_TO_Funts(double MASS);
@@ -399,113 +399,113 @@ double Grains_TO_Carats(double MASS);
 double Grains_TO_Tonnes(double MASS);
 double Grains_TO_Quintals(double MASS);
 double Grains_TO_Kilograms(double MASS);
-double Grains_TO_Grams(double MASS);
+double Grains_TO_Grams(double MASS); */
 
-//РџСЂРѕС‚РѕС‚РёРїС‹ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ Р’Р Р•РњР•РќР
-//РЅР°РЅРѕСЃРµРєСѓРЅРґС‹
-long double nsec_to_sec (long double TIME);
-long double nsec_to_msec (long double TIME);
-long double nsec_to_mksec (long double TIME);
-long double nsec_to_sec (long double TIME);
-long double nsec_to_min (long double TIME);
-long double nsec_to_chas (long double TIME);
-long double nsec_to_sut (long double TIME);
-long double nsec_to_week (long double TIME);
-long double nsec_to_year (long double TIME);
-long double nsec_to_vek (long double TIME);
-//РјРёРєСЂРѕСЃРµРєСѓРЅРґС‹
-long double mksec_to_sec (long double TIME);
-long double mksec_to_nsec (long double TIME);
-long double mksec_to_msec (long double TIME);
-long double mksec_to_min (long double TIME);
-long double mksec_to_chas (long double TIME);
-long double mksec_to_sut (long double TIME);
-long double mksec_to_week (long double TIME);
-long double mksec_to_year (long double TIME);
-long double mksec_to_vek (long double TIME);
-//РјРёР»Р»РёСЃРµРєСѓРЅРґС‹
-long double msec_to_sec (long double TIME);
-long double msec_to_nsec (long double TIME);
-long double msec_to_mksec (long double TIME);
-long double msec_to_min (long double TIME);
-long double msec_to_chas (long double TIME);
-long double msec_to_sut (long double TIME);
-long double msec_to_week (long double TIME);
-long double msec_to_year (long double TIME);
-long double msec_to_vek (long double TIME);
-//СЃРµРєСѓРЅРґС‹
-long double sec_to_nsec (long double TIME);
-long double sec_to_mksec (long double TIME);
-long double sec_to_msec (long double TIME);
-long double sec_to_min (long double TIME);
-long double sec_to_chas (long double TIME);
-long double sec_to_sut (long double TIME);
-long double sec_to_week (long double TIME);
-long double sec_to_year (long double TIME);
-long double sec_to_vek (long double TIME);
-//РјРёРЅСѓС‚С‹
-long double min_to_nsec (long double TIME);
-long double min_to_mksec (long double TIME);
-long double min_to_msec (long double TIME);
-long double min_to_sec (long double TIME);
-long double min_to_chas (long double TIME);
-long double min_to_sut (long double TIME);
-long double min_to_week (long double TIME);
-long double min_to_year (long double TIME);
-long double min_to_vek (long double TIME);
-//С‡Р°СЃС‹
-long double chas_to_nsec (long double TIME);
-long double chas_to_mksec (long double TIME);
-long double chas_to_msec (long double TIME);
-long double chas_to_sec (long double TIME);
-long double chas_to_min (long double TIME);
-long double chas_to_sut (long double TIME);
-long double chas_to_week (long double TIME);
-long double chas_to_year (long double TIME);
-long double chas_to_vek (long double TIME);
-//СЃСѓС‚РєРё
-long double sut_to_nsec (long double TIME);
-long double sut_to_mksec (long double TIME);
-long double sut_to_msec (long double TIME);
-long double sut_to_sec (long double TIME);
-long double sut_to_min (long double TIME);
-long double sut_to_chas (long double TIME);
-long double sut_to_week (long double TIME);
-long double sut_to_year (long double TIME);
-long double sut_to_vek (long double TIME);
-//РЅРµРґРµР»Рё
-long double week_to_nsec (long double TIME);
-long double week_to_mksec (long double TIME);
-long double week_to_msec (long double TIME);
-long double week_to_sec (long double TIME);
-long double week_to_min (long double TIME);
-long double week_to_sut (long double TIME);
-long double week_to_chas (long double TIME);
-long double week_to_year (long double TIME);
-long double week_to_vek (long double TIME);
-//РіРѕРґР°
-long double year_to_nsec (long double TIME);
-long double year_to_mksec (long double TIME);
-long double year_to_msec (long double TIME);
-long double year_to_sec (long double TIME);
-long double year_to_min (long double TIME);
-long double year_to_sut (long double TIME);
-long double year_to_chas (long double TIME);
-long double year_to_week (long double TIME);
-long double year_to_vek (long double TIME);
-//РІРµРєР°
-long double vek_to_nsec (long double TIME);
-long double vek_to_mksec (long double TIME);
-long double vek_to_msec (long double TIME);
-long double vek_to_sec (long double TIME);
-long double vek_to_min (long double TIME);
-long double vek_to_sut (long double TIME);
-long double vek_to_chas (long double TIME);
-long double vek_to_week (long double TIME);
-long double vek_to_year (long double TIME);
+//Прототипы конвертирования ВРЕМЕНИ
+//наносекунды
+long double nsec_to_sec(long double TIME);
+long double nsec_to_msec(long double TIME);
+long double nsec_to_mksec(long double TIME);
+long double nsec_to_sec(long double TIME);
+long double nsec_to_min(long double TIME);
+long double nsec_to_chas(long double TIME);
+long double nsec_to_sut(long double TIME);
+long double nsec_to_week(long double TIME);
+long double nsec_to_year(long double TIME);
+long double nsec_to_vek(long double TIME);
+//микросекунды
+long double mksec_to_sec(long double TIME);
+long double mksec_to_nsec(long double TIME);
+long double mksec_to_msec(long double TIME);
+long double mksec_to_min(long double TIME);
+long double mksec_to_chas(long double TIME);
+long double mksec_to_sut(long double TIME);
+long double mksec_to_week(long double TIME);
+long double mksec_to_year(long double TIME);
+long double mksec_to_vek(long double TIME);
+//миллисекунды
+long double msec_to_sec(long double TIME);
+long double msec_to_nsec(long double TIME);
+long double msec_to_mksec(long double TIME);
+long double msec_to_min(long double TIME);
+long double msec_to_chas(long double TIME);
+long double msec_to_sut(long double TIME);
+long double msec_to_week(long double TIME);
+long double msec_to_year(long double TIME);
+long double msec_to_vek(long double TIME);
+//секунды
+long double sec_to_nsec(long double TIME);
+long double sec_to_mksec(long double TIME);
+long double sec_to_msec(long double TIME);
+long double sec_to_min(long double TIME);
+long double sec_to_chas(long double TIME);
+long double sec_to_sut(long double TIME);
+long double sec_to_week(long double TIME);
+long double sec_to_year(long double TIME);
+long double sec_to_vek(long double TIME);
+//минуты
+long double min_to_nsec(long double TIME);
+long double min_to_mksec(long double TIME);
+long double min_to_msec(long double TIME);
+long double min_to_sec(long double TIME);
+long double min_to_chas(long double TIME);
+long double min_to_sut(long double TIME);
+long double min_to_week(long double TIME);
+long double min_to_year(long double TIME);
+long double min_to_vek(long double TIME);
+//часы
+long double chas_to_nsec(long double TIME);
+long double chas_to_mksec(long double TIME);
+long double chas_to_msec(long double TIME);
+long double chas_to_sec(long double TIME);
+long double chas_to_min(long double TIME);
+long double chas_to_sut(long double TIME);
+long double chas_to_week(long double TIME);
+long double chas_to_year(long double TIME);
+long double chas_to_vek(long double TIME);
+//сутки
+long double sut_to_nsec(long double TIME);
+long double sut_to_mksec(long double TIME);
+long double sut_to_msec(long double TIME);
+long double sut_to_sec(long double TIME);
+long double sut_to_min(long double TIME);
+long double sut_to_chas(long double TIME);
+long double sut_to_week(long double TIME);
+long double sut_to_year(long double TIME);
+long double sut_to_vek(long double TIME);
+//недели
+long double week_to_nsec(long double TIME);
+long double week_to_mksec(long double TIME);
+long double week_to_msec(long double TIME);
+long double week_to_sec(long double TIME);
+long double week_to_min(long double TIME);
+long double week_to_sut(long double TIME);
+long double week_to_chas(long double TIME);
+long double week_to_year(long double TIME);
+long double week_to_vek(long double TIME);
+//года
+long double year_to_nsec(long double TIME);
+long double year_to_mksec(long double TIME);
+long double year_to_msec(long double TIME);
+long double year_to_sec(long double TIME);
+long double year_to_min(long double TIME);
+long double year_to_sut(long double TIME);
+long double year_to_chas(long double TIME);
+long double year_to_week(long double TIME);
+long double year_to_vek(long double TIME);
+//века
+long double vek_to_nsec(long double TIME);
+long double vek_to_mksec(long double TIME);
+long double vek_to_msec(long double TIME);
+long double vek_to_sec(long double TIME);
+long double vek_to_min(long double TIME);
+long double vek_to_sut(long double TIME);
+long double vek_to_chas(long double TIME);
+long double vek_to_week(long double TIME);
+long double vek_to_year(long double TIME);
 
-//РїСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёР№ РєРѕРЅРІРµРЅС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РІРµР»РёС‡РёРЅ РѕР±СЉРµРјР°
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РљСѓР±РёС‡РµСЃРєРёР№ РєРёР»РѕРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ 
+//прототип функций конвентирования различных величин объема
+//Единица измерения Кубический километр и её перевод
 double squaredkilometers_TO_squaredmeters(double AMOUNT);
 double squaredkilometers_TO_squareddecimeters(double AMOUNT);
 double squaredkilometers_TO_squaredcentimeters(double AMOUNT);
@@ -517,7 +517,7 @@ double squaredkilometers_TO_barrels(double AMOUNT);
 double squaredkilometers_TO_quarts(double AMOUNT);
 double squaredkilometers_TO_pints(double AMOUNT);
 double squaredkilometers_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РљСѓР±РёС‡РµСЃРєРёР№ РјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения Кубический метр и её перевод
 double squaredmeters_TO_squaredkilometers(double AMOUNT);
 double squaredmeters_TO_squareddecimeters(double AMOUNT);
 double squaredmeters_TO_squaredcentimeters(double AMOUNT);
@@ -529,7 +529,7 @@ double squaredmeters_TO_barrels(double AMOUNT);
 double squaredmeters_TO_pints(double AMOUNT);
 double squaredmeters_TO_quarts(double AMOUNT);
 double squaredmeters_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РєСѓР±РёС‡РµСЃРєРёР№ РґРµС†РёРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения кубический дециметр и её перевод
 double squareddecimeters_TO_squaredmeters(double AMOUNT);
 double squareddecimeters_TO_squaredkilometers(double AMOUNT);
 double squareddecimeters_TO_squaredcentimeters(double AMOUNT);
@@ -541,7 +541,7 @@ double squareddecimeters_TO_barrels(double AMOUNT);
 double squareddecimeters_TO_pints(double AMOUNT);
 double squareddecimeters_TO_quarts(double AMOUNT);
 double squareddecimeters_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РєСѓР±РёС‡РµСЃРєРёР№ РґРµС†РёРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения кубический дециметр и её перевод
 double squaredcentimeters_TO_squareddecimeters(double AMOUNT);
 double squaredcentimeters_TO_squaredmeters(double AMOUNT);
 double squaredcentimeters_TO_squaredkilometers(double AMOUNT);
@@ -553,7 +553,7 @@ double squaredcentimeters_TO_barrels(double AMOUNT);
 double squaredcentimeters_TO_pints(double AMOUNT);
 double squaredcentimeters_TO_quarts(double AMOUNT);
 double squaredcentimeters_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РєСѓР±РёС‡РµСЃРєРёР№ РјРёР»Р»РёРјРµС‚СЂС‹ РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения кубический миллиметры её перевод
 double squaredmillimeters_TO_squaredcentimeters(double AMOUNT);
 double squaredmillimeters_TO_squareddecimeters(double AMOUNT);
 double squaredmillimeters_TO_squaredmeters(double AMOUNT);
@@ -565,7 +565,7 @@ double squaredmillimeters_TO_barrels(double AMOUNT);
 double squaredmillimeters_TO_pints(double AMOUNT);
 double squaredmillimeters_TO_quarts(double AMOUNT);
 double squaredmillimeters_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РєСѓР±РёС‡РµСЃРєРёР№ РјРёР»Р»РёРјРµС‚СЂС‹ РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения кубический миллиметры её перевод
 double liters_TO_squaredmillimeters(double AMOUNT);
 double liters_TO_squaredcentimeters(double AMOUNT);
 double liters_TO_squareddecimeters(double AMOUNT);
@@ -577,7 +577,7 @@ double liters_TO_barrels(double AMOUNT);
 double liters_TO_quarts(double AMOUNT);
 double liters_TO_pints(double AMOUNT);
 double liters_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РјРёР»Р»РёС‚СЂ РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения миллитр её перевод
 double mililiters_TO_liters(double AMOUNT);
 double mililiters_TO_squaredmillimeters(double AMOUNT);
 double mililiters_TO_squaredcentimeters(double AMOUNT);
@@ -589,7 +589,7 @@ double mililiters_TO_barrels(double AMOUNT);
 double mililiters_TO_quarts(double AMOUNT);
 double mililiters_TO_pints(double AMOUNT);
 double mililiters_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РіР°Р»Р»РѕРЅ РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения галлон её перевод
 double gallons_TO_mililiters(double AMOUNT);
 double gallons_TO_liters(double AMOUNT);
 double gallons_TO_squaredmillimeters(double AMOUNT);
@@ -601,7 +601,7 @@ double gallons_TO_barrels(double AMOUNT);
 double gallons_TO_quarts(double AMOUNT);
 double gallons_TO_pints(double AMOUNT);
 double gallons_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р±Р°СЂСЂРµР»СЊ (РЅРµС„С‚СЏРЅРѕР№) РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения баррель (нефтяной) её перевод
 double barrels_TO_gallons(double AMOUNT);
 double barrels_TO_mililiters(double AMOUNT);
 double barrels_TO_liters(double AMOUNT);
@@ -613,7 +613,7 @@ double barrels_TO_squaredkilometers(double AMOUNT);
 double barrels_TO_quarts(double AMOUNT);
 double barrels_TO_pints(double AMOUNT);
 double barrels_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РєРІР°СЂС‚Р°  РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения кварта  её перевод
 double quarts_TO_barrels(double AMOUNT);
 double quarts_TO_gallons(double AMOUNT);
 double quarts_TO_mililiters(double AMOUNT);
@@ -625,7 +625,7 @@ double quarts_TO_squaredmeters(double AMOUNT);
 double quarts_TO_squaredkilometers(double AMOUNT);
 double quarts_TO_pints(double AMOUNT);
 double quarts_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РїРёРЅС‚Р°  РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения пинта  её перевод
 double pints_TO_quarts(double AMOUNT);
 double pints_TO_barrels(double AMOUNT);
 double pints_TO_gallons(double AMOUNT);
@@ -637,7 +637,7 @@ double pints_TO_squareddecimeters(double AMOUNT);
 double pints_TO_squaredmeters(double AMOUNT);
 double pints_TO_squaredkilometers(double AMOUNT);
 double pints_TO_flozs(double AMOUNT);
-//Р•РґРёРЅРёС†Р° Р¶РёРґРєР°СЏ СѓРЅС†РёСЏ  РµС‘ РїРµСЂРµРІРѕРґ
+//Единица жидкая унция  её перевод
 double flozs_TO_pints(double AMOUNT);
 double flozs_TO_quarts(double AMOUNT);
 double flozs_TO_barrels(double AMOUNT);
@@ -650,8 +650,8 @@ double flozs_TO_squareddecimeters(double AMOUNT);
 double flozs_TO_squaredmeters(double AMOUNT);
 double flozs_TO_squaredkilometers(double AMOUNT);
 
-/*Р¤РЈРќРљР¦РР РљРћРќР’Р•Р РўРР РћР’РђРќРРЇ Р РђР—Р›РР§РќР«РҐ Р•Р”РРќРР¦ Р”Р›РРќР«  */
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РјРёР»Р»РёРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+/*ФУНКЦИИ КОНВЕРТИРОВАНИЯ РАЗЛИЧНЫХ ЕДИНИЦ ДЛИНЫ  */
+//Единица измерения миллиметр и её перевод
 double millimeters_TO_meters(double LENGTH);
 double millimeters_TO_centimeters(double LENGTH);
 double millimeters_TO_decimeters(double LENGTH);
@@ -665,7 +665,7 @@ double millimeters_TO_micrometers(double LENGTH);
 double millimeters_TO_nanometers(double LENGTH);
 double millimeters_TO_angstroms(double LENGTH);
 double millimeters_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения метр и её перевод
 double meters_TO_millimeters(double LENGTH);
 double meters_TO_centimeters(double LENGTH);
 double meters_TO_decimeters(double LENGTH);
@@ -679,7 +679,7 @@ double meters_TO_micrometers(double LENGTH);
 double meters_TO_nanometers(double LENGTH);
 double meters_TO_angstroms(double LENGTH);
 double meters_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ СЃР°РЅС‚РёРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения сантиметр и её перевод
 double centimeters_TO_meters(double LENGTH);
 double centimeters_TO_millimeters(double LENGTH);
 double centimeters_TO_decimeters(double LENGTH);
@@ -693,7 +693,7 @@ double centimeters_TO_micrometers(double LENGTH);
 double centimeters_TO_nanometers(double LENGTH);
 double centimeters_TO_angstroms(double LENGTH);
 double centimeters_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РґРµС†РёРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения дециметр и её перевод
 double decimeters_TO_centimeters(double LENGTH);
 double decimeters_TO_meters(double LENGTH);
 double decimeters_TO_millimeters(double LENGTH);
@@ -707,7 +707,7 @@ double decimeters_TO_micrometers(double LENGTH);
 double decimeters_TO_nanometers(double LENGTH);
 double decimeters_TO_angstroms(double LENGTH);
 double decimeters_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РєРёР»РѕРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения километр и её перевод
 double kilometers_TO_decimeters(double LENGTH);
 double kilometers_TO_centimeters(double LENGTH);
 double kilometers_TO_meters(double LENGTH);
@@ -721,7 +721,7 @@ double kilometers_TO_micrometers(double LENGT);
 double kilometers_TO_nanometers(double LENGTH);
 double kilometers_TO_angstroms(double LENGTH);
 double kilometers_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ СЃР°Р¶РµРЅСЊ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения сажень и её перевод
 double fathoms_TO_kilometers(double LENGTH);
 double fathoms_TO_decimeters(double LENGTH);
 double fathoms_TO_centimeters(double LENGTH);
@@ -735,7 +735,7 @@ double fathoms_TO_micrometers(double LENGTH);
 double fathoms_TO_nanometers(double LENGTH);
 double fathoms_TO_angstroms(double LENGTH);
 double fathoms_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р°СЂС€РёРЅ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения аршин и её перевод
 double arshins_TO_fathoms(double LENGTH);
 double arshins_TO_kilometers(double LENGTH);
 double arshins_TO_decimeters(double LENGTH);
@@ -749,7 +749,7 @@ double arshins_TO_micrometers(double LENGTH);
 double arshins_TO_nanometers(double LENGTH);
 double arshins_TO_angstroms(double LENGTH);
 double arshins_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РјРёР»СЏ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения миля и её перевод
 double miles_TO_arshins(double LENGTH);
 double miles_TO_fathoms(double LENGTH);
 double miles_TO_kilometers(double LENGTH);
@@ -763,7 +763,7 @@ double miles_TO_micrometers(double LENGTH);
 double miles_TO_nanometers(double LENGTH);
 double miles_TO_angstroms(double LENGTH);
 double miles_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ СЏСЂРґ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения ярд и её перевод
 double yards_TO_miles(double LENGTH);
 double yards_TO_arshins(double LENGTH);
 double yards_TO_fathoms(double LENGTH);
@@ -777,7 +777,7 @@ double yards_TO_micrometers(double LENGTH);
 double yards_TO_nanometers(double LENGTH);
 double yards_TO_angstroms(double LENGTH);
 double yards_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ С„СѓС‚ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения фут и её перевод
 double foots_TO_yards(double LENGTH);
 double foots_TO_miles(double LENGTH);
 double foots_TO_arshins(double LENGTH);
@@ -791,7 +791,7 @@ double foots_TO_micrometers(double LENGTH);
 double foots_TO_nanometers(double LENGTH);
 double foots_TO_angstroms(double LENGTH);
 double foots_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РјРёРєСЂРѕРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения микрометр и её перевод
 double micrometers_TO_foots(double LENGTH);
 double micrometers_TO_yards(double LENGTH);
 double micrometers_TO_miles(double LENGTH);
@@ -805,7 +805,7 @@ double micrometers_TO_millimeters(double LENGTH);
 double micrometers_TO_nanometers(double LENGTH);
 double micrometers_TO_angstroms(double LENGTH);
 double micrometers_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РЅР°РЅРѕРјРµС‚СЂ Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения нанометр и её перевод
 double nanometers_TO_micrometers(double LENGTH);
 double nanometers_TO_foots(double LENGTH);
 double nanometers_TO_yards(double LENGTH);
@@ -819,7 +819,7 @@ double nanometers_TO_meters(double LENGTH);
 double nanometers_TO_millimeters(double LENGTH);
 double nanometers_TO_angstroms(double LENGTH);
 double nanometers_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р°РЅРіСЃС‚СЂРµРј Рё РµС‘ РїРµСЂРµРІРѕРґ
+//Единица измерения ангстрем и её перевод
 double angstroms_TO_nanometers(double LENGTH);
 double angstroms_TO_micrometers(double LENGTH);
 double angstroms_TO_foots(double LENGTH);
@@ -833,7 +833,7 @@ double angstroms_TO_centimeters(double LENGTH);
 double angstroms_TO_meters(double LENGTH);
 double angstroms_TO_meters(double LENGTH);
 double angstroms_TO_nauticalmiles(double LENGTH);
-//Р•РґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ РјРѕСЂСЃРєР°СЏ РјРёР»СЏ
+//Единица измерения морская миля
 double nauticalmiles_TO_angstroms(double LENGTH);
 double nauticalmiles_TO_nanometers(double LENGTH);
 double nauticalmiles_TO_micrometers(double LENGTH);
@@ -847,29 +847,29 @@ double nauticalmiles_TO_decimeters(double LENGTH);
 double nauticalmiles_TO_centimeters(double LENGTH);
 double nauticalmiles_TO_meters(double LENGTH);
 double nauticalmiles_TO_millimeters(double LENGTH);
-//РџСЂРѕС‚РѕС‚РёРїС‹ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ Р­РќР•Р Р“РР
-//РґР¶РѕСѓР»Рё
-double joule_to_kvatch (double ENERGY);
-double joule_to_electronvolt (double ENERGY);
-double joule_to_kall (double ENERGY);
-double joule_to_tnt (double ENERGY);
-//РљРёР»РѕРІР°С‚С‚-С‡Р°СЃ
-double kvatch_to_joule (double ENERGY);
-double kvatch_to_electronvolt (double ENERGY);
-double kvatch_to_kall (double ENERGY);
-double kvatch_to_tnt (double ENERGY);
-//Р­Р»РµРєС‚СЂРѕРЅРІРѕР»СЊС‚
-double electronvolt_to_joule (double ENERGY);
-double electronvolt_to_kvatch (double ENERGY);
-double electronvolt_to_kall (double ENERGY);
-double electronvolt_to_tnt (double ENERGY);
-//РљР°Р»РѕСЂРёРё
-double kall_to_joule (double ENERGY);
-double kall_to_kvatch (double ENERGY);
-double kall_to_electronvolt (double ENERGY);
-double kall_to_tnt (double ENERGY);
-//РўСЂР°С‚РёР»РѕРІС‹Р№ СЌРєРІРёРІР°Р»РµРЅС‚
-double tnt_to_joule (double ENERGY);
-double tnt_to_kvatch (double ENERGY);
-double tnt_to_electronvolt (double ENERGY);
-double tnt_to_kall (double ENERGY);
+//Прототипы конвертирования ЭНЕРГИИ
+//джоули
+double joule_to_kvatch(double ENERGY);
+double joule_to_electronvolt(double ENERGY);
+double joule_to_kall(double ENERGY);
+double joule_to_tnt(double ENERGY);
+//Киловатт-час
+double kvatch_to_joule(double ENERGY);
+double kvatch_to_electronvolt(double ENERGY);
+double kvatch_to_kall(double ENERGY);
+double kvatch_to_tnt(double ENERGY);
+//Электронвольт
+double electronvolt_to_joule(double ENERGY);
+double electronvolt_to_kvatch(double ENERGY);
+double electronvolt_to_kall(double ENERGY);
+double electronvolt_to_tnt(double ENERGY);
+//Калории
+double kall_to_joule(double ENERGY);
+double kall_to_kvatch(double ENERGY);
+double kall_to_electronvolt(double ENERGY);
+double kall_to_tnt(double ENERGY);
+//Тратиловый эквивалент
+double tnt_to_joule(double ENERGY);
+double tnt_to_kvatch(double ENERGY);
+double tnt_to_electronvolt(double ENERGY);
+double tnt_to_kall(double ENERGY);
