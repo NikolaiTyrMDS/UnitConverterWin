@@ -1,434 +1,434 @@
 #include <stdio.h>
 
-/* ФУНКЦИИ КОНВЕРТИРОВАНИЯ РАЗЛИЧНЫХ ЕДИНИЦ МОЩНОСТИ */
+/* ‘”Ќ ?»»  ќЌ¬?–“»–ќ¬јЌ»я –ј«Ћ»„Ќџ’ ??»Ќ»? ћќўЌќ—“» */
 
-// <Ваты> ---> <Киловаты> //
+// <¬аты> ---> < иловаты> //
 double Vat2kVat(double POWER) {
 	POWER = POWER / 1000;
 	return POWER;
 }
 
-// <Киловаты> ---> <Ваты> //
+// < иловаты> ---> <¬аты> //
 double kVat2Vat(double POWER) {
 	POWER = POWER * 1000;
 	return POWER;
 }
 
-// <Ваты> ---> <Мегаваты> //
+// <¬аты> ---> <ћегаваты> //
 double Vat2mVat(double POWER) {
 	POWER = POWER / 1000000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Ваты> //
+// <ћегаваты> ---> <¬аты> //
 double mVat2Vat(double POWER) {
 	POWER = POWER * 1000000;
 	return POWER;
 }
 
-// <Киловаты> ---> <Мегаваты> //
+// < иловаты> ---> <ћегаваты> //
 double kVat2mVat(double POWER) {
 	POWER = POWER / 1000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Киловаты> //
+// <ћегаваты> ---> < иловаты> //
 double mVat2kVat(double POWER) {
 	POWER = POWER * 1000;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Ваты> //
+// < илограмм-сила-метр в секунду> ---> <¬аты> //
 double kgSilaMvS2Vat(double POWER) {
 	POWER = POWER * 9.81;
 	return POWER;
 }
 
-// <Ваты> ---> <Килограмм-сила-метр в секунду> //
+// <¬аты> ---> < илограмм-сила-метр в секунду> //
 double Vat2kgSilaMvS(double POWER) {
 	POWER = POWER / 9.81;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Киловаты> //
+// < илограмм-сила-метр в секунду> ---> < иловаты> //
 double kgSilaMvS2kVat(double POWER) {
 	POWER = (POWER * 9.81) / 1000;
 	return POWER;
 }
 
-// <Киловаты> ---> <Килограмм-сила-метр в секунду> //
+// < иловаты> ---> < илограмм-сила-метр в секунду> //
 double kVat2kgSilaMvS(double POWER) {
 	POWER = (POWER * 1000) / 9.81;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Мегаваты> //
+// < илограмм-сила-метр в секунду> ---> <ћегаваты> //
 double kgSilaMvS2mVat(double POWER) {
 	POWER = (POWER * 9.81) / 1000000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Килограмм-сила-метр в секунду> //
+// <ћегаваты> ---> < илограмм-сила-метр в секунду> //
 double mVat2kgSilaMvS(double POWER) {
 	POWER = (POWER * 1000000) / 9.81;
 	return POWER;
 }
 
-// <Ваты> ---> <Эрг в секунду> //
+// <¬аты> ---> <Ёрг в секунду> //
 double Vat2ErgS(double POWER) {
 	POWER = POWER  * 10000000;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Ваты> //
+// <Ёрг в секунду> ---> <¬аты> //
 double ErgS2Vat(double POWER) {
 	POWER = POWER / 10000000;
 	return POWER;
 }
 
-// <Киловаты> ---> <Эрг в секунду> //
+// < иловаты> ---> <Ёрг в секунду> //
 double kVat2ErgS(double POWER) {
 	POWER = POWER  * 10000000000;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Киловаты> //
+// <Ёрг в секунду> ---> < иловаты> //
 double ErgS2kVat(double POWER) {
 	POWER = POWER / 10000000000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Эрг в секунду> //
+// <ћегаваты> ---> <Ёрг в секунду> //
 double mVat2ErgS(double POWER) {
 	POWER = POWER  * 10000000000000;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Мегаваты> //
+// <Ёрг в секунду> ---> <ћегаваты> //
 double ErgS2mVat(double POWER) {
 	POWER = POWER / 10000000000000;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Эрг в секунду> //
+// < илограмм-сила-метр в секунду> ---> <Ёрг в секунду> //
 double kgSilaMvS2ErgS(double POWER) {
 	POWER = POWER  * 9.81 * 10000000;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Килограмм-сила-метр в секунду> //
+// <Ёрг в секунду> ---> < илограмм-сила-метр в секунду> //
 double ErgS2kgSilaMvS(double POWER) {
 	POWER = POWER / (9.81 * 10000000);
 	return POWER;
 }
 
-// <Ваты> ---> <Лошадиные силы(метрические)> //
+// <¬аты> ---> <Ћошадиные силы(метрические)> //
 double Vat2HorsePowMetr(double POWER) {
 	POWER = POWER  / 735.5;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Ваты> //
+// <Ћошадиные силы(метрические)> ---> <¬аты> //
 double HorsePowMetr2Vat(double POWER) {
 	POWER = POWER * 735.5;
 	return POWER;
 }
 
-// <Киловаты> ---> <Лошадиные силы(метрические)> //
+// < иловаты> ---> <Ћошадиные силы(метрические)> //
 double kVat2HorsePowMetr(double POWER) {
 	POWER = (POWER  * 1000) / 735.5;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Киловаты> //
+// <Ћошадиные силы(метрические)> ---> < иловаты> //
 double HorsePowMetr2kVat(double POWER) {
 	POWER = (POWER * 735.5) / 1000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Лошадиные силы(метрические)> //
+// <ћегаваты> ---> <Ћошадиные силы(метрические)> //
 double mVat2HorsePowMetr(double POWER) {
 	POWER = (POWER  * 1000000) / 735.5;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Мегаваты> //
+// <Ћошадиные силы(метрические)> ---> <ћегаваты> //
 double HorsePowMetr2mVat(double POWER) {
 	POWER = (POWER * 735.5) / 1000000;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Лошадиные силы(метрические)> //
+// < илограмм-сила-метр в секунду> ---> <Ћошадиные силы(метрические)> //
 double kgSilaMvS2HorsePowMetr(double POWER) {
 	POWER = POWER / 75;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Килограмм-сила-метр в секунду> //
+// <Ћошадиные силы(метрические)> ---> < илограмм-сила-метр в секунду> //
 double HorsePowMetr2kgSilaMvS(double POWER) {
 	POWER = POWER * 75;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Лошадиные силы(метрические)> //
+// <Ёрг в секунду> ---> <Ћошадиные силы(метрические)> //
 double ErgS2HorsePowMetr(double POWER) {
 	POWER = POWER / (7.355 * 1000000000);
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Эрг в секунду> //
+// <Ћошадиные силы(метрические)> ---> <Ёрг в секунду> //
 double HorsePowMetr2ErgS(double POWER) {
 	POWER = POWER * 7.355 * 1000000000;
 	return POWER;
 }
 
-// <Ваты> ---> <Лошадиные силы(английские)> //
+// <¬аты> ---> <Ћошадиные силы(английские)> //
 double Vat2HorsePowEng(double POWER) {
 	POWER = POWER / 745.7;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Ваты> //
+// <Ћошадиные силы(английские)> ---> <¬аты> //
 double HorsePowEng2Vat(double POWER) {
 	POWER = POWER * 745.7;
 	return POWER;
 }
 
-// <Киловаты> ---> <Лошадиные силы(английские)> //
+// < иловаты> ---> <Ћошадиные силы(английские)> //
 double kVat2HorsePowEng(double POWER) {
 	POWER = (POWER * 1000) / 745.7;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Киловаты> //
+// <Ћошадиные силы(английские)> ---> < иловаты> //
 double HorsePowEng2kVat(double POWER) {
 	POWER = (POWER * 745.7) / 1000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Лошадиные силы(английские)> //
+// <ћегаваты> ---> <Ћошадиные силы(английские)> //
 double mVat2HorsePowEng(double POWER) {
 	POWER = (POWER * 1000000) / 745.7;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Мегаваты> //
+// <Ћошадиные силы(английские)> ---> <ћегаваты> //
 double HorsePowEng2mVat(double POWER) {
 	POWER = (POWER * 745.7) / 1000000;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Лошадиные силы(английские)> //
+// < илограмм-сила-метр в секунду> ---> <Ћошадиные силы(английские)> //
 double kgSilaMvS2HorsePowEng(double POWER) {
 	POWER = POWER / 76.04;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Килограмм-сила-метр в секунду> //
+// <Ћошадиные силы(английские)> ---> < илограмм-сила-метр в секунду> //
 double HorsePowEng2kgSilaMvS(double POWER) {
 	POWER = POWER * 76.04;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Лошадиные силы(английские)> //
+// <Ёрг в секунду> ---> <Ћошадиные силы(английские)> //
 double ErgS2HorsePowEng(double POWER) {
 	POWER = POWER / (7.457 * 1000000000);
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Эрг в секунду> //
+// <Ћошадиные силы(английские)> ---> <Ёрг в секунду> //
 double HorsePowEng2ErgS(double POWER) {
 	POWER = POWER * 7.457 * 1000000000;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Лошадиные силы(английские)> //
+// <Ћошадиные силы(метрические)> ---> <Ћошадиные силы(английские)> //
 double HorsePowMetr2HorsePowEng(double POWER) {
 	POWER = POWER / 1.014;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Лошадиные силы(метрические)> //
+// <Ћошадиные силы(английские)> ---> <Ћошадиные силы(метрические)> //
 double HorsePowEng2HorsePowMetr(double POWER) {
 	POWER = POWER * 1.014;
 	return POWER;
 }
 
-// <Ваты> ---> <Милливаты> //
+// <¬аты> ---> <ћилливаты> //
 double Vat2MlVat(double POWER) {
 	POWER = POWER * 1000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Ваты> //
+// <ћилливаты> ---> <¬аты> //
 double MlVat2Vat(double POWER) {
 	POWER = POWER / 1000;
 	return POWER;
 }
 
-// <Киловаты> ---> <Милливаты> //
+// < иловаты> ---> <ћилливаты> //
 double kVat2MlVat(double POWER) {
 	POWER = POWER * 1000000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Киловаты> //
+// <ћилливаты> ---> < иловаты> //
 double MlVat2kVat(double POWER) {
 	POWER = POWER / 1000000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Милливаты> //
+// <ћегаваты> ---> <ћилливаты> //
 double mVat2MlVat(double POWER) {
 	POWER = POWER * 1000000000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Мегаваты> //
+// <ћилливаты> ---> <ћегаваты> //
 double MlVat2mVat(double POWER) {
 	POWER = POWER / 1000000000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Килограмм-сила-метр в секунду> //
+// <ћилливаты> ---> < илограмм-сила-метр в секунду> //
 double MlVat2kgSilaMvS(double POWER) {
 	POWER = POWER / 9.81 / 1000;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Милливаты> //
+// < илограмм-сила-метр в секунду> ---> <ћилливаты> //
 double kgSilaMvS2MlVat(double POWER) {
 	POWER = (POWER * 9.81) / 1000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Эрг в секунду> //
+// <ћилливаты> ---> <Ёрг в секунду> //
 double MlVat2ErgS(double POWER) {
 	POWER = POWER  * 10000;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Милливаты> //
+// <Ёрг в секунду> ---> <ћилливаты> //
 double ErgS2MlVat(double POWER) {
 	POWER = POWER / 10000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Лошадиные силы(метрические)> //
+// <ћилливаты> ---> <Ћошадиные силы(метрические)> //
 double MlVat2HorsePowMetr(double POWER) {
 	POWER = POWER  / 735.5 / 1000;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Милливаты> //
+// <Ћошадиные силы(метрические)> ---> <ћилливаты> //
 double HorsePowMetr2MlVat(double POWER) {
 	POWER = (POWER * 735.5) / 1000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Лошадиные силы(английские)> //
+// <ћилливаты> ---> <Ћошадиные силы(английские)> //
 double MlVat2HorsePowEng(double POWER) {
 	POWER = POWER / 745.7 / 1000;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Милливаты> //
+// <Ћошадиные силы(английские)> ---> <ћилливаты> //
 double HorsePowEng2MlVat(double POWER) {
 	POWER = (POWER * 745.7) / 1000;
 	return POWER;
 }
 
-// <Милливаты> ---> <Микроваты> //
+// <ћилливаты> ---> <ћикроваты> //
 double MlVat2MkVat(double POWER) {
 	POWER = POWER * 1000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Милливаты> //
+// <ћикроваты> ---> <ћилливаты> //
 double MkVat2MlVat(double POWER) {
 	POWER = POWER / 1000;
 	return POWER;
 }
 
-// <Ваты> ---> <Микроваты> //
+// <¬аты> ---> <ћикроваты> //
 double Vat2MkVat(double POWER) {
 	POWER = POWER * 1000000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Ваты> //
+// <ћикроваты> ---> <¬аты> //
 double MkVat2Vat(double POWER) {
 	POWER = POWER / 1000000;
 	return POWER;
 }
 
-// <Киловаты> ---> <Микроваты> //
+// < иловаты> ---> <ћикроваты> //
 double kVat2MkVat(double POWER) {
 	POWER = POWER * 1000000000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Киловаты> //
+// <ћикроваты> ---> < иловаты> //
 double MkVat2kVat(double POWER) {
 	POWER = POWER / 1000000000;
 	return POWER;
 }
 
-// <Мегаваты> ---> <Микроваты> //
+// <ћегаваты> ---> <ћикроваты> //
 double mVat2MkVat(double POWER) {
 	POWER = POWER * 1000000000000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Мегаваты> //
+// <ћикроваты> ---> <ћегаваты> //
 double MkVat2mVat(double POWER) {
 	POWER = POWER / 1000000000000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Килограмм-сила-метр в секунду> //
+// <ћикроваты> ---> < илограмм-сила-метр в секунду> //
 double MkVat2kgSilaMvS(double POWER) {
 	POWER = POWER / 9.81 / 1000000;
 	return POWER;
 }
 
-// <Килограмм-сила-метр в секунду> ---> <Микроваты> //
+// < илограмм-сила-метр в секунду> ---> <ћикроваты> //
 double kgSilaMvS2MkVat(double POWER) {
 	POWER = (POWER * 9.81) / 1000000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Эрг в секунду> //
+// <ћикроваты> ---> <Ёрг в секунду> //
 double MkVat2ErgS(double POWER) {
 	POWER = POWER  * 10;
 	return POWER;
 }
 
-// <Эрг в секунду> ---> <Микроваты> //
+// <Ёрг в секунду> ---> <ћикроваты> //
 double ErgS2MkVat(double POWER) {
 	POWER = POWER / 10;
 	return POWER;
 }
 
-// <Микроваты> ---> <Лошадиные силы(метрические)> //
+// <ћикроваты> ---> <Ћошадиные силы(метрические)> //
 double MkVat2HorsePowMetr(double POWER) {
 	POWER = POWER  / 735.5 / 1000000;
 	return POWER;
 }
 
-// <Лошадиные силы(метрические)> ---> <Микроваты> //
+// <Ћошадиные силы(метрические)> ---> <ћикроваты> //
 double HorsePowMetr2MkVat(double POWER) {
 	POWER = (POWER * 735.5) / 1000000;
 	return POWER;
 }
 
-// <Микроваты> ---> <Лошадиные силы(английские)> //
+// <ћикроваты> ---> <Ћошадиные силы(английские)> //
 double MkVat2HorsePowEng(double POWER) {
 	POWER = POWER / 745.7 / 1000000;
 	return POWER;
 }
 
-// <Лошадиные силы(английские)> ---> <Микроваты> //
+// <Ћошадиные силы(английские)> ---> <ћикроваты> //
 double HorsePowEng2MkVat(double POWER) {
 	POWER = (POWER * 745.7) / 1000000;
 	return POWER;

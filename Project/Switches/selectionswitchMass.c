@@ -35,7 +35,7 @@ double selectionswitchMass(double MEASUREMENT)
            "6 - Стоун;\n"
            "7 - Фунт;\n"
            "8 - Унция;\n"
-           "9 - Драхма;\n\t"
+           "9 - Драхма;\n"
            "10 - Гран;\n \t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
@@ -44,11 +44,11 @@ double selectionswitchMass(double MEASUREMENT)
         scanf("%d", &key.output_choice);
     }
 
-    if(input_choice < 10 && output_choice < 10)
-		 key.id = key.input_choice * 10 + key.output_choice;
-	  if(input_choice >= 10)
+    if(key.input_choice < 10 && key.output_choice < 10)
+		key.id = key.input_choice * 10 + key.output_choice;
+	if(key.input_choice == 10 && key.output_choice <= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-	  if(input_choice < 10 && output_choice >= 10)
+	if(key.input_choice < 10 && key.output_choice == 10)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
@@ -340,4 +340,6 @@ double selectionswitchMass(double MEASUREMENT)
 
     return key.gate;
 }
+
+
 

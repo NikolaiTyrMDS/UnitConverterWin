@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
-                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+#include "../Headers/total.h"
 
 double selectionswitchTemperature(double MEASUREMENT)
 {
@@ -200,7 +199,7 @@ double selectionswitchTemperature(double MEASUREMENT)
             key.gate = FahrenheitsTORomers(MEASUREMENT);
             break;
         case 87:
-            key.gate = FahrenheitsTOCelsiuss(MEASUREMENT);
+            key.gate = FahrenheitsTOCelsius(MEASUREMENT);
             break;
         default:
             printf("Не введено значение конвертируемой величины, "

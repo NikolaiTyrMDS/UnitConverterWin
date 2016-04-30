@@ -18,8 +18,8 @@ double selectionswitchAmount(double MEASUREMENT)
            "7 - Миллилитр;\n"
            "8 - Галлон;\n"
            "9 - Баррель;\n"
-           "10 - Кварта;\n \t"
-           "11 - Пинта;\n \t"
+           "10 - Кварта;\n "
+           "11 - Пинта;\n "
            "12 - Жидкая унция; \t");
     scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
@@ -38,8 +38,8 @@ double selectionswitchAmount(double MEASUREMENT)
            "7 - Миллилитр;\n"
            "8 - Галлон;\n"
            "9 - Баррель;\n"
-           "10 - Кварта;\n \t"
-           "11 - Пинта;\n \t"
+           "10 - Кварта;\n "
+           "11 - Пинта;\n "
            "12 - Жидкая унция; \t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
@@ -48,11 +48,11 @@ double selectionswitchAmount(double MEASUREMENT)
         scanf("%d", &key.output_choice);
     }
 
-    if(input_choice < 10 && output_choice < 10)
+    if(key.input_choice < 10 && key.output_choice < 10)
 		key.id = key.input_choice * 10 + key.output_choice;
-	if(input_choice >= 10)
+	if(key.input_choice == 10 && key.output_choice <= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-	if(input_choice < 10 && output_choice >= 10)
+	if(key.input_choice < 10 && key.output_choice == 10)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
@@ -80,7 +80,7 @@ double selectionswitchAmount(double MEASUREMENT)
             break;
         case 19:
             key.gate = squaredkilometers_TO_barrels(MEASUREMENT);
-            break;
+            break;   
         case 110:
             key.gate = squaredkilometers_TO_quarts(MEASUREMENT);
             break;
@@ -124,7 +124,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 212:
             key.gate = squaredmeters_TO_flozs(MEASUREMENT);
             break;
-        // Кубический дециметр
+        // Кубический дециметр   
         case 32:
             key.gate = squareddecimeters_TO_squaredmeters(MEASUREMENT);
             break;
@@ -158,7 +158,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 312:
             key.gate = squareddecimeters_TO_flozs(MEASUREMENT);
             break;
-         // квадратный сантиметр
+         // квадратный сантиметр   
         case 43:
             key.gate = squaredcentimeters_TO_squareddecimeters(MEASUREMENT);
             break;
@@ -192,7 +192,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 412:
             key.gate = squaredcentimeters_TO_flozs(MEASUREMENT);
             break;
-         // Кубический миллиметр
+         // Кубический миллиметр   
         case 54:
             key.gate = squaredmillimeters_TO_squaredcentimeters(MEASUREMENT);
             break;
@@ -215,7 +215,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = squaredmillimeters_TO_gallons(MEASUREMENT);
             break;
         case 59:
-            key.gate = squaredmillimeters_TO_barrels(MEASUREMENT);
+            key.gate = squaredmillimeters_TO_barrels(MEASUREMENT); 
             break;
         case 510:
             key.gate = squaredmillimeters_TO_quarts(MEASUREMENT);
@@ -226,7 +226,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 512:
             key.gate = squaredmillimeters_TO_flozs(MEASUREMENT);
             break;
-         // Литры
+         // Литры   
         case 65:
             key.gate = liters_TO_squaredmillimeters(MEASUREMENT);
             break;
@@ -260,7 +260,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 612:
             key.gate = liters_TO_flozs(MEASUREMENT);
             break;
-         // Миллилитр
+         // Миллилитр   
         case 76:
             key.gate = mililiters_TO_liters(MEASUREMENT);
             break;
@@ -294,7 +294,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 712:
             key.gate = mililiters_TO_flozs(MEASUREMENT);
             break;
-        // Галлон
+        // Галлон    
         case 87:
             key.gate = gallons_TO_mililiters(MEASUREMENT);
             break;
@@ -311,7 +311,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = gallons_TO_squareddecimeters(MEASUREMENT);
             break;
         case 82:
-            key.gate = gallons_TO_squaredmeters(MEASUREMENT);
+            key.gate = gallons_TO_squaredmeters(MEASUREMENT);  
             break;
         case 81:
             key.gate = gallons_TO_squaredkilometers(MEASUREMENT);
@@ -328,7 +328,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 812:
             key.gate = gallons_TO_flozs(MEASUREMENT);
             break;
-
+        
         //Баррель
         case 98:
             key.gate = barrels_TO_gallons(MEASUREMENT);
@@ -363,7 +363,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 912:
             key.gate =  barrels_TO_floz(MEASUREMENT);
             break;
-         // Кварта
+         // Кварта    
         case 1009:
             key.gate =  quarts_TO_barrels(MEASUREMENT);
             break;
@@ -397,7 +397,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 1012:
             key.gate =  quarts_TO_flozs(MEASUREMENT);
             break;
-        // Пинта
+        // Пинта   
         case 1110:
             key.gate =  pints_TO_quarts(MEASUREMENT);
             break;
@@ -430,8 +430,8 @@ double selectionswitchAmount(double MEASUREMENT)
             break;
         case 1112:
             key.gate =  pints_TO_flozs(MEASUREMENT);
-            break;
-         // Жидкая унция
+            break;   
+         // Жидкая унция    
         case 1211:
             key.gate =  flozs_TO_pints(MEASUREMENT);
             break;
@@ -464,7 +464,7 @@ double selectionswitchAmount(double MEASUREMENT)
             break;
         case 1201:
             key.gate =  flozs_TO_squaredkilometers(MEASUREMENT);
-            break;
+            break;                                                                                                                                                                            
         default:
             printf("Не введено значение конвертируемой величины, "
                    "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");

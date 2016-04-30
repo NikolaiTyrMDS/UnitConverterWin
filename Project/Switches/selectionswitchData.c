@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
-#include "../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
                                 Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
 double selectionswitchData(double MEASUREMENT)

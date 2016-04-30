@@ -56,7 +56,7 @@ double CelsiusTODelisles(double TEMPERATURE) {
 /*------------------------Единица измерения Фаренгейт и её перевод в выше перечисленные единицы измерения-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // <Фаренгейт> ---> <цельсий> //
-double FahrenheitsTOCelsiuss(double TEMPERATURE) {
+double FahrenheitsTOCelsius(double TEMPERATURE) {
 	TEMPERATURE = (TEMPERATURE - 32) * 5/9;  // Для перевода температуры из шкалы Фаренгейта в шкалу Цельсия нужно воспользоваться формулой [°C]=([°F]-32)*5/9
 	return TEMPERATURE;
 }
@@ -360,7 +360,7 @@ double DelislesTOReaumurs(double TEMPERATURE) {
 
 // <Делисле> ---> <Кельвин> //
 double DelislesTOKelvins(double TEMPERATURE) {
-	TEMPERATURE = (373.15 - TEMPERATURE) * 2/3; //Для перевода температуры из шкалы Делисле в шкалу Кельвина   нужно воспользоваться формулой  [°K]=373.15-[°De]*2/3
+	TEMPERATURE = 373.15 - TEMPERATURE * 2/3; //Для перевода температуры из шкалы Делисле в шкалу Кельвина   нужно воспользоваться формулой  [°K]=373.15-[°De]*2/3
         return TEMPERATURE;
 }
 

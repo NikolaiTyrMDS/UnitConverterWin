@@ -2,12 +2,12 @@
 
 
 double kmch_to_mc (double SPEED) {
-	SPEED = SPEED * 0,277777;
+	SPEED = SPEED * 0.277777;
 	return SPEED;
 }
 
 double kmch_to_uzl (double SPEED) {
-	SPEED = SPEED * 0,539956;
+	SPEED = SPEED * 0.539956;
 	return SPEED;
 }
 
@@ -22,12 +22,12 @@ double kmch_to_milch (double SPEED) {
 }
 
 double uzl_to_mc (double SPEED) {
-	SPEED = SPEED * 0,514444;
+	SPEED = SPEED * 0.514444;
 	return SPEED;
 }
 
 double uzl_to_kmch (double SPEED) {
-	SPEED = SPEED * 1,8520;
+	SPEED = SPEED * 1.8520;
 	return SPEED;
 }
 
@@ -62,12 +62,12 @@ double mah_to_milch (double SPEED) {
 }
 
 double milch_to_mc (double SPEED) {
-	SPEED = SPEED * 0,447040;
+	SPEED = SPEED * 0.447040;
 	return SPEED;
 }
 
 double milch_to_kmch (double SPEED) {
-	SPEED = SPEED * 1,609344;
+	SPEED = SPEED * 1.609344;
 	return SPEED;
 }
 

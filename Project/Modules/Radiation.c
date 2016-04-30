@@ -1,50 +1,51 @@
 #include <stdio.h>
+#include <math.h>
 // DONE;
 // Конвертирование соседних величин в сторону увеличения;
-double adjacentValuesUpward(double RESISTANCE)
+double adjacentValuesUpward(double RADIATION)
 {
-    RESISTANCE = RESISTANCE/1000;
-    return RESISTANCE;
+    RADIATION = RADIATION/1000;
+    return RADIATION;
 }
 // ----------------------------------------------------- //
 // Конвертирование соседних величин в сторону уменьшения;
-double adjacentValuesToDecrease(double RESISTANCE)
+double adjacentValuesToDecrease(double RADIATION)
 {
-    RESISTANCE = RESISTANCE*1000;
-    return RESISTANCE;
+    RADIATION = RADIATION*1000;
+    return RADIATION;
 }
 // ----------------------------------------------------- //
 // Конвертирование величин через одну в сторону увеличения;
-double valuesBetweenOneUpward(double RESISTANCE)
+double valuesBetweenOneUpward(double RADIATION)
 {
-    RESISTANCE = RESISTANCE/(pow(1000, 2));
-    return RESISTANCE;
+    RADIATION = RADIATION/(pow(1000, 2));
+    return RADIATION;
 }
 // ----------------------------------------------------- //
 // Конвертирование величин через одну в сторону уменьшения;
-double valuesBetweenOneToDecrease(double RESISTANCE)
+double valuesBetweenOneToDecrease(double RADIATION)
 {
-    RESISTANCE = RESISTANCE*(pow(1000, 2));
-    return RESISTANCE;
+    RADIATION = RADIATION*(pow(1000, 2));
+    return RADIATION;
 }
 // ----------------------------------------------------- //
 // Конвертирование величин через две в сторону увеличения;
-double valuesBetweenTwoUpward(double RESISTANCE)
+double valuesBetweenTwoUpward(double RADIATION)
 {
-    RESISTANCE = RESISTANCE/(pow(1000, 3));
-    return RESISTANCE;
+    RADIATION = RADIATION/(pow(1000, 3));
+    return RADIATION;
 }
 // ----------------------------------------------------- //
 // Конвертирование величин через две в сторону уменьшения;
-double valuesBetweenTwoToDecrease(double RESISTANCE)
+double valuesBetweenTwoToDecrease(double RADIATION)
 {
-    RESISTANCE = RESISTANCE*(pow(1000, 3));
-    return RESISTANCE;
+    RADIATION = RADIATION*(pow(1000, 3));
+    return RADIATION;
 }
 // ----------------------------------------------------- //
 // Конвертирование из беккерелей в кюри; //
-double ciTobq(double RESISTANCE)
+double ciTobq(double RADIATION)
 {
-    RESISTANCE = RESISTANCE*37000000000;
-    return RESISTANCE;
+    RADIATION = RADIATION*37000000000;
+    return RADIATION;
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 // Конвертирование соседних величин в сторону увеличения;
 double adjacentValuesUpward(double RESISTANCE)
 {
@@ -51,7 +52,7 @@ double valuesBetweenThreeUpward(double RESISTANCE)
 // Конвертирование величин через одну в сторону уменьшения;
 double valuesBetweenThreeToDecrease(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE*(pow(1000, 4);
+    RESISTANCE = RESISTANCE*(pow(1000, 4));
     return RESISTANCE;
 }
 // ----------------------------------------------------- //

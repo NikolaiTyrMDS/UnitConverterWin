@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+#include "../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
                                 Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
 double selectionswitchTime(double MEASUREMENT)
@@ -153,9 +153,9 @@ double selectionswitchTime(double MEASUREMENT)
         case 409:
             key.gate = sec_to_year(MEASUREMENT);
             break;
-        case 410:
+       /* case 410:
             key.gate = sec_to_vek(MEASUREMENT);
-            break;
+            break;*/
         case 501:
             key.gate = min_to_nsec(MEASUREMENT);
             break;

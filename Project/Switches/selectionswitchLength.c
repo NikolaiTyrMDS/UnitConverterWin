@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
-                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+#include"../Headers/total.h" /* Neiaie '../' - escape-neiaie - eniieucoaony aey ia?aoiaa ia iaei o?iaaiu auoa;
+                                Yoio neiaie eniieucoaony noieuei ?ac, ia neieuei o?iaiae io?ii iiaiyouny; */
 
 
 double selectionswitchLength(double MEASUREMENT)
@@ -9,7 +9,7 @@ double selectionswitchLength(double MEASUREMENT)
     FunctionsParameters key;
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Миллиметр;\n"
+			"1 - Миллиметр;\n"
            "2 - Метр;\n"
            "3 - Сантиметр;\n"
            "4 - Дециметр;\n"
@@ -18,10 +18,10 @@ double selectionswitchLength(double MEASUREMENT)
            "7 - Аршин;\n"
            "8 - Миля;\n"
            "9 - Ярд;\n"
-           "10 - Фут;\n \t"
-           "11 - Микрометр;\n \t"
-           "12 - Нанометр; \n \t"
-           "13 - Ангстрем;\n \t"
+           "10 - Фут;\n "
+           "11 - Микрометр;\n "
+           "12 - Нанометр; \n "
+           "13 - Ангстрем;\n "
            "14 - Морская миля; \n \t");
     scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
@@ -29,9 +29,8 @@ double selectionswitchLength(double MEASUREMENT)
         scanf("%d", &key.input_choice);
     }
 
-    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
-           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Миллиметр;\n"
+   printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
+          "1 - Миллиметр;\n"
            "2 - Метр;\n"
            "3 - Сантиметр;\n"
            "4 - Дециметр;\n"
@@ -40,10 +39,10 @@ double selectionswitchLength(double MEASUREMENT)
            "7 - Аршин;\n"
            "8 - Миля;\n"
            "9 - Ярд;\n"
-           "10 - Фут;\n \t"
-           "11 - Микрометр;\n \t"
-           "12 - Нанометр; \n \t"
-           "13 - Ангстрем;\n \t"
+           "10 - Фут;\n "
+           "11 - Микрометр;\n "
+           "12 - Нанометр; \n "
+           "13 - Ангстрем;\n "
            "14 - Морская миля; \n \t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
@@ -52,17 +51,17 @@ double selectionswitchLength(double MEASUREMENT)
         scanf("%d", &key.output_choice);
     }
 
-    if(input_choice < 10 && output_choice < 10)
+    if(key.input_choice < 10 && key.output_choice < 10)
 		key.id = key.input_choice * 10 + key.output_choice;
-	if(input_choice == 10 && output_choice <= 10)
+	if(key.input_choice == 10 && key.output_choice <= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-	if(input_choice < 10 && output_choice == 10)
+	if(key.input_choice < 10 && key.output_choice == 10)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
-        //Миллиметр
+        //Ieeeeiao?
         case 12:
-            key.gate = millimeters_TO_meters((MEASUREMENT);
+            key.gate = millimeters_TO_meters(MEASUREMENT);
             break;
         case 13:
             key.gate = millimeters_TO_centimeters(MEASUREMENT);
@@ -100,7 +99,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 114:
             key.gate = millimeters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Метр
+        //Iao?
         case 21:
             key.gate = meters_TO_millimeters(MEASUREMENT);
             break;
@@ -140,7 +139,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 214:
             key.gate = meters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Сантиметр
+        //Naioeiao?
         case 32:
             key.gate = centimeters_TO_meters(MEASUREMENT);
             break;
@@ -180,7 +179,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 314:
             key.gate = centimeters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Дециметр
+        //Aaoeiao?
         case 43:
             key.gate = decimeters_TO_centimeters(MEASUREMENT);
             break;
@@ -220,7 +219,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 414:
             key.gate = decimeters_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Километр
+        //Eeeiiao?
         case 54:
             key.gate = kilometers_TO_decimeters(MEASUREMENT);
             break;
@@ -260,7 +259,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 514:
             key.gate = kilometers_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Сажень
+        //Na?aiu
         case 65:
             key.gate = fathoms_TO_kilometers(MEASUREMENT);
             break;
@@ -300,7 +299,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 614:
             key.gate = fathoms_TO_nauticalmiles(MEASUREMENT);
             break;
-         //Аршин
+         //A?oei
         case 76:
             key.gate = arshins_TO_fathoms(MEASUREMENT);
             break;
@@ -340,7 +339,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 714:
             key.gate = arshins_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Миля
+        //Ieey
         case 87:
             key.gate = miles_TO_arshins(MEASUREMENT);
             break;
@@ -380,7 +379,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 814:
             key.gate = miles_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Ярд
+        //??a
         case 98:
             key.gate = yards_TO_miles(MEASUREMENT);
             break;
@@ -420,7 +419,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 914:
             key.gate = yards_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Фут
+        //Ooo
         case 1009:
             key.gate = foots_TO_yards(MEASUREMENT);
             break;
@@ -460,7 +459,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1014:
             key.gate = foots_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Микрометр
+        //Iee?iiao?
         case 1110:
             key.gate = micrometers_TO_foots(MEASUREMENT);
             break;
@@ -500,7 +499,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1114:
             key.gate = micrometers_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Нанометр
+        //Iaiiiao?
         case 1211:
             key.gate = nanometers_TO_micrometers(MEASUREMENT);
             break;
@@ -540,7 +539,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1214:
             key.gate = nanometers_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Ангстрем
+        //Aiano?ai
         case 1312:
             key.gate = angstroms_TO_nanometers(MEASUREMENT);
             break;
@@ -554,7 +553,7 @@ double selectionswitchLength(double MEASUREMENT)
             key.gate = angstroms_TO_yards(MEASUREMENT);
             break;
         case 1308:
-            key.gate = angstroms_TO_mile(MEASUREMENT);
+            key.gate = angstroms_TO_miles(MEASUREMENT);
             break;
         case 1307:
             key.gate = angstroms_TO_arshins(MEASUREMENT);
@@ -575,12 +574,12 @@ double selectionswitchLength(double MEASUREMENT)
             key.gate = angstroms_TO_meters(MEASUREMENT);
             break;
         case 1301:
-            key.gate = angstroms_TO_millimeters(MEASUREMENT);
+            key.gate = angstroms_TO_millimeter(MEASUREMENT);
             break;
         case 1314:
             key.gate = angstroms_TO_nauticalmiles(MEASUREMENT);
             break;
-        //Морская миля
+        //Ii?neay ieey
         case 1413:
             key.gate = nauticalmiles_TO_angstroms(MEASUREMENT);
             break;

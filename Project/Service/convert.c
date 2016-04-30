@@ -21,5 +21,4 @@ void convert(double RESULT) {
 		printf("Результат конвертирования: %0.0lf\n", RESULT + tmp);
 	if (tmp == 0 && f == 0)
 		printf("Результат конвертирования: %0.0lf\n", RESULT - tmp);
-
 }

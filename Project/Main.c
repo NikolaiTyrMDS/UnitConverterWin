@@ -41,11 +41,14 @@ int main()
                 printf("Введите число, которое Вы хотели были перевести. \n"
                        "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
                 head.VOLUME = parsing(head.MEASUREMENT);
-                head.result = selectionswitchData(head.VOLUME);
+                head.result = selectionswitchTime(head.VOLUME);
+                break;
             case 2:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchPression(head.VOLUME);
+                break;
             case 3:
                 printf("Введите число, которое Вы хотели были перевести. \n"
                        "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
@@ -56,28 +59,35 @@ int main()
                 printf("Введите число, которое Вы хотели были перевести. \n"
                        "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
                 head.VOLUME = parsing(head.MEASUREMENT);
-                head.result = selectionswitchData(head.VOLUME);
+                head.result = selectionswitchLength(head.VOLUME);
                 break;
             case 5:
                 fprintf(stderr, "Модуль не существует\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 6:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchQuantityOfSubstance(head.VOLUME);
+                break;
             case 7:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchMass(head.VOLUME);
+                break;
             case 8:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchPower(head.VOLUME);
+                break;
             case 9:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchAmount(head.VOLUME);
                 break;
             case 10:
                 fprintf(stderr, "Модуль не существует\n");
@@ -100,30 +110,39 @@ int main()
                 system("pause");
                 exit(EXIT_FAILURE);
             case 15:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchSpeed(head.VOLUME);
+                break;
             case 16:
                 fprintf(stderr, "Модуль не существует\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 17:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchTemperature(head.VOLUME);
                 break;
             case 18:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchAngle(head.VOLUME);
+                break;
             case 19:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchFrequency(head.VOLUME);
+                break;
             case 20:
-                fprintf(stderr, "Модуль не существует\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Введите число, которое Вы хотели были перевести. \n"
+                       "В качестве знака-разделителя для вещественных чисел используйте символ ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchEnergy(head.VOLUME);
+                break;
             default:
                 fprintf(stderr, "Вы пытаетесь выбрать род величины, которого не существует. Программа будет завершена;");
                 break;

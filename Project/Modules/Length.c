@@ -996,7 +996,7 @@ double nanometers_TO_angstroms(double LENGTH) {
 
 // <нанометр> ---> <морская миля> //
 double nanometers_TO_nauticalmiles(double LENGTH) {
-	LENGTH = LENGTH * 5.399568034557 * (pow(10, -13); // Формула для перевода
+	LENGTH = LENGTH * 5.399568034557 * (pow(10, -13)); // Формула для перевода
 	return LENGTH;
 }
 
@@ -1017,67 +1017,67 @@ double angstroms_TO_micrometers(double LENGTH) {
 
 // <ангстрем> ---> <фут> //
 double angstroms_TO_foots(double LENGTH) {
-	LENGTH = LENGTH * 3.280839895013 * (pow(10, -10);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 3.280839895013 * (pow(10, -10));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <ярд> //
 double angstroms_TO_yards(double LENGTH) {
-	LENGTH = LENGTH * 1.093613298338 * (pow(10, -10);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1.093613298338 * (pow(10, -10));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <миля> //
 double angstroms_TO_miles(double LENGTH) {
-	LENGTH = LENGTH * 6.213711922373 * (pow(10, -14);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 6.213711922373 * (pow(10, -14));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <аршин> //
 double angstroms_TO_arshins(double LENGTH) {
-	LENGTH = LENGTH * 1.40607424072 * (pow(10, -10);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1.40607424072 * (pow(10, -10));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <сажень> //
 double angstroms_TO_fathoms(double LENGTH) {
-	LENGTH = LENGTH * 4.686914135733 * (pow(10, -11);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 4.686914135733 * (pow(10, -11));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <километр> //
 double angstroms_TO_kilometers(double LENGTH) {
-	LENGTH = LENGTH * 1 * (pow(10, -13);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1 * (pow(10, -13));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <дециметр> //
 double angstroms_TO_decimeters(double LENGTH) {
-	LENGTH = LENGTH * 1 * (pow(10, -9);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1 * (pow(10, -9));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <сантиметр> //
 double angstroms_TO_centimeters(double LENGTH) {
-	LENGTH = LENGTH * 1 * (pow(10, -8);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1 * (pow(10, -8));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <метр> //
 double angstroms_TO_meters(double LENGTH) {
-	LENGTH = LENGTH * 1 * (pow(10, -10);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1 * (pow(10, -10));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <миллиметр> //
 double angstroms_TO_millimeter(double LENGTH) {
-	LENGTH = LENGTH * 1 * (pow(10, -7);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1 * (pow(10, -7));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <ангстрем> ---> <морская миля> //
 double angstroms_TO_nauticalmiles(double LENGTH) {
-	LENGTH = LENGTH * 5.399568034557 * (pow(10, -14);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 5.399568034557 * (pow(10, -14));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
@@ -1087,13 +1087,13 @@ double angstroms_TO_nauticalmiles(double LENGTH) {
 
 // <морская миля> ---> <ангстрем> //
 double nauticalmiles_TO_angstroms(double LENGTH) {
-	LENGTH = LENGTH * 1.852 * (pow(10, 13);  // Формула для перевода !!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1.852 * (pow(10, 13));  // Формула для перевода !!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
 // <морская миля> ---> <нанометр> //
 double nauticalmiles_TO_nanometers(double LENGTH) {
-	LENGTH = LENGTH * 1.852 * (pow(10, 12);  // Формула для перевода !!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1.852 * (pow(10, 12));  // Формула для перевода !!!!!!!!!!!!!!
 	return LENGTH;
 }
 
