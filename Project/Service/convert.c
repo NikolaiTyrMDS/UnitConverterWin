@@ -14,12 +14,12 @@ void convert(double RESULT) {
 	for (i = 0; tmp >= 1; i++) {
 			tmp = tmp - 1;
 	}
-	
+
 	// This will be used as different ways to showw rezut;
 	if (tmp != 0)
-		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %lf\n", RESULT);
+		printf("Результат конвертирования: %lf\n", RESULT);
 	if (tmp == 0 && f == 1)
-		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %0.0lf\n", RESULT + tmp);
+		printf("Результат конвертирования: %0.0lf\n", RESULT + tmp);
 	if (tmp == 0 && f == 0)
-		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %0.0lf\n", RESULT - tmp);
+		printf("Результат конвертирования: %0.0lf\n", RESULT - tmp);
 }

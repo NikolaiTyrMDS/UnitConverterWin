@@ -1,11 +1,7 @@
-#ifndef TOTAL
-#define TOTAL
-
 typedef struct entered_and_gated_parameters {
     double result, VOLUME;
     float version;
-    int like_to_continue;
-    char measurement_id[5];
+    int like_to_continue, measurement_id;
     char MEASUREMENT[261];
 } MainParameters;
 // ÈÇÌÅÍÅÍÈÅ ÏÀÐÀÌÅÒÐÎÂ ÎÏÀÑÍÎ ÄËß ÆÈÇÍÈ;
@@ -1070,6 +1066,3 @@ double tnt_to_joule (double ENERGY);
 double tnt_to_kvatch (double ENERGY);
 double tnt_to_electronvolt (double ENERGY);
 double tnt_to_kall (double ENERGY);
-
-
-#endif
