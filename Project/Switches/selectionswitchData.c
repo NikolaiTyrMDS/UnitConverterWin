@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
-#include "total.h"
+#include "../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
 double selectionswitchData(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("\nВыберите величину, из которой Вы хотите произвести конвертирование:\n\n"
+    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
            "1 - Бит;\n"
            "2 - Байт;\n"
            "3 - Килобайт;\n"
@@ -15,15 +17,15 @@ double selectionswitchData(double MEASUREMENT)
            "6 - Терабайт;\n"
            "7 - Пэтабайт;\n"
            "8 - Эксабайт;\n"
-           "9 - Зэтабайт;\n\n\t");
+           "9 - Зэтабайт;\n \t");
     scanf("%d", &key.input_choice);
-    while(key.input_choice != 1 && key.input_choice != 2 && key.input_choice != 3 && key.input_choice != 4 && key.input_choice != 5 && key.input_choice != 6 && key.input_choice != 7 && key.input_choice != 8 && key.input_choice != 9) {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\n\t");
+    while(key.input_choice >= 10 || key.input_choice == 0) {
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("\nВыберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
-           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n\n"
+    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
+           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
            "1 - Бит;\n"
            "2 - Байт;\n"
            "3 - Килобайт;\n"
@@ -32,21 +34,15 @@ double selectionswitchData(double MEASUREMENT)
            "6 - Терабайт;\n"
            "7 - Пэтабайт;\n"
            "8 - Эксабайт;\n"
-           "9 - Зэтабайт;\n\n\t");
+           "9 - Зэтабайт;\n\t");
     scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || (key.output_choice != 1 && key.output_choice != 2 && key.output_choice != 3 && key.output_choice != 4 && key.output_choice != 5 && key.output_choice != 6 && key.output_choice != 7 && key.output_choice != 8 && key.output_choice != 9) )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
-                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\n\t");
+                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.output_choice);
     }
 
-    key.id = key.input_choice;
-    if(key.output_choice >= 10) {
-        key.id = key.id * 100 + key.output_choice;
-    }
-    else if(key.output_choice < 10) {
-        key.id = key.id * 10 + key.output_choice;
-    }
+    key.id = key.input_choice * 10 + key.output_choice;
 
     switch(key.id) {
         case 12:

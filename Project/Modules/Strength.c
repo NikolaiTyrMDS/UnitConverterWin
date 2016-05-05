@@ -1,144 +1,255 @@
 #include <stdio.h>
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã±Ã®Ã±Ã¥Ã¤Ã­Ã¨Ãµ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²//
-double adjacentValuesUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+// DONE;
+/* ÔÓÍÊÖÈÈ ÊÎÍÂÅÐÒÈÐÎÂÀÍÈß ÐÀÇËÈ×ÍÛÕ ÅÄÈÍÈÖ ÈÇÌÅÐÅÍÈß ÑÈËÛ */
+
+// <Íüþòîíû> ---> <Êèëîíüþòîíû> //
+double Newton2kNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000;
+	return STRENGTH;
 }
-double adjacentValuesToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Êèëîíüþòîíû> ---> <Íüþòîíû> //
+double kNewton2Newton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000;
+	return STRENGTH;
 }
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã·Ã¥Ã°Ã¥Ã§ 1 Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²//
-double valuesBetweenOneUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/(pow(1000, 2));
-    return STRENGTH;
+
+// <Íüþòîíû> ---> <Ìèëëèíüþòîíû> //
+double Newton2mNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000;
+	return STRENGTH;
 }
-double valuesBetweenOneToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*(pow(1000, 2));
-    return STRENGTH;
-}	
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã·Ã¥Ã°Ã¥Ã§ 2 Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²;
-double valuesBetweenTwoUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/(pow(1000, 3));
-    return STRENGTH;
+
+// <Ìèëëèíüþòîíû> ---> <Íüþòîíû> //
+double mNewton2Newton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000;
+	return STRENGTH;
 }
-double valuesBetweenTwoToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*(pow(1000, 3));
-    return STRENGTH;
+
+// <Ìèëëèíüþòîíû> ---> <Êèëîíüþòîíû> //
+double mNewton2kNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000;
+	return STRENGTH;
 }
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã·Ã¥Ã°Ã¥Ã§ 3 Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²;
-double valuesBetweenThreeUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/(pow(1000, 4));
-    return STRENGTH;
+
+// <Êèëîíüþòîíû> ---> <Ìèëëèíüþòîíû> //
+double kNewton2mNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000;
+	return STRENGTH;
 }
-double valuesBetweenThreeToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*(pow(1000, 4));
-    return STRENGTH;
+
+// <Íüþòîíû> ---> <Ìåãàíüþòîíû> //
+double Newton2MgNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000;
+	return STRENGTH;
 }
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã·Ã¥Ã°Ã¥Ã§ 4 Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²//
-double valuesBetweenFourUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/(pow(1000, 5));
-    return STRENGTH;
+
+// <Ìåãàíüþòîíû> ---> <Íüþòîíû> //
+double MgNewton2Newton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000;
+	return STRENGTH;
 }
-double valuesBetweenFourToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*(pow(1000, 5));
-    return STRENGTH;
+
+// <Ìèëëèíüþòîíû> ---> <Ìåãàíüþòîíû> //
+double mNewton2MgNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000000;
+	return STRENGTH;
 }
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã·Ã¥Ã°Ã¥Ã§ 5 Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²//
-double valuesBetweenFiveUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/(pow(1000, 6));
-    return STRENGTH;
+
+// <Ìåãàíüþòîíû> ---> <Ìèëëèíüþòîíû> //
+double MgNewton2mNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000000;
+	return STRENGTH;
 }
-double valuesBetweenFiveToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*(pow(1000, 6));
-    return STRENGTH;
+
+// <Êèëîíüþòîíû> ---> <Ìåãàíüþòîíû> //
+double kNewton2MgNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000;
+	return STRENGTH;
 }
-// ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã­ Ã·Ã¥Ã°Ã¥Ã§ 6 Ã¨Ã§ Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã© Ã¢ Ã¡Ã®Ã«Ã¼Ã¸Ã³Ã¾ Ã¨ Ã­Ã Ã®Ã¡Ã®Ã°Ã®Ã²//
-double valuesBetweenSixUpward(double STRENGTH)
-{
-    STRENGTH = STRENGTH/(pow(1000, 7));
-    return STRENGTH;
+
+// <Ìåãàíüþòîíû> ---> <Êèëîíüþòîíû> //
+double MgNewton2kNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000;
+	return STRENGTH;
 }
-double valuesBetweenSixToDecrease(double STRENGTH)
-{
-    STRENGTH = STRENGTH*(pow(1000, 7));
-    return STRENGTH;
+
+// <Íüþòîíû> ---> <Ìèêðîíüþòîíû> //
+double Newton2MkNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000;
+	return STRENGTH;
 }
-//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿: ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¬Ã¨ÃªÃ°Ã®Ã­Ã¼Ã¾Ã²Ã®Ã­Ã  Ã¢ Ã­Ã Ã­Ã®Ã­Ã¼Ã¾Ã²Ã®Ã­ Ã¨ Ã®Ã¡Ã°Ã Ã²Ã­Ã®//
-double micronewtonTonanonewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+
+// <Ìèêðîíüþòîíû> ---> <Íüþòîíû> //
+double MkNewton2Newton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000;
+	return STRENGTH;
 }
-double micronewtonTomillinewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Ìèëëèíüþòîíû> ---> <Ìèêðîíüþòîíû> //
+double mNewton2MkNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000;
+	return STRENGTH;
 }
-//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿: ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¬Ã¨Ã«Ã«Ã¨Ã­Ã¼Ã¾Ã²Ã®Ã­Ã  Ã¢ Ã¬Ã¨ÃªÃ°Ã®Ã­Ã¼Ã¾Ã²Ã®Ã­ Ã¨ Ã®Ã¡Ã°Ã Ã²Ã­Ã®//
-double millinewtonTomicronewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+
+// <Ìèêðîíüþòîíû> ---> <Ìèëëèíüþòîíû> //
+double MkNewton2mNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000;
+	return STRENGTH;
 }
-double micronewtonTomillinewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Êèëîíüþòîíû> ---> <Ìèêðîíüþòîíû> //
+double kNewton2MkNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000000;
+	return STRENGTH;
 }
-//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿: ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã­Ã¼Ã¾Ã²Ã®Ã­Ã  Ã¢ Ã¬Ã¨Ã«Ã«Ã¨Ã­Ã¼Ã¾Ã²Ã®Ã­ Ã¨ Ã®Ã¡Ã°Ã Ã²Ã­Ã®//
-double newtonTomillinewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+
+// <Ìèêðîíüþòîíû> ---> <Êèëîíüþòîíû> //
+double MkNewton2kNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000000;
+	return STRENGTH;
 }
-double newtonTomillinewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Ìåãàíüþòîíû> ---> <Ìèêðîíüþòîíû> //
+double MgNewton2MkNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000000000;
+	return STRENGTH;
 }
-//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿: ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ ÃªÃ¨Ã«Ã®Ã­Ã¼Ã¾Ã²Ã®Ã­Ã  Ã¢ Ã­Ã¼Ã¾Ã²Ã®Ã­ Ã¨ Ã®Ã¡Ã°Ã Ã²Ã­Ã®//
-double kilonewtonTonewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+
+// <Ìèêðîíüþòîíû> ---> <Ìåãàíüþòîíû> //
+double MkNewton2MgNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000000000;
+	return STRENGTH;
 }
-double newtonTokilonewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Íüþòîíû> ---> <Êèëîãðàìì-ñèëû> //
+double Newton2kgsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 0.101972;
+	return STRENGTH;
 }
-//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿: ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¬Ã¥Ã£Ã Ã­Ã¼Ã¾Ã²Ã®Ã­Ã  Ã¢ ÃªÃ¨Ã«Ã®Ã­Ã¼Ã¾Ã²Ã®Ã­ Ã¨ Ã®Ã¡Ã°Ã Ã²Ã­Ã®//
-double meganewtonTokilonewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+
+// <Êèëîãðàìì-ñèëû> ---> <Íüþòîíû> //
+double kgsNewton2Newton(double STRENGTH) {
+	STRENGTH = STRENGTH / 0.101972;
+	return STRENGTH;
 }
-double kilonewtonTomeganewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Ìèëëèíüþòîíû> ---> <Êèëîãðàìì-ñèëû> //
+double mNewton2kgsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000 * 0.101972;
+	return STRENGTH;
 }
-//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿: ÃŠÃ®Ã­Ã¢Ã¥Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã£Ã¨Ã£Ã Ã­Ã¼Ã¾Ã²Ã®Ã­Ã  Ã¢ Ã¬Ã¥Ã£Ã Ã­Ã¼Ã¾Ã²Ã®Ã­ Ã¨ Ã®Ã¡Ã°Ã Ã²Ã­Ã®//
-double gyganewtonTomeganewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH/1000;
-    return STRENGTH;
+
+// <Êèëîãðàìì-ñèëû> ---> <Ìèëëèíüþòîíû> //
+double kgsNewton2mNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.101972) * 1000;
+	return STRENGTH;
 }
-double meganewtonTogyganewton(double STRENGTH)
-{
-    STRENGTH = STRENGTH*1000;
-    return STRENGTH;
+
+// <Ìèêðîíüþòîíû> ---> <Êèëîãðàìì-ñèëû> //
+double MkNewton2kgsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000 * 0.101972;
+	return STRENGTH;
+}
+
+// <Êèëîãðàìì-ñèëû> ---> <Ìèêðîíüþòîíû> //
+double kgsNewton2MkNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.101972) * 1000000;
+	return STRENGTH;
+}
+
+// <Êèëîíüþòîíû> ---> <Êèëîãðàìì-ñèëû> //
+double kNewton2kgsNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 1000) * 0.101972;
+	return STRENGTH;
+}
+
+// <Êèëîãðàìì-ñèëû> ---> <Êèëîíüþòîíû> //
+double kgsNewton2kNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.101972) * 1000;
+	return STRENGTH;
+}
+
+// <Ìåãàíüþòîíû> ---> <Êèëîãðàìì-ñèëû> //
+double MgNewton2kgsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 1000000 * 0.101972;
+	return STRENGTH;
+}
+
+// <Êèëîãðàìì-ñèëû> ---> <Ìåãàíüþòîíû> //
+double kgsNewton2MgNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.101972) * 1000000;
+	return STRENGTH;
+}
+
+// <Íüþòîíû> ---> <Ôóíò-ñèëû> //
+double Newton2fsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 0.225;
+	return STRENGTH;
+}
+
+// <Ôóíò-ñèëû> ---> <Íüþòîíû> //
+double fsNewton2Newton(double STRENGTH) {
+	STRENGTH = STRENGTH / 0.225;
+	return STRENGTH;
+}
+
+// <Êèëîíüþòîíû> ---> <Ôóíò-ñèëû> //
+double kNewton2fsNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 1000) * 0.225;
+	return STRENGTH;
+}
+
+// <Ôóíò-ñèëû> ---> <Êèëîíüþòîíû> //
+double fsNewton2kNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.225) * 1000;
+	return STRENGTH;
+}
+
+// <Ìåãàíüþòîíû> ---> <Ôóíò-ñèëû> //
+double MgNewton2fsNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 1000000) * 0.225;
+	return STRENGTH;
+}
+
+// <Ôóíò-ñèëû> ---> <Ìåãàíüþòîíû> //
+double fsNewton2MgNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.225) * 1000000;
+	return STRENGTH;
+}
+
+// <Ìèëëèíüþòîíû> ---> <Ôóíò-ñèëû> //
+double mNewton2fsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000 * 0.225;
+	return STRENGTH;
+}
+
+// <Ôóíò-ñèëû> ---> <Ìèëëèíüþòîíû> //
+double fsNewton2mNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.225) * 1000;
+	return STRENGTH;
+}
+
+// <Ìèêðîíüþòîíû> ---> <Ôóíò-ñèëû> //
+double MkNewton2fsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 1000000 * 0.225;
+	return STRENGTH;
+}
+
+// <Ôóíò-ñèëû> ---> <Ìèêðîíüþòîíû> //
+double fsNewton2MkNewton(double STRENGTH) {
+	STRENGTH = (STRENGTH / 0.225) * 1000000;
+	return STRENGTH;
+}
+
+// <Êèëîãðàìì-ñèëû> ---> <Ôóíò-ñèëû> //
+double kgsNewton2fsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH * 2.205;
+	return STRENGTH;
+}
+
+// <Ôóíò-ñèëû> ---> <Êèëîãðàìì-ñèëû> //
+double fsNewton2kgsNewton(double STRENGTH) {
+	STRENGTH = STRENGTH / 2.205;
+	return STRENGTH;
 }
