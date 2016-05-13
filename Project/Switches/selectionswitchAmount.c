@@ -1,50 +1,50 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
-                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+#include"../Headers/total.h" /* Г‘ГЁГ¬ГўГ®Г« '../' - escape-Г±ГЁГ¬ГўГ®Г« - ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГІГ±Гї Г¤Г«Гї ГЇГҐГ°ГҐГµГ®Г¤Г  Г­Г  Г®Г¤ГЁГ­ ГіГ°Г®ГўГҐГ­Гј ГўГ»ГёГҐ;
+                                ГќГІГ®ГІ Г±ГЁГ¬ГўГ®Г« ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГІГ±Гї Г±ГІГ®Г«ГјГЄГ® Г°Г Г§, Г­Г  Г±ГЄГ®Г«ГјГЄГ® ГіГ°Г®ГўГ­ГҐГ© Г­ГіГ¦Г­Г® ГЇГ®Г¤Г­ГїГІГјГ±Гї; */
 
 
 double selectionswitchAmount(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Кубический километр;\n"
-           "2 - Кубический метр;\n"
-           "3 - Кубический дециметр;\n"
-           "4 - Кубический сантиметр;\n"
-           "5 - Кубический миллиметр;\n"
-           "6 - Литр;\n"
-           "7 - Миллилитр;\n"
-           "8 - Галлон;\n"
-           "9 - Баррель;\n"
-           "10 - Кварта;\n "
-           "11 - Пинта;\n "
-           "12 - Жидкая унция; \t");
+    printf("Г‚Г»ГЎГҐГ°ГЁГІГҐ ГўГҐГ«ГЁГ·ГЁГ­Гі, ГЁГ§ ГЄГ®ГІГ®Г°Г®Г© Г‚Г» ГµГ®ГІГЁГІГҐ ГЇГ°Г®ГЁГ§ГўГҐГ±ГІГЁ ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ Г­ГЁГҐ:\n"
+           "1 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© ГЄГЁГ«Г®Г¬ГҐГІГ°;\n"
+           "2 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¬ГҐГІГ°;\n"
+           "3 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¤ГҐГ¶ГЁГ¬ГҐГІГ°;\n"
+           "4 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г±Г Г­ГІГЁГ¬ГҐГІГ°;\n"
+           "5 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¬ГЁГ«Г«ГЁГ¬ГҐГІГ°;\n"
+           "6 - Г‹ГЁГІГ°;\n"
+           "7 - ГЊГЁГ«Г«ГЁГ«ГЁГІГ°;\n"
+           "8 - ГѓГ Г«Г«Г®Г­;\n"
+           "9 - ГЃГ Г°Г°ГҐГ«Гј;\n"
+           "10 - ГЉГўГ Г°ГІГ ;\n "
+           "11 - ГЏГЁГ­ГІГ ;\n "
+           "12 - Г†ГЁГ¤ГЄГ Гї ГіГ­Г¶ГЁГї; \t");
     scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
+        fprintf(stderr, "\nГ‚Г» ГўГ»ГЎГ°Г Г«ГЁ ГўГҐГ«ГЁГ·ГЁГ­Гі, ГЄГ®ГІГ®Г°Г®Г© Г­ГҐГІ Гў Г±ГЇГЁГ±ГЄГҐ Г¤Г®Г±ГІГіГЇГ­Г»Гµ ГўГҐГ«ГЁГ·ГЁГ­. \nГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , Г±Г¤ГҐГ«Г Г©ГІГҐ ГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГўГ»ГЎГ®Г°\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
-           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Кубический километр;\n"
-           "2 - Кубический метр;\n"
-           "3 - Кубический дециметр;\n"
-           "4 - Кубический сантиметр;\n"
-           "5 - Кубический миллиметр;\n"
-           "6 - Литр;\n"
-           "7 - Миллилитр;\n"
-           "8 - Галлон;\n"
-           "9 - Баррель;\n"
-           "10 - Кварта;\n "
-           "11 - Пинта;\n "
-           "12 - Жидкая унция; \t");
+    printf("Г‚Г»ГЎГҐГ°ГЁГІГҐ ГўГҐГ«ГЁГ·ГЁГ­Гі, Гў ГЄГ®ГІГ®Г°ГіГѕ Г‚Г» ГµГ®ГІГЁГІГҐ ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј Г‚Г ГёГі ГўГҐГ«ГЁГ·ГЁГ­Гі.\n"
+           "ГЌГҐ Г­ГіГ¦Г­Г® ГўГ»ГЎГЁГ°Г ГІГј ГІГі Г¦ГҐ ГўГҐГ«ГЁГ·ГЁГ­Гі, Г·ГІГ® Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Гў ГЄГ Г·ГҐГ±ГІГўГҐ ГЄГ®Г­ГўГҐГ°ГІГЁГ°ГіГҐГ¬Г®Г©:\n"
+           "1 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© ГЄГЁГ«Г®Г¬ГҐГІГ°;\n"
+           "2 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¬ГҐГІГ°;\n"
+           "3 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¤ГҐГ¶ГЁГ¬ГҐГІГ°;\n"
+           "4 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г±Г Г­ГІГЁГ¬ГҐГІГ°;\n"
+           "5 - ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¬ГЁГ«Г«ГЁГ¬ГҐГІГ°;\n"
+           "6 - Г‹ГЁГІГ°;\n"
+           "7 - ГЊГЁГ«Г«ГЁГ«ГЁГІГ°;\n"
+           "8 - ГѓГ Г«Г«Г®Г­;\n"
+           "9 - ГЃГ Г°Г°ГҐГ«Гј;\n"
+           "10 - ГЉГўГ Г°ГІГ ;\n "
+           "11 - ГЏГЁГ­ГІГ ;\n "
+           "12 - Г†ГЁГ¤ГЄГ Гї ГіГ­Г¶ГЁГї; \t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
-                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
+        fprintf(stderr, "\nГ‚Г» ГўГ»ГЎГ°Г Г«ГЁ ГўГҐГ«ГЁГ·ГЁГ­Гі, ГЄГ®ГІГ®Г°Г®Г© Г­ГҐГІ Гў Г±ГЇГЁГ±ГЄГҐ Г¤Г®Г±ГІГіГЇГ­Г»Гµ ГўГҐГ«ГЁГ·ГЁГ­, \nГЁГ«ГЁ Г‚Г» ГЇГ»ГІГ ГҐГІГҐГ±Гј ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј "
+                "Г®Г¤Г­Гі ГЁ ГІГі Г¦ГҐ ГўГҐГ«ГЁГ·ГЁГ­Гі. \nГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , Г±Г¤ГҐГ«Г Г©ГІГҐ ГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГўГ»ГЎГ®Г°\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -56,7 +56,7 @@ double selectionswitchAmount(double MEASUREMENT)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
-        // Кубический километр
+        // ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© ГЄГЁГ«Г®Г¬ГҐГІГ°
         case 12:
             key.gate = squaredkilometers_TO_squaredmeters(MEASUREMENT);
             break;
@@ -90,7 +90,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 112:
             key.gate = squaredkilometers_TO_flozs(MEASUREMENT);
             break;
-        // кубические метры
+        // ГЄГіГЎГЁГ·ГҐГ±ГЄГЁГҐ Г¬ГҐГІГ°Г»
         case 21:
             key.gate = squaredmeters_TO_squaredkilometers(MEASUREMENT);
             break;
@@ -124,7 +124,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 212:
             key.gate = squaredmeters_TO_flozs(MEASUREMENT);
             break;
-        // Кубический дециметр   
+        // ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¤ГҐГ¶ГЁГ¬ГҐГІГ°   
         case 32:
             key.gate = squareddecimeters_TO_squaredmeters(MEASUREMENT);
             break;
@@ -158,7 +158,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 312:
             key.gate = squareddecimeters_TO_flozs(MEASUREMENT);
             break;
-         // квадратный сантиметр   
+         // ГЄГўГ Г¤Г°Г ГІГ­Г»Г© Г±Г Г­ГІГЁГ¬ГҐГІГ°   
         case 43:
             key.gate = squaredcentimeters_TO_squareddecimeters(MEASUREMENT);
             break;
@@ -192,7 +192,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 412:
             key.gate = squaredcentimeters_TO_flozs(MEASUREMENT);
             break;
-         // Кубический миллиметр   
+         // ГЉГіГЎГЁГ·ГҐГ±ГЄГЁГ© Г¬ГЁГ«Г«ГЁГ¬ГҐГІГ°   
         case 54:
             key.gate = squaredmillimeters_TO_squaredcentimeters(MEASUREMENT);
             break;
@@ -226,7 +226,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 512:
             key.gate = squaredmillimeters_TO_flozs(MEASUREMENT);
             break;
-         // Литры   
+         // Г‹ГЁГІГ°Г»   
         case 65:
             key.gate = liters_TO_squaredmillimeters(MEASUREMENT);
             break;
@@ -237,7 +237,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = liters_TO_squareddecimeters(MEASUREMENT);
             break;
         case 62:
-            key.gate = liters_TO_squareddecimeters(MEASUREMENT);
+            key.gate = liters_TO_squaredmeters(MEASUREMENT);
             break;
         case 61:
             key.gate = liters_TO_squaredkilometers(MEASUREMENT);
@@ -260,7 +260,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 612:
             key.gate = liters_TO_flozs(MEASUREMENT);
             break;
-         // Миллилитр   
+         // ГЊГЁГ«Г«ГЁГ«ГЁГІГ°   
         case 76:
             key.gate = mililiters_TO_liters(MEASUREMENT);
             break;
@@ -294,7 +294,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 712:
             key.gate = mililiters_TO_flozs(MEASUREMENT);
             break;
-        // Галлон    
+        // ГѓГ Г«Г«Г®Г­    
         case 87:
             key.gate = gallons_TO_mililiters(MEASUREMENT);
             break;
@@ -329,7 +329,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = gallons_TO_flozs(MEASUREMENT);
             break;
         
-        //Баррель
+        //ГЃГ Г°Г°ГҐГ«Гј
         case 98:
             key.gate = barrels_TO_gallons(MEASUREMENT);
             break;
@@ -363,7 +363,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 912:
             key.gate =  barrels_TO_floz(MEASUREMENT);
             break;
-         // Кварта    
+         // ГЉГўГ Г°ГІГ     
         case 1009:
             key.gate =  quarts_TO_barrels(MEASUREMENT);
             break;
@@ -397,7 +397,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 1012:
             key.gate =  quarts_TO_flozs(MEASUREMENT);
             break;
-        // Пинта   
+        // ГЏГЁГ­ГІГ    
         case 1110:
             key.gate =  pints_TO_quarts(MEASUREMENT);
             break;
@@ -431,7 +431,7 @@ double selectionswitchAmount(double MEASUREMENT)
         case 1112:
             key.gate =  pints_TO_flozs(MEASUREMENT);
             break;   
-         // Жидкая унция    
+         // Г†ГЁГ¤ГЄГ Гї ГіГ­Г¶ГЁГї    
         case 1211:
             key.gate =  flozs_TO_pints(MEASUREMENT);
             break;
@@ -466,8 +466,8 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate =  flozs_TO_squaredkilometers(MEASUREMENT);
             break;                                                                                                                                                                            
         default:
-            printf("Не введено значение конвертируемой величины, "
-                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
+            printf("ГЌГҐ ГўГўГҐГ¤ГҐГ­Г® Г§Г­Г Г·ГҐГ­ГЁГҐ ГЄГ®Г­ГўГҐГ°ГІГЁГ°ГіГҐГ¬Г®Г© ГўГҐГ«ГЁГ·ГЁГ­Г», "
+                   "ГЁГ«ГЁ Г‚Г» ГЇГ»ГІГ ГҐГІГҐГ±Гј ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ ГІГј Гў ГўГҐГ«ГЁГ·ГЁГ­Гі, ГЄГ®ГІГ®Г°ГіГѕ ГіГ¦ГҐ ГЇГ°ГҐГ®ГЎГ°Г Г§ГіГҐГІГҐ\n");
             break;
     }
 
