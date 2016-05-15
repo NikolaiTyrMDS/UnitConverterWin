@@ -1,50 +1,50 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Ñèìâîë '../' - escape-ñèìâîë - èñïîëüçóåòñÿ äëÿ ïåðåõîäà íà îäèí óðîâåíü âûøå;
-                                Ýòîò ñèìâîë èñïîëüçóåòñÿ ñòîëüêî ðàç, íà ñêîëüêî óðîâíåé íóæíî ïîäíÿòüñÿ; */
+#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
+                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
 
 double selectionswitchAmount(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Âûáåðèòå âåëè÷èíó, èç êîòîðîé Âû õîòèòå ïðîèçâåñòè êîíâåðòèðîâàíèå:\n"
-           "1 - Êóáè÷åñêèé êèëîìåòð;\n"
-           "2 - Êóáè÷åñêèé ìåòð;\n"
-           "3 - Êóáè÷åñêèé äåöèìåòð;\n"
-           "4 - Êóáè÷åñêèé ñàíòèìåòð;\n"
-           "5 - Êóáè÷åñêèé ìèëëèìåòð;\n"
-           "6 - Ëèòð;\n"
-           "7 - Ìèëëèëèòð;\n"
-           "8 - Ãàëëîí;\n"
-           "9 - Áàððåëü;\n"
-           "10 - Êâàðòà;\n "
-           "11 - Ïèíòà;\n "
-           "12 - Æèäêàÿ óíöèÿ; \t");
+    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
+           "1 - Кубический километр;\n"
+           "2 - Кубический метр;\n"
+           "3 - Кубический дециметр;\n"
+           "4 - Кубический сантиметр;\n"
+           "5 - Кубический миллиметр;\n"
+           "6 - Литр;\n"
+           "7 - Миллилитр;\n"
+           "8 - Галлон;\n"
+           "9 - Баррель;\n"
+           "10 - Кварта;\n "
+           "11 - Пинта;\n "
+           "12 - Жидкая унция; \n\t");
     scanf("%d", &key.input_choice);
-    while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nÂû âûáðàëè âåëè÷èíó, êîòîðîé íåò â ñïèñêå äîñòóïíûõ âåëè÷èí. \nÏîæàëóéñòà, ñäåëàéòå êîððåêòíûé âûáîð\n\t");
+    while(key.input_choice > 12 || key.input_choice == 0) {
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("Âûáåðèòå âåëè÷èíó, â êîòîðóþ Âû õîòèòå êîíâåðòèðîâàòü Âàøó âåëè÷èíó.\n"
-           "Íå íóæíî âûáèðàòü òó æå âåëè÷èíó, ÷òî Âû âûáðàëè â êà÷åñòâå êîíâåðòèðóåìîé:\n"
-           "1 - Êóáè÷åñêèé êèëîìåòð;\n"
-           "2 - Êóáè÷åñêèé ìåòð;\n"
-           "3 - Êóáè÷åñêèé äåöèìåòð;\n"
-           "4 - Êóáè÷åñêèé ñàíòèìåòð;\n"
-           "5 - Êóáè÷åñêèé ìèëëèìåòð;\n"
-           "6 - Ëèòð;\n"
-           "7 - Ìèëëèëèòð;\n"
-           "8 - Ãàëëîí;\n"
-           "9 - Áàððåëü;\n"
-           "10 - Êâàðòà;\n "
-           "11 - Ïèíòà;\n "
-           "12 - Æèäêàÿ óíöèÿ; \t");
+    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
+           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
+           "1 - Кубический километр;\n"
+           "2 - Кубический метр;\n"
+           "3 - Кубический дециметр;\n"
+           "4 - Кубический сантиметр;\n"
+           "5 - Кубический миллиметр;\n"
+           "6 - Литр;\n"
+           "7 - Миллилитр;\n"
+           "8 - Галлон;\n"
+           "9 - Баррель;\n"
+           "10 - Кварта;\n "
+           "11 - Пинта;\n "
+           "12 - Жидкая унция; \n\t");
     scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nÂû âûáðàëè âåëè÷èíó, êîòîðîé íåò â ñïèñêå äîñòóïíûõ âåëè÷èí, \nèëè Âû ïûòàåòåñü êîíâåðòèðîâàòü "
-                "îäíó è òó æå âåëè÷èíó. \nÏîæàëóéñòà, ñäåëàéòå êîððåêòíûé âûáîð\n\t");
+    while(key.output_choice == key.input_choice || key.input_choice > 12 || key.input_choice == 0 )  {
+        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
+                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -56,41 +56,41 @@ double selectionswitchAmount(double MEASUREMENT)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
-        // Êóáè÷åñêèé êèëîìåòð
+        // Кубический километр
         case 12:
             key.gate = squaredkilometers_TO_squaredmeters(MEASUREMENT);
             break;
         case 13:
-            key.gate = squaredkilometers_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 14:
-            key.gate = squaredkilometers_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 15:
-            key.gate = squaredkilometers_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 16:
-            key.gate = squaredkilometers_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 17:
-            key.gate = squaredkilometers_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 18:
-            key.gate = squaredkilometers_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 19:
-            key.gate = squaredkilometers_TO_barrels(MEASUREMENT);
-            break;   
+            key.gate = squaredmeters_TO_barrels(squaredkilometers_TO_squaredmeters(MEASUREMENT));
+            break;
         case 110:
-            key.gate = squaredkilometers_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 111:
-            key.gate = squaredkilometers_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
         case 112:
-            key.gate = squaredkilometers_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(squaredkilometers_TO_squaredmeters(MEASUREMENT));
             break;
-        // êóáè÷åñêèå ìåòðû
+        // Кубический метр
         case 21:
             key.gate = squaredmeters_TO_squaredkilometers(MEASUREMENT);
             break;
@@ -124,350 +124,349 @@ double selectionswitchAmount(double MEASUREMENT)
         case 212:
             key.gate = squaredmeters_TO_flozs(MEASUREMENT);
             break;
-        // Êóáè÷åñêèé äåöèìåòð   
+        // Кубический дециметр
         case 32:
             key.gate = squareddecimeters_TO_squaredmeters(MEASUREMENT);
             break;
         case 31:
-            key.gate = squareddecimeters_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 34:
-            key.gate = squareddecimeters_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 35:
-            key.gate = squareddecimeters_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 36:
-            key.gate = squareddecimeters_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 37:
-            key.gate = squareddecimeters_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 38:
-            key.gate = squareddecimeters_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 39:
-            key.gate = squareddecimeters_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 310:
-            key.gate = squareddecimeters_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 311:
-            key.gate = squareddecimeters_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 312:
-            key.gate = squareddecimeters_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(squareddecimeters_TO_squaredmeters(MEASUREMENT));
             break;
-         // êâàäðàòíûé ñàíòèìåòð   
+         // Кубический сантиметр
         case 43:
-            key.gate = squaredcentimeters_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 42:
-            key.gate = squaredcentimeters_TO_squaredmeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmeters(MEASUREMENT);
             break;
         case 41:
-            key.gate = squaredcentimeters_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 45:
-            key.gate = squaredcentimeters_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 46:
-            key.gate = squaredcentimeters_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 47:
-            key.gate = squaredcentimeters_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 48:
-            key.gate = squaredcentimeters_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 49:
-            key.gate = squaredcentimeters_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 410:
-            key.gate = squaredcentimeters_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 411:
-            key.gate = squaredcentimeters_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 412:
-            key.gate = squaredcentimeters_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
-         // Êóáè÷åñêèé ìèëëèìåòð   
+         // Кубический миллиметр
         case 54:
-            key.gate = squaredmillimeters_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 53:
-            key.gate = squaredmillimeters_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 52:
             key.gate = squaredmillimeters_TO_squaredmeters(MEASUREMENT);
             break;
         case 51:
-            key.gate = squaredmillimeters_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 56:
-            key.gate = squaredmillimeters_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 57:
-            key.gate = squaredmillimeters_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 58:
-            key.gate = squaredmillimeters_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 59:
-            key.gate = squaredmillimeters_TO_barrels(MEASUREMENT); 
+            key.gate = squaredmeters_TO_barrels(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 510:
-            key.gate = squaredmillimeters_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 511:
-            key.gate = squaredmillimeters_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 512:
-            key.gate = squaredmillimeters_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(squaredmillimeters_TO_squaredmeters(MEASUREMENT));
             break;
-         // Ëèòðû   
+         // Литр
         case 65:
-            key.gate = liters_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 64:
-            key.gate = liters_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 63:
-            key.gate = liters_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 62:
             key.gate = liters_TO_squaredmeters(MEASUREMENT);
             break;
         case 61:
-            key.gate = liters_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 67:
-            key.gate = liters_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 68:
-            key.gate = liters_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 69:
-            key.gate = liters_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 610:
-            key.gate = liters_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 611:
-            key.gate = liters_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(liters_TO_squaredmeters(MEASUREMENT));
             break;
         case 612:
-            key.gate = liters_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(liters_TO_squaredmeters(MEASUREMENT));
             break;
-         // Ìèëëèëèòð   
+         // Миллилитр
         case 76:
-            key.gate = mililiters_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 75:
-            key.gate = mililiters_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 74:
-            key.gate = mililiters_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 73:
-            key.gate = mililiters_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 72:
             key.gate = mililiters_TO_squaredmeters(MEASUREMENT);
             break;
         case 71:
-            key.gate = mililiters_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 78:
-            key.gate = mililiters_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 79:
-            key.gate = mililiters_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 710:
-            key.gate = mililiters_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 711:
-            key.gate = mililiters_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
         case 712:
-            key.gate = mililiters_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(mililiters_TO_squaredmeters(MEASUREMENT));
             break;
-        // Ãàëëîí    
+        // Галлон
         case 87:
-            key.gate = gallons_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 86:
-            key.gate = gallons_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 85:
-            key.gate = gallons_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 84:
-            key.gate = gallons_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 83:
-            key.gate = gallons_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 82:
-            key.gate = gallons_TO_squaredmeters(MEASUREMENT);  
+            key.gate = gallons_TO_squaredmeters(MEASUREMENT);
             break;
         case 81:
-            key.gate = gallons_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 89:
-            key.gate = gallons_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 810:
-            key.gate = gallons_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 811:
-            key.gate = gallons_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(gallons_TO_squaredmeters(MEASUREMENT));
             break;
         case 812:
-            key.gate = gallons_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(gallons_TO_squaredmeters(MEASUREMENT));
             break;
-        
-        //Áàððåëü
+        //Баррель
         case 98:
-            key.gate = barrels_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 97:
-            key.gate = barrels_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 96:
-            key.gate = barrels_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 95:
-            key.gate = barrels_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 94:
-            key.gate = barrels_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 93:
-            key.gate = barrels_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 92:
             key.gate = barrels_TO_squaredmeters(MEASUREMENT);
             break;
         case 91:
-            key.gate = barrels_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 910:
-            key.gate =  barrels_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 911:
-            key.gate =  barrels_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 912:
-            key.gate =  barrels_TO_floz(MEASUREMENT);
+            key.gate = squaredmeters_TO_floz(barrels_TO_squaredmeters(MEASUREMENT));
             break;
-         // Êâàðòà    
+         // Êâàðòà
         case 1009:
-            key.gate =  quarts_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1008:
-            key.gate =  quarts_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1007:
-            key.gate =  quarts_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1006:
-            key.gate =  quarts_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1005:
-            key.gate =  quarts_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1004:
-            key.gate =  quarts_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1003:
-            key.gate =  quarts_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1002:
-            key.gate =  quarts_TO_squaredmeters(MEASUREMENT);
+            key.gate = quarts_TO_squaredmeters(MEASUREMENT);
             break;
         case 1001:
-            key.gate =  quarts_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1011:
-            key.gate =  quarts_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(quarts_TO_squaredmeters(MEASUREMENT));
             break;
         case 1012:
-            key.gate =  quarts_TO_flozs(MEASUREMENT);
+            key.gate = squaredmeters_TO_flozs(quarts_TO_squaredmeters(MEASUREMENT));
             break;
-        // Ïèíòà   
+        // Пинта
         case 1110:
-            key.gate =  pints_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1109:
-            key.gate =  pints_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1108:
-            key.gate =  pints_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1107:
-            key.gate =  pints_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1106:
-            key.gate =  pints_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1105:
-            key.gate =  pints_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1104:
-            key.gate =  pints_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1103:
-            key.gate =  pints_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1102:
-            key.gate =  pints_TO_squaredmeters(MEASUREMENT);
+            key.gate = pints_TO_squaredmeters(MEASUREMENT);
             break;
         case 1101:
-            key.gate =  pints_TO_squaredkilometers(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredkilometers(pints_TO_squaredmeters(MEASUREMENT));
             break;
         case 1112:
-            key.gate =  pints_TO_flozs(MEASUREMENT);
-            break;   
-         // Æèäêàÿ óíöèÿ    
+            key.gate = squaredmeters_TO_flozs(pints_TO_squaredmeters(MEASUREMENT));
+            break;
+         // Жидкая унция
         case 1211:
-            key.gate =  flozs_TO_pints(MEASUREMENT);
+            key.gate = squaredmeters_TO_pints(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1210:
-            key.gate =  flozs_TO_quarts(MEASUREMENT);
+            key.gate = squaredmeters_TO_quarts(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1209:
-            key.gate =  flozs_TO_barrels(MEASUREMENT);
+            key.gate = squaredmeters_TO_barrels(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1208:
-            key.gate =  flozs_TO_gallons(MEASUREMENT);
+            key.gate = squaredmeters_TO_gallons(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1207:
-            key.gate =  flozs_TO_mililiters(MEASUREMENT);
+            key.gate = squaredmeters_TO_mililiters(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1206:
-            key.gate =  flozs_TO_liters(MEASUREMENT);
+            key.gate = squaredmeters_TO_liters(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1205:
-            key.gate =  flozs_TO_squaredmillimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredmillimeters(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1204:
-            key.gate =  flozs_TO_squaredcentimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squaredcentimeters(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1203:
-            key.gate =  flozs_TO_squareddecimeters(MEASUREMENT);
+            key.gate = squaredmeters_TO_squareddecimeters(flozs_TO_squaredmeters(MEASUREMENT));
             break;
         case 1202:
-            key.gate =  flozs_TO_squaredmeters(MEASUREMENT);
+            key.gate = flozs_TO_squaredmeters(MEASUREMENT);
             break;
         case 1201:
-            key.gate =  flozs_TO_squaredkilometers(MEASUREMENT);
-            break;                                                                                                                                                                            
+            key.gate = squaredmeters_TO_squaredkilometers(flozs_TO_squaredmeters(MEASUREMENT));
+            break;
         default:
-            printf("Íå ââåäåíî çíà÷åíèå êîíâåðòèðóåìîé âåëè÷èíû, "
-                   "èëè Âû ïûòàåòåñü êîíâåðòèðîâàòü â âåëè÷èíó, êîòîðóþ óæå ïðåîáðàçóåòå\n");
+            printf("Не введено значение конвертируемой величины, "
+                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
             break;
     }
 
