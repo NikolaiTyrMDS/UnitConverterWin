@@ -1,46 +1,46 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* —ËÏ‚ÓÎ '../' - escape-ÒËÏ‚ÓÎ - ËÒÔÓÎ¸ÁÛÂÚÒˇ ‰Îˇ ÔÂÂıÓ‰‡ Ì‡ Ó‰ËÌ ÛÓ‚ÂÌ¸ ‚˚¯Â;
-                                ›ÚÓÚ ÒËÏ‚ÓÎ ËÒÔÓÎ¸ÁÛÂÚÒˇ ÒÚÓÎ¸ÍÓ ‡Á, Ì‡ ÒÍÓÎ¸ÍÓ ÛÓ‚ÌÂÈ ÌÛÊÌÓ ÔÓ‰ÌˇÚ¸Òˇ; */
+#include"../Headers/total.h" /* –°–∏–º–≤–æ–ª '../' - escape-—Å–∏–º–≤–æ–ª - –∏—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è –¥–ª—è –ø–µ—Ä–µ—Ö–æ–¥–∞ –Ω–∞ –æ–¥–∏–Ω —É—Ä–æ–≤–µ–Ω—å –≤—ã—à–µ;
+                                –≠—Ç–æ—Ç —Å–∏–º–≤–æ–ª –∏—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è —Å—Ç–æ–ª—å–∫–æ —Ä–∞–∑, –Ω–∞ —Å–∫–æ–ª—å–∫–æ —É—Ä–æ–≤–Ω–µ–π –Ω—É–∂–Ω–æ –ø–æ–¥–Ω—è—Ç—å—Å—è; */
 
 
 double selectionswitchMass(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("¬˚·ÂËÚÂ ‚ÂÎË˜ËÌÛ, ËÁ ÍÓÚÓÓÈ ¬˚ ıÓÚËÚÂ ÔÓËÁ‚ÂÒÚË ÍÓÌ‚ÂÚËÓ‚‡ÌËÂ:\n"
-           "1 - √‡ÏÏ;\n"
-           "2 -  ËÎÓ„‡ÏÏ;\n"
-           "3 - ÷ÂÌÚÌÂ;\n"
-           "4 - “ÓÌÌ‡;\n"
-           "5 -  ‡‡Ú;\n"
-           "6 - —ÚÓÛÌ;\n"
-           "7 - ‘ÛÌÚ;\n"
-           "8 - ”ÌˆËˇ;\n"
-           "9 - ƒ‡ıÏ‡;\n"
-           "10 - √‡Ì;\n \t");
+    printf("–í—ã–±–µ—Ä–∏—Ç–µ –≤–µ–ª–∏—á–∏–Ω—É, –∏–∑ –∫–æ—Ç–æ—Ä–æ–π –í—ã —Ö–æ—Ç–∏—Ç–µ –ø—Ä–æ–∏–∑–≤–µ—Å—Ç–∏ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞–Ω–∏–µ:\n"
+           "1 - –ì—Ä–∞–º–º;\n"
+           "2 - –ö–∏–ª–æ–≥—Ä–∞–º–º;\n"
+           "3 - –¶–µ–Ω—Ç–Ω–µ—Ä;\n"
+           "4 - –¢–æ–Ω–Ω–∞;\n"
+           "5 - –ö–∞—Ä–∞—Ç;\n"
+           "6 - –°—Ç–æ—É–Ω;\n"
+           "7 - –§—É–Ω—Ç;\n"
+           "8 - –£–Ω—Ü–∏—è;\n"
+           "9 - –î—Ä–∞—Ö–º–∞;\n"
+           "10 - –ì—Ä–∞–Ω;\n \t");
     scanf("%d", &key.input_choice);
-    while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\n¬˚ ‚˚·‡ÎË ‚ÂÎË˜ËÌÛ, ÍÓÚÓÓÈ ÌÂÚ ‚ ÒÔËÒÍÂ ‰ÓÒÚÛÔÌ˚ı ‚ÂÎË˜ËÌ. \nœÓÊ‡ÎÛÈÒÚ‡, Ò‰ÂÎ‡ÈÚÂ ÍÓÂÍÚÌ˚È ‚˚·Ó\n\t");
+    while(key.input_choice > 10 || key.input_choice == 0) {
+        fprintf(stderr, "\n–í—ã –≤—ã–±—Ä–∞–ª–∏ –≤–µ–ª–∏—á–∏–Ω—É, –∫–æ—Ç–æ—Ä–æ–π –Ω–µ—Ç –≤ —Å–ø–∏—Å–∫–µ –¥–æ—Å—Ç—É–ø–Ω—ã—Ö –≤–µ–ª–∏—á–∏–Ω. \n–ü–æ–∂–∞–ª—É–π—Å—Ç–∞, —Å–¥–µ–ª–∞–π—Ç–µ –∫–æ—Ä—Ä–µ–∫—Ç–Ω—ã–π –≤—ã–±–æ—Ä\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("¬˚·ÂËÚÂ ‚ÂÎË˜ËÌÛ, ‚ ÍÓÚÓÛ˛ ¬˚ ıÓÚËÚÂ ÍÓÌ‚ÂÚËÓ‚‡Ú¸ ¬‡¯Û ‚ÂÎË˜ËÌÛ.\n"
-           "ÕÂ ÌÛÊÌÓ ‚˚·Ë‡Ú¸ ÚÛ ÊÂ ‚ÂÎË˜ËÌÛ, ˜ÚÓ ¬˚ ‚˚·‡ÎË ‚ Í‡˜ÂÒÚ‚Â ÍÓÌ‚ÂÚËÛÂÏÓÈ:\n"
-           "1 - √‡ÏÏ;\n"
-           "2 -  ËÎÓ„‡ÏÏ;\n"
-           "3 - ÷ÂÌÚÌÂ;\n"
-           "4 - “ÓÌÌ‡;\n"
-           "5 -  ‡‡Ú;\n"
-           "6 - —ÚÓÛÌ;\n"
-           "7 - ‘ÛÌÚ;\n"
-           "8 - ”ÌˆËˇ;\n"
-           "9 - ƒ‡ıÏ‡;\n"
-           "10 - √‡Ì;\n \t");
+    printf("–í—ã–±–µ—Ä–∏—Ç–µ –≤–µ–ª–∏—á–∏–Ω—É, –≤ –∫–æ—Ç–æ—Ä—É—é –í—ã —Ö–æ—Ç–∏—Ç–µ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞—Ç—å –í–∞—à—É –≤–µ–ª–∏—á–∏–Ω—É.\n"
+           "–ù–µ –Ω—É–∂–Ω–æ –≤—ã–±–∏—Ä–∞—Ç—å —Ç—É –∂–µ –≤–µ–ª–∏—á–∏–Ω—É, —á—Ç–æ –í—ã –≤—ã–±—Ä–∞–ª–∏ –≤ –∫–∞—á–µ—Å—Ç–≤–µ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä—É–µ–º–æ–π:\n"
+           "1 - –ì—Ä–∞–º–º;\n"
+           "2 - –ö–∏–ª–æ–≥—Ä–∞–º–º;\n"
+           "3 - –¶–µ–Ω—Ç–Ω–µ—Ä;\n"
+           "4 - –¢–æ–Ω–Ω–∞;\n"
+           "5 - –ö–∞—Ä–∞—Ç;\n"
+           "6 - –°—Ç–æ—É–Ω;\n"
+           "7 - –§—É–Ω—Ç;\n"
+           "8 - –£–Ω—Ü–∏—è;\n"
+           "9 - –î—Ä–∞—Ö–º–∞;\n\t"
+           "10 - –ì—Ä–∞–Ω;\n \t");
     scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\n¬˚ ‚˚·‡ÎË ‚ÂÎË˜ËÌÛ, ÍÓÚÓÓÈ ÌÂÚ ‚ ÒÔËÒÍÂ ‰ÓÒÚÛÔÌ˚ı ‚ÂÎË˜ËÌ, \nËÎË ¬˚ Ô˚Ú‡ÂÚÂÒ¸ ÍÓÌ‚ÂÚËÓ‚‡Ú¸ "
-                "Ó‰ÌÛ Ë ÚÛ ÊÂ ‚ÂÎË˜ËÌÛ. \nœÓÊ‡ÎÛÈÒÚ‡, Ò‰ÂÎ‡ÈÚÂ ÍÓÂÍÚÌ˚È ‚˚·Ó\n\t");
+    while(key.output_choice == key.input_choice || key.input_choice > 10 || key.input_choice == 0 )  {
+        fprintf(stderr, "\n–í—ã –≤—ã–±—Ä–∞–ª–∏ –≤–µ–ª–∏—á–∏–Ω—É, –∫–æ—Ç–æ—Ä–æ–π –Ω–µ—Ç –≤ —Å–ø–∏—Å–∫–µ –¥–æ—Å—Ç—É–ø–Ω—ã—Ö –≤–µ–ª–∏—á–∏–Ω, \n–∏–ª–∏ –í—ã –ø—ã—Ç–∞–µ—Ç–µ—Å—å –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞—Ç—å "
+                "–æ–¥–Ω—É –∏ —Ç—É –∂–µ –≤–µ–ª–∏—á–∏–Ω—É. \n–ü–æ–∂–∞–ª—É–π—Å—Ç–∞, —Å–¥–µ–ª–∞–π—Ç–µ –∫–æ—Ä—Ä–µ–∫—Ç–Ω—ã–π –≤—ã–±–æ—Ä\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -51,36 +51,35 @@ double selectionswitchMass(double MEASUREMENT)
 	if(key.input_choice < 10 && key.output_choice == 10)
 		key.id = key.input_choice * 100 + key.output_choice;
 
-    switch(key.id) {
-		//√‡ÏÏ
+    //–ì—Ä–∞–º–º
         case 12:
             key.gate = Grams_TO_Kilograms(MEASUREMENT);
             break;
         case 13:
-            key.gate = Grams_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 14:
-            key.gate = Grams_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 15:
-            key.gate = Grams_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 16:
-            key.gate = Grams_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 17:
-            key.gate = Grams_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 18:
-            key.gate = Grams_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 19:
-            key.gate = Grams_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Grams_TO_Kilograms(MEASUREMENT));
             break;
         case 110:
-            key.gate = Grams_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Grams_TO_Kilograms(MEASUREMENT));
             break;
-        // ËÎÓ„‡ÏÏ
+        //–ö–∏–ª–æ–≥—Ä–∞–º–º
         case 21:
             key.gate = Kilograms_TO_Grams(MEASUREMENT);
             break;
@@ -108,238 +107,235 @@ double selectionswitchMass(double MEASUREMENT)
         case 210:
             key.gate = Kilograms_TO_Grains(MEASUREMENT);
             break;
-        //÷ÂÌÚÌÂ
+        //–¶–µ–Ω—Ç–Ω–µ—Ä
         case 32:
             key.gate = Quintals_TO_Kilograms(MEASUREMENT);
             break;
         case 31:
-            key.gate = Quintals_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 34:
-            key.gate = Quintals_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 35:
-            key.gate = Quintals_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 36:
-            key.gate = Quintals_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 37:
-            key.gate = Quintals_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 38:
-            key.gate = Quintals_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 39:
-            key.gate = Quintals_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Quintals_TO_Kilograms(MEASUREMENT));
             break;
         case 310:
-            key.gate = Quintals_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Quintals_TO_Kilograms(MEASUREMENT));
             break;
-        //“ÓÌÌ‡
+        //–¢–æ–Ω–Ω–∞
         case 43:
-            key.gate = Tonnes_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 42:
             key.gate = Tonnes_TO_Kilograms(MEASUREMENT);
             break;
         case 41:
-            key.gate = Tonnes_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 45:
-            key.gate = Tonnes_TO_Carat(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 46:
-            key.gate = Tonnes_TO_Stone(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 47:
-            key.gate = Tonnes_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 48:
-            key.gate = Tonnes_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 49:
-            key.gate = Tonnes_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
         case 410:
-            key.gate = Tonnes_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Tonnes_TO_Kilograms(MEASUREMENT));
             break;
-        // ‡‡Ú
+        //–ö–∞—Ä–∞—Ç
         case 54:
-            key.gate = Carats_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 53:
-            key.gate = Carats_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 52:
             key.gate = Carats_TO_Kilograms(MEASUREMENT);
             break;
         case 51:
-            key.gate = Carats_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 56:
-            key.gate = Carats_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 57:
-            key.gate = Carats_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 58:
-            key.gate = Carats_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 59:
-            key.gate = Carats_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Carats_TO_Kilograms(MEASUREMENT));
             break;
         case 510:
-            key.gate = Carats_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Carats_TO_Kilograms(MEASUREMENT));
             break;
-        //—ÚÓÛÌ
+        //–°—Ç–æ—É–Ω
         case 65:
-            key.gate = Stones_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 64:
-            key.gate = Stones_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 63:
-            key.gate = Stones_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 62:
             key.gate = Stones_TO_Kilograms(MEASUREMENT);
             break;
         case 61:
-            key.gate = Stones_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 67:
-            key.gate = Stones_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 68:
-            key.gate = Stones_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 69:
-            key.gate = Stones_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Stones_TO_Kilograms(MEASUREMENT));
             break;
         case 610:
-            key.gate = Stones_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Stones_TO_Kilograms(MEASUREMENT));
             break;
-        //‘ÛÌÚ
+        //–§—É–Ω—Ç
         case 76:
-            key.gate = Funts_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 75:
-            key.gate = Funts_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 74:
-            key.gate = Funts_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 73:
-            key.gate = Funts_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 72:
             key.gate = Funts_TO_Kilograms(MEASUREMENT);
             break;
         case 71:
-            key.gate = Funts_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 78:
-            key.gate = Funts_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 79:
-            key.gate = Funts_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Funts_TO_Kilograms(MEASUREMENT));
             break;
         case 710:
-            key.gate = Funts_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Funts_TO_Kilograms(MEASUREMENT));
             break;
-        //”ÌˆËˇ
+        //–£–Ω—Ü–∏—è
         case 87:
-            key.gate = Ounces_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 86:
-            key.gate = Ounces_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 85:
-            key.gate = Ounces_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 84:
-            key.gate = Ounces_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 83:
-            key.gate = Ounces_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 82:
             key.gate = Ounces_TO_Kilograms(MEASUREMENT);
             break;
         case 81:
-            key.gate = Ounces_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 89:
-            key.gate = Ounces_TO_Drachmas(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Ounces_TO_Kilograms(MEASUREMENT));
             break;
         case 810:
-            key.gate = Ounces_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Ounces_TO_Kilograms(MEASUREMENT));
             break;
-        //ƒ‡ıÏ‡
+        //–î—Ä–∞—Ö–º–∞
         case 98:
-            key.gate = Drachmas_TO_Ounces(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 97:
-            key.gate = Drachmas_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 96:
-            key.gate = Drachmas_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 95:
-            key.gate = Drachmas_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 94:
-            key.gate = Drachmas_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 93:
-            key.gate = Drachmas_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 92:
             key.gate = Drachmas_TO_Kilograms(MEASUREMENT);
             break;
         case 91:
-            key.gate = Drachmas_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
         case 910:
-            key.gate = Drachmas_TO_Grains(MEASUREMENT);
+            key.gate = Kilograms_TO_Grains(Drachmas_TO_Kilograms(MEASUREMENT));
             break;
-        //√‡Ì
+        //–ì—Ä–∞–Ω
         case 1009:
-            key.gate = Grains_TO_Drachma(MEASUREMENT);
+            key.gate = Kilograms_TO_Drachmas(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1008:
-            key.gate = Grains_TO_Ounce(MEASUREMENT);
+            key.gate = Kilograms_TO_Ounces(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1007:
-            key.gate = Grains_TO_Funts(MEASUREMENT);
+            key.gate = Kilograms_TO_Funts(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1006:
-            key.gate = Grains_TO_Stones(MEASUREMENT);
+            key.gate = Kilograms_TO_Stones(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1005:
-            key.gate = Grains_TO_Carats(MEASUREMENT);
+            key.gate = Kilograms_TO_Carats(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1004:
-            key.gate = Grains_TO_Tonnes(MEASUREMENT);
+            key.gate = Kilograms_TO_Tonnes(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1003:
-            key.gate = Grains_TO_Quintals(MEASUREMENT);
+            key.gate = Kilograms_TO_Quintals(Grains_TO_Kilograms(MEASUREMENT));
             break;
         case 1002:
             key.gate = Grains_TO_Kilograms(MEASUREMENT);
             break;
         case 1001:
-            key.gate = Grains_TO_Grams(MEASUREMENT);
+            key.gate = Kilograms_TO_Grams(Grains_TO_Kilograms(MEASUREMENT));
             break;
         default:
-            printf("ÕÂ ‚‚Â‰ÂÌÓ ÁÌ‡˜ÂÌËÂ ÍÓÌ‚ÂÚËÛÂÏÓÈ ‚ÂÎË˜ËÌ˚, "
-                   "ËÎË ¬˚ Ô˚Ú‡ÂÚÂÒ¸ ÍÓÌ‚ÂÚËÓ‚‡Ú¸ ‚ ‚ÂÎË˜ËÌÛ, ÍÓÚÓÛ˛ ÛÊÂ ÔÂÓ·‡ÁÛÂÚÂ\n");
+            printf("–ù–µ –≤–≤–µ–¥–µ–Ω–æ –∑–Ω–∞—á–µ–Ω–∏–µ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä—É–µ–º–æ–π –≤–µ–ª–∏—á–∏–Ω—ã, "
+                   "–∏–ª–∏ –í—ã –ø—ã—Ç–∞–µ—Ç–µ—Å—å –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞—Ç—å –≤ –≤–µ–ª–∏—á–∏–Ω—É, –∫–æ—Ç–æ—Ä—É—é —É–∂–µ –ø—Ä–µ–æ–±—Ä–∞–∑—É–µ—Ç–µ\n");
             break;
     }
 
     return key.gate;
 }
-
-
-
