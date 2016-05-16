@@ -1,184 +1,65 @@
 #include <stdio.h>
 
-/* ФУНКЦИИ КОНВЕРТИРОВАНИЯ РАЗЛИЧНЫХ ЕДИНИЦ КОЛИЧЕСТВА ВЕЩЕСТВА */
-/* Параметр QOS - Quantity Of Substance, с англ. - Количество Вещества */
+/* Р¤РЈРќРљР¦РР РљРћРќР’Р•Р РўРР РћР’РђРќРРЇ Р РђР—Р›РР§РќР«РҐ Р•Р”РРќРР¦ РљРћР›РР§Р•РЎРўР’Рђ Р’Р•Р©Р•РЎРўР’Рђ */
+/* РџР°СЂР°РјРµС‚СЂ QOS - Quantity Of Substance, СЃ Р°РЅРіР». - РљРѕР»РёС‡РµСЃС‚РІРѕ Р’РµС‰РµСЃС‚РІР° */
 
-// <Моли> ---> <Миллимоли> //
+// <РњРѕР»Рё> ---> <РњРёР»Р»РёРјРѕР»Рё> //
 double Mole2mMole(double QOS) {
 	QOS = QOS * 1000;
 	return QOS;
 }
 
-// <Миллимоли> ---> <Моли> //
+// <РњРёР»Р»РёРјРѕР»Рё> ---> <РњРѕР»Рё> //
 double mMole2Mole(double QOS) {
 	QOS = QOS / 1000;
 	return QOS;
 }
 
-// <Моли> ---> <Киломоли> //
+// <РњРѕР»Рё> ---> <РљРёР»РѕРјРѕР»Рё> //
 double Mole2kMole(double QOS) {
 	QOS = QOS / 1000;
 	return QOS;
 }
 
-// <Киломоли> ---> <Моли> //
+// <РљРёР»РѕРјРѕР»Рё> ---> <РњРѕР»Рё> //
 double kMole2Mole(double QOS) {
 	QOS = QOS * 1000;
 	return QOS;
 }
 
-// <Миллимоли> ---> <Киломоли> //
-double mMole2kMole(double QOS) {
-	QOS = QOS / 1000000;
-	return QOS;
-}
-
-// <Киломоли> ---> <Миллимоли> //
-double kMole2mMole(double QOS) {
-	QOS = QOS * 1000000;
-	return QOS;
-}
-
-// <Моли> ---> <Фунт-моли> //
+// <РњРѕР»Рё> ---> <Р¤СѓРЅС‚-РјРѕР»Рё> //
 double Mole2PoundMole(double QOS) {
 	QOS = QOS * 0.0022046226;
 	return QOS;
 }
 
-// <Фунт-моли> ---> <Моли> //
+// <Р¤СѓРЅС‚-РјРѕР»Рё> ---> <РњРѕР»Рё> //
 double PoundMole2Mole(double QOS) {
 	QOS = QOS / 0.0022046226;
 	return QOS;
 }
 
-// <Миллимоли> ---> <Фунт-моли> //
-double mMole2PoundMole(double QOS) {
-	QOS = QOS * 1000 * 0.0022046226;
-	return QOS;
-}
 
-// <Фунт-моли> ---> <Миллимоли> //
-double PoundMole2mMole(double QOS) {
-	QOS = (QOS * 1000) / 0.0022046226;
-	return QOS;
-}
-
-// <Киломоли> ---> <Фунт-моли> //
-double kMole2PoundMole(double QOS) {
-	QOS = (QOS / 1000) * 0.0022046226;
-	return QOS;
-}
-
-// <Фунт-моли> ---> <Киломоли> //
-double PoundMole2kMole(double QOS) {
-	QOS = (QOS / 1000) / 0.0022046226;
-	return QOS;
-}
-
-// <Моли> ---> <Микромоли> //
+// <РњРѕР»Рё> ---> <РњРёРєСЂРѕРјРѕР»Рё> //
 double Mole2MkMole(double QOS) {
 	QOS = QOS * 1000000;
 	return QOS;
 }
 
-// <Микромоли> ---> <Моли> //
+// <РњРёРєСЂРѕРјРѕР»Рё> ---> <РњРѕР»Рё> //
 double MkMole2Mole(double QOS) {
 	QOS = QOS / 1000000;
 	return QOS;
 }
 
-// <Киломоли> ---> <Микромоли> //
-double kMole2MkMole(double QOS) {
-	QOS = QOS * 1000000000;
-	return QOS;
-}
-
-// <Микромоли> ---> <Киломоли> //
-double MkMole2kMole(double QOS) {
-	QOS = QOS / 1000000000;
-	return QOS;
-}
-
-// <Миллимоли> ---> <Микромоли> //
-double mMole2MkMole(double QOS) {
-	QOS = QOS * 1000;
-	return QOS;
-}
-
-// <Микромоли> ---> <Миллимоли> //
-double MkMole2mMole(double QOS) {
-	QOS = QOS / 1000;
-	return QOS;
-}
-
-// <Фунт-моли> ---> <Микромоли> //
-double PoundMole2MkMole(double QOS) {
-	QOS = (QOS * 1000000) / 0.0022046226;
-	return QOS;
-}
-
-// <Микромоли> ---> <Фунт-моли> //
-double MkMole2PoundMole(double QOS) {
-	QOS = QOS * 1000000 * 0.0022046226;
-	return QOS;
-}
-
-// <Моли> ---> <Мегамоли> //
+// <РњРѕР»Рё> ---> <РњРµРіР°РјРѕР»Рё> //
 double Mole2MgMole(double QOS) {
 	QOS = QOS / 1000000;
 	return QOS;
 }
 
-// <Мегамоли> ---> <Моли> //
+// <РњРµРіР°РјРѕР»Рё> ---> <РњРѕР»Рё> //
 double MgMole2Mole(double QOS) {
 	QOS = QOS * 1000000;
-	return QOS;
-}
-
-// <Киломоли> ---> <Мегамоли> //
-double kMole2MgMole(double QOS) {
-	QOS = QOS / 1000;
-	return QOS;
-}
-
-// <Мегамоли> ---> <Киломоли> //
-double MgMole2kMole(double QOS) {
-	QOS = QOS * 1000;
-	return QOS;
-}
-
-// <Миллимоли> ---> <Мегамоли> //
-double mMole2MgMole(double QOS) {
-	QOS = QOS / 1000000000;
-	return QOS;
-}
-
-// <Мегамоли> ---> <Миллимоли> //
-double MgMole2mMole(double QOS) {
-	QOS = QOS * 1000000000;
-	return QOS;
-}
-
-// <Микромоли> ---> <Мегамоли> //
-double MkMole2MgMole(double QOS) {
-	QOS = QOS / 1000000000000;
-	return QOS;
-}
-
-// <Мегамоли> ---> <Микромоли> //
-double MgMole2MkMole(double QOS) {
-	QOS = QOS * 1000000000000;
-	return QOS;
-}
-
-// <Фунт-моли> ---> <Мегамоли> //
-double PoundMole2MgMole(double QOS) {
-	QOS = (QOS * 1000000) / 0.0022046226;
-	return QOS;
-}
-
-// <Мегамоли> ---> <Фунт-моли> //
-double MgMole2PoundMole(double QOS) {
-	QOS = (QOS / 1000000) * 0.0022046226;
 	return QOS;
 }
