@@ -1,43 +1,45 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
-                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+#include"../Headers/total.h" /* РЎРёРјРІРѕР» '../' - escape-СЃРёРјРІРѕР» - РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРµСЂРµС…РѕРґР° РЅР° РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ;
+                                Р­С‚РѕС‚ СЃРёРјРІРѕР» РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃС‚РѕР»СЊРєРѕ СЂР°Р·, РЅР° СЃРєРѕР»СЊРєРѕ СѓСЂРѕРІРЅРµР№ РЅСѓР¶РЅРѕ РїРѕРґРЅСЏС‚СЊСЃСЏ; */
 
 double selectionswitchPower(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-    	   "1 - Микроват;\n"
-           "2 - Милливат;\n"
-           "3 - Ват;\n"
-           "4 - Киловат;\n"
-           "5 - Мегават;\n"
-           "6 - Килограмм-сил-метров в секунду;\n"
-           "7 - Эрг в секунду;\n"
-           "8 - Лошадиных сил(метрических);\n"
-           "9 - Лошадиных сил(английских);\n\t");
-    scanf("%d", &key.input_choice);
+    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РёР· РєРѕС‚РѕСЂРѕР№ Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРёР·РІРµСЃС‚Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ:\n"
+    	   "1 - РњРёРєСЂРѕРІР°С‚;\n"
+           "2 - РњРёР»Р»РёРІР°С‚;\n"
+           "3 - Р’Р°С‚;\n"
+           "4 - РљРёР»РѕРІР°С‚;\n"
+           "5 - РњРµРіР°РІР°С‚;\n"
+           "6 - РљРёР»РѕРіСЂР°РјРј-СЃРёР»-РјРµС‚СЂРѕРІ РІ СЃРµРєСѓРЅРґСѓ;\n"
+           "7 - Р­СЂРі РІ СЃРµРєСѓРЅРґСѓ;\n"
+           "8 - Р›РѕС€Р°РґРёРЅС‹С… СЃРёР»(РјРµС‚СЂРёС‡РµСЃРєРёС…);\n"
+           "9 - Р›РѕС€Р°РґРёРЅС‹С… СЃРёР»(Р°РЅРіР»РёР№СЃРєРёС…);\n\t");
+    key.input_choice = parsing_id(key.in);
+    //scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
+        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
-           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-    	   "1 - Микроват;\n"
-           "2 - Милливат;\n"
-           "3 - Ват;\n"
-           "4 - Киловат;\n"
-           "5 - Мегават;\n"
-           "6 - Килограмм-сил-метров в секунду;\n"
-           "7 - Эрг в секунду;\n"
-           "8 - Лошадиных сил(метрических);\n"
-           "9 - Лошадиных сил(английских);\n\t");
-    scanf("%d", &key.output_choice);
+    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РІ РєРѕС‚РѕСЂСѓСЋ Р’С‹ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ Р’Р°С€Сѓ РІРµР»РёС‡РёРЅСѓ.\n"
+           "РќРµ РЅСѓР¶РЅРѕ РІС‹Р±РёСЂР°С‚СЊ С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ, С‡С‚Рѕ Р’С‹ РІС‹Р±СЂР°Р»Рё РІ РєР°С‡РµСЃС‚РІРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№:\n"
+    	   "1 - РњРёРєСЂРѕРІР°С‚;\n"
+           "2 - РњРёР»Р»РёРІР°С‚;\n"
+           "3 - Р’Р°С‚;\n"
+           "4 - РљРёР»РѕРІР°С‚;\n"
+           "5 - РњРµРіР°РІР°С‚;\n"
+           "6 - РљРёР»РѕРіСЂР°РјРј-СЃРёР»-РјРµС‚СЂРѕРІ РІ СЃРµРєСѓРЅРґСѓ;\n"
+           "7 - Р­СЂРі РІ СЃРµРєСѓРЅРґСѓ;\n"
+           "8 - Р›РѕС€Р°РґРёРЅС‹С… СЃРёР»(РјРµС‚СЂРёС‡РµСЃРєРёС…);\n"
+           "9 - Р›РѕС€Р°РґРёРЅС‹С… СЃРёР»(Р°РЅРіР»РёР№СЃРєРёС…);\n\t");
+    key.output_choice = parsing_id(key.out);
+    //scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
-                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
+        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ, \nРёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ "
+                "РѕРґРЅСѓ Рё С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -45,52 +47,52 @@ double selectionswitchPower(double MEASUREMENT)
 
     switch(key.id) {
         case 12:
-            key.gate = MkVat2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(MkVat2Vat(MEASUREMENT));
             break;
         case 13:
             key.gate = MkVat2Vat(MEASUREMENT);
             break;
         case 14:
-            key.gate = MkVat2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(MkVat2Vat(MEASUREMENT));
             break;
         case 15:
-            key.gate = MkVat2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(MkVat2Vat(MEASUREMENT));
             break;
         case 16:
-            key.gate = MkVat2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(MkVat2Vat(MEASUREMENT));
             break;
         case 17:
-            key.gate = MkVat2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(MkVat2Vat(MEASUREMENT));
             break;
         case 18:
-            key.gate = MkVat2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(MkVat2Vat(MEASUREMENT));
             break;
         case 19:
-            key.gate = MkVat2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(MkVat2Vat(MEASUREMENT));
             break;
         case 21:
-            key.gate = MlVat2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(MlVat2Vat(MEASUREMENT));
             break;
         case 23:
             key.gate = MlVat2Vat(MEASUREMENT);
             break;
         case 24:
-            key.gate = MlVat2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(MlVat2Vat(MEASUREMENT));
             break;
         case 25:
-            key.gate = MlVat2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(MlVat2Vat(MEASUREMENT));
             break;
         case 26:
-            key.gate = MlVat2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(MlVat2Vat(MEASUREMENT));
             break;
         case 27:
-            key.gate = MlVat2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(MlVat2Vat(MEASUREMENT));
             break;
         case 28:
-            key.gate = MlVat2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(MlVat2Vat(MEASUREMENT));
             break;
         case 29:
-            key.gate = MlVat2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(MlVat2Vat(MEASUREMENT));
             break;
         case 31:
             key.gate = Vat2MkVat(MEASUREMENT);
@@ -117,152 +119,152 @@ double selectionswitchPower(double MEASUREMENT)
             key.gate = Vat2HorsePowEng(MEASUREMENT);
             break;
         case 41:
-            key.gate = kVat2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(kVat2Vat(MEASUREMENT));
             break;
         case 42:
-            key.gate = kVat2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(kVat2Vat(MEASUREMENT));
             break;
         case 43:
             key.gate = kVat2Vat(MEASUREMENT);
             break;
         case 45:
-            key.gate = kVat2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(kVat2Vat(MEASUREMENT));
             break;
         case 46:
-            key.gate = kVat2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(kVat2Vat(MEASUREMENT));
             break;
         case 47:
-            key.gate = kVat2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(kVat2Vat(MEASUREMENT));
             break;
         case 48:
-            key.gate = kVat2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(kVat2Vat(MEASUREMENT));
             break;
         case 49:
-            key.gate = kVat2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(kVat2Vat(MEASUREMENT));
             break;
         case 51:
-            key.gate = mVat2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(mVat2Vat(MEASUREMENT));
             break;
         case 52:
-            key.gate = mVat2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(mVat2Vat(MEASUREMENT));
             break;
         case 53:
             key.gate = mVat2Vat(MEASUREMENT);
             break;
         case 54:
-            key.gate = mVat2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(mVat2Vat(MEASUREMENT));
             break;
         case 56:
-            key.gate = mVat2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(mVat2Vat(MEASUREMENT));
             break;
         case 57:
-            key.gate = mVat2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(mVat2Vat(MEASUREMENT));
             break;
         case 58:
-            key.gate = mVat2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(mVat2Vat(MEASUREMENT));
             break;
         case 59:
-            key.gate = mVat2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(mVat2Vat(MEASUREMENT));
             break;
         case 61:
-            key.gate = kgSilaMvS2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 62:
-            key.gate = kgSilaMvS2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 63:
             key.gate = kgSilaMvS2Vat(MEASUREMENT);
             break;
         case 64:
-            key.gate = kgSilaMvS2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 65:
-            key.gate = kgSilaMvS2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 67:
-            key.gate = kgSilaMvS2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 68:
-            key.gate = kgSilaMvS2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 69:
-            key.gate = kgSilaMvS2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(kgSilaMvS2Vat(MEASUREMENT));
             break;
         case 71:
-            key.gate = ErgS2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(ErgS2Vat(MEASUREMENT));
             break;
         case 72:
-            key.gate = ErgS2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(ErgS2Vat(MEASUREMENT));
             break;
         case 73:
             key.gate = ErgS2Vat(MEASUREMENT);
             break;
         case 74:
-            key.gate = ErgS2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(ErgS2Vat(MEASUREMENT));
             break;
         case 75:
-            key.gate = ErgS2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(ErgS2Vat(MEASUREMENT));
             break;
         case 76:
-            key.gate = ErgS2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(ErgS2Vat(MEASUREMENT));
             break;
         case 78:
-            key.gate = ErgS2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(ErgS2Vat(MEASUREMENT));
             break;
         case 79:
-            key.gate = ErgS2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(ErgS2Vat(MEASUREMENT));
             break;
         case 81:
-            key.gate = HorsePowMetr2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 82:
-            key.gate = HorsePowEng2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 83:
             key.gate = HorsePowMetr2Vat(MEASUREMENT);
             break;
         case 84:
-            key.gate = HorsePowMetr2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 85:
-            key.gate = HorsePowMetr2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 86:
-            key.gate = HorsePowMetr2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 87:
-            key.gate = HorsePowMetr2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 89:
-            key.gate = HorsePowMetr2HorsePowEng(MEASUREMENT);
+            key.gate = Vat2HorsePowEng(HorsePowMetr2Vat(MEASUREMENT));
             break;
         case 91:
-            key.gate = HorsePowEng2MkVat(MEASUREMENT);
+            key.gate = Vat2MkVat(HorsePowEng2Vat(MEASUREMENT));
             break;
         case 92:
-            key.gate = HorsePowEng2MlVat(MEASUREMENT);
+            key.gate = Vat2MlVat(HorsePowEng2Vat(MEASUREMENT));
             break;
         case 93:
             key.gate = HorsePowEng2Vat(MEASUREMENT);
             break;
         case 94:
-            key.gate = HorsePowEng2kVat(MEASUREMENT);
+            key.gate = Vat2kVat(HorsePowEng2Vat(MEASUREMENT));
             break;
         case 95:
-            key.gate = HorsePowEng2mVat(MEASUREMENT);
+            key.gate = Vat2mVat(HorsePowEng2Vat(MEASUREMENT));
             break;
         case 96:
-            key.gate = HorsePowEng2kgSilaMvS(MEASUREMENT);
+            key.gate = Vat2kgSilaMvS(HorsePowEng2Vat(MEASUREMENT));
             break;
         case 97:
-            key.gate = HorsePowEng2ErgS(MEASUREMENT);
+            key.gate = Vat2ErgS(HorsePowEng2Vat(MEASUREMENT));
             break;
         case 98:
-            key.gate = HorsePowEng2HorsePowMetr(MEASUREMENT);
+            key.gate = Vat2HorsePowMetr(HorsePowEng2Vat(MEASUREMENT));
             break;
         default:
-            printf("Не введено значение конвертируемой величины, "
-                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
+            printf("РќРµ РІРІРµРґРµРЅРѕ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№ РІРµР»РёС‡РёРЅС‹, "
+                   "РёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ РІ РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂСѓСЋ СѓР¶Рµ РїСЂРµРѕР±СЂР°Р·СѓРµС‚Рµ\n");
             break;
     }
 
