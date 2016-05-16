@@ -1,254 +1,254 @@
 #include <stdio.h>
 // DONE;
-/* ‘”Õ ÷»»  ŒÕ¬≈–“»–Œ¬¿Õ»ﬂ –¿«À»◊Õ€’ ≈ƒ»Õ»÷ »«Ã≈–≈Õ»ﬂ ”√À¿ */
+/* –§–£–ù–ö–¶–ò–ò –ö–û–ù–í–ï–†–¢–ò–†–û–í–ê–ù–ò–Ø –†–ê–ó–õ–ò–ß–ù–´–• –ï–î–ò–ù–ò–¶ –ò–ó–ú–ï–†–ï–ù–ò–Ø –£–ì–õ–ê */
 
-// <√‡‰ÛÒ˚> ---> <–‡‰Ë‡Ì˚> //
+// <–ì—Ä–∞–¥—É—Å—ã> ---> <–†–∞–¥–∏–∞–Ω—ã> //
 double Degree2Radian(double ANGLE) {
 	ANGLE = ANGLE / 57.295779513;
 	return ANGLE;
 }
 
-// <–‡‰Ë‡Ì˚> ---> <√‡‰ÛÒ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã> ---> <–ì—Ä–∞–¥—É—Å—ã> //
 double Radian2Degree(double ANGLE) {
 	ANGLE = ANGLE * 57.295779513;
 	return ANGLE;
 }
 
-// <√‡‰ÛÒ˚> ---> <ÃËÌÛÚ˚> //
+// <–ì—Ä–∞–¥—É—Å—ã> ---> <–ú–∏–Ω—É—Ç—ã> //
 double Degree2Min(double ANGLE) {
 	ANGLE = ANGLE * 60;
 	return ANGLE;
 }
 
-// <ÃËÌÛÚ˚> ---> <√‡‰ÛÒ˚> //
+// <–ú–∏–Ω—É—Ç—ã> ---> <–ì—Ä–∞–¥—É—Å—ã> //
 double Min2Degree(double ANGLE) {
 	ANGLE = ANGLE / 60;
 	return ANGLE;
 }
 
-// <–‡‰Ë‡Ì˚> ---> <ÃËÌÛÚ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã> ---> <–ú–∏–Ω—É—Ç—ã> //
 double Radian2Min(double ANGLE) {
 	ANGLE = ANGLE * 60 * 57.295779513;
 	return ANGLE;
 }
 
-// <ÃËÌÛÚ˚> ---> <–‡‰Ë‡Ì˚> //
+// <–ú–∏–Ω—É—Ç—ã> ---> <–†–∞–¥–∏–∞–Ω—ã> //
 double Min2Radian(double ANGLE) {
 	ANGLE = ANGLE / (60 * 57.295779513);
 	return ANGLE;
 }
 
-// <√‡‰ÛÒ˚> ---> <—ÂÍÛÌ‰˚> //
+// <–ì—Ä–∞–¥—É—Å—ã> ---> <–°–µ–∫—É–Ω–¥—ã> //
 double Degree2Sec(double ANGLE) {
 	ANGLE = ANGLE * 3600;
 	return ANGLE;
 }
 
-// <—ÂÍÛÌ‰˚> ---> <√‡‰ÛÒ˚> //
+// <–°–µ–∫—É–Ω–¥—ã> ---> <–ì—Ä–∞–¥—É—Å—ã> //
 double Sec2Degree(double ANGLE) {
 	ANGLE = ANGLE / 3600;
 	return ANGLE;
 }
 
-// <–‡‰Ë‡Ì˚> ---> <—ÂÍÛÌ‰˚> //
+// <–†–∞–¥–∏–∞–Ω—ã> ---> <–°–µ–∫—É–Ω–¥—ã> //
 double Radian2Sec(double ANGLE) {
 	ANGLE = ANGLE * 3600 * 57.295779513;
 	return ANGLE;
 }
 
-// <—ÂÍÛÌ‰˚> ---> <–‡‰Ë‡Ì˚> //
+// <–°–µ–∫—É–Ω–¥—ã> ---> <–†–∞–¥–∏–∞–Ω—ã> //
 double Sec2Radian(double ANGLE) {
 	ANGLE = ANGLE / (3600 * 57.295779513);
 	return ANGLE;
 }
 
-// <ÃËÌÛÚ˚> ---> <—ÂÍÛÌ‰˚> //
+// <–ú–∏–Ω—É—Ç—ã> ---> <–°–µ–∫—É–Ω–¥—ã> //
 double Min2Sec(double ANGLE) {
 	ANGLE = ANGLE * 60;
 	return ANGLE;
 }
 
-// <—ÂÍÛÌ‰˚> ---> <ÃËÌÛÚ˚> //
+// <–°–µ–∫—É–Ω–¥—ã> ---> <–ú–∏–Ω—É—Ç—ã> //
 double Sec2Min(double ANGLE) {
 	ANGLE = ANGLE / 60;
 	return ANGLE;
 }
 
-// <√‡‰ÛÒ˚> ---> <√‡‰˚> //
+// <–ì—Ä–∞–¥—É—Å—ã> ---> <–ì—Ä–∞–¥—ã> //
 double Degree2Grad(double ANGLE) {
 	ANGLE = ANGLE / 0.9;
 	return ANGLE;
 }
 
-// <√‡‰˚> ---> <√‡‰ÛÒ˚> //
+// <–ì—Ä–∞–¥—ã> ---> <–ì—Ä–∞–¥—É—Å—ã> //
 double Grad2Degree(double ANGLE) {
 	ANGLE = ANGLE * 0.9;
 	return ANGLE;
 }
 
-// <ÃËÌÛÚ˚> ---> <√‡‰˚> //
+// <–ú–∏–Ω—É—Ç—ã> ---> <–ì—Ä–∞–¥—ã> //
 double Min2Grad(double ANGLE) {
 	ANGLE = ANGLE / (0.9 * 60);
 	return ANGLE;
 }
 
-// <√‡‰˚> ---> <ÃËÌÛÚ˚> //
+// <–ì—Ä–∞–¥—ã> ---> <–ú–∏–Ω—É—Ç—ã> //
 double Grad2Min(double ANGLE) {
 	ANGLE = ANGLE * 0.9 * 60;
 	return ANGLE;
 }
 
-// <—ÂÍÛÌ‰˚> ---> <√‡‰˚> //
+// <–°–µ–∫—É–Ω–¥—ã> ---> <–ì—Ä–∞–¥—ã> //
 double Sec2Grad(double ANGLE) {
 	ANGLE = ANGLE / (0.9 * 3600);
 	return ANGLE;
 }
 
-// <√‡‰˚> ---> <—ÂÍÛÌ‰˚> //
+// <–ì—Ä–∞–¥—ã> ---> <–°–µ–∫—É–Ω–¥—ã> //
 double Grad2Sec(double ANGLE) {
 	ANGLE = ANGLE * 0.9 * 3600;
 	return ANGLE;
 }
 
-// <–‡‰Ë‡Ì˚> ---> <√‡‰˚> //
+// <–†–∞–¥–∏–∞–Ω—ã> ---> <–ì—Ä–∞–¥—ã> //
 double Radian2Grad(double ANGLE) {
 	ANGLE = ANGLE * (57.295779513 / 0.9);
 	return ANGLE;
 }
 
-// <√‡‰˚> ---> <–‡‰Ë‡Ì˚> //
+// <–ì—Ä–∞–¥—ã> ---> <–†–∞–¥–∏–∞–Ω—ã> //
 double Grad2Radian(double ANGLE) {
 	ANGLE = ANGLE / 57.295779513 / 0.9;
 	return ANGLE;
 }
 
-// <—ÂÍÒÚ‡ÌÚ˚> ---> <√‡‰ÛÒ˚> //
+// <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> ---> <–ì—Ä–∞–¥—É—Å—ã> //
 double Sextant2Degree(double ANGLE) {
 	ANGLE = ANGLE * 60;
 	return ANGLE;
 }
 
-// <√‡‰ÛÒ˚> ---> <—ÂÍÒÚ‡ÌÚ˚> //
+// <–ì—Ä–∞–¥—É—Å—ã> ---> <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> //
 double Degree2Sextant(double ANGLE) {
 	ANGLE = ANGLE / 60;
 	return ANGLE;
 }
 
-// <—ÂÍÒÚ‡ÌÚ˚> ---> <ÃËÌÛÚ˚> //
+// <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> ---> <–ú–∏–Ω—É—Ç—ã> //
 double Sextant2Min(double ANGLE) {
 	ANGLE = ANGLE * 3600;
 	return ANGLE;
 }
 
-// <ÃËÌÛÚ˚> ---> <—ÂÍÒÚ‡ÌÚ˚> //
+// <–ú–∏–Ω—É—Ç—ã> ---> <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> //
 double Min2Sextant(double ANGLE) {
 	ANGLE = ANGLE / 3600;
 	return ANGLE;
 }
 
-// <—ÂÍÒÚ‡ÌÚ˚> ---> <—ÂÍÛÌ‰˚> //
+// <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> ---> <–°–µ–∫—É–Ω–¥—ã> //
 double Sextant2Sec(double ANGLE) {
 	ANGLE = ANGLE * 216000;
 	return ANGLE;
 }
 
-// <—ÂÍÛÌ‰˚> ---> <—ÂÍÒÚ‡ÌÚ˚> //
+// <–°–µ–∫—É–Ω–¥—ã> ---> <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> //
 double Sec2Sextant(double ANGLE) {
 	ANGLE = ANGLE / 216000;
 	return ANGLE;
 }
 
-// <—ÂÍÒÚ‡ÌÚ˚> ---> <√‡‰˚> //
+// <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> ---> <–ì—Ä–∞–¥—ã> //
 double Sextant2Grad(double ANGLE) {
 	ANGLE = (ANGLE * 60) / 0.9;
 	return ANGLE;
 }
 
-// <√‡‰˚> ---> <—ÂÍÒÚ‡ÌÚ˚> //
+// <–ì—Ä–∞–¥—ã> ---> <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> //
 double Grad2Sextant(double ANGLE) {
 	ANGLE = ANGLE * (0.9 / 60);
 	return ANGLE;
 }
 
-// <—ÂÍÒÚ‡ÌÚ˚> ---> <–‡‰Ë‡Ì˚> //
+// <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> ---> <–†–∞–¥–∏–∞–Ω—ã> //
 double Sextant2Radian(double ANGLE) {
 	ANGLE = (ANGLE * 60) / 57.295779513;
 	return ANGLE;
 }
 
-// <–‡‰Ë‡Ì˚> ---> <—ÂÍÒÚ‡ÌÚ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã> ---> <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> //
 double Radian2Sextant(double ANGLE) {
 	ANGLE = ANGLE * (57.295779513 / 60);
 	return ANGLE;
 }
 
-// <–ÛÏ·˚> ---> <√‡‰ÛÒ˚> //
+// <–†—É–º–±—ã> ---> <–ì—Ä–∞–¥—É—Å—ã> //
 double Rumb2Degree(double ANGLE) {
 	ANGLE = ANGLE * 11.25;
 	return ANGLE;
 }
 
-// <√‡‰ÛÒ˚> ---> <–ÛÏ·˚> //
+// <–ì—Ä–∞–¥—É—Å—ã> ---> <–†—É–º–±—ã> //
 double Degree2Rumb(double ANGLE) {
 	ANGLE = ANGLE / 11.25;
 	return ANGLE;
 }
 
-// <–ÛÏ·˚> ---> <–‡‰Ë‡Ì˚> //
+// <–†—É–º–±—ã> ---> <–†–∞–¥–∏–∞–Ω—ã> //
 double Rumb2Radian(double ANGLE) {
 	ANGLE = (ANGLE * 11.25) / 57.295779513;
 	return ANGLE;
 }
 
-// <–‡‰Ë‡Ì˚> ---> <–ÛÏ·˚> //
+// <–†–∞–¥–∏–∞–Ω—ã> ---> <–†—É–º–±—ã> //
 double Radian2Rumb(double ANGLE) {
 	ANGLE = ANGLE * (57.295779513 / 11.25);
 	return ANGLE;
 }
 
-// <–ÛÏ·˚> ---> <ÃËÌÛÚ˚> //
+// <–†—É–º–±—ã> ---> <–ú–∏–Ω—É—Ç—ã> //
 double Rumb2Min(double ANGLE) {
 	ANGLE = ANGLE * 11.25 * 60;
 	return ANGLE;
 }
 
-// <ÃËÌÛÚ˚> ---> <–ÛÏ·˚> //
+// <–ú–∏–Ω—É—Ç—ã> ---> <–†—É–º–±—ã> //
 double Min2Rumb(double ANGLE) {
 	ANGLE = ANGLE / (11.25 * 60);
 	return ANGLE;
 }
 
-// <–ÛÏ·˚> ---> <—ÂÍÛÌ‰˚> //
+// <–†—É–º–±—ã> ---> <–°–µ–∫—É–Ω–¥—ã> //
 double Rumb2Sec(double ANGLE) {
 	ANGLE = ANGLE * 11.25 * 3600;
 	return ANGLE;
 }
 
-// <—ÂÍÛÌ‰˚> ---> <–ÛÏ·˚> //
+// <–°–µ–∫—É–Ω–¥—ã> ---> <–†—É–º–±—ã> //
 double Sec2Rumb(double ANGLE) {
 	ANGLE = ANGLE / (11.25 * 3600);
 	return ANGLE;
 }
 
-// <–ÛÏ·˚> ---> <√‡‰˚> //
+// <–†—É–º–±—ã> ---> <–ì—Ä–∞–¥—ã> //
 double Rumb2Grad(double ANGLE) {
 	ANGLE = (ANGLE * 11.25) / 0.9;
 	return ANGLE;
 }
 
-// <√‡‰˚> ---> <–ÛÏ·˚> //
+// <–ì—Ä–∞–¥—ã> ---> <–†—É–º–±—ã> //
 double Grad2Rumb(double ANGLE) {
 	ANGLE = ANGLE * (0.9 / 11.25);
 	return ANGLE;
 }
 
-// <–ÛÏ·˚> ---> <—ÂÍÒÚ‡ÌÚ˚> //
+// <–†—É–º–±—ã> ---> <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> //
 double Rumb2Sextant(double ANGLE) {
 	ANGLE = (ANGLE * 11.25) / 60;
 	return ANGLE;
 }
 
-// <—ÂÍÒÚ‡ÌÚ˚> ---> <–ÛÏ·˚> //
+// <–°–µ–∫—Å—Ç–∞–Ω—Ç—ã> ---> <–†—É–º–±—ã> //
 double Sextant2Rumb(double ANGLE) {
 	ANGLE = ANGLE * (60 / 11.25);
 	return ANGLE;
