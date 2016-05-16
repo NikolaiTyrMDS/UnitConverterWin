@@ -1,39 +1,41 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
-                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+#include"../Headers/total.h" /* РЎРёРјРІРѕР» '../' - escape-СЃРёРјРІРѕР» - РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРµСЂРµС…РѕРґР° РЅР° РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ;
+                                Р­С‚РѕС‚ СЃРёРјРІРѕР» РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃС‚РѕР»СЊРєРѕ СЂР°Р·, РЅР° СЃРєРѕР»СЊРєРѕ СѓСЂРѕРІРЅРµР№ РЅСѓР¶РЅРѕ РїРѕРґРЅСЏС‚СЊСЃСЏ; */
 
 double selectionswitchFrequency(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Микрогерц;\n"
-           "2 - Миллигерц;\n"
-           "3 - Герц;\n"
-           "4 - Килогерц;\n"
-           "5 - Мегагерц;\n"
-           "6 - Френелей;\n"
-           "7 - Радиан на секунду;\n\t");
-    scanf("%d", &key.input_choice);
-    while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
+    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РёР· РєРѕС‚РѕСЂРѕР№ Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРёР·РІРµСЃС‚Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ:\n"
+           "1 - РњРёРєСЂРѕРіРµСЂС†;\n"
+           "2 - РњРёР»Р»РёРіРµСЂС†;\n"
+           "3 - Р“РµСЂС†;\n"
+           "4 - РљРёР»РѕРіРµСЂС†;\n"
+           "5 - РњРµРіР°РіРµСЂС†;\n"
+           "6 - Р¤СЂРµРЅРµР»РµР№;\n"
+           "7 - Р Р°РґРёР°РЅ РЅР° СЃРµРєСѓРЅРґСѓ;\n\t");
+    key.input_choice = parsing_id(key.in);
+    //scanf("%d", &key.input_choice);
+    while(key.input_choice >= 8 || key.input_choice == 0) {
+        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
-           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Микрогерц;\n"
-           "2 - Миллигерц;\n"
-           "3 - Герц;\n"
-           "4 - Килогерц;\n"
-           "5 - Мегагерц;\n"
-           "6 - Френелей;\n"
-           "7 - Радиан на секунду;\n\t");
-    scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
-                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
+    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РІ РєРѕС‚РѕСЂСѓСЋ Р’С‹ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ Р’Р°С€Сѓ РІРµР»РёС‡РёРЅСѓ.\n"
+           "РќРµ РЅСѓР¶РЅРѕ РІС‹Р±РёСЂР°С‚СЊ С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ, С‡С‚Рѕ Р’С‹ РІС‹Р±СЂР°Р»Рё РІ РєР°С‡РµСЃС‚РІРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№:\n"
+           "1 - РњРёРєСЂРѕРіРµСЂС†;\n"
+           "2 - РњРёР»Р»РёРіРµСЂС†;\n"
+           "3 - Р“РµСЂС†;\n"
+           "4 - РљРёР»РѕРіРµСЂС†;\n"
+           "5 - РњРµРіР°РіРµСЂС†;\n"
+           "6 - Р¤СЂРµРЅРµР»РµР№;\n"
+           "7 - Р Р°РґРёР°РЅ РЅР° СЃРµРєСѓРЅРґСѓ;\n\t");
+    key.output_choice = parsing_id(key.out);
+    //scanf("%d", &key.output_choice);
+    while(key.output_choice == key.input_choice || key.input_choice >= 8 || key.input_choice == 0 )  {
+        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ, \nРёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ "
+                "РѕРґРЅСѓ Рё С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -41,40 +43,40 @@ double selectionswitchFrequency(double MEASUREMENT)
 
     switch(key.id) {
         case 12:
-            key.gate = MkHerz2MlHerz(MEASUREMENT);
+            key.gate = Herz2MlHerz(MkHerz2Herz(MEASUREMENT));
             break;
         case 13:
             key.gate = MkHerz2Herz(MEASUREMENT);
             break;
         case 14:
-            key.gate = MkHerz2kHerz(MEASUREMENT);
+            key.gate = Herz2kHerz(MkHerz2Herz(MEASUREMENT));
             break;
         case 15:
-            key.gate = MkHerz2MgHerz(MEASUREMENT);
+            key.gate = Herz2MgHerz(MkHerz2Herz(MEASUREMENT));
             break;
         case 16:
-            key.gate = MkHerz2Frenel(MEASUREMENT);
+            key.gate = Herz2Frenel(MkHerz2Herz(MEASUREMENT));
             break;
         case 17:
-            key.gate = MkHerz2RadSec(MEASUREMENT);
+            key.gate = Herz2RadSec(MkHerz2Herz(MEASUREMENT));
             break;
         case 21:
-            key.gate = MlHerz2MkHerz(MEASUREMENT);
+            key.gate = Herz2MkHerz(MlHerz2Herz(MEASUREMENT));
             break;
         case 23:
             key.gate = MlHerz2Herz(MEASUREMENT);
             break;
         case 24:
-            key.gate = MlHerz2kHerz(MEASUREMENT);
+            key.gate = Herz2kHerz(MlHerz2Herz(MEASUREMENT));
             break;
         case 25:
-            key.gate = MlHerz2MgHerz(MEASUREMENT);
+            key.gate = Herz2MgHerz(MlHerz2Herz(MEASUREMENT));
             break;
         case 26:
-            key.gate = MlHerz2Frenel(MEASUREMENT);
+            key.gate = Herz2Frenel(MlHerz2Herz(MEASUREMENT));
             break;
         case 27:
-            key.gate = MlHerz2RadSec(MEASUREMENT);
+            key.gate = Herz2RadSec(MlHerz2Herz(MEASUREMENT));
             break;
         case 31:
             key.gate = Herz2MkHerz(MEASUREMENT);
@@ -95,80 +97,80 @@ double selectionswitchFrequency(double MEASUREMENT)
             key.gate = Herz2RadSec(MEASUREMENT);
             break;
         case 41:
-            key.gate = kHerz2MkHerz(MEASUREMENT);
+            key.gate = Herz2MkHerz(kHerz2Herz(MEASUREMENT));
             break;
         case 42:
-            key.gate = kHerz2MlHerz(MEASUREMENT);
+            key.gate = Herz2MlHerz(kHerz2Herz(MEASUREMENT));
             break;
         case 43:
             key.gate = kHerz2Herz(MEASUREMENT);
             break;
         case 45:
-            key.gate = kHerz2MgHerz(MEASUREMENT);
+            key.gate = Herz2MgHerz(kHerz2Herz(MEASUREMENT));
             break;
         case 46:
-            key.gate = kHerz2Frenel(MEASUREMENT);
+            key.gate = Herz2Frenel(kHerz2Herz(MEASUREMENT));
             break;
         case 47:
-            key.gate = kHerz2RadSec(MEASUREMENT);
+            key.gate = Herz2RadSec(kHerz2Herz(MEASUREMENT));
             break;
         case 51:
-            key.gate = MgHerz2MkHerz(MEASUREMENT);
+            key.gate = Herz2MkHerz(MgHerz2Herz(MEASUREMENT));
             break;
         case 52:
-            key.gate = MgHerz2MlHerz(MEASUREMENT);
+            key.gate = Herz2MlHerz(MgHerz2Herz(MEASUREMENT));
             break;
         case 53:
             key.gate = MgHerz2Herz(MEASUREMENT);
             break;
         case 54:
-            key.gate = MgHerz2kHerz(MEASUREMENT);
+            key.gate = Herz2kHerz(MgHerz2Herz(MEASUREMENT));
             break;
         case 56:
-            key.gate = MgHerz2Frenel(MEASUREMENT);
+            key.gate = Herz2Frenel(MgHerz2Herz(MEASUREMENT));
             break;
         case 57:
-            key.gate = MgHerz2RadSec(MEASUREMENT);
+            key.gate = Herz2RadSec(MgHerz2Herz(MEASUREMENT));
             break;
         case 61:
-            key.gate = Frenel2MkHerz(MEASUREMENT);
+            key.gate = Herz2MkHerz(Frenel2Herz(MEASUREMENT));
             break;
         case 62:
-            key.gate = Frenel2MlHerz(MEASUREMENT);
+            key.gate = Herz2MlHerz(Frenel2Herz(MEASUREMENT));
             break;
         case 63:
             key.gate = Frenel2Herz(MEASUREMENT);
             break;
         case 64:
-            key.gate = Frenel2kHerz(MEASUREMENT);
+            key.gate = Herz2kHerz(Frenel2Herz(MEASUREMENT));
             break;
         case 65:
-            key.gate = Frenel2MgHerz(MEASUREMENT);
+            key.gate = Herz2MgHerz(Frenel2Herz(MEASUREMENT));
             break;
         case 67:
-            key.gate = Frenel2RadSec(MEASUREMENT);
+            key.gate = Herz2RadSec(Frenel2Herz(MEASUREMENT));
             break;
         case 71:
-            key.gate = RadSec2MkHerz(MEASUREMENT);
+            key.gate = Herz2MkHerz(RadSec2Herz(MEASUREMENT));
             break;
         case 72:
-            key.gate = RadSec2MlHerz(MEASUREMENT);
+            key.gate = Herz2MlHerz(RadSec2Herz(MEASUREMENT));
             break;
         case 73:
             key.gate = RadSec2Herz(MEASUREMENT);
             break;
         case 74:
-            key.gate = RadSec2kHerz(MEASUREMENT);
+            key.gate = Herz2kHerz(RadSec2Herz(MEASUREMENT));
             break;
         case 75:
-            key.gate = RadSec2MgHerz(MEASUREMENT);
+            key.gate = Herz2MgHerz(RadSec2Herz(MEASUREMENT));
             break;
         case 76:
-            key.gate = RadSec2Frenel(MEASUREMENT);
+            key.gate = Herz2Frenel(RadSec2Herz(MEASUREMENT));
             break;
         default:
-            printf("Не введено значение конвертируемой величины, "
-                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
+            printf("РќРµ РІРІРµРґРµРЅРѕ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№ РІРµР»РёС‡РёРЅС‹, "
+                   "РёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ РІ РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂСѓСЋ СѓР¶Рµ РїСЂРµРѕР±СЂР°Р·СѓРµС‚Рµ\n");
             break;
     }
 
