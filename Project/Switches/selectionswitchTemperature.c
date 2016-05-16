@@ -1,209 +1,232 @@
 #include <stdio.h>
 #include <math.h>
-#include "../Headers/total.h"
+#include"../Headers/total.h" /* –°–∏–º–≤–æ–ª '../' - escape-—Å–∏–º–≤–æ–ª - –∏—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è –¥–ª—è –ø–µ—Ä–µ—Ö–æ–¥–∞ –Ω–∞ –æ–¥–∏–Ω —É—Ä–æ–≤–µ–Ω—å –≤—ã—à–µ;
+                                –≠—Ç–æ—Ç —Å–∏–º–≤–æ–ª –∏—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è —Å—Ç–æ–ª—å–∫–æ —Ä–∞–∑, –Ω–∞ —Å–∫–æ–ª—å–∫–æ —É—Ä–æ–≤–Ω–µ–π –Ω—É–∂–Ω–æ –ø–æ–¥–Ω—è—Ç—å—Å—è; */
+
 
 double selectionswitchTemperature(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("¬˚·ÂËÚÂ ‚ÂÎË˜ËÌÛ, ËÁ ÍÓÚÓÓÈ ¬˚ ıÓÚËÚÂ ÔÓËÁ‚ÂÒÚË ÍÓÌ‚ÂÚËÓ‚‡ÌËÂ:\n"
-           "1 - √‡‰ÛÒ˚ ƒÂÎËÒÎÂ;\t5 - √‡‰ÛÒ˚ –ÂÓÏ˛‡;\n"
-           "2 - √‡‰ÛÒ˚  ÂÎ¸‚ËÌ‡;\t6 - √‡‰ÛÒ˚ –∏ÏÂ‡;\n"
-           "3 - √‡‰ÛÒ˚ Õ¸˛ÚÓÌ‡;\t7 - √‡‰ÛÒ˚ ÷ÂÎ¸ÒËˇ;\n"
-           "4 - √‡‰ÛÒ˚ –‡ÌÍËÌ‡;\t8 - √‡‰ÛÒ˚ ‘‡ÂÌ„ÂÈÚ‡;\n\t");
+    printf("–í—ã–±–µ—Ä–∏—Ç–µ –≤–µ–ª–∏—á–∏–Ω—É, –∏–∑ –∫–æ—Ç–æ—Ä–æ–π –í—ã —Ö–æ—Ç–∏—Ç–µ –ø—Ä–æ–∏–∑–≤–µ—Å—Ç–∏ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞–Ω–∏–µ:\n"
+           "1 - –¶–µ–ª—å—Å–∏–π;\n"
+           "2 - –§–∞—Ä–µ–Ω–≥–µ–π—Ç;\n"
+           "3 - –ö–µ–ª—å–≤–∏–Ω;\n"
+           "4 - –†–µ–æ–º—é—Ä–∞;\n"
+           "5 - –†–∞–Ω–∫–∏–Ω–∞;\n"
+           "6 - –ù—å—é—Ç–æ–Ω–∞;\n"
+           "7 - –†—ë–º–µ—Ä–∞;\n"
+           "8 - –î–µ–ª–∏—Å–ª–µ;\n \t");
     scanf("%d", &key.input_choice);
-    while(key.input_choice >= 9 || key.input_choice == 0) {
-        fprintf(stderr, "\n¬˚ ‚˚·‡ÎË ‚ÂÎË˜ËÌÛ, ÍÓÚÓÓÈ ÌÂÚ ‚ ÒÔËÒÍÂ ‰ÓÒÚÛÔÌ˚ı ‚ÂÎË˜ËÌ. \nœÓÊ‡ÎÛÈÒÚ‡, Ò‰ÂÎ‡ÈÚÂ ÍÓÂÍÚÌ˚È ‚˚·Ó\n\t");
+    while(key.input_choice > 8|| key.input_choice == 0) {
+        fprintf(stderr, "\n–í—ã –≤—ã–±—Ä–∞–ª–∏ –≤–µ–ª–∏—á–∏–Ω—É, –∫–æ—Ç–æ—Ä–æ–π –Ω–µ—Ç –≤ —Å–ø–∏—Å–∫–µ –¥–æ—Å—Ç—É–ø–Ω—ã—Ö –≤–µ–ª–∏—á–∏–Ω. \n–ü–æ–∂–∞–ª—É–π—Å—Ç–∞, —Å–¥–µ–ª–∞–π—Ç–µ –∫–æ—Ä—Ä–µ–∫—Ç–Ω—ã–π –≤—ã–±–æ—Ä\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("¬˚·ÂËÚÂ ‚ÂÎË˜ËÌÛ, ‚ ÍÓÚÓÛ˛ ¬˚ ıÓÚËÚÂ ÍÓÌ‚ÂÚËÓ‚‡Ú¸ ¬‡¯Û ‚ÂÎË˜ËÌÛ.\n"
-           "ÕÂ ÌÛÊÌÓ ‚˚·Ë‡Ú¸ ÚÛ ÊÂ ‚ÂÎË˜ËÌÛ, ˜ÚÓ ¬˚ ‚˚·‡ÎË ‚ Í‡˜ÂÒÚ‚Â ÍÓÌ‚ÂÚËÛÂÏÓÈ:\n"
-           "1 - √‡‰ÛÒ˚ ƒÂÎËÒÎÂ;\t5 - √‡‰ÛÒ˚ –ÂÓÏ˛‡;\n"
-           "2 - √‡‰ÛÒ˚  ÂÎ¸‚ËÌ‡;\t6 - √‡‰ÛÒ˚ –∏ÏÂ‡;\n"
-           "3 - √‡‰ÛÒ˚ Õ¸˛ÚÓÌ‡;\t7 - √‡‰ÛÒ˚ ÷ÂÎ¸ÒËˇ;\n"
-           "4 - √‡‰ÛÒ˚ –‡ÌÍËÌ‡;\t8 - √‡‰ÛÒ˚ ‘‡ÂÌ„ÂÈÚ‡;\n\t");
+    printf("–í—ã–±–µ—Ä–∏—Ç–µ –≤–µ–ª–∏—á–∏–Ω—É, –≤ –∫–æ—Ç–æ—Ä—É—é –í—ã —Ö–æ—Ç–∏—Ç–µ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞—Ç—å –í–∞—à—É –≤–µ–ª–∏—á–∏–Ω—É.\n"
+           "–ù–µ –Ω—É–∂–Ω–æ –≤—ã–±–∏—Ä–∞—Ç—å —Ç—É –∂–µ –≤–µ–ª–∏—á–∏–Ω—É, —á—Ç–æ –í—ã –≤—ã–±—Ä–∞–ª–∏ –≤ –∫–∞—á–µ—Å—Ç–≤–µ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä—É–µ–º–æ–π:\n"
+           "1 - –¶–µ–ª—å—Å–∏–π;\n"
+           "2 - –§–∞—Ä–µ–Ω–≥–µ–π—Ç;\n"
+           "3 - –ö–µ–ª—å–≤–∏–Ω;\n"
+           "4 - –†–µ–æ–º—é—Ä–∞;\n"
+           "5 - –†–∞–Ω–∫–∏–Ω–∞;\n"
+           "6 - –ù—å—é—Ç–æ–Ω–∞;\n"
+           "7 - –†—ë–º–µ—Ä–∞;\n"
+           "8 - –î–µ–ª–∏—Å–ª–µ;\n \t");
     scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || key.output_choice >= 9 || key.input_choice == 0)  {
-        fprintf(stderr, "\n¬˚ ‚˚·‡ÎË ‚ÂÎË˜ËÌÛ, ÍÓÚÓÓÈ ÌÂÚ ‚ ÒÔËÒÍÂ ‰ÓÒÚÛÔÌ˚ı ‚ÂÎË˜ËÌ, \nËÎË ¬˚ Ô˚Ú‡ÂÚÂÒ¸ ÍÓÌ‚ÂÚËÓ‚‡Ú¸ "
-                "Ó‰ÌÛ Ë ÚÛ ÊÂ ‚ÂÎË˜ËÌÛ. \nœÓÊ‡ÎÛÈÒÚ‡, Ò‰ÂÎ‡ÈÚÂ ÍÓÂÍÚÌ˚È ‚˚·Ó\n\t");
+    while(key.output_choice == key.input_choice || key.input_choice > 8 || key.input_choice == 0 )  {
+        fprintf(stderr, "\n–í—ã –≤—ã–±—Ä–∞–ª–∏ –≤–µ–ª–∏—á–∏–Ω—É, –∫–æ—Ç–æ—Ä–æ–π –Ω–µ—Ç –≤ —Å–ø–∏—Å–∫–µ –¥–æ—Å—Ç—É–ø–Ω—ã—Ö –≤–µ–ª–∏—á–∏–Ω, \n–∏–ª–∏ –í—ã –ø—ã—Ç–∞–µ—Ç–µ—Å—å –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞—Ç—å "
+                "–æ–¥–Ω—É –∏ —Ç—É –∂–µ –≤–µ–ª–∏—á–∏–Ω—É. \n–ü–æ–∂–∞–ª—É–π—Å—Ç–∞, —Å–¥–µ–ª–∞–π—Ç–µ –∫–æ—Ä—Ä–µ–∫—Ç–Ω—ã–π –≤—ã–±–æ—Ä\n\t");
         scanf("%d", &key.output_choice);
     }
 
-    key.id = key.input_choice * 10 + key.output_choice;
+    if(input_choice < 10 && output_choice < 10)
+		key.id = key.input_choice * 10 + key.output_choice;
+	if(input_choice == 10 && output_choice <= 10)
+		key.id = key.input_choice * 100 + key.output_choice;
+	if(input_choice < 10 && output_choice == 10)
+		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
+        //–¶–µ–ª—å—Å–∏–π
         case 12:
-            key.gate = DelislesTOKelvins(MEASUREMENT);
+            key.gate = Kelvins_TO_Fahrenheits(Celsius_TO_Kelvins(MEASUREMENT));
             break;
         case 13:
-            key.gate = DelislesTONewtons(MEASUREMENT);
+            key.gate = Celsius_TO_Kelvins(MEASUREMENT);
             break;
         case 14:
-            key.gate = DelislesTORankines(MEASUREMENT);
+            key.gate = Kelvins_TO_Reaumurs(Celsius_TO_Kelvins(MEASUREMENT));
             break;
         case 15:
-            key.gate = DelislesTOReaumurs(MEASUREMENT);
+            key.gate = Kelvins_TO_Rankines(Celsius_TO_Kelvins(MEASUREMENT));
             break;
         case 16:
-            key.gate = DelislesTORomers(MEASUREMENT);
+            key.gate = Kelvins_TO_Newtons(Celsius_TO_Kelvins(MEASUREMENT));
             break;
         case 17:
-            key.gate = DelislesTOCelsius(MEASUREMENT);
+            key.gate = Kelvins_TO_Romers(Celsius_TO_Kelvins(MEASUREMENT));
             break;
         case 18:
-            key.gate = DelislesTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(Celsius_TO_Kelvins(MEASUREMENT));
+            break;
+        //–§–∞—Ä–µ–Ω–≥–µ–π—Ç
+        case 23:
+            key.gate = Fahrenheits_TO_Kelvins(MEASUREMENT);
             break;
         case 21:
-            key.gate = KelvinsTODelisles(MEASUREMENT);
-            break;
-        case 23:
-            key.gate = KelvinsTONewtons(MEASUREMENT);
+            key.gate = Kelvins_TO_Celsiuss(Fahrenheits_TO_Kelvins(MEASUREMENT));
             break;
         case 24:
-            key.gate = KelvinsTORankines(MEASUREMENT);
+            key.gate = Kelvins_TO_Reaumurs(Fahrenheits_TO_Kelvins(MEASUREMENT));
             break;
         case 25:
-            key.gate = KelvinsTOReaumurs(MEASUREMENT);
+            key.gate = Kelvins_TO_Rankines(Fahrenheits_TO_Kelvins(MEASUREMENT));
             break;
         case 26:
-            key.gate = KelvinsTORomers(MEASUREMENT);
+            key.gate = Kelvins_TO_Newtons(Fahrenheits_TO_Kelvins(MEASUREMENT));
             break;
         case 27:
-            key.gate = KelvinsTOCelsius(MEASUREMENT);
+            key.gate = Kelvins_TO_Romers(Fahrenheits_TO_Kelvins(MEASUREMENT));
             break;
         case 28:
-            key.gate = KelvinsTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(Fahrenheits_TO_Kelvins(MEASUREMENT));
+            break;
+        //–ö–µ–ª—å–≤–∏–Ω
+        case 32:
+            key.gate = Kelvins_TO_Fahrenheits(MEASUREMENT);
             break;
         case 31:
-            key.gate = NewtonsTODelisles(MEASUREMENT);
-            break;
-        case 32:
-            key.gate = NewtonsTOKelvins(MEASUREMENT);
+            key.gate = Kelvins_TO_Celsius(MEASUREMENT);
             break;
         case 34:
-            key.gate = NewtonsTORankines(MEASUREMENT);
+            key.gate = Kelvins_TO_Reaumurs(MEASUREMENT);
             break;
         case 35:
-            key.gate = NewtonsTOReaumurs(MEASUREMENT);
+            key.gate = Kelvins_TO_Rankines(MEASUREMENT);
             break;
         case 36:
-            key.gate = NewtonsTORomers(MEASUREMENT);
+            key.gate = Kelvins_TO_Newtons(MEASUREMENT);
             break;
         case 37:
-            key.gate = NewtonsTOCelsius(MEASUREMENT);
+            key.gate = Kelvins_TO_Romers(MEASUREMENT);
             break;
         case 38:
-            key.gate = NewtonsTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(MEASUREMENT);
             break;
-        case 41:
-            key.gate = RankinesTODelisles(MEASUREMENT);
+        //–†–µ–æ–º—é—Ä
+        case 43:
+            key.gate = Reaumurs_TO_Kelvins(MEASUREMENT);
             break;
         case 42:
-            key.gate = RankinesTOKelvins(MEASUREMENT);
+            key.gate = Kelvins_TO_Fahrenheits(Reaumurs_TO_Kelvins(MEASUREMENT));
             break;
-        case 43:
-            key.gate = RankinesTONewtons(MEASUREMENT);
+        case 41:
+            key.gate = Kelvins_TO_Celsius(Reaumurs_TO_Kelvins(MEASUREMENT));
             break;
         case 45:
-            key.gate = RankinesTOReaumurs(MEASUREMENT);
+            key.gate = Kelvins_TO_Rankines(Reaumurs_TO_Kelvins(MEASUREMENT));
             break;
         case 46:
-            key.gate = RankinesTORomers(MEASUREMENT);
+            key.gate = Kelvins_TO_Newtons(Reaumurs_TO_Kelvins(MEASUREMENT));
             break;
         case 47:
-            key.gate = RankinesTOCelsius(MEASUREMENT);
+            key.gate = Kelvins_TO_Romers(Reaumurs_TO_Kelvins(MEASUREMENT));
             break;
         case 48:
-            key.gate = RankinesTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(Reaumurs_TO_Kelvins(MEASUREMENT));
             break;
-        case 51:
-            key.gate = ReaumursTODelisles(MEASUREMENT);
-            break;
-        case 52:
-            key.gate = ReaumursTOKelvins(MEASUREMENT);
+        //–†–∞–Ω–∫–∏–Ω
+        case 54:
+            key.gate = Kelvins_TO_Reaumurs(Rankines_TO_Kelvins(MEASUREMENT));
             break;
         case 53:
-            key.gate = ReaumursTONewtons(MEASUREMENT);
+            key.gate = Rankines_TO_Kelvins(MEASUREMENT);
             break;
-        case 54:
-            key.gate = ReaumursTORankines(MEASUREMENT);
+        case 52:
+            key.gate = Kelvins_TO_Fahrenheits(Rankines_TO_Kelvins(MEASUREMENT));
+            break;
+        case 51:
+            key.gate = Kelvins_TO_Celsius(Rankines_TO_Kelvins(MEASUREMENT));
             break;
         case 56:
-            key.gate = ReaumursTORomers(MEASUREMENT);
+            key.gate = Kelvins_TO_Newtons(Rankines_TO_Kelvins(MEASUREMENT));
             break;
         case 57:
-            key.gate = ReaumursTOCelsius(MEASUREMENT);
+            key.gate = Kelvins_TO_Romers(Rankines_TO_Kelvins(MEASUREMENT));
             break;
         case 58:
-            key.gate = ReaumursTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(Rankines_TO_Kelvins(MEASUREMENT));
             break;
-        case 61:
-            key.gate = RomersTODelisles(MEASUREMENT);
-            break;
-        case 62:
-            key.gate = RomersTOKelvins(MEASUREMENT);
-            break;
-        case 63:
-            key.gate = RomersTONewtons(MEASUREMENT);
+        //–ù—å—é—Ç–æ–Ω
+        case 65:
+            key.gate = Kelvins_TO_Rankines(Newtons_TO_Kelvins(MEASUREMENT));
             break;
         case 64:
-            key.gate = RomersTORankines(MEASUREMENT);
+            key.gate = Kelvins_TO_Reaumurs(Newtons_TO_Kelvins(MEASUREMENT));
             break;
-        case 65:
-            key.gate = RomersTOReaumurs(MEASUREMENT);
+        case 63:
+            key.gate = Newtons_TO_Kelvins(MEASUREMENT);
+            break;
+        case 62:
+            key.gate = Kelvins_TO_Fahrenheits(Newtons_TO_Kelvins(MEASUREMENT));
+            break;
+        case 61:
+            key.gate = Kelvins_TO_Celsius(Newtons_TO_Kelvins(MEASUREMENT));
             break;
         case 67:
-            key.gate = RomersTOCelsius(MEASUREMENT);
+            key.gate = Kelvins_TO_Romers(Newtons_TO_Kelvins(MEASUREMENT));
             break;
         case 68:
-            key.gate = RomersTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(Newtons_TO_Kelvins(MEASUREMENT));
             break;
-        case 71:
-            key.gate = CelsiusTODelisles(MEASUREMENT);
-            break;
-        case 72:
-            key.gate = CelsiusTOKelvins(MEASUREMENT);
-            break;
-        case 73:
-            key.gate = CelsiusTONewtons(MEASUREMENT);
-            break;
-        case 74:
-            key.gate = CelsiusTORankines(MEASUREMENT);
+        //–†—ë–º–µ—Ä
+        case 76:
+            key.gate = Kelvins_TO_Newtons(Romers_TO_Kelvins(MEASUREMENT));
             break;
         case 75:
-            key.gate = CelsiusTOReaumurs(MEASUREMENT);
+            key.gate = Kelvins_TO_Rankines(Romers_TO_Kelvins(MEASUREMENT));
             break;
-        case 76:
-            key.gate = CelsiusTORomers(MEASUREMENT);
+        case 74:
+            key.gate = Kelvins_TO_Reaumurs(Romers_TO_Kelvins(MEASUREMENT));
+            break;
+        case 73:
+            key.gate = Romers_TO_Kelvins(MEASUREMENT);
+            break;
+        case 72:
+            key.gate = Kelvins_TO_Fahrenheits(Romers_TO_Kelvins(MEASUREMENT));
+            break;
+        case 71:
+            key.gate = Kelvins_TO_Celsius(Romers_TO_Kelvins(MEASUREMENT));
             break;
         case 78:
-            key.gate = CelsiusTOFahrenheits(MEASUREMENT);
+            key.gate = Kelvins_TO_Delisles(Romers_TO_Kelvins(MEASUREMENT));
             break;
-        case 81:
-            key.gate = FahrenheitsTODelisles(MEASUREMENT);
-            break;
-        case 82:
-            key.gate = FahrenheitsTOKelvins(MEASUREMENT);
-            break;
-        case 83:
-            key.gate = FahrenheitsTONewtons(MEASUREMENT);
-            break;
-        case 84:
-            key.gate = FahrenheitsTORankines(MEASUREMENT);
-            break;
-        case 85:
-            key.gate = FahrenheitsTOReaumurs(MEASUREMENT);
+        //–î–µ–ª–∏—Å–ª–µ
+        case 87:
+            key.gate = Kelvins_TO_Romers(Delisles_TO_Kelvins(MEASUREMENT));
             break;
         case 86:
-            key.gate = FahrenheitsTORomers(MEASUREMENT);
+            key.gate = Kelvins_TO_Newtons(Delisles_TO_Kelvins(MEASUREMENT));
             break;
-        case 87:
-            key.gate = FahrenheitsTOCelsius(MEASUREMENT);
+        case 85:
+            key.gate = Kelvins_TO_Rankines(Delisles_TO_Kelvins(MEASUREMENT));
+            break;
+        case 84:
+            key.gate = Kelvins_TO_Reaumurs(Delisles_TO_Kelvins(MEASUREMENT));
+            break;
+        case 83:
+            key.gate = Delisles_TO_Kelvins(MEASUREMENT);
+            break;
+        case 82:
+            key.gate = Kelvins_TO_Fahrenheits(Delisles_TO_Kelvins(MEASUREMENT));
+            break;
+        case 81:
+            key.gate = Kelvins_TO_Celsius(Delisles_TO_Kelvins(MEASUREMENT));
             break;
         default:
-            printf("ÕÂ ‚‚Â‰ÂÌÓ ÁÌ‡˜ÂÌËÂ ÍÓÌ‚ÂÚËÛÂÏÓÈ ‚ÂÎË˜ËÌ˚, "
-                   "ËÎË ¬˚ Ô˚Ú‡ÂÚÂÒ¸ ÍÓÌ‚ÂÚËÓ‚‡Ú¸ ‚ ‚ÂÎË˜ËÌÛ, ÍÓÚÓÛ˛ ÛÊÂ ÔÂÓ·‡ÁÛÂÚÂ\n");
+            printf("–ù–µ –≤–≤–µ–¥–µ–Ω–æ –∑–Ω–∞—á–µ–Ω–∏–µ –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä—É–µ–º–æ–π –≤–µ–ª–∏—á–∏–Ω—ã, "
+                   "–∏–ª–∏ –í—ã –ø—ã—Ç–∞–µ—Ç–µ—Å—å –∫–æ–Ω–≤–µ—Ä—Ç–∏—Ä–æ–≤–∞—Ç—å –≤ –≤–µ–ª–∏—á–∏–Ω—É, –∫–æ—Ç–æ—Ä—É—é —É–∂–µ –ø—Ä–µ–æ–±—Ä–∞–∑—É–µ—Ç–µ\n");
             break;
     }
 
