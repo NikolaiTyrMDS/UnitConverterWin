@@ -1,254 +1,254 @@
 #include <stdio.h>
 
-/* ‘”Õ ÷»»  ŒÕ¬≈–“»–Œ¬¿Õ»ﬂ –¿«À»◊Õ€’ ≈ƒ»Õ»÷ ◊¿—“Œ“€ */
+/* –§–£–ù–ö–¶–ò–ò –ö–û–ù–í–ï–†–¢–ò–†–û–í–ê–ù–ò–Ø –†–ê–ó–õ–ò–ß–ù–´–• –ï–î–ò–ù–ò–¶ –ß–ê–°–¢–û–¢–´ */
 
-// <√Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+// <–ì–µ—Ä—Ü—ã> ---> <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> //
 double Herz2kHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000;
 	return FREQUENCY;
 }
 
-// < ËÎÓ„Âˆ˚> ---> <√Âˆ˚> //
+// <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> ---> <–ì–µ—Ä—Ü—ã> //
 double kHerz2Herz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000;
 	return FREQUENCY;
 }
 
-// <√Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+// <–ì–µ—Ä—Ü—ã> ---> <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> //
 double Herz2MlHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000;
 	return FREQUENCY;
 }
 
-// <ÃËÎÎË„Âˆ˚> ---> <√Âˆ˚> //
+// <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> ---> <–ì–µ—Ä—Ü—ã> //
 double MlHerz2Herz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000;
 	return FREQUENCY;
 }
 
-// < ËÎÓ„Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+// <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> ---> <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> //
 double kHerz2MlHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000;
 	return FREQUENCY;
 }
 
-// <ÃËÎÎË„Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+// <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> ---> <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> //
 double MlHerz2kHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000;
 	return FREQUENCY;
 }
 
-// <√Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+// <–ì–µ—Ä—Ü—ã> ---> <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> //
 double Herz2MkHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000;
 	return FREQUENCY;
 }
 
-// <ÃËÍÓ„Âˆ˚> ---> <√Âˆ˚> //
+// <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> ---> <–ì–µ—Ä—Ü—ã> //
 double MkHerz2Herz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000;
 	return FREQUENCY;
 }
 
-// < ËÎÓ„Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+// <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> ---> <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> //
 double kHerz2MkHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000;
 	return FREQUENCY;
 }
 
-// <ÃËÍÓ„Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+// <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> ---> <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> //
 double MkHerz2kHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000;
 	return FREQUENCY;
 }
 
-// <ÃËÍÓ„Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+// <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> ---> <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> //
 double MkHerz2MlHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000;
 	return FREQUENCY;
 }
 
-// <ÃËÎÎË„Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+// <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> ---> <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> //
 double MlHerz2MkHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000;
 	return FREQUENCY;
 }
 
-// <√Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+// <–ì–µ—Ä—Ü—ã> ---> <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> //
 double Herz2MgHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000;
 	return FREQUENCY;
 }
 
-// <ÃÂ„‡„Âˆ˚> ---> <√Âˆ˚> //
+// <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> ---> <–ì–µ—Ä—Ü—ã> //
 double MgHerz2Herz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000;
 	return FREQUENCY;
 }
 
-// <ÃËÎÎË„Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+// <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> ---> <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> //
 double MlHerz2MgHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000;
 	return FREQUENCY;
 }
 
-// <ÃÂ„‡„Âˆ˚> ---> <ÃËÎÎË„Âˆ˚> //
+// <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> ---> <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> //
 double MgHerz2MlHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000;
 	return FREQUENCY;
 }
 
-// < ËÎÓ„Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+// <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> ---> <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> //
 double kHerz2MgHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000;
 	return FREQUENCY;
 }
 
-// <ÃÂ„‡„Âˆ˚> ---> < ËÎÓ„Âˆ˚> //
+// <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> ---> <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> //
 double MgHerz2kHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000;
 	return FREQUENCY;
 }
 
-// <ÃËÍÓ„Âˆ˚> ---> <ÃÂ„‡„Âˆ˚> //
+// <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> ---> <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> //
 double MkHerz2MgHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000000;
 	return FREQUENCY;
 }
 
-// <ÃÂ„‡„Âˆ˚> ---> <ÃËÍÓ„Âˆ˚> //
+// <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> ---> <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> //
 double MgHerz2MkHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000000;
 	return FREQUENCY;
 }
 
-// <√Âˆ˚> ---> <‘ÂÌÂÎË> //
-double Herz2Frenel(double FREQUENCY) {
+// <–ì–µ—Ä—Ü—ã> ---> <–§—Ä–µ–Ω–µ–ª–∏> //
+long double Herz2Frenel(long double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000000;
 	return FREQUENCY;
 }
 
-// <‘ÂÌÂÎË> ---> <√Âˆ˚> //
+// <–§—Ä–µ–Ω–µ–ª–∏> ---> <–ì–µ—Ä—Ü—ã> //
 double Frenel2Herz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000000;
 	return FREQUENCY;
 }
 
-// <ÃËÎÎË„Âˆ˚> ---> <‘ÂÌÂÎË> //
+// <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> ---> <–§—Ä–µ–Ω–µ–ª–∏> //
 double MlHerz2Frenel(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000;
 	return FREQUENCY;
 }
 
-// <‘ÂÌÂÎË> ---> <ÃËÎÎË„Âˆ˚> //
+// <–§—Ä–µ–Ω–µ–ª–∏> ---> <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> //
 double Frenel2MlHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000;
 	return FREQUENCY;
 }
 
-// <ÃËÍÓ„Âˆ˚> ---> <‘ÂÌÂÎË> //
+// <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> ---> <–§—Ä–µ–Ω–µ–ª–∏> //
 double MkHerz2Frenel(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000;
 	return FREQUENCY;
 }
 
-// <‘ÂÌÂÎË> ---> <ÃËÍÓ„Âˆ˚> //
+// <–§—Ä–µ–Ω–µ–ª–∏> ---> <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> //
 double Frenel2MkHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000;
 	return FREQUENCY;
 }
 
-// < ËÎÓ„Âˆ˚> ---> <‘ÂÌÂÎË> //
+// <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> ---> <–§—Ä–µ–Ω–µ–ª–∏> //
 double kHerz2Frenel(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000000000;
 	return FREQUENCY;
 }
 
-// <‘ÂÌÂÎË> ---> < ËÎÓ„Âˆ˚> //
+// <–§—Ä–µ–Ω–µ–ª–∏> ---> <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> //
 double Frenel2kHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000000000;
 	return FREQUENCY;
 }
 
-// <ÃÂ„‡„Âˆ˚> ---> <‘ÂÌÂÎË> //
+// <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> ---> <–§—Ä–µ–Ω–µ–ª–∏> //
 double MgHerz2Frenel(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000000000000000;
 	return FREQUENCY;
 }
 
-// <‘ÂÌÂÎË> ---> <ÃÂ„‡„Âˆ˚> //
+// <–§—Ä–µ–Ω–µ–ª–∏> ---> <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> //
 double Frenel2MgHerz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 1000000000000000000;
 	return FREQUENCY;
 }
 
-// <√Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+// <–ì–µ—Ä—Ü—ã> ---> <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> //
 double Herz2RadSec(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 6.28319;
 	return FREQUENCY;
 }
 
-// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <√Âˆ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> ---> <–ì–µ—Ä—Ü—ã> //
 double RadSec2Herz(double FREQUENCY) {
 	FREQUENCY = FREQUENCY / 6.28319;
 	return FREQUENCY;
 }
 
-// <ÃËÎÎË„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+// <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> ---> <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> //
 double MlHerz2RadSec(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY / 1000) * 6.28319;
 	return FREQUENCY;
 }
 
-// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <ÃËÎÎË„Âˆ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> ---> <–ú–∏–ª–ª–∏–≥–µ—Ä—Ü—ã> //
 double RadSec2MlHerz(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY * 1000) / 6.28319;
 	return FREQUENCY;
 }
 
-// <ÃËÍÓ„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+// <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> ---> <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> //
 double MkHerz2RadSec(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY / 1000000) * 6.28319;
 	return FREQUENCY;
 }
 
-// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <ÃËÍÓ„Âˆ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> ---> <–ú–∏–∫—Ä–æ–≥–µ—Ä—Ü—ã> //
 double RadSec2MkHerz(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY * 1000000) / 6.28319;
 	return FREQUENCY;
 }
 
-// < ËÎÓ„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+// <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> ---> <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> //
 double kHerz2RadSec(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000 * 6.28319;
 	return FREQUENCY;
 }
 
-// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> < ËÎÓ„Âˆ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> ---> <–ö–∏–ª–æ–≥–µ—Ä—Ü—ã> //
 double RadSec2kHerz(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY / 1000) / 6.28319;
 	return FREQUENCY;
 }
 
-// <ÃÂ„‡„Âˆ˚> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+// <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> ---> <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> //
 double MgHerz2RadSec(double FREQUENCY) {
 	FREQUENCY = FREQUENCY * 1000000 * 6.28319;
 	return FREQUENCY;
 }
 
-// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <ÃÂ„‡„Âˆ˚> //
+// <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> ---> <–ú–µ–≥–∞–≥–µ—Ä—Ü—ã> //
 double RadSec2MgHerz(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY / 1000000) / 6.28319;
 	return FREQUENCY;
 }
 
-// <‘ÂÌÂÎË> ---> <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> //
+// <–§—Ä–µ–Ω–µ–ª–∏> ---> <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> //
 double Frenel2RadSec(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY / 1000000000000) * 6.28319;
 	return FREQUENCY;
 }
 
-// <–‡‰Ë‡Ì˚ Ì‡ ÒÂÍÛÌ‰Û> ---> <‘ÂÌÂÎË> //
+// <–†–∞–¥–∏–∞–Ω—ã –Ω–∞ —Å–µ–∫—É–Ω–¥—É> ---> <–§—Ä–µ–Ω–µ–ª–∏> //
 double RadSec2Frenel(double FREQUENCY) {
 	FREQUENCY = (FREQUENCY * 1000000000000) / 6.28319;
 	return FREQUENCY;
