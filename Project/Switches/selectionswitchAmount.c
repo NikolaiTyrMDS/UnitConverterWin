@@ -163,7 +163,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = squaredmeters_TO_squareddecimeters(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
             break;
         case 42:
-            key.gate = squaredmeters_TO_squaredmeters(MEASUREMENT);
+            key.gate = squaredcentimeters_TO_squaredmeters(MEASUREMENT);
             break;
         case 41:
             key.gate = squaredmeters_TO_squaredkilometers(squaredcentimeters_TO_squaredmeters(MEASUREMENT));
@@ -360,7 +360,7 @@ double selectionswitchAmount(double MEASUREMENT)
             key.gate = squaredmeters_TO_pints(barrels_TO_squaredmeters(MEASUREMENT));
             break;
         case 912:
-            key.gate = squaredmeters_TO_floz(barrels_TO_squaredmeters(MEASUREMENT));
+            key.gate = squaredmeters_TO_flozs(barrels_TO_squaredmeters(MEASUREMENT));
             break;
          // Êâàðòà
         case 1009:
