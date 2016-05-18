@@ -169,7 +169,7 @@ double nanometers_TO_meters(double LENGTH) {
 
 // <ангстрем> ---> <метр> //
 double angstroms_TO_meters(double LENGTH) {
-	LENGTH = LENGTH * 1 * (pow(10, -10);  // Формула для перевода !!!!!!!!!!!!!!!!!!
+	LENGTH = LENGTH * 1 * (pow(10, -10));  // Формула для перевода !!!!!!!!!!!!!!!!!!
 	return LENGTH;
 }
 
