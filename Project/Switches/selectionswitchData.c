@@ -1,43 +1,43 @@
 #include <stdio.h>
 #include <math.h>
-#include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
-                                Этот символ используется столько раз, на сколько уровней нужно подняться; */
+#include"../Headers/total.h" /* РЎРёРјРІРѕР» '../' - escape-СЃРёРјРІРѕР» - РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРµСЂРµС…РѕРґР° РЅР° РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ;
+                                Р­С‚РѕС‚ СЃРёРјРІРѕР» РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃС‚РѕР»СЊРєРѕ СЂР°Р·, РЅР° СЃРєРѕР»СЊРєРѕ СѓСЂРѕРІРЅРµР№ РЅСѓР¶РЅРѕ РїРѕРґРЅСЏС‚СЊСЃСЏ; */
 
 double selectionswitchData(double MEASUREMENT)
 {
     FunctionsParameters key;
 
-    printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Бит;\n"
-           "2 - Байт;\n"
-           "3 - Килобайт;\n"
-           "4 - Мегабайт;\n"
-           "5 - Гигабайт;\n"
-           "6 - Терабайт;\n"
-           "7 - Пэтабайт;\n"
-           "8 - Эксабайт;\n"
-           "9 - Зэтабайт;\n \t");
+    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РёР· РєРѕС‚РѕСЂРѕР№ Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРёР·РІРµСЃС‚Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ:\n"
+           "1 - Р‘РёС‚;\n"
+           "2 - Р‘Р°Р№С‚;\n"
+           "3 - РљРёР»РѕР±Р°Р№С‚;\n"
+           "4 - РњРµРіР°Р±Р°Р№С‚;\n"
+           "5 - Р“РёРіР°Р±Р°Р№С‚;\n"
+           "6 - РўРµСЂР°Р±Р°Р№С‚;\n"
+           "7 - РџСЌС‚Р°Р±Р°Р№С‚;\n"
+           "8 - Р­РєСЃР°Р±Р°Р№С‚;\n"
+           "9 - Р—СЌС‚Р°Р±Р°Р№С‚;\n \t");
     scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
+        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
         scanf("%d", &key.input_choice);
     }
 
-    printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
-           "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Бит;\n"
-           "2 - Байт;\n"
-           "3 - Килобайт;\n"
-           "4 - Мегабайт;\n"
-           "5 - Гигабайт;\n"
-           "6 - Терабайт;\n"
-           "7 - Пэтабайт;\n"
-           "8 - Эксабайт;\n"
-           "9 - Зэтабайт;\n\t");
+    printf("Р’С‹Р±РµСЂРёС‚Рµ РІРµР»РёС‡РёРЅСѓ, РІ РєРѕС‚РѕСЂСѓСЋ Р’С‹ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ Р’Р°С€Сѓ РІРµР»РёС‡РёРЅСѓ.\n"
+           "РќРµ РЅСѓР¶РЅРѕ РІС‹Р±РёСЂР°С‚СЊ С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ, С‡С‚Рѕ Р’С‹ РІС‹Р±СЂР°Р»Рё РІ РєР°С‡РµСЃС‚РІРµ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРјРѕР№:\n"
+           "1 - Р‘РёС‚;\n"
+           "2 - Р‘Р°Р№С‚;\n"
+           "3 - РљРёР»РѕР±Р°Р№С‚;\n"
+           "4 - РњРµРіР°Р±Р°Р№С‚;\n"
+           "5 - Р“РёРіР°Р±Р°Р№С‚;\n"
+           "6 - РўРµСЂР°Р±Р°Р№С‚;\n"
+           "7 - РџСЌС‚Р°Р±Р°Р№С‚;\n"
+           "8 - Р­РєСЃР°Р±Р°Р№С‚;\n"
+           "9 - Р—СЌС‚Р°Р±Р°Р№С‚;\n\t");
     scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
-        fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
-                "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
+        fprintf(stderr, "\nР’С‹ РІС‹Р±СЂР°Р»Рё РІРµР»РёС‡РёРЅСѓ, РєРѕС‚РѕСЂРѕР№ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С… РІРµР»РёС‡РёРЅ, \nРёР»Рё Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ "
+                "РѕРґРЅСѓ Рё С‚Сѓ Р¶Рµ РІРµР»РёС‡РёРЅСѓ. \nРџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРґРµР»Р°Р№С‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ\n\t");
         scanf("%d", &key.output_choice);
     }
 
@@ -45,226 +45,220 @@ double selectionswitchData(double MEASUREMENT)
 
     switch(key.id) {
         case 12:
-            key.gate = bitsTobytes(MEASUREMENT);
+            key.gate = bitsTObytes(MEASUREMENT);
             break;
         case 13:
-            key.gate = bitsTokilobytes(MEASUREMENT);
+            key.gate = bitsTOkilobytes(MEASUREMENT);
             break;
         case 14:
-            key.gate = bitsTomegabytes(MEASUREMENT);
+            key.gate = bitsTOmegabytes(MEASUREMENT);
             break;
         case 15:
-            key.gate = bitsTogigabytes(MEASUREMENT);
+            key.gate = bitsTOgigabytes(MEASUREMENT);
             break;
         case 16:
-            key.gate = bitsToterabytes(MEASUREMENT);
+            key.gate = bitsTOterabytes(MEASUREMENT);
             break;
         case 17:
-            key.gate = bitsTopetabytes(MEASUREMENT);
+            key.gate = bitsTOpetabytes(MEASUREMENT);
             break;
         case 18:
-            key.gate = bitsToexabytes(MEASUREMENT);
+            key.gate = bitsTOexabytes(MEASUREMENT);
             break;
         case 19:
-            key.gate = bitsTozetabytes(MEASUREMENT);
+            key.gate = bitsTOzetabytes(MEASUREMENT);
             break;
         case 21:
-            key.gate = bytesTobits(MEASUREMENT);
+            key.gate = bytesTObits(MEASUREMENT);
             break;
         case 23:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOkilobytes(bytesTObits(MEASUREMENT));
             break;
         case 24:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = bitsTOmegabytes(bytesTObits(MEASUREMENT));
             break;
         case 25:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = bitsTOgigabytes(bytesTObits(MEASUREMENT));
             break;
         case 26:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            key.gate = bitsTOterabytes(bytesTObits(MEASUREMENT));
             break;
         case 27:
-            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+            key.gate = bitsTOpetabytes(bytesTObits(MEASUREMENT));
             break;
         case 28:
-            key.gate = valuesBetweenFiveUpward(MEASUREMENT);
+            key.gate = bitsTOexabytes(bytesTObits(MEASUREMENT));
             break;
         case 29:
-            key.gate = valuesBetweenSixUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(bytesTObits(MEASUREMENT));
             break;
         case 31:
-            key.gate = kilobytesTobits(MEASUREMENT);
+            key.gate = kilobytesTObits(MEASUREMENT);
             break;
         case 32:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(kilobytesTObits(MEASUREMENT));
             break;
         case 34:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOmegabytes(kilobytesTObits(MEASUREMENT));
             break;
         case 35:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = bitsTOgigabytes(kilobytesTObits(MEASUREMENT));
             break;
         case 36:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = bitsTOterabytes(kilobytesTObits(MEASUREMENT));
             break;
         case 37:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            key.gate = bitsTOpetabytes(kilobytesTObits(MEASUREMENT));
             break;
         case 38:
-            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+            key.gate = bitsTOexabytes(kilobytesTObits(MEASUREMENT));
             break;
         case 39:
-            key.gate = valuesBetweenFiveUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(kilobytesTObits(MEASUREMENT));
             break;
         case 41:
-            key.gate = megabytesTobits(MEASUREMENT);
+            key.gate = megabytesTObits(MEASUREMENT);
             break;
         case 42:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(megabytesTObits(MEASUREMENT));
             break;
         case 43:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTOkilobytes(megabytesTObits(MEASUREMENT));
             break;
         case 45:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOgigabytes(megabytesTObits(MEASUREMENT));
             break;
         case 46:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = bitsTOterabytes(megabytesTObits(MEASUREMENT));
             break;
         case 47:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = bitsTOpetabytes(megabytesTObits(MEASUREMENT));
             break;
         case 48:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            key.gate = bitsTOexabytes(megabytesTObits(MEASUREMENT));
             break;
         case 49:
-            key.gate = valuesBetweenFourUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(megabytesTObits(MEASUREMENT));
             break;
         case 51:
-            key.gate = gigabytesTobits(MEASUREMENT);
+            key.gate = gigabytesTObits(MEASUREMENT);
             break;
         case 52:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(gigabytesTObits(MEASUREMENT));
             break;
         case 53:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = bitsTOkilobytes(gigabytesTObits(MEASUREMENT));
             break;
         case 54:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTOmegabytes(gigabytesTObits(MEASUREMENT));
             break;
         case 56:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOterabytes(gigabytesTObits(MEASUREMENT));
             break;
         case 57:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = bitsTOpetabytes(gigabytesTObits(MEASUREMENT));
             break;
         case 58:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = bitsTOexabytes(gigabytesTObits(MEASUREMENT));
             break;
         case 59:
-            key.gate = valuesBetweenThreeUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(gigabytesTObits(MEASUREMENT));
             break;
         case 61:
-            key.gate = terabytesTobits(MEASUREMENT);
+            key.gate = terabytesTObits(MEASUREMENT);
             break;
         case 62:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(terabytesTObits(MEASUREMENT));
             break;
         case 63:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = bitsTOkilobytes(terabytesTObits(MEASUREMENT));
             break;
         case 64:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = bitsTOmegabytes(terabytesTObits(MEASUREMENT));
             break;
         case 65:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTOgigabytes(terabytesTObits(MEASUREMENT));
             break;
         case 67:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOpetabytes(terabytesTObits(MEASUREMENT));
             break;
         case 68:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = bitsTOexabytes(terabytesTObits(MEASUREMENT));
             break;
         case 69:
-            key.gate = valuesBetweenTwoUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(terabytesTObits(MEASUREMENT));
             break;
         case 71:
-            key.gate = petabytesTobits(MEASUREMENT);
+            key.gate = petabytesTObits(MEASUREMENT);
             break;
         case 72:
-            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(petabytesTObits(MEASUREMENT));
             break;
         case 73:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            key.gate = bitsTOkilobytes(petabytesTObits(MEASUREMENT));
             break;
         case 74:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = bitsTOmegabytes(petabytesTObits(MEASUREMENT));
             break;
         case 75:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = bitsTOgigabytes(petabytesTObits(MEASUREMENT));
             break;
         case 76:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTOterabytes(petabytesTObits(MEASUREMENT));
             break;
         case 78:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOexabytes(petabytesTObits(MEASUREMENT));
             break;
         case 79:
-            key.gate = valuesBetweenOneUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(petabytesTObits(MEASUREMENT));
             break;
         case 81:
-            key.gate = exabytesTobits(MEASUREMENT);
+            key.gate = exabytesTObits(MEASUREMENT);
             break;
         case 82:
-            key.gate = valuesBetweenFiveToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(exabytesTObits(MEASUREMENT));
             break;
         case 83:
-            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+            key.gate = bitsTOkilobytes(exabytesTObits(MEASUREMENT));
             break;
         case 84:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            key.gate = bitsTOmegabytes(exabytesTObits(MEASUREMENT));
             break;
         case 85:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = bitsTOgigabytes(exabytesTObits(MEASUREMENT));
             break;
         case 86:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = bitsTOterabytes(exabytesTObits(MEASUREMENT));
             break;
         case 87:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTOpetabytes(exabytesTObits(MEASUREMENT));
             break;
         case 89:
-            key.gate = adjacentValuesUpward(MEASUREMENT);
+            key.gate = bitsTOzetabytes(exabytesTObits(MEASUREMENT));
             break;
         case 91:
-            key.gate = zetabytesTobits(MEASUREMENT);
+            key.gate = zetabytesTObits(MEASUREMENT);
             break;
         case 92:
-            key.gate = valuesBetweenSixToDecrease(MEASUREMENT);
+            key.gate = bitsTObytes(zetabytesTObits(MEASUREMENT));
             break;
         case 93:
-            key.gate = valuesBetweenFiveToDecrease(MEASUREMENT);
+            key.gate = bitsTOkilobytes(zetabytesTObits(MEASUREMENT));
             break;
         case 94:
-            key.gate = valuesBetweenFourToDecrease(MEASUREMENT);
+            key.gate = bitsTOmegabytes(zetabytesTObits(MEASUREMENT));
             break;
         case 95:
-            key.gate = valuesBetweenThreeToDecrease(MEASUREMENT);
+            key.gate = bitsTOgigabytes(zetabytesTObits(MEASUREMENT));
             break;
         case 96:
-            key.gate = valuesBetweenTwoToDecrease(MEASUREMENT);
+            key.gate = bitsTOterabytes(zetabytesTObits(MEASUREMENT));
             break;
         case 97:
-            key.gate = valuesBetweenOneToDecrease(MEASUREMENT);
+            key.gate = bitsTOpetabytes(zetabytesTObits(MEASUREMENT));
             break;
         case 98:
-            key.gate = adjacentValuesToDecrease(MEASUREMENT);
+            key.gate = bitsTOexabytes(zetabytesTObits(MEASUREMENT));
             break;
-        default:
-            printf("Не введено значение конвертируемой величины, "
-                   "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
-            break;
-    }
-
     return key.gate;
 }
