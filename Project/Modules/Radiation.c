@@ -1,51 +1,34 @@
 #include <stdio.h>
 #include <math.h>
-// DONE;
-// Конвертирование соседних величин в сторону увеличения;
-double adjacentValuesUpward(double RADIATION)
+
+double PTOmP(double RADIATION)
 {
-    RADIATION = RADIATION/1000;
+    RADIATION = RADIATION * 1000;
     return RADIATION;
 }
-// ----------------------------------------------------- //
-// Конвертирование соседних величин в сторону уменьшения;
-double adjacentValuesToDecrease(double RADIATION)
+double PTOuP(double RADIATION)
 {
-    RADIATION = RADIATION*1000;
+    RADIATION = RADIATION * 1000000;
     return RADIATION;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону увеличения;
-double valuesBetweenOneUpward(double RADIATION)
+double PTOKlperKg(double RADIATION)
 {
-    RADIATION = RADIATION/(pow(1000, 2));
+    RADIATION = RADIATION * 2.57976 * pow(10, -4);
     return RADIATION;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону уменьшения;
-double valuesBetweenOneToDecrease(double RADIATION)
+
+double mPTOP(double RADIATION)
 {
-    RADIATION = RADIATION*(pow(1000, 2));
+    RADIATION = RADIATION / 1000;
     return RADIATION;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через две в сторону увеличения;
-double valuesBetweenTwoUpward(double RADIATION)
+double uPTOP(double RADIATION)
 {
-    RADIATION = RADIATION/(pow(1000, 3));
+    RADIATION = RADIATION / 1000000;
     return RADIATION;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через две в сторону уменьшения;
-double valuesBetweenTwoToDecrease(double RADIATION)
+double KlperKgTOP(double RADIATION)
 {
-    RADIATION = RADIATION*(pow(1000, 3));
-    return RADIATION;
-}
-// ----------------------------------------------------- //
-// Конвертирование из беккерелей в кюри; //
-double ciTobq(double RADIATION)
-{
-    RADIATION = RADIATION*37000000000;
+    RADIATION = RADIATION / 2.57976 / pow(10, -4);
     return RADIATION;
 }
