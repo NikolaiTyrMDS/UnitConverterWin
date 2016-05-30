@@ -260,5 +260,6 @@ double selectionswitchData(double MEASUREMENT)
         case 98:
             key.gate = bitsTOexabytes(zetabytesTObits(MEASUREMENT));
             break;
+    }
     return key.gate;
 }

@@ -4,7 +4,7 @@
 typedef struct entered_and_gated_parameters {
     double result, VOLUME;
     float version;
-    char like_to_continue;
+    int like_to_continue;
     char measurement_id[5];
     char MEASUREMENT[261];
 } MainParameters;
@@ -31,6 +31,7 @@ double selectionswitchAmount(double MEASUREMENT);
 double selectionswitchLength(double MEASUREMENT);
 //КОЛЯ
 double selectionswitchData(double MEASUREMENT);
+double selectionswitchRadiation(double MEASUREMENT);
 
 //ПАХОМ
 
@@ -51,95 +52,89 @@ double selectionswitchEnergy(double MEASUREMENT);
 
 
 // Ïðîòîòèïû ðàáî÷èõ ôóíêöèé;
-double adjacentValuesUpward(double DATA);
-double adjacentValuesToDecrease(double DATA);
-double valuesBetweenOneUpward(double DATA);
-double valuesBetweenOneToDecrease(double DATA);
-double valuesBetweenTwoUpward(double DATA);
-double valuesBetweenTwoToDecrease(double DATA);
-double valuesBetweenThreeUpward(double DATA);
-double valuesBetweenThreeToDecrease(double DATA);
-double valuesBetweenFourUpward(double DATA);
-double valuesBetweenFourToDecrease(double DATA);
-double valuesBetweenFiveUpward(double DATA);
-double valuesBetweenFiveToDecrease(double DATA);
-double valuesBetweenSixUpward(double DATA);
-double valuesBetweenSixToDecrease(double DATA);
-double bitsTobytes(double DATA);
-double bytesTobits(double DATA);
-double bitsTokilobytes(double DATA);
-double kilobytesTobits(double DATA);
-double bitsTomegabytes(double DATA);
-double megabytesTobits(double DATA);
-double bitsTogigabytes(double DATA);
-double gigabytesTobits(double DATA);
-double bitsToterabytes(double DATA);
-double terabytesTobits(double DATA);
-double bitsTopetabytes(double DATA);
-double petabytesTobits(double DATA);
-double bitsToexabytes(double DATA);
-double exabytesTobits(double DATA);
-double bitsTozetabytes(double DATA);
-double zetabytesTobits(double DATA);
+double bitsTObytes(double DATA);
+double bytesTObits(double DATA);
+double bitsTOkilobytes(double DATA);
+double kilobytesTObits(double DATA);
+double bitsTOmegabytes(double DATA);
+double megabytesTObits(double DATA);
+double bitsTOgigabytes(double DATA);
+double gigabytesTObits(double DATA);
+double bitsTOterabytes(double DATA);
+double terabytesTObits(double DATA);
+double bitsTOpetabytes(double DATA);
+double petabytesTObits(double DATA);
+double bitsTOexabytes(double DATA);
+double exabytesTObits(double DATA);
+double bitsTOzetabytes(double DATA);
+double zetabytesTObits(double DATA);
+
+// RADIATION
+double PTOmP(double RADIATION);
+double PTOuP(double RADIATION);
+double PTOKlperKg(double RADIATION);
+double mPTOP(double RADIATION);
+double uPTOP(double RADIATION);
+double KlperKgTOP(double RADIATION);
 
 //TIME
- double nsec_to_min ( double TIME);
- double mksec_to_min ( double TIME);
- double msec_to_min ( double TIME);
- double sec_to_min ( double TIME);
- double min_to_nsec ( double TIME);
- double min_to_mksec ( double TIME);
- double min_to_msec ( double TIME);
- double min_to_sec ( double TIME);
- double min_to_chas ( double TIME);
- double min_to_sut ( double TIME);
- double min_to_week ( double TIME);
- double min_to_year ( double TIME);
- double min_to_vek ( double TIME);
- double chas_to_min ( double TIME);
- double sut_to_min ( double TIME);
- double week_to_min ( double TIME);
- double year_to_min ( double TIME);
- double vek_to_min ( double TIME);
+ double nsec_TO_min ( double TIME);
+ double mksec_TO_min ( double TIME);
+ double msec_TO_min ( double TIME);
+ double sec_TO_min ( double TIME);
+ double min_TO_nsec ( double TIME);
+ double min_TO_mksec ( double TIME);
+ double min_TO_msec ( double TIME);
+ double min_TO_sec ( double TIME);
+ double min_TO_chas ( double TIME);
+ double min_TO_sut ( double TIME);
+ double min_TO_week ( double TIME);
+ double min_TO_year ( double TIME);
+ double min_TO_vek ( double TIME);
+ double chas_TO_min ( double TIME);
+ double sut_TO_min ( double TIME);
+ double week_TO_min ( double TIME);
+ double year_TO_min ( double TIME);
+ double vek_TO_min ( double TIME);
 
 //ДАВЛЕНИЕ
 
 //bar
-double bar_to_mbar(double PRESS);	
-double bar_to_paskal(double PRESS);
-double bar_to_kpaskal(double PRESS);
-double bar_to_Mpaskal(double PRESS);
-double bar_to_gcm(double PRESS);
-double bar_to_kgcm(double PRESS);
-double bar_to_toncm(double PRESS);
-double bar_to_kgm(double PRESS);
-double bar_to_tonm(double PRESS);
-double bar_to_newtoncm(double PRESS);
-double bar_to_newtonm(double PRESS);
+double bar_TO_mbar(double PRESS);
+double bar_TO_paskal(double PRESS);
+double bar_TO_kpaskal(double PRESS);
+double bar_TO_Mpaskal(double PRESS);
+double bar_TO_gcm(double PRESS);
+double bar_TO_kgcm(double PRESS);
+double bar_TO_TOncm(double PRESS);
+double bar_TO_kgm(double PRESS);
+double bar_TO_TOnm(double PRESS);
+double bar_TO_newTOncm(double PRESS);
+double bar_TO_newTOnm(double PRESS);
 //mbar
-double mbar_to_bar(double PRESS);
+double mbar_TO_bar(double PRESS);
 //paskal
-double paskal_to_bar(double PRESS);
+double paskal_TO_bar(double PRESS);
 //kpaskal
-double kpaskal_to_bar(double PRESS);
+double kpaskal_TO_bar(double PRESS);
 //Mpaskal
-double Mpaskal_to_bar(double PRESS);
+double Mpaskal_TO_bar(double PRESS);
 //gcm
-double gcm_to_bar(double PRESS);
+double gcm_TO_bar(double PRESS);
 //kgcm
-double kgcm_to_bar(double PRESS);
-//toncm
-double toncm_to_bar(double PRESS);
+double kgcm_TO_bar(double PRESS);
+//TOncm
+double TOncm_TO_bar(double PRESS);
 //kgm
-double kgm_to_bar(double PRESS);
-//tonm
-double tonm_to_bar(double PRESS);
-//newtoncm
-double newtoncm_to_bar(double PRESS);
-//newtonm
-double newtonm_to_bar(double PRESS);
+double kgm_TO_bar(double PRESS);
+//TOnm
+double TOnm_TO_bar(double PRESS);
+//newTOncm
+double newTOncm_TO_bar(double PRESS);
+//newTOnm
+double newTOnm_TO_bar(double PRESS);
 
-//ФУНКЦИИ КОНВЕРТИРОВАНИЯ РАЗЛИЧНЫХ ЕДИНИЦ ДЛИНЫ  
+//ФУНКЦИИ КОНВЕРТИРОВАНИЯ РАЗЛИЧНЫХ ЕДИНИЦ ДЛИНЫ
 //Единица измерения миллиметр и её перевод
 double millimeters_TO_meters(double LENGTH);
 //Единица измерения метр и её перевод
@@ -201,11 +196,11 @@ double Grams_TO_Kilograms(double MASS);
 //Единица измерения Центнер и её перевод
 double Quintals_TO_Kilograms(double MASS);
 //Единица измерения Тонна и её перевод
-double Tonnes_TO_Kilograms(double MASS);
+double TOnnes_TO_Kilograms(double MASS);
 //Единица измерения Карат и её перевод
 double Carats_TO_Kilograms(double MASS);
 //Единица измерения Стоун и её перевод
-double Stones_TO_Kilograms(double MASS);
+double STOnes_TO_Kilograms(double MASS);
 //Единица измерения Фунт и её перевод
 double Funts_TO_Kilograms(double MASS);
 //Единица измерения Унция и её перевод
@@ -217,9 +212,9 @@ double Grains_TO_Kilograms(double MASS);
 //Единица измерения кило и её перевод
 double Kilograms_TO_Grams(double MASS);
 double Kilograms_TO_Quintals(double MASS);
-double Kilograms_TO_Tonnes(double MASS);
+double Kilograms_TO_TOnnes(double MASS);
 double Kilograms_TO_Carats(double MASS);
-double Kilograms_TO_Stones(double MASS);
+double Kilograms_TO_STOnes(double MASS);
 double Kilograms_TO_Funts(double MASS);
 double Kilograms_TO_Ounces(double MASS);
 double Kilograms_TO_Drachmas(double MASS);
@@ -245,7 +240,7 @@ double Vat2MkVat(double POWER);
 double MkVat2Vat(double POWER);
 
 //прототип функций конвентирования различных величин объема
-//Единица измерения Кубический километр и её перевод 
+//Единица измерения Кубический километр и её перевод
 double squaredkilometers_TO_squaredmeters(double AMOUNT);
 //Единица измерения Кубический метр и её перевод
 double squaredmeters_TO_squaredkilometers(double AMOUNT);
@@ -290,12 +285,12 @@ double Kelvins_TO_Fahrenheits(double TEMPERATURE);
 double Kelvins_TO_Celsius(double TEMPERATURE);
 double Kelvins_TO_Reaumurs(double TEMPERATURE);
 double Kelvins_TO_Rankines(double TEMPERATURE);
-double Kelvins_TO_Newtons(double TEMPERATURE);
+double Kelvins_TO_NewTOns(double TEMPERATURE);
 double Kelvins_TO_Romers(double TEMPERATURE);
 double Kelvins_TO_Delisles(double TEMPERATURE);
 double Reaumurs_TO_Kelvins(double TEMPERATURE);
 double Rankines_TO_Kelvins(double TEMPERATURE);
-double Newtons_TO_Kelvins(double TEMPERATURE);
+double NewTOns_TO_Kelvins(double TEMPERATURE);
 double Romers_TO_Kelvins(double TEMPERATURE);
 double Delisles_TO_Kelvins(double TEMPERATURE);
 // прототипы функций конвентирования различных величин УГЛА
@@ -329,30 +324,30 @@ double RadSec2Herz(double FREQUENCY);
 
 
 //ПРОТАТИПЫ СКОРОСТИ
-double kmch_to_mc (double SPEED);
-double kmch_to_uzl (double SPEED);
-double kmch_to_mah (double SPEED);
-double kmch_to_milch (double SPEED);
-double uzl_to_kmch (double SPEED);
-double mah_to_kmch (double SPEED);
-double milch_to_kmch (double SPEED);
-double mc_to_kmch (double SPEED);
+double kmch_TO_mc (double SPEED);
+double kmch_TO_uzl (double SPEED);
+double kmch_TO_mah (double SPEED);
+double kmch_TO_milch (double SPEED);
+double uzl_TO_kmch (double SPEED);
+double mah_TO_kmch (double SPEED);
+double milch_TO_kmch (double SPEED);
+double mc_TO_kmch (double SPEED);
 
 
 //Прототипы конвертирования ЭНЕРГИИ
 //джоули
-double joule_to_kvatch (double ENERGY);
-double joule_to_electronvolt (double ENERGY);
-double joule_to_kall (double ENERGY);
-double joule_to_tnt (double ENERGY);
+double joule_TO_kvatch (double ENERGY);
+double joule_TO_electronvolt (double ENERGY);
+double joule_TO_kall (double ENERGY);
+double joule_TO_tnt (double ENERGY);
 //Киловатт-час
-double kvatch_to_joule (double ENERGY);
+double kvatch_TO_joule (double ENERGY);
 //Электронвольт
-double electronvolt_to_joule (double ENERGY);
+double electronvolt_TO_joule (double ENERGY);
 //Калории
-double kall_to_joule (double ENERGY);
+double kall_TO_joule (double ENERGY);
 //Тратиловый эквивалент
-double tnt_to_joule (double ENERGY);
+double tnt_TO_joule (double ENERGY);
 
 
 #endif

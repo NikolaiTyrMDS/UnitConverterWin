@@ -1,184 +1,83 @@
 #include <stdio.h>
 #include <math.h>
 
-// DONE;
-// Конвертирование соседних величин из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double adjacentValuesUpward(double DATA)
-{
-    DATA = DATA/1024;
-    return DATA;
-}
-double adjacentValuesToDecrease(double DATA)
-{
-    DATA = DATA*1024;
-    return DATA;
-}
-//---------------------------------------------------------------------------------------------------------------//
-// Конвертирование величин через 1 из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double valuesBetweenOneUpward(double DATA)
-{
-    DATA = DATA/(pow(1024, 2));
-    return DATA;
-}
-double valuesBetweenOneToDecrease(double DATA)
-{
-    DATA = DATA*(pow(1024, 2));
-    return DATA;
-}
-//---------------------------------------------------------------------------------------------------------------//
-// Конвертирование величин через 2 из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double valuesBetweenTwoUpward(double DATA)
-{
-    DATA = DATA/(pow(1024, 3));
-    return DATA;
-}
-double valuesBetweenTwoToDecrease(double DATA)
-{
-    DATA = DATA*(pow(1024, 3));
-    return DATA;
-}
-//---------------------------------------------------------------------------------------------------------------//
-// Конвертирование величин через 3 из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double valuesBetweenThreeUpward(double DATA)
-{
-    DATA = DATA/(pow(1024, 4));
-    return DATA;
-}
-double valuesBetweenThreeToDecrease(double DATA)
-{
-    DATA = DATA*(pow(1024, 4));
-    return DATA;
-}
-//---------------------------------------------------------------------------------------------------------------//
-// Конвертирование величин через 4 из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double valuesBetweenFourUpward(double DATA)
-{
-    DATA = DATA/(pow(1024, 5));
-    return DATA;
-}
-double valuesBetweenFourToDecrease(double DATA)
-{
-    DATA = DATA*(pow(1024, 5));
-    return DATA;
-}
-//---------------------------------------------------------------------------------------------------------------//
-// Конвертирование величин через 5 из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double valuesBetweenFiveUpward(double DATA)
-{
-    DATA = DATA/(pow(1024, 6));
-    return DATA;
-}
-double valuesBetweenFiveToDecrease(double DATA)
-{
-    DATA = DATA*(pow(1024, 6));
-    return DATA;
-}
-//---------------------------------------------------------------------------------------------------------------//
-// Конвертирование величин через 6 из меньшей в большую и наоборот, не касается конвертиирования из битов и в них;
-double valuesBetweenSixUpward(double DATA)
-{
-    DATA = DATA/(pow(1024, 7));
-    return DATA;
-}
-double valuesBetweenSixToDecrease(double DATA)
-{
-    DATA = DATA*(pow(1024, 7));
-    return DATA;
-}
-//--------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в байты и обратно;
-double bitsTobytes(double DATA)
+double bitsTObytes(double DATA)
 {
     DATA = DATA/8;
     return DATA;
 }
-double bytesTobits(double DATA)
+double bytesTObits(double DATA)
 {
     DATA = DATA*8;
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в килобайты и обратно;
-double bitsTokilobytes(double DATA)
+double bitsTOkilobytes(double DATA)
 {
     DATA = DATA/(1024*8);
     return DATA;
 }
-double kilobytesTobits(double DATA)
+double kilobytesTObits(double DATA)
 {
     DATA = DATA*(1024*8);
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в мегабайты и обратно;
-double bitsTomegabytes(double DATA)
+double bitsTOmegabytes(double DATA)
 {
     DATA = DATA/(pow(1024, 2)*8);
     return DATA;
 }
-double megabytesTobits(double DATA)
+double megabytesTObits(double DATA)
 {
     DATA = DATA*(pow(1024, 2)*8);
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в гигабайты и обратно;
-double bitsTogigabytes(double DATA)
+double bitsTOgigabytes(double DATA)
 {
     DATA = DATA/(pow(1024, 3)*8);
     return DATA;
 }
-double gigabytesTobits(double DATA)
+double gigabytesTObits(double DATA)
 {
     DATA = DATA*(pow(1024, 3)*8);
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в терабайты и обратно;
-double bitsToterabytes(double DATA)
+double bitsTOterabytes(double DATA)
 {
     DATA = DATA/(pow(1024, 4)*8);
     return DATA;
 }
-double terabytesTobits(double DATA)
+double terabytesTObits(double DATA)
 {
     DATA = DATA*(pow(1024, 4)*8);
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в петабайты и обратно;
-double bitsTopetabytes(double DATA)
+double bitsTOpetabytes(double DATA)
 {
     DATA = DATA/(pow(1024, 5)*8);
     return DATA;
 }
-double petabytesTobits(double DATA)
+double petabytesTObits(double DATA)
 {
     DATA = DATA*(pow(1024, 5)*8);
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в эксабайты и обратно;
-double bitsToexabytes(double DATA)
+double bitsTOexabytes(double DATA)
 {
     DATA = DATA/(pow(1024, 6)*8);
     return DATA;
 }
-double exabytesTobits(double DATA)
+double exabytesTObits(double DATA)
 {
     DATA = DATA*(pow(1024, 6)*8);
     return DATA;
 }
-//-------------------------------------------------------------------//
-// Специальная функция: Конвертирование из битов в зетабайты и обратно;
-double bitsTozetabytes(double DATA)
+double bitsTOzetabytes(double DATA)
 {
     DATA = DATA/(pow(1024, 7)*8);
     return DATA;
 }
-double zetabytesTobits(double DATA)
+double zetabytesTObits(double DATA)
 {
     DATA = DATA*(pow(1024, 7)*8);
     return DATA;
 }
-//-------------------------------------------------------------------//

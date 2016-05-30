@@ -3,131 +3,135 @@
 #include <locale.h>
 #include <math.h>
 #include "Headers/total.h"
+#include <windows.h>
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+    setlocale(LC_ALL, "ru-RU.utf8");
 
     MainParameters head;
     head.version = 1.54;
     head.like_to_continue = 1;
 
-    printf("Unit Converter. Âåðñèÿ %.2f \n\n", head.version);
+    printf("Unit Converter. Ð’ÐµÑ€ÑÐ¸Ñ %.2f \n\n", head.version);
 
-    printf("ÂÍÈÌÀÍÈÅ!\n"
-           "Â íàñòîÿùåå âðåìÿ ýòîò êîíâåðòåð ðàáîòàåò ñ ïóíêòàìè 3, 17. \n\n");
+    printf("Ð’ÐÐ˜ÐœÐÐÐ˜Ð•!\n"
+           "Ð’ Ð½Ð°ÑÑ‚Ð¾ÑÑ‰ÐµÐµ Ð²Ñ€ÐµÐ¼Ñ ÑÑ‚Ð¾Ñ‚ ÐºÐ¾Ð½Ð²ÐµÑ€Ñ‚ÐµÑ€ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ Ð¿ÑƒÐ½ÐºÑ‚Ð°Ð¼Ð¸ 3, 17. \n\n");
 
     while(head.like_to_continue == 1) {
-        printf("Âûáåðèòå, ñ âåëè÷èíîé êàêîãî ðîäà Âû õîòåëè áû ðàáîòàòü: \n"
-               "1 - Âðåìÿ;\t\t\t11 - Ïëîòíîñòü; \n"
-               "2 - Äàâëåíèå;\t\t\t12 - Ðàäèîàêòèâíîñòü; \n"
-               "3 - Äàííûå;\t\t\t13 - Ñèëà; \n"
-               "4 - Äëèíà;\t\t\t14 - Ñèëà òîêà; \n"
-               "5 - Çàðÿä;\t\t\t15 - Ñêîðîñòü; \n"
-               "6 - Êîëè÷åñòâî âåùåñòâà;\t16 - Ñîïðîòèâëåíèå; \n"
-               "7 - Ìàññà;\t\t\t17 - Òåìïåðàòóðà; \n"
-               "8 - Ìîùíîñòü;\t\t\t18 - Óãîë; \n"
-               "9 - Îáú¸ì;\t\t\t19 - ×àñòîòà; \n"
-               "10 - Ïëîùàäü;\t\t\t20 - Ýíåðãèÿ; \n\t");
-        scanf("%d", &head.measurement_id);
-
-        while(head.measurement_id >= 21) {
-            printf("\nÐîä âåëè÷èíû âàìè íå âûáðàí. Ñäåëàéòå êîððåêòíûé âûáîð: \n\t");
-            scanf("%d", &head.measurement_id);
+        printf("Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ, Ñ Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð½Ð¾Ð¹ ÐºÐ°ÐºÐ¾Ð³Ð¾ Ñ€Ð¾Ð´Ð° Ð’Ñ‹ Ñ…Ð¾Ñ‚ÐµÐ»Ð¸ Ð±Ñ‹ Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ñ‚ÑŒ: \n"
+               "1 - Ð’Ñ€ÐµÐ¼Ñ;\t\t\t11 - ÐŸÐ»Ð¾Ñ‚Ð½Ð¾ÑÑ‚ÑŒ; \n"
+               "2 - Ð”Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ;\t\t\t12 - Ð Ð°Ð´Ð¸Ð¾Ð°ÐºÑ‚Ð¸Ð²Ð½Ð¾ÑÑ‚ÑŒ; \n"
+               "3 - Ð”Ð°Ð½Ð½Ñ‹Ðµ;\t\t\t13 - Ð¡Ð¸Ð»Ð°; \n"
+               "4 - Ð”Ð»Ð¸Ð½Ð°;\t\t\t14 - Ð¡Ð¸Ð»Ð° Ñ‚Ð¾ÐºÐ°; \n"
+               "5 - Ð—Ð°Ñ€ÑÐ´;\t\t\t15 - Ð¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ; \n"
+               "6 - ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð²ÐµÑ‰ÐµÑÑ‚Ð²Ð°;\t16 - Ð¡Ð¾Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð»ÐµÐ½Ð¸Ðµ; \n"
+               "7 - ÐœÐ°ÑÑÐ°;\t\t\t17 - Ð¢ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ð°; \n"
+               "8 - ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ;\t\t\t18 - Ð£Ð³Ð¾Ð»; \n"
+               "9 - ÐžÐ±ÑŠÑ‘Ð¼;\t\t\t19 - Ð§Ð°ÑÑ‚Ð¾Ñ‚Ð°; \n"
+               "10 - ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ;\t\t\t20 - Ð­Ð½ÐµÑ€Ð³Ð¸Ñ; \n\t");
+        int ID = parsing_id(head.measurement_id);
+        while(ID >= 21 || ID <= 0) {
+            printf("\nÐ Ð¾Ð´ Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð½Ñ‹ Ð²Ð°Ð¼Ð¸ Ð½Ðµ Ð²Ñ‹Ð±Ñ€Ð°Ð½. Ð¡Ð´ÐµÐ»Ð°Ð¹Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€: \n\t");
+            ID = parsing_id(head.measurement_id);
         }
 
-        switch(head.measurement_id) {
+        switch(ID) {
             case 1:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 2:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 3:
-                printf("Ââåäèòå ÷èñëî, êîòîðîå Âû õîòåëè áûëè ïåðåâåñòè. \n"
-                       "Â êà÷åñòâå çíàêà-ðàçäåëèòåëÿ äëÿ âåùåñòâåííûõ ÷èñåë èñïîëüçóéòå ñèìâîë ','.\n\t");
+                printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð’Ñ‹ Ñ…Ð¾Ñ‚ÐµÐ»Ð¸ Ð±Ñ‹Ð»Ð¸ Ð¿ÐµÑ€ÐµÐ²ÐµÑÑ‚Ð¸. \n"
+                       "Ð’ ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ Ð·Ð½Ð°ÐºÐ°-Ñ€Ð°Ð·Ð´ÐµÐ»Ð¸Ñ‚ÐµÐ»Ñ Ð´Ð»Ñ Ð²ÐµÑ‰ÐµÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ» Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹Ñ‚Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð» ','.\n\t");
                 head.VOLUME = parsing(head.MEASUREMENT);
                 head.result = selectionswitchData(head.VOLUME);
                 break;
             case 4:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 5:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 6:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 7:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 8:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 9:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 10:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 11:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 12:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
-                system("pause");
-                exit(EXIT_FAILURE);
+                printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð’Ñ‹ Ñ…Ð¾Ñ‚ÐµÐ»Ð¸ Ð±Ñ‹Ð»Ð¸ Ð¿ÐµÑ€ÐµÐ²ÐµÑÑ‚Ð¸. \n"
+                       "Ð’ ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ Ð·Ð½Ð°ÐºÐ°-Ñ€Ð°Ð·Ð´ÐµÐ»Ð¸Ñ‚ÐµÐ»Ñ Ð´Ð»Ñ Ð²ÐµÑ‰ÐµÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ» Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹Ñ‚Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð» ','.\n\t");
+                head.VOLUME = parsing(head.MEASUREMENT);
+                head.result = selectionswitchRadiation(head.VOLUME);
+                break;
             case 13:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 14:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 15:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 16:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 17:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 18:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 19:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             case 20:
-                fprintf(stderr, "Ìîäóëü íå ñóùåñòâóåò\n");
+                fprintf(stderr, "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚\n");
                 system("pause");
                 exit(EXIT_FAILURE);
             default:
-                fprintf(stderr, "Âû ïûòàåòåñü âûáðàòü ðîä âåëè÷èíû, êîòîðîãî íå ñóùåñòâóåò. Ïðîãðàììà áóäåò çàâåðøåíà;");
+                fprintf(stderr, "Ð’Ñ‹ Ð¿Ñ‹Ñ‚Ð°ÐµÑ‚ÐµÑÑŒ Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ñ€Ð¾Ð´ Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð½Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚. ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð±ÑƒÐ´ÐµÑ‚ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°;");
                 break;
         }
 
         convert(head.result);
 
-        printf("Âàì íðàâèòñÿ?\n");
-        printf("Õîòèòå ïðîäîëæèòü?\n");
+        printf("Ð’Ð°Ð¼ Ð½Ñ€Ð°Ð²Ð¸Ñ‚ÑÑ?\n");
+        printf("Ð¥Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ?\n");
         scanf("%d", &head.like_to_continue);
         printf("\n");
     }

@@ -12,9 +12,7 @@ double parsing(char *MEASUREMENT)
 	for(i = 0; i < strlen(MEASUREMENT); i++) {
         if(((MEASUREMENT[i] >= 0x30 && MEASUREMENT[i] <= 0x39) || (MEASUREMENT[i] == 0x2C || MEASUREMENT[i] == 0x2E)) == 0) {
             fprintf(stderr, "Вы ввели не коректные данные.\n");
-            //system("pause");
-			system ("read -p \"Нажмите любую клавишу для выхода ...\" -n 1"); 
-            exit(1);
+            scanf("%s", MEASUREMENT);
         }
 	}
 
@@ -35,14 +33,11 @@ int parsing_id(char *MEASUREMENT)
 	scanf("%s", MEASUREMENT);
 
 	for(i = 0; i < strlen(MEASUREMENT); i++) {
-        if((MEASUREMENT[i] >= 0x30 && MEASUREMENT[i] <= 0x39) == 0) {
+        while((MEASUREMENT[i] >= 0x30 && MEASUREMENT[i] <= 0x39) == 0) {
             fprintf(stderr, "Вы ввели не коректные данные\n");
-            //system("pause");
-            system ("read -p \"Нажмите любую клавишу для выхода ...\" -n 1"); 
-            exit(1);
+            scanf("%s", MEASUREMENT);
         }
 	}
-
 
 	res = atoi(MEASUREMENT);
 	return res;

@@ -3,7 +3,7 @@
 #include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
                                 Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
-double selectionswitchData(double MEASUREMENT)
+double selectionswitchRadiation(double MEASUREMENT)
 {
     FunctionsParameters key;
 
@@ -35,40 +35,41 @@ double selectionswitchData(double MEASUREMENT)
 
     switch(key.id) {
         case 12:
-            key.gate = bitsTObytes(MEASUREMENT);
+            key.gate = PTOuP(KlperKgTOP(MEASUREMENT));
             break;
         case 13:
-            key.gate = bitsTOkilobytes(MEASUREMENT);
+            key.gate = PTOmP(KlperKgTOP(MEASUREMENT));
             break;
         case 14:
-            key.gate = bitsTOmegabytes(MEASUREMENT);
+            key.gate = KlperKgTOP(MEASUREMENT);
             break;
         case 21:
-            key.gate = bytesTObits(MEASUREMENT);
+            key.gate = PTOKlperKg(uPTOP(MEASUREMENT));
             break;
         case 23:
-            key.gate = bitsTOkilobytes(bytesTObits(MEASUREMENT));
+            key.gate = PTOmP(uPTOP(MEASUREMENT));
             break;
         case 24:
-            key.gate = bitsTOmegabytes(bytesTObits(MEASUREMENT));
+            key.gate = uPTOP(MEASUREMENT);
             break;
         case 31:
-            key.gate = kilobytesTObits(MEASUREMENT);
+            key.gate = PTOKlperKg(mPTOP(MEASUREMENT));
             break;
         case 32:
-            key.gate = bitsTObytes(kilobytesTObits(MEASUREMENT));
+            key.gate = PTOuP(mPTOP(MEASUREMENT));
             break;
         case 34:
-            key.gate = bitsTOmegabytes(kilobytesTObits(MEASUREMENT));
+            key.gate = mPTOP(MEASUREMENT);
             break;
         case 41:
-            key.gate = megabytesTObits(MEASUREMENT);
+            key.gate = PTOKlperKg(MEASUREMENT);
             break;
         case 42:
-            key.gate = bitsTObytes(megabytesTObits(MEASUREMENT));
+            key.gate = PTOuP(MEASUREMENT);
             break;
         case 43:
-            key.gate = bitsTOkilobytes(megabytesTObits(MEASUREMENT));
+            key.gate = PTOmP(MEASUREMENT);
             break;
+    }
     return key.gate;
 }
