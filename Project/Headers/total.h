@@ -1,20 +1,22 @@
 #ifndef TOTAL
 #define TOTAL
 
-typedef struct entered_and_gated_parameters {
+typedef struct entered_and_gated_parameters
+{
+    char MEASUREMENT[261];
+    char measurement_id[5];
     double result, VOLUME;
     float version;
     int like_to_continue;
-    char measurement_id[5];
-    char MEASUREMENT[261];
 } MainParameters;
 // ÈÇÌÅÍÅÍÈÅ ÏÀÐÀÌÅÒÐÎÂ ÎÏÀÑÍÎ ÄËß ÆÈÇÍÈ;
 
-typedef struct working_values {
+typedef struct working_values
+{
+    char in[5], out[5];
     double gate;
     int id;
     int input_choice, output_choice;
-    char in[5], out[5];
 } FunctionsParameters;
 
 
@@ -32,6 +34,7 @@ double selectionswitchLength(double MEASUREMENT);
 //КОЛЯ
 double selectionswitchData(double MEASUREMENT);
 double selectionswitchRadiation(double MEASUREMENT);
+double selectionswitchResistance(double MEASUREMENT);
 
 //ПАХОМ
 
@@ -46,10 +49,6 @@ double selectionswitchPression(double MEASUREMENT);
 double selectionswitchSpeed(double MEASUREMENT);
 double selectionswitchTime(double MEASUREMENT);
 double selectionswitchEnergy(double MEASUREMENT);
-
-
-
-
 
 // Ïðîòîòèïû ðàáî÷èõ ôóíêöèé;
 double bitsTObytes(double DATA);
@@ -77,25 +76,35 @@ double mPTOP(double RADIATION);
 double uPTOP(double RADIATION);
 double KlperKgTOP(double RADIATION);
 
+// RESISTANCE
+double OmTOmOm(double RESISTANCE);
+double OmTOuOm(double RESISTANCE);
+double OmTOVoltperAmper(double RESISTANCE);
+double OmTOSimens(double RESISTANCE);
+double mOmTOOm(double RESISTANCE);
+double uOmTOOm(double RESISTANCE);
+double VoltperAmperTOOm(double RESISTANCE);
+double SimensTOOm(double RESISTANCE);
+
 //TIME
- double nsec_TO_min ( double TIME);
- double mksec_TO_min ( double TIME);
- double msec_TO_min ( double TIME);
- double sec_TO_min ( double TIME);
- double min_TO_nsec ( double TIME);
- double min_TO_mksec ( double TIME);
- double min_TO_msec ( double TIME);
- double min_TO_sec ( double TIME);
- double min_TO_chas ( double TIME);
- double min_TO_sut ( double TIME);
- double min_TO_week ( double TIME);
- double min_TO_year ( double TIME);
- double min_TO_vek ( double TIME);
- double chas_TO_min ( double TIME);
- double sut_TO_min ( double TIME);
- double week_TO_min ( double TIME);
- double year_TO_min ( double TIME);
- double vek_TO_min ( double TIME);
+double nsec_TO_min ( double TIME);
+double mksec_TO_min ( double TIME);
+double msec_TO_min ( double TIME);
+double sec_TO_min ( double TIME);
+double min_TO_nsec ( double TIME);
+double min_TO_mksec ( double TIME);
+double min_TO_msec ( double TIME);
+double min_TO_sec ( double TIME);
+double min_TO_chas ( double TIME);
+double min_TO_sut ( double TIME);
+double min_TO_week ( double TIME);
+double min_TO_year ( double TIME);
+double min_TO_vek ( double TIME);
+double chas_TO_min ( double TIME);
+double sut_TO_min ( double TIME);
+double week_TO_min ( double TIME);
+double year_TO_min ( double TIME);
+double vek_TO_min ( double TIME);
 
 //ДАВЛЕНИЕ
 

@@ -1,58 +1,42 @@
 #include <stdio.h>
 #include <math.h>
-// Конвертирование соседних величин в сторону увеличения;
-double adjacentValuesUpward(double RESISTANCE)
+// Ом, миллиом, микроом, вольт на ампер, сименс;
+double OmTOmOm(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE/1000;
+    RESISTANCE = RESISTANCE * 1000;
     return RESISTANCE;
 }
-// --------------------------------------------------- //
-// Конвертирование соседних величин в сторону уменьшения;
-double adjacentValuesToDecrease(double RESISTANCE)
+double OmTOuOm(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE*1000;
+    RESISTANCE = RESISTANCE * 1000000;
     return RESISTANCE;
 }
-// --------------------------------------------------- //
-// Конвертирование величин через одну в сторону увеличения;
-double valuesBetweenOneUpward(double RESISTANCE)
+double OmTOVoltperAmper(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE/(pow(1000, 2));
     return RESISTANCE;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону уменьшения;
-double valuesBetweenOneToDecrease(double RESISTANCE)
+double OmTOSimens(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE*(pow(1000, 2));
+    RESISTANCE = 1 / RESISTANCE;
     return RESISTANCE;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону увеличения;
-double valuesBetweenTwoUpward(double RESISTANCE)
+
+double mOmTOOm(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE/(pow(1000, 3));
+    RESISTANCE = RESISTANCE / 1000;
     return RESISTANCE;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону уменьшения;
-double valuesBetweenTwoToDecrease(double RESISTANCE)
+double uOmTOOm(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE*(pow(1000, 3));
+    RESISTANCE = RESISTANCE / 1000000;
     return RESISTANCE;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону увеличения;
-double valuesBetweenThreeUpward(double RESISTANCE)
+double VoltperAmperTOOm(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE/(pow(1000, 4));
     return RESISTANCE;
 }
-// ----------------------------------------------------- //
-// Конвертирование величин через одну в сторону уменьшения;
-double valuesBetweenThreeToDecrease(double RESISTANCE)
+double SimensTOOm(double RESISTANCE)
 {
-    RESISTANCE = RESISTANCE*(pow(1000, 4));
+    RESISTANCE = 1 / RESISTANCE;
     return RESISTANCE;
 }
-// ----------------------------------------------------- //
