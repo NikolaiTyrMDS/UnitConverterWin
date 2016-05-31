@@ -20,8 +20,8 @@ double KilogramsPerCubicMeter2GramsPerCubicMeter(double DENSITY) {
 	return DENSITY;
 }
 
-// <Грамм на кубический сантиметр> ---> <Килограмм на кубический метр> //
-double GramsPerCubicSantimeter2KilogramsPerCubicMeter(double DENSITY) {
+// <Грамм на кубический метр> ---> <Килограмм на кубический метр> //
+double GramsPerCubicMeter2KilogramsPerCubicMeter(double DENSITY) {
 	DENSITY = DENSITY / 1000;
 	return DENSITY;
 }
@@ -32,7 +32,7 @@ double KilogramsPerCubicMeter2GramsPerCubicSantimeter(double DENSITY) {
 	return DENSITY;
 }
 
-// <Грамм на кубический метр> ---> <Килограмм на кубический метр> //
+// <Грамм на кубический сантиметр> ---> <Килограмм на кубический метр> //
 double GramsPerCubicSantimeter2KilogramsPerCubicMeter(double DENSITY) {
 	DENSITY = DENSITY * 1000;
 	return DENSITY;
@@ -45,7 +45,7 @@ double KilogramsPerCubicMeter2GramsPerCubicMillimeter(double DENSITY) {
 }
 
 // <Грамм на кубический миллиметр> ---> <Килограмм на кубический метр> //
-double GramsPerCubicMeter2KilogramsPerCubicMeter(double DENSITY) {
+double GramsPerCubicMillimeter2KilogramsPerCubicMeter(double DENSITY) {
 	DENSITY = DENSITY * 1000000;
 	return DENSITY;
 }
@@ -53,5 +53,11 @@ double GramsPerCubicMeter2KilogramsPerCubicMeter(double DENSITY) {
 // <Килограмм на кубический метр> ---> <Миллиграмм на кубический метр> //
 double KilogramsPerCubicMeter2MilligramsPerCubicMeter(double DENSITY) {
 	DENSITY = DENSITY / 1000000;
+	return DENSITY;
+}
+
+// <Миллиграмм на кубический метр> ---> <Килограмм на кубический метр> //
+double MilligramsPerCubicMeter2KilogramsPerCubicMeter(double DENSITY) {
+	DENSITY = DENSITY * 1000000;
 	return DENSITY;
 }
