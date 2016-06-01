@@ -3,7 +3,7 @@
 #include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
                                 Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
-double selectionswitchAngle(double MEASUREMENT)
+double selectionswitchStrength(double MEASUREMENT)
 {
     FunctionsParameters key;
 
