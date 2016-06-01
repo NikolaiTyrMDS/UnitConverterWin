@@ -19,10 +19,13 @@ double selectionswitchMass(double MEASUREMENT)
            "8 - Унция;\n"
            "9 - Драхма;\n"
            "10 - Гран;\n \t");
-    scanf("%d", &key.input_choice);
+    //scanf("%d", &key.input_choice);
+    scanf("%s", key.in);
+    key.input_choice = parsing_id(key.in);
     while(key.input_choice > 10 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        scanf("%s", key.in);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
@@ -37,11 +40,14 @@ double selectionswitchMass(double MEASUREMENT)
            "8 - Унция;\n"
            "9 - Драхма;\n\t"
            "10 - Гран;\n \t");
-    scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || key.input_choice > 10 || key.input_choice == 0 )  {
+    //scanf("%d", &key.output_choice);
+    scanf("%s", key.out);
+    key.output_choice = parsing_id(key.out);
+    while(key.output_choice == key.input_choice || key.output_choice > 10 || key.output_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        scanf("%s", key.out);
+        key.output_choice = parsing_id(key.out);
     }
 
     if(key.input_choice < 10 && key.output_choice < 10)
@@ -50,7 +56,9 @@ double selectionswitchMass(double MEASUREMENT)
 		key.id = key.input_choice * 100 + key.output_choice;
 	if(key.input_choice < 10 && key.output_choice == 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-
+		
+		
+	switch(key.id) {
     //Грамм
         case 12:
             key.gate = Grams_TO_Kilograms(MEASUREMENT);
