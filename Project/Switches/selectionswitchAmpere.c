@@ -3,7 +3,7 @@
 #include"../Headers/total.h" /* Символ '../' - escape-символ - используется для перехода на один уровень выше;
                                 Этот символ используется столько раз, на сколько уровней нужно подняться; */
 
-double selectionswitchAngle(double MEASUREMENT)
+double selectionswitchAmpere(double MEASUREMENT)
 {
     FunctionsParameters key;
 
@@ -38,7 +38,7 @@ double selectionswitchAngle(double MEASUREMENT)
     key.id = key.input_choice * 10 + key.output_choice;
     switch(key.id) {
         case 12:
-        	key.gate = 	Ampere2kAmpere(MEASUREMENT);
+            key.gate = Ampere2kAmpere(MEASUREMENT);
             break;
         case 13:
             key.gate = Ampere2mAmpere(MEASUREMENT);
