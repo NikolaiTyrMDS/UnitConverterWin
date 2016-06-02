@@ -217,7 +217,63 @@ double year_to_min ( double TIME);
 double vek_to_min ( double TIME);
 
 //............................................................................................................................
-// ROMAN PROKOPENKO
+// ANGLE
+double Degree2Radian(double ANGLE);
+double Radian2Degree(double ANGLE);
+double Degree2Min(double ANGLE);
+double Min2Degree(double ANGLE);
+double Degree2Sec(double ANGLE);
+double Sec2Degree(double ANGLE);
+double Degree2Grad(double ANGLE);
+double Grad2Degree(double ANGLE);
+double Sextant2Degree(double ANGLE);
+double Degree2Sextant(double ANGLE);
+double Rumb2Degree(double ANGLE);
+double Degree2Rumb(double ANGLE);
+
+// FREQUENCY
+double Herz2kHerz(double FREQUENCY);
+double kHerz2Herz(double FREQUENCY);
+double Herz2MlHerz(double FREQUENCY);
+double MlHerz2Herz(double FREQUENCY);
+double Herz2MkHerz(double FREQUENCY);
+double MkHerz2Herz(double FREQUENCY);
+double Herz2MgHerz(double FREQUENCY);
+double MgHerz2Herz(double FREQUENCY);
+double Herz2Frenel(double FREQUENCY);
+double Frenel2Herz(double FREQUENCY);
+double Herz2RadSec(double FREQUENCY);
+double RadSec2Herz(double FREQUENCY);
+
+// POWER
+double Vat2kVat(double POWER);
+double kVat2Vat(double POWER);
+double Vat2mVat(double POWER);
+double mVat2Vat(double POWER);
+double kgSilaMvS2Vat(double POWER);
+double Vat2kgSilaMvS(double POWER);
+double Vat2ErgS(double POWER);
+double ErgS2Vat(double POWER);
+double Vat2HorsePowMetr(double POWER);
+double HorsePowMetr2Vat(double POWER);
+double Vat2HorsePowEng(double POWER);
+double HorsePowEng2Vat(double POWER);
+double Vat2MlVat(double POWER);
+double MlVat2Vat(double POWER);
+double Vat2MkVat(double POWER);
+double MkVat2Vat(double POWER);
+
+// QUANTITY OF SUBSTANCE
+double Mole2mMole(double QOS);
+double mMole2Mole(double QOS);
+double Mole2kMole(double QOS);
+double kMole2Mole(double QOS);
+double Mole2PoundMole(double QOS);
+double PoundMole2Mole(double QOS);
+double Mole2MkMole(double QOS);
+double MkMole2Mole(double QOS);
+double Mole2MgMole(double QOS);
+double MgMole2Mole(double QOS);
 
 //............................................................................................................................
 // AMOUNT
