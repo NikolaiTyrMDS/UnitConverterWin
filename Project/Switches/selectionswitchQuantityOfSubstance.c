@@ -8,14 +8,14 @@ double selectionswitchQuantityOfSubstance(double MEASUREMENT)
     FunctionsParameters key;
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Микромолей;\n"
-           "2 - Миллимолей;\n"
-           "3 - Молей;\n"
-           "4 - Киломолей;\n"
-           "5 - Мегамолей;\n"
-           "6 - Фунт-молей;\n\t");
-    scanf("%s", key.in);
+           "1 - Микромоли;\n"
+           "2 - Миллимоли;\n"
+           "3 - Моли;\n"
+           "4 - Киломоли;\n"
+           "5 - Мегамоли;\n"
+           "6 - Фунт-моли;\n\t");
     key.input_choice = parsing_id(key.in);
+    //scanf("%d", &key.input_choice);
     while(key.input_choice >= 7 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
@@ -23,14 +23,14 @@ double selectionswitchQuantityOfSubstance(double MEASUREMENT)
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Микромолей;\n"
-           "2 - Миллимолей;\n"
-           "3 - Молей;\n"
-           "4 - Киломолей;\n"
-           "5 - Мегамолей;\n"
-           "6 - Фунт-молей;\n\t");
-    scanf("%s", key.out);
+           "1 - Микромоли;\n"
+           "2 - Миллимоли;\n"
+           "3 - Моли;\n"
+           "4 - Киломоли;\n"
+           "5 - Мегамоли;\n"
+           "6 - Фунт-моли;\n\t");
     key.output_choice = parsing_id(key.out);
+    //scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.input_choice >= 7 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
