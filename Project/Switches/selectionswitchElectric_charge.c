@@ -66,7 +66,7 @@ double selectionswitchElectric_charge(double MEASUREMENT)
             key.gate = KlTOFaradei(ElementaryElectricChargeTOKl(MEASUREMENT));
             break;
         case 21:
-            key.gate = (milliAmperPerHourTOKl(MEASUREMENT));
+            key.gate = KlTOElementaryElectricCharge(milliAmperPerHourTOKl(MEASUREMENT));
             break;
         case 23:
             key.gate = KlTOmicroKl(milliAmperPerHourTOKl(MEASUREMENT));
@@ -87,7 +87,7 @@ double selectionswitchElectric_charge(double MEASUREMENT)
             key.gate = KlTOFaradei(milliAmperPerHourTOKl(MEASUREMENT));
             break;
         case 31:
-            key.gate = (microKlTOKl(MEASUREMENT));
+            key.gate = KlTOElementaryElectricCharge(microKlTOKl(MEASUREMENT));
             break;
         case 32:
             key.gate = KlTOmilliAmperPerHour(microKlTOKl(MEASUREMENT));
@@ -108,7 +108,7 @@ double selectionswitchElectric_charge(double MEASUREMENT)
             key.gate = KlTOFaradei(microKlTOKl(MEASUREMENT));
             break;
         case 41:
-            key.gate = (milliKlTOKl(MEASUREMENT));
+            key.gate = KlTOElementaryElectricCharge(milliKlTOKl(MEASUREMENT));
             break;
         case 42:
             key.gate = KlTOmilliAmperPerHour(milliKlTOKl(MEASUREMENT));
@@ -150,7 +150,7 @@ double selectionswitchElectric_charge(double MEASUREMENT)
             key.gate = KlTOFaradei(MEASUREMENT);
             break;
         case 61:
-            key.gate = (kiloKlTOKl(MEASUREMENT));
+            key.gate = KlTOElementaryElectricCharge(kiloKlTOKl(MEASUREMENT));
             break;
         case 62:
             key.gate = KlTOmilliAmperPerHour(kiloKlTOKl(MEASUREMENT));
@@ -171,7 +171,7 @@ double selectionswitchElectric_charge(double MEASUREMENT)
             key.gate = KlTOFaradei(kiloKlTOKl(MEASUREMENT));
             break;
         case 71:
-            key.gate = (megaKlTOKl(MEASUREMENT));
+            key.gate = KlTOElementaryElectricCharge(megaKlTOKl(MEASUREMENT));
             break;
         case 72:
             key.gate = KlTOmilliAmperPerHour(megaKlTOKl(MEASUREMENT));
@@ -192,7 +192,7 @@ double selectionswitchElectric_charge(double MEASUREMENT)
             key.gate = KlTOFaradei(megaKlTOKl(MEASUREMENT));
             break;
         case 81:
-            key.gate = (FaradeiTOKl(MEASUREMENT));
+            key.gate = KlTOElementaryElectricCharge(FaradeiTOKl(MEASUREMENT));
             break;
         case 82:
             key.gate = KlTOmilliAmperPerHour(FaradeiTOKl(MEASUREMENT));
