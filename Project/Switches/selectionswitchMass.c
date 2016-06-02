@@ -38,7 +38,7 @@ double selectionswitchMass(double MEASUREMENT)
            "6 - Стоун;\n"
            "7 - Фунт;\n"
            "8 - Унция;\n"
-           "9 - Драхма;\n\t"
+           "9 - Драхма;\n"
            "10 - Гран;\n \t");
     //scanf("%d", &key.output_choice);
     scanf("%s", key.out);

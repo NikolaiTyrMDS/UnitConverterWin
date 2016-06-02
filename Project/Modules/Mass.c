@@ -89,7 +89,7 @@ double Carats_TO_Kilograms(double MASS) {
 
 // <Стоун> ---> <Килограмм> //
 double Stones_TO_Kilograms(double MASS) {
-	MASS = MASS * 6,35029;   // Формула для перевода
+	MASS = MASS * 6.35029;   // Формула для перевода
 	return MASS;
 }
 
