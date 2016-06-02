@@ -35,6 +35,7 @@ double selectionswitchLength(double MEASUREMENT);
 double selectionswitchData(double MEASUREMENT);
 double selectionswitchRadiation(double MEASUREMENT);
 double selectionswitchResistance(double MEASUREMENT);
+double selectionswitchElectric_charge(double MEASUREMENT);
 
 //ПАХОМ
 
@@ -85,6 +86,22 @@ double mOmTOOm(double RESISTANCE);
 double uOmTOOm(double RESISTANCE);
 double VoltperAmperTOOm(double RESISTANCE);
 double SimensTOOm(double RESISTANCE);
+
+// ELECTRIC CHARGE
+double microKlTOKl(double ELECTRICCHARGE);
+double milliKlTOKl(double ELECTRICCHARGE);
+double kiloKlTOKl(double ELECTRICCHARGE);
+double megaKlTOKl(double ELECTRICCHARGE);
+double milliAmperPerHourTOKl(double ELECTRICCHARGE);
+double FaradeiTOKl(double ELECTRICCHARGE);
+double ElementaryElectricChargeTOKl(double ELECTRICCHARGE);
+double KlTOmicroKl(double ELECTRICCHARGE);
+double KlTOmilliKl(double ELECTRICCHARGE);
+double KlTOkiloKl(double ELECTRICCHARGE);
+double KlTOmegaKl(double ELECTRICCHARGE);
+double KlTOmilliAmperPerHour(double ELECTRICCHARGE);
+double KlTOFaradei(double ELECTRICCHARGE);
+double KlTOElementaryElectricCharge(double ELECTRICCHARGE);
 
 //TIME
 double nsec_TO_min ( double TIME);

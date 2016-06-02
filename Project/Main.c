@@ -12,7 +12,7 @@ int main()
     setlocale(LC_ALL, "ru-RU.utf8");
 
     MainParameters head;
-    head.version = 1.72;
+    head.version = 1.93;
     head.like_to_continue = 1;
 
     printf("Unit Converter. Версия %.2f \n\n", head.version);
