@@ -21,7 +21,8 @@ double selectionswitchAmount(double MEASUREMENT)
            "10 - Кварта;\n "
            "11 - Пинта;\n "
            "12 - Жидкая унция; \n\t");
-    scanf("%d", &key.input_choice);
+    scanf("%s", key.in);
+    key.input_choice = parsing_id(key.in);
     while(key.input_choice > 12 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);
@@ -41,7 +42,8 @@ double selectionswitchAmount(double MEASUREMENT)
            "10 - Кварта;\n "
            "11 - Пинта;\n "
            "12 - Жидкая унция; \n\t");
-    scanf("%d", &key.output_choice);
+    scanf("%s", key.out);
+    key.output_choice = parsing_id(key.out);
     while(key.output_choice == key.input_choice || key.input_choice > 12 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");

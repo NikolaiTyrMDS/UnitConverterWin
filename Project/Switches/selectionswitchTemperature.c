@@ -17,7 +17,6 @@ double selectionswitchTemperature(double MEASUREMENT)
            "6 - Ньютона;\n"
            "7 - Рёмера;\n"
            "8 - Делисле;\n \t");
-    //scanf("%d", &key.input_choice);
     scanf("%s", key.in);
     key.input_choice = parsing_id(key.in);
     while(key.input_choice > 8|| key.input_choice == 0) {
@@ -36,7 +35,6 @@ double selectionswitchTemperature(double MEASUREMENT)
            "6 - Ньютона;\n"
            "7 - Рёмера;\n"
            "8 - Делисле;\n \t");
-    //scanf("%d", &key.output_choice);
     scanf("%s", key.out);
     key.output_choice = parsing_id(key.out);
     while(key.output_choice == key.input_choice || key.output_choice > 8 || key.output_choice == 0 )  {

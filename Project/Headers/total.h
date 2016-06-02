@@ -2,22 +2,24 @@
 #define TOTAL
 
 typedef struct entered_and_gated_parameters {
+    char MEASUREMENT[261];
+    char measurement_id[5];
     double result, VOLUME;
     float version;
     int like_to_continue;
-    char measurement_id[5];
-    char MEASUREMENT[261];
 } MainParameters;
-// ÈÇÌÅÍÅÍÈÅ ÏÀÐÀÌÅÒÐÎÂ ÎÏÀÑÍÎ ÄËß ÆÈÇÍÈ;
+// Параметры отвечают за main();
 
 typedef struct working_values {
+    char in[5], out[5];
     double gate;
     int id;
     int input_choice, output_choice;
-    char in[5], out[5];
 } FunctionsParameters;
+// Параметры отвечают за функциональную часть кода;
 
-// Ñëóæåáíûå ôóíêöèè;
+//............................................................................................................................
+// SERVICE
 double parsing(char *MEASUREMENT);
 void convert(double RESULT);
 int parsing_id(char *MEASUREMENT);
@@ -218,5 +220,93 @@ double vek_to_min ( double TIME);
 // ROMAN PROKOPENKO
 
 //............................................................................................................................
-// ARSENI LISENKO
+// AMOUNT
+double squaredmeters_TO_squaredkilometers(double AMOUNT);
+double squaredmeters_TO_squareddecimeters(double AMOUNT);
+double squaredmeters_TO_squaredcentimeters(double AMOUNT);
+double squaredmeters_TO_squaredmillimeters(double AMOUNT);
+double squaredmeters_TO_liters(double AMOUNT);
+double squaredmeters_TO_mililiters(double AMOUNT);
+double squaredmeters_TO_gallons(double AMOUNT);
+double squaredmeters_TO_barrels(double AMOUNT);
+double squaredmeters_TO_pints(double AMOUNT);
+double squaredmeters_TO_quarts(double AMOUNT);
+double squaredmeters_TO_flozs(double AMOUNT);
+double squaredkilometers_TO_squaredmeters(double AMOUNT);
+double squareddecimeters_TO_squaredmeters(double AMOUNT);
+double squaredcentimeters_TO_squaredmeters(double AMOUNT);
+double squaredmillimeters_TO_squaredmeters(double AMOUNT);
+double liters_TO_squaredmeters(double AMOUNT);
+double mililiters_TO_squaredmeters(double AMOUNT);
+double gallons_TO_squaredmeters(double AMOUNT);
+double barrels_TO_squaredmeters(double AMOUNT);
+double quarts_TO_squaredmeters(double AMOUNT);
+double pints_TO_squaredmeters(double AMOUNT);
+double flozs_TO_squaredmeters(double AMOUNT);
+
+// LENGTH
+double meters_TO_millimeters(double LENGTH);
+double meters_TO_centimeters(double LENGTH);
+double meters_TO_decimeters(double LENGTH);
+double meters_TO_kilometers(double LENGTH);
+double meters_TO_fathoms(double LENGTH);
+double meters_TO_arshins(double LENGTH);
+double meters_TO_miles(double LENGTH);
+double meters_TO_yards(double LENGTH);
+double meters_TO_foots(double LENGTH);
+double meters_TO_micrometers(double LENGTH);
+double meters_TO_nanometers(double LENGTH);
+double meters_TO_angstroms(double LENGTH);
+double meters_TO_nauticalmiles(double LENGTH);
+double millimeters_TO_meters(double LENGTH);
+double centimeters_TO_meters(double LENGTH);
+double decimeters_TO_meters(double LENGTH);
+double kilometers_TO_meters(double LENGTH);
+double fathoms_TO_meters(double LENGTH);
+double arshins_TO_meters(double LENGTH);
+double miles_TO_meters(double LENGTH);
+double yards_TO_meters(double LENGTH);
+double foots_TO_meters(double LENGTH);
+double micrometers_TO_meters(double LENGTH);
+double nanometers_TO_meters(double LENGTH);
+double angstroms_TO_meters(double LENGTH);
+double nauticalmiles_TO_meters(double LENGTH);
+
+// MASS
+double Kilograms_TO_Grams(double MASS);
+double Kilograms_TO_Quintals(double MASS);
+double Kilograms_TO_Tonnes(double MASS);
+double Kilograms_TO_Carats(double MASS);
+double Kilograms_TO_Stones(double MASS);
+double Kilograms_TO_Funts(double MASS);
+double Kilograms_TO_Ounces(double MASS);
+double Kilograms_TO_Drachmas(double MASS);
+double Kilograms_TO_Grains(double MASS);
+double Grams_TO_Kilograms(double MASS);
+double Quintals_TO_Kilograms(double MASS);
+double Tonnes_TO_Kilograms(double MASS);
+double Carats_TO_Kilograms(double MASS);
+double Stones_TO_Kilograms(double MASS);
+double Funts_TO_Kilograms(double MASS);
+double Ounces_TO_Kilograms(double MASS);
+double Drachmas_TO_Kilograms(double MASS);
+double Grains_TO_Kilograms(double MASS);
+
+// TEMPERATURE
+double Kelvins_TO_Fahrenheits(double TEMPERATURE);
+double Kelvins_TO_Celsius(double TEMPERATURE);
+double Kelvins_TO_Reaumurs(double TEMPERATURE);
+double Kelvins_TO_Rankines(double TEMPERATURE);
+double Kelvins_TO_Newtons(double TEMPERATURE);
+double Kelvins_TO_Romers(double TEMPERATURE);
+double Kelvins_TO_Delisles(double TEMPERATURE);
+double Fahrenheits_TO_Kelvins(double TEMPERATURE);
+double Celsius_TO_Kelvins(double TEMPERATURE);
+double Reaumurs_TO_Kelvins(double TEMPERATURE);
+double Rankines_TO_Kelvins(double TEMPERATURE);
+double Newtons_TO_Kelvins(double TEMPERATURE);
+double Romers_TO_Kelvins(double TEMPERATURE);
+double Delisles_TO_Kelvins(double TEMPERATURE);
+
+//............................................................................................................................
 #endif

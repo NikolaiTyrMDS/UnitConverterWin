@@ -14,7 +14,6 @@ double selectionswitchRadiation(double MEASUREMENT)
            "4 - Рентген;\n \t");
     scanf("%s", key.in);
     key.input_choice = parsing_id(key.in);
-
     while(key.input_choice >= 4 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
         scanf("%d", &key.input_choice);

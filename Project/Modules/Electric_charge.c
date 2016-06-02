@@ -33,7 +33,7 @@ double FaradeiTOKl(double ELECTRICCHARGE)
 }
 double ElementaryElectricChargeTOKl(double ELECTRICCHARGE)
 {
-    ELECTRICCHARGE = ELECTRICCHARGE * 1.602176565 * pow(10, − 19);
+    ELECTRICCHARGE = ELECTRICCHARGE * 1.602176565 / pow(10, 19);
     return ELECTRICCHARGE;
 }
 
@@ -70,6 +70,6 @@ double KlTOFaradei(double ELECTRICCHARGE)
 }
 double KlTOElementaryElectricCharge(double ELECTRICCHARGE)
 {
-    ELECTRICCHARGE = ELECTRICCHARGE / 1.602176565 / pow(10, − 19);
+    ELECTRICCHARGE = ELECTRICCHARGE / 1.602176565 * pow(10, 19);
     return ELECTRICCHARGE;
 }

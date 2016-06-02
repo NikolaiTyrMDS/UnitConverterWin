@@ -21,7 +21,7 @@ double selectionswitchPression(double MEASUREMENT)
            " 10 - Тонна/метр;\n"
            " 11 - Ньютон/сантиметр;\n"
            " 12 - Ньютон/метр;\n \t");
-    //scanf("%d", &key.input_choice);
+    scanf("%s", key.in);
     key.input_choice = parsing_id(key.in);
     while(key.input_choice > 12 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
@@ -42,7 +42,7 @@ double selectionswitchPression(double MEASUREMENT)
            " 10 - Тонна/метр;\n"
            " 11 - Ньютон/сантиметр;\n"
            " 12 - Ньютон/метр;\n \t");
-    //scanf("%d", &key.output_choice);
+    scanf("%s", key.out);
     key.output_choice = parsing_id(key.out);
     while(key.output_choice == key.input_choice || key.input_choice > 12 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
@@ -153,7 +153,7 @@ double selectionswitchPression(double MEASUREMENT)
         case 312:
             key.gate = bar_to_newtonm(paskal_to_bar(MEASUREMENT));
             break;
-            
+
         case 401:
             key.gate = kpaskal_to_bar(MEASUREMENT);
             break;
@@ -452,7 +452,7 @@ double selectionswitchPression(double MEASUREMENT)
          case 1211:
             key.gate = bar_to_newtoncm(newtonm_to_bar(MEASUREMENT));
             break;
-      
+
         default:
             printf("Не введено значение конвертируемой величины, "
                    "или Вы пытаетесь конвертировать в величину, которую уже преобразуете\n");
