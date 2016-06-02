@@ -18,16 +18,18 @@ double selectionswitchLength(double MEASUREMENT)
            "7 - Аршин;\n"
            "8 - Миля;\n"
            "9 - Ярд;\n"
-           "10 - Фут;\n \t"
-           "11 - Микрометр;\n \t"
-           "12 - Нанометр; \n \t"
-           "13 - Ангстрем;\n \t"
+           "10 - Фут;\n"
+           "11 - Микрометр;\n"
+           "12 - Нанометр; \n"
+           "13 - Ангстрем;\n"
            "14 - Морская миля; \n \t");
   //scanf("%d", &key.input_choice);
+  scanf("%s", key.in);
    key.input_choice = parsing_id(key.in);
     while(key.input_choice > 14 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        scanf("%s", key.in);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
@@ -41,24 +43,26 @@ double selectionswitchLength(double MEASUREMENT)
            "7 - Аршин;\n"
            "8 - Миля;\n"
            "9 - Ярд;\n"
-           "10 - Фут;\n \t"
-           "11 - Микрометр;\n \t"
-           "12 - Нанометр; \n \t"
-           "13 - Ангстрем;\n \t"
+           "10 - Фут;\n"
+           "11 - Микрометр;\n"
+           "12 - Нанометр; \n"
+           "13 - Ангстрем;\n"
            "14 - Морская миля; \n \t");
     //scanf("%d", &key.output_choice);
+    scanf("%s", key.out);
     key.output_choice = parsing_id(key.out);
-    while(key.output_choice == key.input_choice || key.input_choice > 14 || key.input_choice == 0 )  {
+    while(key.output_choice == key.input_choice || key.output_choice > 14 || key.output_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        scanf("%s", key.out);
+        key.output_choice = parsing_id(key.out);
     }
 
     if(key.input_choice < 10 && key.output_choice < 10)
 		key.id = key.input_choice * 10 + key.output_choice;
-	if(key.input_choice == 10 && key.output_choice <= 10)
+	if(key.input_choice >= 10 && key.output_choice <= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
-	if(key.input_choice < 10 && key.output_choice == 10)
+	if(key.input_choice < 10 && key.output_choice >= 10)
 		key.id = key.input_choice * 100 + key.output_choice;
 
     switch(key.id) {
@@ -276,7 +280,7 @@ double selectionswitchLength(double MEASUREMENT)
             key.gate = fathoms_TO_meters(MEASUREMENT);
             break;
         case 61:
-            key.gate = meters_TO_millimeter(fathoms_TO_meters(MEASUREMENT));
+            key.gate = meters_TO_millimeters(fathoms_TO_meters(MEASUREMENT));
             break;
         case 67:
             key.gate = meters_TO_arshins(fathoms_TO_meters(MEASUREMENT));
@@ -353,7 +357,7 @@ double selectionswitchLength(double MEASUREMENT)
             key.gate = meters_TO_kilometers(miles_TO_meters(MEASUREMENT));
             break;
         case 84:
-            key.gate = meters_TO_decimeters(miles_TO_metersMEASUREMENT));
+            key.gate = meters_TO_decimeters(miles_TO_meters(MEASUREMENT));
             break;
         case 83:
             key.gate = meters_TO_centimeters(miles_TO_meters(MEASUREMENT));
@@ -402,7 +406,7 @@ double selectionswitchLength(double MEASUREMENT)
             key.gate = meters_TO_centimeters(yards_TO_meters(MEASUREMENT));
             break;
         case 92:
-            key.gate = meters_TO_meters(MEASUREMENT);
+            key.gate = yards_TO_meters(MEASUREMENT);
             break;
         case 91:
             key.gate = meters_TO_millimeters(yards_TO_meters(MEASUREMENT));
@@ -472,7 +476,7 @@ double selectionswitchLength(double MEASUREMENT)
         case 1108:
             key.gate = meters_TO_miles(micrometers_TO_meters(MEASUREMENT));
             break;
-        case 1107
+        case 1107:
             key.gate = meters_TO_arshins(micrometers_TO_meters(MEASUREMENT));
             break;
         case 1106:
@@ -481,14 +485,14 @@ double selectionswitchLength(double MEASUREMENT)
         case 1105:
             key.gate = meters_TO_kilometers(micrometers_TO_meters(MEASUREMENT));
             break;
-        case 1104;
+        case 1104:
             key.gate = meters_TO_decimeters(micrometers_TO_meters(MEASUREMENT));
             break;
         case 1103:
             key.gate = meters_TO_centimeters(micrometers_TO_meters(MEASUREMENT));
             break;
         case 1102:
-            key.gate = meters_TO_meters(micrometers_TO_meters(MEASUREMENT));
+            key.gate = micrometers_TO_meters(MEASUREMENT);
             break;
         case 1101:
             key.gate = meters_TO_millimeters(micrometers_TO_meters(MEASUREMENT));
