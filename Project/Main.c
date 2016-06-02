@@ -4,11 +4,13 @@
 #include <math.h>
 #include "Headers/total.h"
 #include <windows.h>
+#include <graphics.h>
 
 int main()
 {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
+    settextstyle(BOLD_FONT, HORIZ_DIR, 10);
     setlocale(LC_ALL, "ru-RU.utf8");
 
     MainParameters head;
@@ -16,9 +18,6 @@ int main()
     head.like_to_continue = 1;
 
     printf("Unit Converter. Версия %.2f \n\n", head.version);
-
-    printf("ВНИМАНИЕ!\n"
-           "В настоящее время этот конвертер работает с пунктами 3, 17. \n\n");
 
     while(head.like_to_continue == 1)
     {

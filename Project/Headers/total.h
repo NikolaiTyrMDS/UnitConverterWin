@@ -49,22 +49,22 @@ double selectionswitchTime(double MEASUREMENT);
 
 //............................................................................................................................
 // DATA
-double bitsTobytes(double DATA);
-double bytesTobits(double DATA);
-double bitsTokilobytes(double DATA);
-double kilobytesTobits(double DATA);
-double bitsTomegabytes(double DATA);
-double megabytesTobits(double DATA);
-double bitsTogigabytes(double DATA);
-double gigabytesTobits(double DATA);
-double bitsToterabytes(double DATA);
-double terabytesTobits(double DATA);
-double bitsTopetabytes(double DATA);
-double petabytesTobits(double DATA);
-double bitsToexabytes(double DATA);
-double exabytesTobits(double DATA);
-double bitsTozetabytes(double DATA);
-double zetabytesTobits(double DATA);
+double bitsTObytes(double DATA);
+double bytesTObits(double DATA);
+double bitsTOkilobytes(double DATA);
+double kilobytesTObits(double DATA);
+double bitsTOmegabytes(double DATA);
+double megabytesTObits(double DATA);
+double bitsTOgigabytes(double DATA);
+double gigabytesTObits(double DATA);
+double bitsTOterabytes(double DATA);
+double terabytesTObits(double DATA);
+double bitsTOpetabytes(double DATA);
+double petabytesTObits(double DATA);
+double bitsTOexabytes(double DATA);
+double exabytesTObits(double DATA);
+double bitsTOzetabytes(double DATA);
+double zetabytesTObits(double DATA);
 
 // RADIATION
 double PTOmP(double RADIATION);
