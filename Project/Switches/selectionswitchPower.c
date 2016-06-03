@@ -17,11 +17,12 @@ double selectionswitchPower(double MEASUREMENT)
            "7 - Эрг в секунду;\n"
            "8 - Лошадиные силы(метрических);\n"
            "9 - Лошадиные силы(английских);\n\t");
+    scanf("%s", key.in);       
     key.input_choice = parsing_id(key.in);
-    //scanf("%d", &key.input_choice);
     while(key.input_choice >= 10 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        scanf("%s", key.in);       
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
@@ -35,12 +36,13 @@ double selectionswitchPower(double MEASUREMENT)
            "7 - Эрг в секунду;\n"
            "8 - Лошадиные силы(метрических);\n"
            "9 - Лошадиные силы(английских);\n\t");
-    key.output_choice = parsing_id(key.out);
-    //scanf("%d", &key.output_choice);
-    while(key.output_choice == key.input_choice || key.input_choice >= 10 || key.input_choice == 0 )  {
+    scanf("%s", key.out);       
+    key.input_choice = parsing_id(key.out);
+    while(key.output_choice == key.input_choice || key.output_choice >= 10 || key.output_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        scanf("%s", key.out);       
+        key.input_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;
