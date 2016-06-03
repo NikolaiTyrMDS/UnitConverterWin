@@ -4,13 +4,11 @@
 #include <math.h>
 #include "Headers/total.h"
 #include <windows.h>
-#include <graphics.h>
 
 int main()
 {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-    settextstyle(BOLD_FONT, HORIZ_DIR, 10);
     setlocale(LC_ALL, "ru-RU.utf8");
 
     MainParameters head;
