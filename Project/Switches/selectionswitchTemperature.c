@@ -24,6 +24,26 @@ double selectionswitchTemperature(double MEASUREMENT)
 		scanf("%s", key.in);
         key.input_choice = parsing_id(key.in);
     }
+    
+    switch(key.input_choice)
+    {
+    	case 1:
+    	while(MEASUREMENT < -273.15) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 2:
+    	while(MEASUREMENT < -459.67) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 3:
+    	while(MEASUREMENT < 0) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 4:
+    	while(MEASUREMENT < -218.52) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 5:
+    	while(MEASUREMENT < 0.33) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 6:
+    	while(MEASUREMENT < -90.14) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 7:
+    	while(MEASUREMENT < -135.9) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    	case 8:
+    	while(MEASUREMENT > 559.72) { printf("Температура вне допустимых пределов. Повторите ввод: \n"); scanf("%d", &MEASUREMENT); } break;
+    }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
