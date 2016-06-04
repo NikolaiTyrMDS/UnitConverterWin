@@ -8,33 +8,31 @@ double selectionswitchDensity(double MEASUREMENT)
     FunctionsParameters key;
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Килограмм на кубический метр;\n"
-           "2 - Килограмм на кубический сантиметр;\n"
-           "3 - Грамм на кубический метр;\n"
-           "4 - Грамм на кубический сантиметр;\n"
-           "5 - Грамм на кубический миллиметр;\n"
-		   "6 - Миллирамм на кубический миллиметр;\n");
-    scanf("%s", key.in);
+           "1 - Килограммы на кубический метр;\n"
+           "2 - Килограммы на кубический сантиметр;\n"
+           "3 - Граммы на кубический метр;\n"
+           "4 - Граммы на кубический сантиметр;\n"
+           "5 - Граммы на кубический миллиметр;\n"
+		   "6 - Миллиграммы на кубический миллиметр;\n");
     key.input_choice = parsing_id(key.in);
-    while(key.input_choice >= 8 || key.input_choice == 0) {
+    while(key.input_choice >= 7 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        key.input_choice = parsing_id(key.in);
     }
 
 	printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Килограмм на кубический метр;\n"
-           "2 - Килограмм на кубический сантиметр;\n"
-           "3 - Грамм на кубический метр;\n"
-           "4 - Грамм на кубический сантиметр;\n"
-           "5 - Грамм на кубический миллиметр;\n"
-		   "6 - Миллирамм на кубический миллиметр;\n");
-    scanf("%s", key.out);
+           "1 - Килограммы на кубический метр;\n"
+           "2 - Килограммы на кубический сантиметр;\n"
+           "3 - Граммы на кубический метр;\n"
+           "4 - Граммы на кубический сантиметр;\n"
+           "5 - Граммы на кубический миллиметр;\n"
+		   "6 - Миллиграммы на кубический миллиметр;\n");
     key.output_choice = parsing_id(key.out);
-    while(key.output_choice == key.input_choice || key.input_choice >= 8 || key.input_choice == 0 )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 7 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        key.output_choice = parsing_id(key.out);
     }
 
         key.id = key.input_choice * 10 + key.output_choice;
@@ -55,7 +53,7 @@ double selectionswitchDensity(double MEASUREMENT)
             key.gate = KilogramsPerCubicMeter2MilligramsPerCubicMeter(MEASUREMENT);
             break;
         case 21:
-            key.gate = KilogramsPerCubicSantimeter2KilogramsPerCubicMeter(MEASUREMENT));
+            key.gate = KilogramsPerCubicSantimeter2KilogramsPerCubicMeter(MEASUREMENT);
             break;
         case 23:
             key.gate = KilogramsPerCubicMeter2GramsPerCubicMeter(KilogramsPerCubicSantimeter2KilogramsPerCubicMeter(MEASUREMENT));

@@ -8,29 +8,27 @@ double selectionswitchRadiation(double MEASUREMENT)
     FunctionsParameters key;
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Кулон на килограмм;\n"
-           "2 - Микрорентген;\n"
-           "3 - Миллирентген;\n"
-           "4 - Рентген;\n \t");
-    scanf("%s", key.in);
+           "1 - Кулоны на килограмм;\n"
+           "2 - Микрорентгены;\n"
+           "3 - Миллирентгены;\n"
+           "4 - Рентгены;\n \t");
     key.input_choice = parsing_id(key.in);
-    while(key.input_choice >= 4 || key.input_choice == 0) {
+    while(key.input_choice >= 5 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Кулон на килограмм;\n"
-           "2 - Микрорентген;\n"
-           "3 - Миллирентген;\n"
-           "4 - Рентген;\n \t");
-    scanf("%s", key.out);
+           "1 - Кулоны на килограмм;\n"
+           "2 - Микрорентгены;\n"
+           "3 - Миллирентгены;\n"
+           "4 - Рентгены;\n \t");
     key.output_choice = parsing_id(key.out);
-    while(key.output_choice == key.input_choice || key.input_choice >= 4 || key.input_choice == 0 )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 5 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        key.output_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;

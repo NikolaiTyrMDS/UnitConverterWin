@@ -8,31 +8,29 @@ double selectionswitchAmpere(double MEASUREMENT)
     FunctionsParameters key;
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Ампер;\n"
-           "2 - Килоампер;\n"
-           "3 - Миллиампер;\n"
-           "4 - Микроампер;\n"
-           "5 - Наноампер;\n");
-    scanf("%s", key.in);
+           "1 - Амперы;\n"
+           "2 - Килоамперы;\n"
+           "3 - Миллиамперы;\n"
+           "4 - Микроамперы;\n"
+           "5 - Наноамперы;\n");
     key.input_choice = parsing_id(key.in);
-    while(key.input_choice >= 8 || key.input_choice == 0) {
+    while(key.input_choice >= 6 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Ампер;\n"
-           "2 - Килоампер;\n"
-           "3 - Миллиапмер;\n"
-           "4 - Микроампер;\n"
-           "5 - Наноампер;\n");
-    scanf("%s", key.out);
+           "1 - Амперы;\n"
+           "2 - Килоамперы;\n"
+           "3 - Миллиамперы;\n"
+           "4 - Микроамперы;\n"
+           "5 - Наноамперы;\n");
     key.output_choice = parsing_id(key.out);
-    while(key.output_choice == key.input_choice || key.input_choice >= 8 || key.input_choice == 0 )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 6 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        key.output_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;

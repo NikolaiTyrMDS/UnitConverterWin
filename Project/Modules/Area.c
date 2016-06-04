@@ -64,13 +64,13 @@ double SquareMeter2SquaresMeter(double AREA) {
 
 // <Квадратный дюйм> ---> <Квадратный метр> //
 double SquareInch2SquareMeter(double AREA) {
-	AREA = AREA / 1550,003;
+	AREA = AREA / 1550.003;
 	return AREA;
 }
 
 // <Квадратный метр> ---> <Квадратный дюйм> //
 double SquareMeter2SquareInch(double AREA) {
-	AREA = AREA * 1550,003;
+	AREA = AREA * 1550.003;
 	return AREA;
 }
 

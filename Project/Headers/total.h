@@ -133,10 +133,11 @@ double KilogramsPerCubicSantimeter2KilogramsPerCubicMeter(double DENSITY);
 double KilogramsPerCubicMeter2GramsPerCubicMeter(double DENSITY);
 double GramsPerCubicSantimeter2KilogramsPerCubicMeter(double DENSITY);
 double KilogramsPerCubicMeter2GramsPerCubicSantimeter(double DENSITY);
-double GramsPerCubicSantimeter2KilogramsPerCubicMeter(double DENSITY);
 double KilogramsPerCubicMeter2GramsPerCubicMillimeter(double DENSITY);
 double GramsPerCubicMeter2KilogramsPerCubicMeter(double DENSITY);
 double KilogramsPerCubicMeter2MilligramsPerCubicMeter(double DENSITY);
+double GramsPerCubicMillimeter2KilogramsPerCubicMeter(double DENSITY);
+double MilligramsPerCubicMeter2KilogramsPerCubicMeter(double DENSITY);
 
 // STRENGTH
 double Newton2kNewton(double STRENGTH);
@@ -150,6 +151,7 @@ double MgNewton2Newton(double STRENGTH);
 double MkNewton2Newton(double STRENGTH);
 double kgsNewton2Newton(double STRENGTH);
 double fsNewton2Newton(double STRENGTH);
+double Newton2MgNewton(double STRENGTH);
 
 //............................................................................................................................
 // SPEED

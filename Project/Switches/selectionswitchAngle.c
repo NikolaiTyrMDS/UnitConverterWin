@@ -15,13 +15,9 @@ double selectionswitchAngle(double MEASUREMENT)
            "5 - Грады;\n"
            "6 - Секстанты;\n"
            "7 - Румбы;\n\t");
-    
-    scanf("%s", key.in);
     key.input_choice = parsing_id(key.in);
-    //scanf("%d", &key.input_choice);
     while(key.input_choice >= 8 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%s", key.in);
         key.input_choice = parsing_id(key.in);
     }
 
@@ -34,14 +30,11 @@ double selectionswitchAngle(double MEASUREMENT)
            "5 - Грады;\n"
            "6 - Секстанты;\n"
            "7 - Румбы;\n\t");
-    scanf("%s", key.out);
     key.output_choice = parsing_id(key.out);
-    //scanf("%d", &key.output_choice);
     while(key.output_choice == key.input_choice || key.output_choice >= 8 || key.output_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%s", key.out);
-        key.input_choice = parsing_id(key.out);
+        key.output_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;

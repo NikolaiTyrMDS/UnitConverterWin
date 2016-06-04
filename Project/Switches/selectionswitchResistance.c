@@ -8,29 +8,27 @@ double selectionswitchResistance(double MEASUREMENT)
     FunctionsParameters key;
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
-           "1 - Сименс;\n"
-           "2 - Микроом;\n"
-           "3 - Миллиом;\n"
-           "4 - Ом = Вольт на ампер;\n\t");
-    scanf("%s", key.in);
+           "1 - Сименсы;\n"
+           "2 - Микроомы;\n"
+           "3 - Миллиомы;\n"
+           "4 - Омы = Вольты на ампер;\n\t");
     key.input_choice = parsing_id(key.in);
-    while(key.input_choice >= 4 || key.input_choice == 0) {
+    while(key.input_choice >= 5 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
-           "1 - Сименс;\n"
-           "2 - Микроом;\n"
-           "3 - Миллиом;\n"
-           "4 - Ом = Вольт на ампер;\n\t");
-    scanf("%s", key.out);
+           "1 - Сименсы;\n"
+           "2 - Микроомы;\n"
+           "3 - Миллиомы;\n"
+           "4 - Омы = Вольты на ампер;\n\t");
     key.output_choice = parsing_id(key.out);
-    while(key.output_choice == key.input_choice || key.input_choice >= 4 || key.input_choice == 0 )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 5 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        key.output_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;

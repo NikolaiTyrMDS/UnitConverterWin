@@ -9,29 +9,27 @@ double selectionswitchEnergy(double MEASUREMENT)
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
            "1 - Джоули;\n"
-           "2 - Киловатт-час;\n"
+           "2 - Киловатт-часы;\n"
            "3 - Электронвольты;\n"
-           "4 - Каллории;\n"
-           "5 - Грам в татиловом эквиваленте;\n \t");
-    scanf("%s", key.in);
+           "4 - Калории;\n"
+           "5 - Граммы в тротиловом эквиваленте;\n \t");
     key.input_choice = parsing_id(key.in);
     while(key.input_choice > 5 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "1 - Джоули;\n"
-           "2 - Киловатт-час;\n"
+           "2 - Киловатт-часы;\n"
            "3 - Электронвольты;\n"
-           "4 - Каллории;\n"
-           "5 - Грам в татиловом эквиваленте;\n \t");
-    scanf("%s", key.out);
+           "4 - Калории;\n"
+           "5 - Граммы в тротиловом эквиваленте;\n \t");
     key.output_choice = parsing_id(key.out);
     while(key.output_choice == key.input_choice || key.input_choice > 5 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        key.output_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;

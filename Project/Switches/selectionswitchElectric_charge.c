@@ -9,36 +9,34 @@ double selectionswitchElectric_charge(double MEASUREMENT)
 
     printf("Выберите величину, из которой Вы хотите произвести конвертирование:\n"
            "1 - Элементарный электрический заряд;\n"
-           "2 - Миллиампер в час;\n"
-           "3 - Микрокулон;\n"
-           "4 - Милликулон;\n"
-           "5 - Кулон;\n"
-           "6 - Килокулон;\n"
-           "7 - Мегакулон;\n"
-           "8 - Фарадей;\n\t");
-    scanf("%s", key.in);
+           "2 - Миллиамперы в час;\n"
+           "3 - Микрокулоны;\n"
+           "4 - Милликулоны;\n"
+           "5 - Кулоны;\n"
+           "6 - Килокулоны;\n"
+           "7 - Мегакулоны;\n"
+           "8 - Фарадеи;\n\t");
     key.input_choice = parsing_id(key.in);
-    while(key.input_choice >= 8 || key.input_choice == 0) {
+    while(key.input_choice >= 9 || key.input_choice == 0) {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.input_choice);
+        key.input_choice = parsing_id(key.in);
     }
 
     printf("Выберите величину, в которую Вы хотите конвертировать Вашу величину.\n"
            "Не нужно выбирать ту же величину, что Вы выбрали в качестве конвертируемой:\n"
            "1 - Элементарный электрический заряд;\n"
-           "2 - Миллиампер в час;\n"
-           "3 - Микрокулон;\n"
-           "4 - Милликулон;\n"
-           "5 - Кулон;\n"
-           "6 - Килокулон;\n"
-           "7 - Мегакулон;\n"
-           "8 - Фарадей;\n\t");
-    scanf("%s", key.out);
+           "2 - Миллиамперы в час;\n"
+           "3 - Микрокулоны;\n"
+           "4 - Милликулоны;\n"
+           "5 - Кулоны;\n"
+           "6 - Килокулоны;\n"
+           "7 - Мегакулоны;\n"
+           "8 - Фарадеи;\n\t");
     key.output_choice = parsing_id(key.out);
-    while(key.output_choice == key.input_choice || key.input_choice >= 8 || key.input_choice == 0 )  {
+    while(key.output_choice == key.input_choice || key.input_choice >= 9 || key.input_choice == 0 )  {
         fprintf(stderr, "\nВы выбрали величину, которой нет в списке доступных величин, \nили Вы пытаетесь конвертировать "
                 "одну и ту же величину. \nПожалуйста, сделайте корректный выбор\n\t");
-        scanf("%d", &key.output_choice);
+        key.output_choice = parsing_id(key.out);
     }
 
     key.id = key.input_choice * 10 + key.output_choice;

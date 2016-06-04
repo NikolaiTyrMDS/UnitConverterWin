@@ -17,9 +17,9 @@ void convert(double RESULT) {
 
 	// This will be used as different ways to showw rezut;
 	if (tmp != 0)
-		printf("Результат конвертирования: %lf\n", RESULT);
+		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %lf\n", RESULT);
 	if (tmp == 0 && f == 1)
-		printf("Результат конвертирования: %0.0lf\n", RESULT + tmp);
+		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %0.0lf\n", RESULT + tmp);
 	if (tmp == 0 && f == 0)
-		printf("Результат конвертирования: %0.0lf\n", RESULT - tmp);
+		printf("Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёСЏ: %0.0lf\n", RESULT - tmp);
 }

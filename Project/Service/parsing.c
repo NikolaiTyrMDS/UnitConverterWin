@@ -27,7 +27,7 @@ double parsing(char *MEASUREMENT)
 
 int parsing_id(char *MEASUREMENT)
 {
-	double res;
+	int res;
 	int i = 0;
 
 	scanf("%s", MEASUREMENT);
